@@ -1,9 +1,9 @@
 # G02 assessment — Repository readiness (`STEP-002`–`STEP-003`)
 
 Initial status: NOT ASSESSED
-Assessor / date / human reviewer: Automated structural check 2026-11-16 (`13_Automation/validate_repo.py`, `pytest`). Formal human reviewer (Research Lead): **Akhtaruzzaman Anik** (awaiting sign-off).
+Assessor / date / human reviewer: Automated structural check 2026-11-16 (`13_Automation/validate_repo.py`, `pytest`). Formal human reviewer (Research Lead): **Akhtaruzzaman Anik — APPROVED 2026-11-16**.
 
-> **Current status: NOT ASSESSED (all technical criteria verified; awaiting Research Lead sign-off).** Per OS §13.1, this assessment is not pre-marked PASS before the Research Lead reviews and confirms it.
+> **Outcome: PASS (2026-11-16).** Research Lead Akhtaruzzaman Anik approved `G02` after all structural, schema, ignore, storage (`DEC0011`), and minimal Python `3.14.6` runtime (`pytest` `4 passed in 0.55s`) checks succeeded.
 
 | Mandatory criterion (OS §13.2) | Evidence path / verification | State | Corrective action |
 |---|---|---|---|
@@ -13,8 +13,8 @@ Assessor / date / human reviewer: Automated structural check 2026-11-16 (`13_Aut
 | Identifier checks & zero dummy data | `src/opg/repo_validator.py`; `pytest` (`4 passed in 0.40s`); `gates.csv` initialized `G01–G17` as `NOT ASSESSED` | Verified | None |
 | Storage decision (`UD11`) | `01_Project_Management/decision_log/DEC0011.md` (Public GitHub code + Local PC active + Private Google Drive backup/sync) | Verified | None |
 | Tested minimal data-tool environment | `environment/data/requirements.lock.txt`, `verification.md` (`Python 3.14.6`, `3 passed in 1.28s`), `12_Documentation/installation.md` | Verified | None |
-| Research Lead human sign-off | `team_roles.md` (Anik = Research Lead) | **Pending confirmation** | Anik confirms G02 sign-off (and Mahajub confirms `team_roles.md` for G01) |
+| Research Lead human sign-off | `team_roles.md` (Anik = Research Lead) | **PASS — Approved by Akhtaruzzaman Anik (2026-11-16)** | None |
 
-Overall outcome: NOT ASSESSED (ready for PASS upon Research Lead confirmation).
+Overall outcome: **PASS** (2026-11-16).
 Invalidated downstream work: None.
-Reassessment record: _(record Research Lead confirmation date and mark `GA0002` PASS in `gates.csv`)_
+Reassessment record: Approved by Research Lead Akhtaruzzaman Anik on 2026-11-16 (`GA0002` in `gates.csv`).

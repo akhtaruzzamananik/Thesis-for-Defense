@@ -2,6 +2,10 @@
 
 All notable changes to the project governance, plans, and repository structure are recorded here.
 
+## [Unreleased] — G02 PASS Recorded
+
+- Recorded Research Lead (Akhtaruzzaman Anik) approval of `G02` (`PASS`) in `01_Project_Management/reviews/G02_assessment_2026-11-16.md`, `gates.csv`, and `dashboard.md`.
+
 ## [Unreleased] — STEP-004 Draft (Literature Search Protocol & Provisional RQs)
 
 - Drafted `02_Literature/searches/protocol.md` (queries `Q1–Q3` testing `G1–G6`, inclusion/exclusion codes, deduplication, and quality criteria), `02_Literature/searches/search_log_template.md`, and `02_Literature/research_questions.md` (provisional `RQ1–RQ3` bounded by `O1–O3`).
