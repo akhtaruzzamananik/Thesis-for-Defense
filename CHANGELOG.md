@@ -2,6 +2,11 @@
 
 All notable changes to the project governance, plans, and repository structure are recorded here.
 
+## [Unreleased] — STEP-003 Part 1 (Canonical CSV Registries, Dashboard, Timeline)
+
+- Created all 21 remaining Appendix B CSV registries (header-only, zero dummy data; `gates.csv` initialized with `G01–G17` as `NOT ASSESSED`).
+- Added `01_Project_Management/dashboard.md` and `01_Project_Management/timeline.md`.
+
 ## [Unreleased] — STEP-002 Complete (UD11 Storage Lock)
 
 - Confirmed off-Git storage policy (`DEC0011.md`): Local PC (active) + Private Google Drive (restricted to Anik & Mahajub for backup/sync), paired with public GitHub (`main`) for source/metadata only.
