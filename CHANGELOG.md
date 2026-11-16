@@ -2,6 +2,11 @@
 
 All notable changes to the project governance, plans, and repository structure are recorded here.
 
+## [Unreleased] — G01 PASS Recorded (STEP-001–004 Unlocked)
+
+- Recorded Mahajub Al Shabah's confirmation of `team_roles.md` (`v1.0.0`) and `scope.md` (`v1.0.0`), marking `G01` as `PASS` (`GA0001`).
+- Both `G01` and `G02` are now `PASS`; `STEP-005` literature searches are unblocked.
+
 ## [Unreleased] — STEP-004 Protocol Approved
 
 - Promoted `02_Literature/searches/protocol.md` to `v1.0.0` (Research Lead Akhtaruzzaman Anik approved 2026-11-16).

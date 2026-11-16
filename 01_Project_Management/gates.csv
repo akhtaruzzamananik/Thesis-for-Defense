@@ -1,5 +1,5 @@
 AssessmentID,GateID,EntityVersions,Outcome,CriteriaReport,Assessor,Approval,AssessmentDate,Supersedes,Invalidates,Owner,Version,Status,Created,Updated,EvidencePath
-GA0001,G01,v0.1.0,NOT ASSESSED,01_Project_Management/reviews/G01_assessment_2026-11-16.md,,,2026-11-16,,,Akhtaruzzaman Anik & Mahajub Al Shabah,1,Initial - NOT ASSESSED,2026-11-16,2026-11-16,01_Project_Management/reviews/G01_assessment_2026-11-16.md
+GA0001,G01,v1.0.0,PASS,01_Project_Management/reviews/G01_assessment_2026-11-16.md,Akhtaruzzaman Anik,Ms Faiza Feroz + A. Anik + M. Al Shabah,2026-11-16,,,Akhtaruzzaman Anik & Mahajub Al Shabah,2,PASS - Scope/O1-O3 & role split confirmed,2026-11-16,2026-11-16,01_Project_Management/reviews/G01_assessment_2026-11-16.md
 GA0002,G02,v0.1.0,PASS,01_Project_Management/reviews/G02_assessment_2026-11-16.md,validate_repo.py + pytest,Akhtaruzzaman Anik (Research Lead),2026-11-16,,,Akhtaruzzaman Anik & Mahajub Al Shabah,2,PASS - Research Lead approved,2026-11-16,2026-11-16,01_Project_Management/reviews/G02_assessment_2026-11-16.md
 GA0003,G03,v0.1.0,NOT ASSESSED,,,,2026-11-16,,,Akhtaruzzaman Anik & Mahajub Al Shabah,1,Initial - NOT ASSESSED,2026-11-16,2026-11-16,
 GA0004,G04,v0.1.0,NOT ASSESSED,,,,2026-11-16,,,Akhtaruzzaman Anik & Mahajub Al Shabah,1,Initial - NOT ASSESSED,2026-11-16,2026-11-16,

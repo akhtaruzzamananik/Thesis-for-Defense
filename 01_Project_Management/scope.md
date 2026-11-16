@@ -4,9 +4,9 @@
 |---|---|
 | Record | `01_Project_Management/scope.md` |
 | Step / gate | STEP-001 / G01 |
-| Version | v0.2.0 (scope/O1–O3 Telegram confirmation recorded; owner assignment & feedback check pending) |
+| Version | v1.0.0 (APPROVED — G01 PASS) |
 | Created | 2026-11-16 |
-| Status | **PARTIALLY CONFIRMED — Supervisor confirmed scope & O1–O3 interpretation via Telegram (2026-11-16, reported by Akhtaruzzaman Anik). Named UD owners and title-defense feedback status remain open for G01 PASS.** |
+| Status | **APPROVED — Supervisor confirmed scope & O1–O3 via Telegram; both researchers (Anik & Mahajub) confirmed role split (`team_roles.md`); no extra defense feedback confirmed.** |
 | Governing sections | OS §1, §11, §13; Blueprint STEP-001 |
 | Linked decisions | DEC0001 (UD01), DEC0021 (UD21); full register in `decisions.csv` |
 
@@ -81,7 +81,7 @@ Only actual comments may be recorded here. No feedback is assumed or invented.
 | Role | Name | Decision (approve / approve with changes / reject) | Date | Evidence (email, signed sheet, meeting note path) |
 |---|---|---|---|---|
 | Researcher | Akhtaruzzaman Anik | Approve (submitted brief & reported Telegram confirmation) | 2026-11-16 | Conversation record (`diary/2026-11-16_STEP-001.md`) |
-| Researcher | Mahajub Al Shabah | | | |
+| Researcher | Mahajub Al Shabah | Approve (confirmed role split & scope) | 2026-11-16 | Reported by A. Anik (`team_roles.md`) |
 | Supervisor | Ms Faiza Feroz | Confirmed scope & O1–O3 summary to proceed (pending: feedback check, UD21 web demo, named owners) | 2026-11-16 | Telegram reply reported by A. Anik (screenshot/log recommended) |
 | Co-supervisor (if required) | Israt Jahan | | | |
 
@@ -92,3 +92,4 @@ Only actual comments may be recorded here. No feedback is assumed or invented.
 | v0.1.0 | 2026-11-16 | Initial STEP-001 draft from retained RF ledger and OS v1.2.0 | Research team (AI-assisted draft) | Pending |
 | v0.2.0 | 2026-11-16 | Recorded Telegram scope/O1–O3 confirmation and secondary-dataset intention | Research team | Scope/O1–O3 confirmed; owners & feedback open |
 | v0.3.0 | 2026-11-16 | Recorded no extra defense feedback, public GitHub policy note, and Anik/Mahajub role split (`team_roles.md`) | Akhtaruzzaman Anik | Pending Mahajub confirmation on role split |
+| v1.0.0 | 2026-11-16 | Recorded Mahajub Al Shabah confirmation; promoted `scope.md` for `G01 PASS` | Research team | **Approved (G01 PASS)** |

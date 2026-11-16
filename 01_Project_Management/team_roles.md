@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Record | `01_Project_Management/team_roles.md` |
-| Version | v0.1.0 (proposed by Anik, 2026-11-16; awaiting Mahajub confirmation) |
+| Version | v1.0.0 (confirmed by both Akhtaruzzaman Anik and Mahajub Al Shabah, 2026-11-16) |
 | Governing section | OS §11 (Roles and human decisions) |
 | Supervisor / Co-supervisor | Ms Faiza Feroz (Lecturer) / Israt Jahan (Senior Lecturer) |
 
@@ -32,5 +32,5 @@ Both teammates share overall project accountability and review each other's outp
 
 | Member | Status | Date |
 |---|---|---|
-| Akhtaruzzaman Anik | Proposed / accepted | 2026-11-16 |
-| Mahajub Al Shabah | Pending confirmation | |
+| Akhtaruzzaman Anik | Confirmed | 2026-11-16 |
+| Mahajub Al Shabah | Confirmed (reported by A. Anik) | 2026-11-16 |
