@@ -2,6 +2,11 @@
 
 All notable changes to the project governance, plans, and repository structure are recorded here.
 
+## [Unreleased] — STEP-004 Draft (Literature Search Protocol & Provisional RQs)
+
+- Drafted `02_Literature/searches/protocol.md` (queries `Q1–Q3` testing `G1–G6`, inclusion/exclusion codes, deduplication, and quality criteria), `02_Literature/searches/search_log_template.md`, and `02_Literature/research_questions.md` (provisional `RQ1–RQ3` bounded by `O1–O3`).
+- Logged `01_Project_Management/diary/2026-11-16_STEP-004.md`; kept `G01` and `G02` as `NOT ASSESSED` pending human sign-off before executing `STEP-005` searches.
+
 ## [Unreleased] — STEP-003 Part 2 (Templates, Validator, and G02 Readiness Review)
 
 - Installed all 30 blank operational templates (`T01–T30`) and `templates_index.md` under `14_Templates_Prompts/`.
