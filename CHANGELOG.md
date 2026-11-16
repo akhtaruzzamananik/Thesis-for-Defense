@@ -2,6 +2,11 @@
 
 All notable changes to the project governance, plans, and repository structure are recorded here.
 
+## [Unreleased] — STEP-002 Complete (UD11 Storage Lock)
+
+- Confirmed off-Git storage policy (`DEC0011.md`): Local PC (active) + Private Google Drive (restricted to Anik & Mahajub for backup/sync), paired with public GitHub (`main`) for source/metadata only.
+- Recorded `01_Project_Management/diary/2026-11-16_STEP-002.md`.
+
 ## [Unreleased] — STEP-002 Part 3 (Minimal Data-Tool Runtime & Smoke Check)
 
 - Recreated local `.venv` on Python `3.14.6` (excluded from Git) and locked minimal data-tool dependencies (`pillow==13.0.0`, `numpy==2.5.5`, `PyYAML==6.0.3`, `pytest==9.2.0`) in `environment/data/requirements.lock.txt`.
