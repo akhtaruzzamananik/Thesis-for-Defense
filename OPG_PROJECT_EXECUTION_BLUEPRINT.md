@@ -7,14 +7,14 @@
 | Field | Value |
 |---|---|
 | Document | OPG_PROJECT_EXECUTION_BLUEPRINT.md |
-| Version / date | v1.1.0 / 2026-11-16 |
+| Version / date | v1.2.0 / 2026-11-16 |
 | Type | Sequential research execution manual |
-| Governing handbook | [OPG Research Operating System](./OPG_RESEARCH_OPERATING_SYSTEM.md), v1.1.0 |
+| Governing handbook | [OPG Research Operating System](./OPG_RESEARCH_OPERATING_SYSTEM.md), v1.2.0 |
 | Primary scientific authority | Title evaluation report (reviewed during original authoring; subsequently removed at the user’s request; see [source status](./OPG_RESEARCH_OPERATING_SYSTEM.md#source-status)) |
 | Status | Complete planning document; execution NOT VERIFIED; all gates NOT ASSESSED |
-| Coverage | 15 stages; 46 focused step types, with repeatable paper, annotation, experiment and writing sessions |
+| Coverage | 16 stages; 49 focused step types, with repeatable paper, annotation, experiment and writing sessions |
 | Owners | Research team, supervisor and named reviewers; assignments recorded at STEP-001 |
-| Intended system | YOLO-based 2D OPG object-localization research prototype and supplementary aid |
+| Intended system | YOLO-based 2D OPG object-localization research prototype and supplementary aid, shown at the defense through a hosted web demonstration (S16) |
 
 ## Version history
 
@@ -22,11 +22,12 @@
 |---|---|---|---|
 | v1.0.0 | 2026-11-16 | Initial source-grounded execution roadmap aligned to the OPG handbook | Proposed; human adoption pending |
 | v1.1.0 | 2026-11-16 | Recorded user-directed source deletion; added early data-tool environment readiness; separated thesis and paper submission-readiness assessments | Editorial/workflow correction authorized; scientific execution gates remain NOT ASSESSED |
+| v1.2.0 | 2026-11-16 | Added stage S16 (hosted web demonstration for the defense): STEP-047–049, gate G17, UD21–UD24; linked STEP-037/038/045/046 and G16 to it | Team-requested addition; UD21 confirmation pending; all gates remain NOT ASSESSED |
 
 ## How to use this blueprint
 
 1. Read the [source facts and unresolved decisions](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-01). REPORT FACT, PLANNING RECOMMENDATION, and **Unresolved / Human Decision Required** have the same meanings in both documents. The report's gap claims remain hypotheses to verify.
-2. Start at the earliest unfinished step with evidenced prerequisites. All steps start NOT STARTED; unchecked boxes below are future verification tasks, not completed work. All research gates G01-G16 start NOT ASSESSED.
+2. Start at the earliest unfinished step with evidenced prerequisites. All steps start NOT STARTED; unchecked boxes below are future verification tasks, not completed work. All research gates G01-G17 start NOT ASSESSED.
 3. The handbook defines policy; this document sequences it. Its [repository contracts](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-02), [registry schemas](./OPG_RESEARCH_OPERATING_SYSTEM.md#appendix-b), [templates](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-14), and [universal DoD](./OPG_RESEARCH_OPERATING_SYSTEM.md#appendix-a) apply to every step.
 4. For each work session, record the step ID plus a dated batch or RUN identifier. Repeated reading, annotation, training and writing steps are bounded sessions repeated until their coverage criteria are met. Time estimates below are **provisional planning estimates**, not promises or reported project dates. Human review/access delays and compute duration are additional unless stated.
 5. Parallelizable means independent work after all its prerequisites exist. It does not authorize crossing a failed/unassessed gate or simultaneous conflicting registry edits. Assign IDs and merge canonical registry changes serially.
@@ -42,6 +43,7 @@
 - No dataset name/count, YOLO release, training settings, score target, or experimental result is supplied as a finalized decision. Do not fill these from convenient library defaults without recording and reviewing them.
 - The report's feedback form is blank. Ask whether separate feedback exists, but never invent comments, examiner signatures or dates.
 - Final-test access follows validation selection and freeze. Published or internal test observations cannot be erased by renaming a split.
+- The hosted web demonstration (S16) is a team/defense requirement, not a report requirement. It reuses the frozen STEP-037 inference path, is never used to tune or select models, and its on-screen response time is not the reported FPS.
 
 <a id="stage-map"></a>
 ## Stage-to-step map and contents
@@ -63,6 +65,7 @@
 | S13 Detection metrics and speed reporting | [033](#step-033)-[035](#step-035) | §7 | G12 |
 | S14 Error analysis, prototype and reproducibility | [036](#step-036)-[038](#step-038) | §7-8 | G13, G14 |
 | S15 Writing, submission and archive | [039](#step-039)-[046](#step-046) | §9, §10, §13 | G15, G16 |
+| S16 Web demonstration hosting and defense showcase | [047](#step-047)-[049](#step-049) | §8.3, §10, §13 | G17 (feeds G16) |
 
 ## Master dependency chain
 
@@ -73,9 +76,14 @@
 → 031/G11 → 032 → [033 metrics + 034 speed] → 035/G12
 → 036/G13 → 037 → 038/G14 → 039–042/G15(thesis)
 → 043 thesis → 044 [G15(paper) before submission OR approved disposition] → 045 archive → 046/G16
+
+Parallel web branch (S16), alongside 039–043:
+037 → 047 scope/platform/policy → 048 build + parity → (G14 PASS) → 049 deploy + rehearse/G17 → defense
+049/G17 (or approved disposition) → 045 archive entry → 046/G16
+Optional hosting spike (synthetic image, generic non-medical model, no evidence value): any time after G02
 ```
 
-Repository bootstrapping and a tested minimal data-tool environment (STEP-002, verified at G02) precede operational scripts. Model-specific environment locking follows YOLO selection at STEP-023; the data-tool environment remains versioned separately. Deterministic annotation preparation may precede split assignment, but fitted preprocessing and augmentation never do. Test predictions are deliberately absent from the experiment loop. STEP-030 repeats STEP-027-029 under new IDs; it does not open the final test set.
+Repository bootstrapping and a tested minimal data-tool environment (STEP-002, verified at G02) precede operational scripts. Model-specific environment locking follows YOLO selection at STEP-023; the data-tool environment remains versioned separately. Deterministic annotation preparation may precede split assignment, but fitted preprocessing and augmentation never do. Test predictions are deliberately absent from the experiment loop. STEP-030 repeats STEP-027-029 under new IDs; it does not open the final test set. S16 is numbered after S15 but executes in parallel with writing: start STEP-047 as soon as STEP-037 exists, so the site is live and rehearsed before the defense date recorded under UD21.
 
 ## Universal session and artifact expectations
 
@@ -100,7 +108,7 @@ For all planning prompts: read the governing sections and current registries, di
 
 **Parallelizable:** No for scope approval; source indexing can be prepared independently.
 
-**Inputs:** Retained RF01-RF16 and UD01-UD20, historical report locators and source-status record; researcher/supervisor confirmations and any authorized source copy or clarification subsequently obtained.
+**Inputs:** Retained RF01-RF16 and UD01-UD24, historical report locators and source-status record; researcher/supervisor confirmations and any authorized source copy or clarification subsequently obtained.
 
 **Expected outputs:** Approved scope/O1-O3 interpretation, named decision owners, blocking deadlines, feedback-status record, G01 assessment.
 
@@ -110,7 +118,7 @@ For all planning prompts: read the governing sections and current registries, di
 
 1. Review the retained title, names and report locators with the researcher; record source availability and seek original evidence or supervisor clarification for any disputed detail. Separate historical certificate evidence from approval of this new plan.
 2. Review all UD rows; assign an owner and latest decision step, keeping later scientific choices unresolved.
-3. Confirm whether separate supervisor/examiner feedback exists; record only actual comments.
+3. Confirm whether separate supervisor/examiner feedback exists; record only actual comments. Record the team's hosted-web-demo requirement as UD21 and ask the supervisor to confirm it and the defense date if known.
 4. Obtain scope/policy adoption and assess G01 against evidence, retaining unresolved later-stage decisions.
 
 **Planning/review prompt:**
@@ -220,7 +228,7 @@ For all planning prompts: read the governing sections and current registries, di
 
 **Parallelizable:** Template files can be drafted independently; registry headers and ID assignment use one reviewer.
 
-**Inputs:** T01-T28, Appendix B schemas, common registry columns, actual STEP-001 decisions.
+**Inputs:** T01-T30, Appendix B schemas, common registry columns, actual STEP-001 decisions.
 
 **Expected outputs:** Blank templates, correct registry headers, populated actual decision records, dashboard and G02 assessment.
 
@@ -230,7 +238,7 @@ For all planning prompts: read the governing sections and current registries, di
 
 1. Materialize field-complete blank templates; retain human approval boundaries.
 2. Create headers from Appendix B with governance columns once, without dummy scientific rows.
-3. Record G01-G16 as NOT ASSESSED except any evidenced G01 assessment; create actual decisions only.
+3. Record G01-G17 as NOT ASSESSED except any evidenced G01 assessment; create actual decisions only.
 4. Verify the minimal data-tool environment evidence, then validate unique headers/IDs, links, folder READMEs and restricted-tier rules; assess G02.
 
 **Planning/review prompt:**
@@ -250,7 +258,7 @@ For all planning prompts: read the governing sections and current registries, di
 **Verification checklist:**
 
 - [ ] All canonical schemas match Appendix B.
-- [ ] T01-T28 are usable and unfilled.
+- [ ] T01-T30 are usable and unfilled.
 - [ ] No dummy scientific evidence or prechecked gates.
 - [ ] G02 mandatory criteria evidenced.
 
@@ -2249,7 +2257,7 @@ For all planning prompts: read the governing sections and current registries, di
 
 **Human-only actions and decisions:** Researchers approve UD18 and demonstration material; dental reviewer checks output interpretation.
 
-**Version-control/artifact expectations:** Commit code/guide and safe tests; distribute weights/images only under approved rights. No public hosting requirement is introduced.
+**Version-control/artifact expectations:** Commit code/guide and safe tests; distribute weights/images only under approved rights. Public hosting is handled separately in STEP-047–049; this entry point is the single inference path the web demonstration must call, so keep its interface stable and documented.
 
 **Documentation updates:** Prototype guide, input/output contract, failure cases, version dependencies and limitations.
 
@@ -2266,7 +2274,7 @@ For all planning prompts: read the governing sections and current registries, di
 
 **Definition of Done:** A documented, tested research prototype reproduces the evaluated detection behavior. Universal DoD applies; this is a required future state, not a completed assessment.
 
-**Next step:** [STEP-038](#step-038)
+**Next step:** [STEP-038](#step-038); the parallel web branch may start at [STEP-047](#step-047).
 
 ---
 
@@ -2693,13 +2701,13 @@ For all planning prompts: read the governing sections and current registries, di
 
 **Governing section references:** [OS §8](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-08); [OS §9](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-09); [OS §10](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-10); [canonical schemas and DoD](./OPG_RESEARCH_OPERATING_SYSTEM.md#appendix-a).
 
-**Prerequisites:** STEP-043/044 submission/disposition records; UD20 retention/access decision; scientific gates current.
+**Prerequisites:** STEP-043/044 submission/disposition records; STEP-049 deployment record and G17 assessment (or approved web-demo disposition); UD20/UD24 retention/access decisions; scientific gates current.
 
 **Estimated difficulty and time (provisional):** Hard; 4–8 hours plus transfer/restore duration.
 
 **Parallelizable:** Tier-specific inventory can proceed independently; final manifest and restore verification are consolidated.
 
-**Inputs:** All source/config/model/data/evaluation/writing records, permissions, release decisions and receipts.
+**Inputs:** All source/config/model/data/evaluation/writing records, deployment registry/web source/container digest, permissions, release decisions and receipts.
 
 **Expected outputs:** ARCH release manifest, source snapshot/tag, restricted artifact inventory, final documents, access/retention instructions and restore proof.
 
@@ -2752,7 +2760,7 @@ For all planning prompts: read the governing sections and current registries, di
 
 **Governing section references:** [OS §1](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-01); [OS §9](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-09); [OS §10](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-10); [OS §13](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-13); [canonical schemas and DoD](./OPG_RESEARCH_OPERATING_SYSTEM.md#appendix-a).
 
-**Prerequisites:** STEP-045 archive verified; all applicable prior gates current PASS; thesis receipt and paper disposition recorded.
+**Prerequisites:** STEP-045 archive verified; all applicable prior gates current PASS, including G17 when UD21 requires the hosted demo; thesis receipt, paper disposition and web-demo record or disposition recorded.
 
 **Estimated difficulty and time (provisional):** Moderate to hard; 3–5 hours plus supervisor sign-off.
 
@@ -2768,7 +2776,7 @@ For all planning prompts: read the governing sections and current registries, di
 
 1. Check every deliverable in OS Section 13.3 against actual artifacts and versions.
 2. Confirm each gate is current for the final lineage, including G10 for every qualifying reported experiment.
-3. Verify thesis receipt, paper obligation/disposition, limitations, reproducibility and archive restoration.
+3. Verify thesis receipt, paper obligation/disposition, hosted web demonstration (G17 and UD24 lifetime action) or its approved disposition, limitations, reproducibility and archive restoration.
 4. Resolve blocking omissions, record supervisor/researcher decision and hand over remaining nonblocking future work.
 
 **Planning/review prompt:**
@@ -2798,7 +2806,195 @@ For all planning prompts: read the governing sections and current registries, di
 
 **Definition of Done:** G16 PASS and all approved research, documentation, submission and archival obligations evidenced. Universal DoD applies; this is a required future state, not a completed assessment.
 
-**Next step:** None. Close the approved project; later studies require a new approved plan.
+**Next step:** None for the main chain. If S16 is not yet complete, finish [STEP-047](#step-047)–[STEP-049](#step-049) before G16. Close the approved project; later studies require a new approved plan.
+
+---
+
+<a id="step-047"></a>
+## STEP-047 — Approve web-demo scope, the hosted best model, hosting platform and data policy
+
+**Objective:** Decide exactly what will be hosted for the defense (the final best model), where it will run, who can access it and how inputs are handled. Resolve UD21-UD24 enough to start building.
+
+**Why this step exists:** The team must show the final model on a website at the defense. Without early decisions, the wrong model gets hosted, the platform cannot run it, or patient images are exposed.
+
+**Governing section references:** [OS §8.3](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-08-3); [OS §1.3](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-01); [OS §10](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-10); [OS §11](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-11); [canonical schemas and DoD](./OPG_RESEARCH_OPERATING_SYSTEM.md#appendix-a).
+
+**Prerequisites:** STEP-037 complete with a stable inference entry point; G11 freeze record identifying the final best MODEL; G12-G13 PASS for that MODEL. UD21 is confirmed by the supervisor, or its confirmation is requested in STEP-001 and recorded here. An optional hosting spike may run earlier (any time after G02) with a synthetic image and a generic non-medical model.
+
+**Estimated difficulty and time (provisional):** Moderate; 3–5 hours plus supervisor/custodian responses; hosting spike 2–4 hours if done.
+
+**Parallelizable:** Yes, alongside STEP-038 and writing (STEP-039 onward). Platform research can start early; final model identification waits for G11/G12.
+
+**Inputs:** G11 freeze record and model registry row of the final best MODEL; its export(s), size, runtime dependencies and measured CPU/GPU latency from EVAL; STEP-037 prototype guide; permitted sample images and their permission records; defense date and window; budget; institutional rules.
+
+**Expected outputs:** DEC records for UD21-UD24; `16_Web_Demo/platform_decision.md` with a candidate comparison; `16_Web_Demo/web_policy.md` (access mode, upload/sample policy, retention, disclaimer); a hosted-model statement naming MODEL ID, G11 freeze ID, EVAL ID and the export to serve; a provisional timeline back-planned from the defense date.
+
+**Repository/file changes:** Create `16_Web_Demo/` with README, `deployment_registry.csv` (header only), `platform_decision.md`, `web_policy.md`, `hosted_model.md`, and a permitted `samples_manifest.csv`. Add decision records under `01_Project_Management/decision_log/`.
+
+**Execution procedure:**
+
+1. **Identify the best model.** Read the G11 freeze record and confirm the MODEL ID selected by the pre-declared validation rule. Confirm it has a G12 EVAL record and G13 limitations. Record MODEL ID, export hash, PP ID, class-map hash and the final-test Precision/Recall/mAP@0.5 to display. Do not re-rank models using final-test scores or demo appearance.
+2. **Choose the export to serve.** Prefer the exact evaluated export. If the host needs a different format or precision (for example ONNX/CPU), plan a parity/tolerance check under OS §8.1, or register and evaluate it as a separate artifact.
+3. **Compare hosting candidates (UD22).** Compare the model size, RAM, CPU latency per OPG image, cold start, cost over the defense window, HTTPS, secret storage, access control, team ownership of the account, and container support. Candidate categories: managed ML demo hosts (for example Hugging Face Spaces with Gradio/Streamlit), container/app hosts (for example Render, Railway, Fly.io), a university server, or a small VPS. Optionally run the hosting spike to measure cold start and latency.
+4. **Set the data policy (UD23).** Decide the access mode and whether to allow uploads or only curated samples. Recommended: curated, disclosure-reviewed samples plus optional in-memory uploads that are never stored. Also decide retention, logging, size/type limits and the exact disclaimer text. Have the dental reviewer approve sample images and wording.
+5. **Set lifetime and rights (UD24).** Decide whether the site stays up, is frozen or is taken down after the defense; who pays; and whether the weights' license allows placing them on the host.
+6. Back-plan dates from the defense: build complete, deployed, rehearsal, freeze (no changes) at least a few days before the defense.
+
+**Planning/review prompt:**
+
+> Using the G11 freeze record, model registry, EVAL report and STEP-037 guide, identify the final best model and its exact export. Compare hosting options for that artifact against size, CPU/GPU latency, cold start, budget, access control and data policy. List UD21-UD24 decisions needed and their deadlines from the defense date. Do not pick a model by test score or appearance, and do not invent platform limits; check current documentation.
+
+**Implementation prompt:**
+
+> Create the `16_Web_Demo/` records and decision files from approved choices only. Write the hosted-model statement with MODEL/EVAL/freeze IDs and hashes copied from registries. Leave unapproved fields as `Unresolved / Human Decision Required`. No deployment yet, and no patient images in any spike.
+
+**Human-only actions and decisions:** The supervisor confirms UD21 (requirement, defense date, live vs fallback expectations) and approves the hosted model statement. Researchers choose the platform and budget (UD22). The custodian and dental reviewer approve the data policy, sample images and disclaimer (UD23). Researchers, supervisor and custodian decide lifetime and rights (UD24).
+
+**Version-control/artifact expectations:** Commit policy/decision records and the sample manifest only; keep sample image bytes in the permitted tier. Never commit tokens, account passwords or weights.
+
+**Documentation updates:** Decisions register, dashboard timeline, `16_Web_Demo/README.md`, risk register (platform limits, cold start, account expiry, network at venue).
+
+**Verification checklist:**
+
+- [ ] Hosted MODEL ID matches the G11 freeze record and has a G12 EVAL and G13 record.
+- [ ] Export to serve is the evaluated export, or a parity/evaluation plan exists.
+- [ ] Platform decision is backed by measured or documented limits for this model.
+- [ ] Data policy, disclaimer and sample images are approved; no unreviewed patient image is bundled.
+- [ ] Defense-date-based timeline and freeze date recorded.
+
+**Common mistakes:** Hosting the model with the best test score instead of the frozen selection; picking a free tier that cannot load the model or sleeps during the defense; using real patient images in a spike; assuming a public dataset license allows public redistribution of its images.
+
+**Recovery procedure:** If the platform cannot run the best model, first try a larger tier or another host. Only then consider a registered, separately evaluated lighter variant, labeled honestly. If the model identification was wrong, supersede the DEC record and restart from step 1.
+
+**Definition of Done:** UD21-UD24 decisions recorded at the level needed to build; the final best model and its exact export are identified with traceable IDs and hashes; the platform and data policy are approved. Universal DoD applies; this is a required future state, not a completed assessment.
+
+**Next step:** [STEP-048](#step-048)
+
+---
+
+<a id="step-048"></a>
+## STEP-048 — Build the web application over the frozen inference path and verify parity
+
+**Objective:** Build a thin website and API that runs the final best model through the STEP-037 inference entry point and produces the same boxes as the evaluated prototype.
+
+**Why this step exists:** A demo that quietly re-implements preprocessing or changes thresholds shows a different model from the one in the thesis. Parity testing proves that what examiners see is the evaluated model.
+
+**Governing section references:** [OS §8.1](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-08); [OS §8.3](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-08-3); [OS §2](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-02); [OS §10](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-10); [canonical schemas and DoD](./OPG_RESEARCH_OPERATING_SYSTEM.md#appendix-a).
+
+**Prerequisites:** STEP-047 decisions approved (hosted model, export, platform, data policy); STEP-037 entry point and tests passing.
+
+**Estimated difficulty and time (provisional):** Moderate to hard; 10–20 hours across UI, API, container, tests and parity sessions.
+
+**Parallelizable:** UI layout, the About page and container work can proceed in parallel. Parity testing waits for the final export.
+
+**Inputs:** Hosted-model statement, export and hash, PP/class-map versions, STEP-037 entry point, approved sample images, web policy, disclaimer text and EVAL metrics to display.
+
+**Expected outputs:** Working `web/` app (upload/sample selection, overlay viewer, labels/scores, metadata panel, About-this-model page with EVAL metrics and limitations, disclaimer, structured result download if approved). Also: a container definition, web tests, a parity report and a local run guide.
+
+**Repository/file changes:** Create `web/` (app, API, static assets, `Dockerfile` or equivalent, dependency lock, `tests/`). Add `16_Web_Demo/parity_checks/PARITY_<date>.md` and `12_Documentation/web_demo_guide.md`. Model weights are fetched by pointer and hash, not committed.
+
+**Execution procedure:**
+
+1. Scaffold the app with the framework chosen in UD22 (for example Gradio/Streamlit for speed, or FastAPI plus a simple front end). Call the STEP-037 entry point directly; do not copy preprocessing code.
+2. At startup, load the export from the approved location, verify its SHA-256 against the model registry, and refuse to start on mismatch.
+3. Build the results view: original image with boxes, class labels, scores, counts per class, MODEL/PP/class-map/source revision, and web response time labeled as not the reported FPS. Add the persistent research-only disclaimer and an About page with the final-test metrics copied from EVAL.
+4. Implement input safety from UD23: type/size/dimension limits, timeouts, in-memory processing, scrubbed logs and rate limiting. Map errors to the OS §8.1 contract (zero detections, unsupported/corrupt input, missing model, class-map mismatch, resource failure).
+5. Parity test: run the same permitted inputs through STEP-037 and through the web API (inside the container). Compare boxes/classes/scores within the approved tolerance and save the report.
+6. Run the container locally as the future offline fallback and record the exact command.
+
+**Planning/review prompt:**
+
+> Design a minimal web app for the hosted best model that calls the STEP-037 entry point unchanged. Specify startup hash verification, result view, About page metrics source, input limits, error mapping, logging and the parity test with tolerance. Identify anything that would change model behaviour and require re-evaluation.
+
+**Implementation prompt:**
+
+> Implement `web/` as a thin layer over `src/opg` inference, with startup hash verification, approved input policy, disclaimer, About page values read from the EVAL record, structured errors and web tests. Build the container, run the parity test on permitted inputs and save the report. Do not change thresholds, preprocessing or the class map, and do not store uploads.
+
+**Human-only actions and decisions:** The dental reviewer checks label names, overlay readability and the disclaimer. The supervisor reviews the About page wording and metrics shown.
+
+**Version-control/artifact expectations:** Commit app code, container definition, lock files, tests, parity report and guide. Keep weights and sample images in approved tiers; keep secrets in the platform secret store.
+
+**Documentation updates:** Web demo guide (local run, container run, environment variables without values), parity report, risk register updates.
+
+**Verification checklist:**
+
+- [ ] App refuses to start if the model hash does not match the registered best model.
+- [ ] Parity with STEP-037 outputs is within the approved tolerance on all permitted test inputs.
+- [ ] Error cases return clear messages; zero detections is not shown as "healthy."
+- [ ] Disclaimer, model IDs and EVAL-sourced metrics are visible.
+- [ ] No uploads stored and logs contain no image data or identifiers.
+- [ ] Container runs locally with the recorded command.
+
+**Common mistakes:** Re-writing resize/normalize in the web code; lowering the confidence threshold so more boxes appear; hardcoding metrics by hand; committing weights or tokens; showing web response time as FPS.
+
+**Recovery procedure:** On parity failure, remove the divergent web-side logic and call the entry point unchanged. If the export itself differs, return to STEP-047 step 2 (tolerance check or separate evaluation). Rerun parity and update the report.
+
+**Definition of Done:** A containerized web app serves the hash-verified final best model with parity evidence, approved input policy, visible disclaimer and documented local fallback. Universal DoD applies; this is a required future state, not a completed assessment.
+
+**Next step:** [STEP-049](#step-049)
+
+---
+
+<a id="step-049"></a>
+## STEP-049 — Deploy the best model, verify the live site and rehearse the defense demonstration
+
+**Objective:** Put the final best model online, prove the live site matches the evaluated model, prepare a fallback, rehearse the defense demo and pass G17.
+
+**Why this step exists:** A site that works on a laptop can fail on the host: memory limits, cold starts, missing secrets, venue network. Examiners must see a stable, honest demonstration on the day.
+
+**Governing section references:** [OS §8.3](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-08-3); [OS §10](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-10); [OS §13](./OPG_RESEARCH_OPERATING_SYSTEM.md#os-13); [canonical schemas and DoD](./OPG_RESEARCH_OPERATING_SYSTEM.md#appendix-a).
+
+**Prerequisites:** STEP-048 complete with parity evidence; G14 PASS for the hosted model's lineage; platform account owned by the team; UD23/UD24 approved.
+
+**Estimated difficulty and time (provisional):** Moderate; 4–8 hours for deployment and checks, plus 1–2 rehearsals and a defense-day check.
+
+**Parallelizable:** Runbook and screenshots can be prepared while deployment is verified. Final freeze and rehearsal are sequential.
+
+**Inputs:** Container/app from STEP-048, registered export and hash, platform decision, web policy, approved samples, EVAL metrics, defense date/venue details.
+
+**Expected outputs:** Live HTTPS URL serving the best model; DEPLOY#### record and registry row; hosted parity and external smoke-check reports; demo runbook (T30); offline fallback tested; screen recording and screenshots (FIG IDs if used in the thesis); G17 assessment.
+
+**Repository/file changes:** Add `16_Web_Demo/DEPLOY####.md`, a registry row, `smoke_checks/`, hosted parity report, `demo_runbook.md` and `reviews/G17_assessment_<date>.md`; record screenshots in `10_Figures_Tables/assets.csv` if used in writing.
+
+**Execution procedure:**
+
+1. Deploy the container to the chosen host. Set secrets and environment variables in the platform store. Confirm startup hash verification passes on the host.
+2. Run hosted parity on the same permitted inputs as STEP-048, and an external-network smoke check over HTTPS (valid, zero-detection, corrupt and oversized inputs). Check memory use and cold-start time.
+3. Confirm the live configuration matches UD23: access mode, no stored uploads, scrubbed logs, visible disclaimer and About page values.
+4. Write the DEPLOY record (platform, URL, commit, image digest, MODEL ID, export hash, PP, class map, parity/smoke paths) and freeze the deployment. Any later change creates a new DEPLOY ID with fresh checks.
+5. Prepare the fallback: local container command on the presenter's laptop, a short screen recording and screenshots. Test the fallback without internet.
+6. Write the T30 runbook and rehearse with the supervisor: sample images to show, talking points (selected-on-validation best model, final-test metrics, limitations, research-only use), and switching to the fallback.
+7. Assess G17 with evidence. On defense day, warm the site and record a smoke check before presenting. After the defense, carry out the UD24 lifetime action and hand the DEPLOY records to STEP-045.
+
+**Planning/review prompt:**
+
+> Plan deployment and verification of the final best model on the chosen host: secrets, hash check, hosted parity, external smoke tests, privacy configuration, cold-start mitigation, fallback and rehearsal. List the G17 evidence required and what would block the live demo.
+
+**Implementation prompt:**
+
+> Deploy the approved container, run hosted parity and smoke checks, save the outputs and write the DEPLOY record and runbook. Do not change model, thresholds or preprocessing on the host. Do not mark G17 PASS without the supervisor walkthrough evidence.
+
+**Human-only actions and decisions:** The deployment owner performs the deployment with team-owned credentials. The supervisor attends the rehearsal and signs off G17. The presenter confirms the fallback on their own machine. Researchers execute the post-defense UD24 action.
+
+**Version-control/artifact expectations:** Commit DEPLOY/smoke/parity/runbook records and tag the deployed source commit. Store the recording and screenshots in permitted storage. Never commit credentials.
+
+**Documentation updates:** Deployment registry, runbook, dashboard (live URL and status), thesis system/implementation section via STEP-040/041 (screenshots labeled as illustrative output), G17 entry in `gates.csv`.
+
+**Verification checklist:**
+
+- [ ] Live site serves the hash-verified final best model (MODEL ID matches the G11 freeze record).
+- [ ] Hosted parity within tolerance; external HTTPS smoke checks pass.
+- [ ] UD23 privacy configuration verified on the live host.
+- [ ] Offline fallback tested without internet; recording/screenshots saved.
+- [ ] Runbook rehearsed with supervisor; G17 assessment recorded with evidence.
+
+**Common mistakes:** Redeploying a "slightly better" model the night before; relying on a free tier that sleeps; forgetting secrets on the host; no fallback when the venue Wi-Fi fails; presenting demo outputs as test results.
+
+**Recovery procedure:** If the live site fails, present the tested fallback and record the incident. Fix on a new DEPLOY ID with fresh parity and smoke checks, and reassess G17. If a model change is truly needed, return to STEP-047 with a registered, evaluated MODEL.
+
+**Definition of Done:** G17 PASS: the final best model is live over HTTPS with traceable DEPLOY evidence, parity, privacy configuration, a rehearsed runbook and a tested offline fallback. Universal DoD applies; this is a required future state, not a completed assessment.
+
+**Next step:** Present at the defense; then [STEP-045](#step-045) archives the deployment record and [STEP-046](#step-046) checks G17 within G16.
 
 ---
 
@@ -2820,19 +3016,20 @@ The report's research-gap argument is tested in STEP-004-009. A narrowed or refu
 - Baseline environment, evaluation plan, pipeline checks and checkpoint restore evidence precede full training. G10 applies to each qualifying experiment, including approved repeats.
 - Final-test inference starts only after validation-only selection and G11 freeze. Error analysis does not authorize further tuning on the same final test. Exposure and correction procedures preserve the original record.
 - Quantitative evaluation, limitations and reproducibility precede submission readiness. Actual thesis submission and paper submission/disposition precede archive and final completion. Journal acceptance is not an invented requirement.
+- The web branch (STEP-047–049) hosts only the G11-frozen, G12-evaluated final best model, through the STEP-037 entry point with parity evidence. Deployment needs G14 PASS. G17 feeds the archive and G16, and the demo never feeds back into model selection.
 
 ## Canonical cross-reference checklist
 
 | Item | Validation result for the planning documents |
 |---|---|
 | Exact approved title | Present verbatim in both documents |
-| Scope | 2D OPG, YOLO, bounding-box localization, selected approved visible targets, research prototype |
-| Stages and steps | S01-S15 aligned to STEP-001-046; contiguous unique step IDs |
-| Gates | G01-G16 share names, ownership steps and evidence requirements with OS Section 13 |
-| Decisions | UD01-UD20 remain canonical in OS Section 1.6; steps resolve them at their required milestones |
+| Scope | 2D OPG, YOLO, bounding-box localization, selected approved visible targets, research prototype, hosted web demonstration of the final best model for the defense |
+| Stages and steps | S01-S16 aligned to STEP-001-049; contiguous unique step IDs |
+| Gates | G01-G17 share names, ownership steps and evidence requirements with OS Section 13 |
+| Decisions | UD01-UD24 remain canonical in OS Section 1.6; steps resolve them at their required milestones |
 | Registries | OS Appendix B remains the sole schema/path authority; no competing scientific ledger introduced |
-| Templates | T01-T28 installed by STEP-003 and instantiated in owning domain folders |
-| Per-step completeness | All 46 steps contain all 20 labeled operational fields, including prerequisites, outputs, verification, recovery and DoD; title and ID appear in each heading |
+| Templates | T01-T30 installed by STEP-003 and instantiated in owning domain folders |
+| Per-step completeness | All 49 steps contain all 20 labeled operational fields, including prerequisites, outputs, verification, recovery and DoD; title and ID appear in each heading |
 | Links | Relative file links and explicit internal anchors checked across both documents |
 | Topic contamination | Search found none of the unrelated reference-project concepts or implementation-stack mandates checked |
 | Source history | Original hashes matched at v1.0.0 authoring; later user-directed deletion is recorded in OS Appendix F, with no claim of current source availability |
@@ -2843,12 +3040,18 @@ The report's research-gap argument is tested in STEP-004-009. A narrowed or refu
 - STEP-002 establishes the minimal data-tool runtime and G02 verifies it. STEP-023 separately locks the YOLO runtime and protects earlier preprocessing provenance.
 - G15 is assessed per document: thesis at STEP-042, paper at STEP-044 before its submission. A documented paper deferral is not a gate PASS. The 46 steps, 15 stages and 16 gate IDs are retained.
 
+## Revision v1.2.0 additions
+
+- Added stage S16 for the team-requested hosted web demonstration: STEP-047 (scope, hosted best model, platform, data policy), STEP-048 (thin web app plus parity test), STEP-049 (deployment, live verification, fallback, rehearsal, G17).
+- "Best model" means the validation-selected MODEL frozen at G11 and evaluated at G12. Any other hosted variant must be registered, evaluated and labeled as such.
+- Added UD21-UD24, gate G17, templates T29-T30, the Deployments registry and `web/` + `16_Web_Demo/` homes. STEP-001/003/037/045/046 and G16 now reference the web branch. Earlier step and gate numbers are unchanged.
+
 ## Verification scope and initial execution state
 
 The authoring review checked both files exist and are non-empty, exact title consistency, all 46 step blocks and required fields, relative-link/anchor targets, absence of unrelated template content, source-file hashes, and editor diagnostics. Manual review checked the stage/gate sequence, unknown scientific decisions, annotation workflow, test-isolation policy, reporting boundaries and source-grounded diagram details. At initial delivery the workspace contained the three sources and two plans. Following the user-directed deletion, it contains only the two planning deliverables; current source links point to the availability record rather than absent files.
 
-These checks establish **planning-document completeness and consistency only**. They do not certify data quality, annotation agreement, a trained model, a passed scientific gate, a submitted thesis or a clinically validated system. All execution steps begin NOT STARTED and all G01-G16 gates remain NOT ASSESSED until their actual evidence is produced. Human adoption of the operating policies and resolution of blocking UD items are still future work.
+These checks establish **planning-document completeness and consistency only**. They do not certify data quality, annotation agreement, a trained model, a passed scientific gate, a submitted thesis or a clinically validated system. All execution steps begin NOT STARTED and all G01-G17 gates remain NOT ASSESSED until their actual evidence is produced. Human adoption of the operating policies and resolution of blocking UD items are still future work.
 
 **Start execution:** [STEP-001](#step-001). **Policy authority:** [OPG Research Operating System](./OPG_RESEARCH_OPERATING_SYSTEM.md).
 
-*End of OPG Project Execution Blueprint — v1.1.0; 46 focused step types across 15 research stages.*
+*End of OPG Project Execution Blueprint — v1.2.0; 49 focused step types across 16 research stages.*

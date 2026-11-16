@@ -8,7 +8,7 @@
 |---|---|
 | Document | OPG_RESEARCH_OPERATING_SYSTEM.md |
 | Type | Project-specific research governance and operational handbook |
-| Version / date | v1.1.0 / 2026-11-16 |
+| Version / date | v1.2.0 / 2026-11-16 |
 | Status | Complete planning document; proposed operating policies awaiting human ratification; research execution NOT VERIFIED |
 | Institution | Daffodil International University, Department of Computer Science and Engineering (report cover) |
 | Report context | FYDP (Title Phase) Evaluation Report; reporting period Summer 2026; submission date 13 August 2026 |
@@ -18,7 +18,7 @@
 | Operational owner | Research team; named task owners and qualified dental reviewer remain to be assigned |
 | Scientific authority | Title evaluation report (reviewed during v1.0.0 authoring; subsequently removed at the user’s request; see [source status](#source-status)), interpreted within the user's binding approved scope |
 | Execution companion | [OPG Project Execution Blueprint](./OPG_PROJECT_EXECUTION_BLUEPRINT.md) |
-| Intended output | Research prototype for dental object localization in 2D OPG images; supplementary aid, not validated clinical diagnosis |
+| Intended output | Research prototype for dental object localization in 2D OPG images, plus a hosted web demonstration of that prototype for the thesis defense; supplementary aid, not validated clinical diagnosis |
 
 The cover's signed certificate is part of the supplied title-phase record. It does not establish approval of the new policies, a clinical study, a dataset license, or an annotation ontology. No such approval is inferred here.
 
@@ -28,6 +28,7 @@ The cover's signed certificate is part of the supplied title-phase record. It do
 |---|---|---|---|
 | v1.0.0 | 2026-11-16 | Initial source-grounded OPG handbook and aligned 46-step execution architecture | Proposed; no execution gates passed |
 | v1.1.0 | 2026-11-16 | Recorded user-directed source deletion; added early data-tool environment readiness; separated thesis and paper submission-readiness assessments | Editorial/workflow correction authorized; scientific execution gates remain NOT ASSESSED |
+| v1.2.0 | 2026-11-16 | Added the team-requested hosted web demonstration for the thesis defense: Section 8.3, stage S16, STEP-047–049, gate G17, UD21–UD24, templates T29–T30, Deployments registry, `web/` and `16_Web_Demo/` homes | Team-requested addition; requirement and scope confirmation pending under UD21; all gates remain NOT ASSESSED |
 
 Record subsequent changes with author, reason, affected decisions, affected steps, and approval evidence. A title or scope change requires formal supervisor review; a typographical correction does not silently change scientific commitments.
 
@@ -62,9 +63,11 @@ This handbook governs collection, preprocessing, annotation, preparation, YOLO t
 
 The research contribution is a focused, reproducible detection workflow and an honestly evaluated prototype. The report's gap analysis is a proposal to investigate. It does not establish that no OPG detection system exists, that YOLO is superior, or that this project is novel. Literature review must test those propositions against direct and contradictory evidence.
 
+At the research team's request, the final evaluated prototype is also to be shown through a **hosted web demonstration** at the thesis defense. This is a team/defense requirement added after the title report, not a REPORT FACT. It is governed by [Section 8.3](#os-08-3) and executed in stage S16 (STEP-047–049, gate G17). The web demonstration is a thin presentation layer over the same frozen, evaluated inference path. It does not produce evaluation evidence, and it is not clinical deployment.
+
 The architecture follows the management discipline of the two supplied Markdown templates: canonical artifact homes, stable identifiers, source-backed claims, explicit human decisions, immutable experiment records, recovery procedures, and evidence-based gates. Its scientific methods, computing platform, and implementation library must be chosen for this project. No platform-specific development arrangement is inherited from the templates.
 
-This is a plan, not an account of completed research. All G01-G16 gates initially have status **NOT ASSESSED**, which blocks dependent work just as a failed gate does. Empty registries, proposed checks, and this document's self-review are not evidence that experiments or scientific gates have passed.
+This is a plan, not an account of completed research. All G01-G17 gates initially have status **NOT ASSESSED**, which blocks dependent work just as a failed gate does. Empty registries, proposed checks, and this document's self-review are not evidence that experiments or scientific gates have passed.
 
 <a id="os-01"></a>
 # 1. Project constitution and source authority
@@ -104,9 +107,9 @@ Page numbers below are physical PDF pages, starting with the photographic cover 
 
 ## 1.3 Binding scope and exclusions
 
-**In scope:** 2D OPG image collection and characterization; approved dental object/visible-abnormality box annotation; reproducible preprocessing and splitting; YOLO model selection and training; validation; held-out testing; detection metrics and timing; failure analysis; thesis/paper documentation; a research inference prototype.
+**In scope:** 2D OPG image collection and characterization; approved dental object/visible-abnormality box annotation; reproducible preprocessing and splitting; YOLO model selection and training; validation; held-out testing; detection metrics and timing; failure analysis; thesis/paper documentation; a research inference prototype; and a hosted web demonstration of that prototype for the thesis defense (team requirement; scope confirmation under UD21; governed by Section 8.3).
 
-**Outside the present approved study:** 3D CBCT modeling, segmentation as a replacement primary task, image-level disease classification as a substitute for localization, treatment recommendations, autonomous diagnosis, clinical deployment, or proven reductions in clinician workload. Other methods can be reviewed as related literature. A new task or clinical validation study requires a separately justified scope amendment.
+**Outside the present approved study:** 3D CBCT modeling, segmentation as a replacement primary task, image-level disease classification as a substitute for localization, treatment recommendations, autonomous diagnosis, clinical deployment, or proven reductions in clinician workload. Other methods can be reviewed as related literature. A new task or clinical validation study requires a separately justified scope amendment. The hosted web demonstration is a research showcase, not clinical deployment: it must not be offered for patient care, must display a research-only disclaimer, and must not retain uploaded images beyond the UD23 policy.
 
 Avoid interpreting an absence of a predicted box as absence of disease. Detection scores are model scores, not calibrated diagnostic probabilities. A reviewer may conclude that some diagram examples are unsuitable for reliable box labeling on the available OPG images. That decision must be documented, not hidden behind an ambiguous umbrella class.
 
@@ -162,9 +165,13 @@ Every row below is **Unresolved / Human Decision Required**. The canonical futur
 | UD15 | Additional analyses: AP across IoUs, uncertainty, repeats, external data, subgroups, robustness | Researchers + supervisor | G09; freeze at G11 | Feasible preregistered scope or explicit non-adoption reasons |
 | UD16 | Numeric scientific success criteria, if required by supervisor | Supervisor + researchers | G09 | Rationale grounded in task/data; distinct from gate validity |
 | UD17 | Thesis format, dates, authorship, acknowledgements, paper venue and submission obligations | Researchers + supervisor | Writing plan; G15 | Actual institutional/venue instructions and author agreement |
-| UD18 | Prototype interface and permitted demonstration material | Researchers + dental reviewer | STEP-037 | Minimal approved inference interface and disclosure review |
+| UD18 | Prototype interface and permitted demonstration material | Researchers + dental reviewer | STEP-037 | Minimal approved inference interface and disclosure review; the hosted web layer is decided separately under UD21-UD24 |
 | UD19 | Report bibliography metadata/content verification, including typographic/encoding issues | Literature lead | G03 / STEP-009 | Original sources checked; unresolved sources excluded from supporting claims |
 | UD20 | Release license, archival access/retention, artifact host and post-project ownership | Researchers + custodian | STEP-045; permissions before any upload | Tiered release/retention agreement and restore evidence |
+| UD21 | Confirm that a hosted web demonstration is required at the defense; its purpose and scope (research showcase only); defense date; required availability window; whether a live link, an offline local run, or both must be shown | Researchers + supervisor | STEP-047 | Written supervisor/department confirmation and the actual defense date or window |
+| UD22 | Hosting platform and compute tier (CPU or GPU), web framework, cost/budget, account ownership, region, URL/domain, and whether the model is served from a container | Researchers + supervisor | STEP-047; G17 | Platform comparison against model size/latency/budget and a hosting spike result; no provider assumed |
+| UD23 | Access mode (public, password/invite, institution-only); input policy (user uploads vs curated permitted sample images only); upload size/type limits; retention of uploads, outputs and logs; permitted demonstration images; disclaimer wording | Researchers + data custodian + dental reviewer | STEP-048 | Approved web data/privacy policy and disclosure review of every bundled sample image |
+| UD24 | Post-defense lifetime of the hosted demo (keep, freeze, or take down), who pays and owns the account, rights to place model weights on the host, and archival of the deployment record | Researchers + supervisor + custodian | STEP-049; aligned with UD20 at STEP-045 | Recorded lifetime decision, license check for weights on the host, and archive entry |
 
 New uncertainties receive new UD numbers. The blueprint references this register rather than creating divergent assumptions. A blocking unknown remains a blocker even if a software library has a default for it.
 
@@ -203,6 +210,8 @@ workspace/
   13_Automation/
   14_Templates_Prompts/
   15_Archive/
+  web/                                       # thin web demo app + deployment config (S16)
+  16_Web_Demo/                               # deployment registry, policies, runbook, checks (S16)
 ```
 
 ## 2.2 Folder contracts
@@ -229,10 +238,12 @@ Every materialized domain folder has a README covering purpose, allowed contents
 | `13_Automation/` | Implementer / all roles | Thin commands for registry checks, artifact verification, figure generation and orchestration | No independent hidden pipeline logic or automated scientific approval |
 | `14_Templates_Prompts/` | Researchers / all roles | Approved blank templates, planning/implementation/review prompts, version log | Filled instances live in owning domain; prompts contain no patient data or secrets |
 | `15_Archive/` | Release owner / authorized readers | Immutable release snapshots, `archive_manifest.csv`, receipts and retention instructions | No active drafts or overwriting released records |
+| `web/` | Deployment owner / demo users | Thin web front end and API that call the `src/opg/` inference entry point; container/deployment configuration; web-specific tests | No reimplemented preprocessing, thresholds or class maps; no weights, patient images, secrets or access tokens in Git |
+| `16_Web_Demo/` | Deployment owner / supervisor and examiners | `deployment_registry.csv`, `DEPLOY####.md` records, `web_policy.md` (UD23), `platform_decision.md` (UD22), `parity_checks/`, `smoke_checks/`, `demo_runbook.md`, permitted sample-image manifest, screenshots for the thesis | No stored user uploads unless UD23 approves; no demo screenshot presented as evaluation evidence |
 
 ## 2.3 Artifact placement and integration contracts
 
-Code is centralized in `src/opg/`; domain folders contain specs, configurations, records, and outputs. Notebooks are optional thin callers in the relevant experiment or analysis folder. A local command-line or script-based prototype is sufficient unless UD18 chooses another minimal interface. No separate product architecture is required by the report.
+Code is centralized in `src/opg/`; domain folders contain specs, configurations, records, and outputs. Notebooks are optional thin callers in the relevant experiment or analysis folder. A local command-line or script-based prototype is sufficient unless UD18 chooses another minimal interface. No separate product architecture is required by the report. The team-requested hosted demonstration (Section 8.3) lives in `web/` as a thin layer that imports the same `src/opg/` inference entry point; it never forks the scientific pipeline.
 
 Maintain this data lineage: `source → DS version → ANN version → SPLIT → PP → REL → EXP → CKPT/MODEL → EVAL → FIG/TAB → CLAIM → WR → release`. Deterministic pre-annotation preparation may occur before splitting, but fitted preprocessing and stochastic augmentation must occur only after split locking under Section 4. The split maps source identities so all derived images inherit their original partition.
 
@@ -266,7 +277,7 @@ Run complementary queries for image quality, annotations, dental abnormalities, 
 
 ## 3.3 Research-gap verification
 
-Retain the report's G1-G6 labels as source labels; project gap records use GAP#### and a `ReportGap` field to avoid confusion with project gates G01-G16.
+Retain the report's G1-G6 labels as source labels; project gap records use GAP#### and a `ReportGap` field to avoid confusion with project gates G01-G17.
 
 | Report proposal | What the review must test | Possible honest outcome |
 |---|---|---|
@@ -505,7 +516,7 @@ G12 requires all four required metrics under a complete protocol, failure counts
 
 ## 8.1 Minimal prototype contract
 
-Implement only a research inference path that accepts an approved 2D OPG input, validates it, applies the registered deterministic preprocessing, loads a registered model, produces class-labeled boxes with scores, maps boxes to the original reference image, and exports a structured result. A script or command-line entry point with optional box overlay is a sufficient recommendation. The report does not require a hosted application.
+Implement only a research inference path that accepts an approved 2D OPG input, validates it, applies the registered deterministic preprocessing, loads a registered model, produces class-labeled boxes with scores, maps boxes to the original reference image, and exports a structured result. A script or command-line entry point with optional box overlay is a sufficient recommendation. The report does not require a hosted application; the team's later defense requirement adds a hosted web demonstration, governed by [Section 8.3](#os-08-3), which must call this same entry point.
 
 Outputs include model/checkpoint and preprocessing versions, class-map version, source revision, input identifier, timing boundary, and processing status. Explain zero detections, unsupported input, corrupted input, missing model, invalid class map, and resource failure clearly. Zero detections is a valid technical outcome, not a negative diagnosis. Avoid retaining patient inputs beyond approved research policy.
 
@@ -518,6 +529,45 @@ Distinguish: (a) reloading the archived model and reproducing predictions/metric
 The audit in STEP-038 uses a clean authorized environment or a demonstrably fresh environment, retrieves artifacts by manifest, verifies checksums, follows written commands, regenerates metrics and representative figures, and compares results under documented tolerances. Recheck the release class map, split, training configuration, evaluator, and inference timing setup. Reproduction cannot depend on unrecorded notebook state or a private chat history.
 
 If data cannot be shared, provide lawful access instructions and restricted audit evidence. Restricted access is not an excuse to fabricate public reproducibility; state what an external reader can and cannot reproduce. G14 fails on missing essential artifacts or unexplained disagreement. Repairs generate new artifact/evaluation versions and appropriate downstream review.
+
+<a id="os-08-3"></a>
+## 8.3 Hosted web demonstration for the defense
+
+**Status and authority.** The research team requires that the final result be shown through a website at the thesis defense. This is a team/defense requirement added after the title report (UD21), not a REPORT FACT and not a new scientific objective. It adds a presentation deliverable; it does not change O1-O3, the RQs, the evaluation protocol or the scope exclusions in Section 1.3.
+
+**Which model is hosted: the final best model.** The hosted model is the project's single final best model, defined as follows: the MODEL selected on validation only and frozen at G11 (STEP-031), then evaluated on the final test at G12 (STEP-035), with G13 limitations recorded. "Best" means the pre-declared validation selection rule in the frozen protocol, not the highest final-test score after the fact, not the model that looks best in the demo, and not a newer untracked run. Record the hosted MODEL ID, the G11 freeze record and the EVAL ID in the DEPLOY record, and show the model's final-test Precision, Recall and mAP@0.5 on an "About this model" page, copied from the EVAL report. If the team later wants to host a different model (for example a smaller, faster variant for a free CPU host), it must already be a registered, evaluated MODEL with its own EVAL record. The site must label it as that model, never as the final best model, and the thesis must cite its own metrics. Any export (for example ONNX, half precision or quantization) of the best model passes the Section 8.1 tolerance check or is registered and evaluated as a separate inference artifact.
+
+**Architecture contract (PLANNING RECOMMENDATION).**
+
+```text
+Browser (examiner) ──HTTPS──> web/ front end ──> web/ API ──> src/opg inference entry point (STEP-037)
+                                                              │
+                                                              └─> registered MODEL export (hash-verified at startup)
+                                                                  + registered deterministic PP + class map
+```
+
+1. The web layer is thin. It imports the STEP-037 inference entry point. It must not reimplement preprocessing, resizing, thresholds, NMS, class maps or coordinate mapping.
+2. It serves only a registered MODEL/export whose hash matches the model registry. The application verifies the hash at startup and displays MODEL ID, PP ID, class-map version and source revision on the results page.
+3. A different model, export format, precision mode or backend is a new deployment (new DEPLOY ID) and needs a new parity check. Under Section 8.1, a precision/backend change beyond tolerance also needs a newly evaluated inference artifact.
+4. The demo shows: image input (upload and/or curated sample selection per UD23), the original image with box overlays, class labels and scores, a structured result download (optional), processing status, and a persistent research-only disclaimer.
+5. Any time shown on screen is labeled **web response time**. It includes network, queueing and cold-start effects and is not the G12 FPS measurement. Thesis speed claims cite EVAL records only.
+
+**Hosting choice (UD22).** No provider is mandated. Compare candidates on: ability to hold the model export and its runtime; CPU-only latency for one OPG image; cold-start/sleep behaviour; memory limit; cost over the required availability window; HTTPS; secret storage; access control; account ownership by the team, not one individual's expiring trial; and institutional acceptability. Candidate categories to evaluate include managed ML demo hosts (for example Hugging Face Spaces with Gradio or Streamlit), general container/app hosts (for example Render, Railway or Fly.io), a university/department server, or a small VPS. A container (for example a Dockerfile) is recommended so that the same image runs locally as an offline fallback. A pre-research **hosting spike** with a synthetic image and a generic non-medical model is allowed at any time after G02 to de-risk the platform. It is never research evidence and must not use patient data.
+
+**Privacy and security (UD23).**
+
+- Default recommendation: curated, disclosure-reviewed sample images only, plus optional uploads processed in memory and not stored. Persisting uploads or outputs requires an explicit UD23 approval and retention rule.
+- Every bundled sample image must have distribution permission and pass the Section 1.5 disclosure review (no burned-in names, IDs, dates or institution marks).
+- Enforce HTTPS, file type/size/dimension limits, request timeouts and basic rate limiting. Reject non-image or corrupted input with the Section 8.1 error contract.
+- Logs record request status, timing and DEPLOY ID only; no image bytes, filenames that may carry identifiers, or client personal data.
+- Secrets and tokens live in the platform secret store, never in Git or in the container image. Model weights are fetched from the approved artifact tier or bundled only when UD24 confirms the license allows it.
+- Access mode (public link, password/invite, institution-only) follows UD23. A public link does not imply permission to publish the dataset.
+
+**Reliability for the defense.** Run health checks, warm the service before the defense, and record a smoke check from an external network on the defense day. Prepare a fallback: the same container or inference entry point running locally on the presenter's machine, plus a short screen recording and static screenshots of the live demo. A failed live link with a working fallback is a presentation incident, not a scientific failure.
+
+**Change control and records.** Each deployment receives a DEPLOY#### ID in `16_Web_Demo/deployment_registry.csv`, linking source commit, container/image digest, MODEL ID, export hash, PP ID, class-map hash, platform, URL, access mode, parity-check result and status. Do not tune thresholds or swap models in the demo to improve its appearance. That is the Section 8.1 "prettier demo" error. Demo screenshots used in the thesis receive FIG IDs and are labeled as illustrative system output, not as evaluation results.
+
+**Gate.** G17 (Section 13.2) assesses web demonstration readiness at STEP-049. G16 requires G17 current PASS when UD21 confirms the hosted demo is required, or an approved, recorded disposition otherwise. Post-defense lifetime and archival follow UD24/UD20.
 
 <a id="os-09"></a>
 # 9. Writing and submission operating system
@@ -606,6 +656,7 @@ Roles describe responsibilities; they do not require a separate person or autono
 | Implementer | Build reviewed data/model/evaluation functions | Cannot silently change classes, splits, or evaluation protocol |
 | Evaluation reviewer | Freeze checks, evaluator validity, evidence review | Cannot tune against final-test results |
 | Writing/release owner | Claim/citation audit, final files, receipts, archives | Cannot assert submission or acceptance without evidence |
+| Deployment owner | Build, host, monitor and present the web demonstration; maintain deployment registry and fallback | Cannot change model, preprocessing, thresholds or class map; cannot accept or store inputs beyond the UD23 policy |
 
 Human-task handoff: state the question, why evidence is needed, options and consequences, responsible person, blocking step/gate, required record/path, and verification method. Stop only dependent work; continue independent literature/documentation where allowed. Preserve a decision once authorized unless new evidence invalidates it. Never repeatedly ask for the same approval without a changed basis.
 
@@ -652,13 +703,14 @@ Store assessments in `01_Project_Management/gates.csv` and detailed `reviews/G##
 | G13 Errors and limitations / 036 | Systematic case review, label/error distinctions, reviewer evidence, bounded limitations and clinical wording | Cherry-picked examples, unsupported causes or utility claims; blocks final conclusions | Dental reviewer + supervisor |
 | G14 Reproducibility / 038 | Fresh-environment evidence; artifact retrieval/checksums; predictions/metrics regenerated; declared training reproducibility level; documented tolerances and limits | Missing artifacts, unrecorded state or unexplained discrepancy; blocks submission readiness | Reproduction reviewer |
 | G15 Document-specific submission readiness / 042 thesis; 044 paper if submitting | Complete relevant document and supplements; citation/claim/figure checks; actual institution or venue requirements; review responses and author/supervisor approval, separately evidenced for each document/version | Missing evidence blocks only that document’s submission; thesis does not await paper drafting. Approved paper deferral is a disposition, not a PASS | Supervisor + authors |
-| G16 Project completion / 046 | All applicable prior gates current; thesis receipt, paper disposition, source/artifact archive, access/retention and restore proof, deliverable inventory | Missing required submission/evidence/archive; blocks completion declaration | Researchers + supervisor |
+| G16 Project completion / 046 | All applicable prior gates current, including G17 when the hosted demo is required (UD21); thesis receipt, paper disposition, web demonstration record or approved disposition, source/artifact archive, access/retention and restore proof, deliverable inventory | Missing required submission/evidence/archive; blocks completion declaration | Researchers + supervisor |
+| G17 Hosted web demonstration readiness / 049 | UD21-UD24 decisions recorded; deployed DEPLOY record linked to registered MODEL/export hash, PP, class map and source commit; parity check against STEP-037 outputs within the approved tolerance; external-network smoke check over HTTPS; error-contract tests; privacy/retention configuration matches UD23; disclosure-reviewed sample images; research-only disclaimer visible; secrets outside Git; tested offline fallback and demo runbook; supervisor walkthrough | Model/preprocessing mismatch, unreviewed images, stored uploads without approval, missing disclaimer or no working fallback; blocks the live defense demonstration and, when UD21 requires it, G16 | Supervisor + deployment owner |
 
 ## 13.3 Gate failure and recovery
 
 Record failed item, evidence, affected artifacts, corrective action, owner, and retest. Return to the earliest responsible step, not automatically to the start of the project. Preserve the failed assessment and append a new assessment. A low score is not gate failure unless a prospectively approved scientific success target applies; even then report the valid negative result and discuss objective attainment honestly.
 
-Project completion means documented fulfillment of the approved deliverables and honest conclusions, not a positive hypothesis or publication acceptance. Final deliverables: source and environment record; authorized dataset/annotation/preprocessing/split pipeline and manifests; complete experiment and checkpoint records; registered models; valid evaluation and error reports; reproducibility and prototype guide; thesis submission; paper package/submission or approved disposition; immutable archive and recoverable backups.
+Project completion means documented fulfillment of the approved deliverables and honest conclusions, not a positive hypothesis or publication acceptance. Final deliverables: source and environment record; authorized dataset/annotation/preprocessing/split pipeline and manifests; complete experiment and checkpoint records; registered models; valid evaluation and error reports; reproducibility and prototype guide; hosted web demonstration record (DEPLOY, G17, runbook, fallback) or its approved disposition; thesis submission; paper package/submission or approved disposition; immutable archive and recoverable backups.
 
 <a id="os-14"></a>
 # 14. Template library
@@ -701,6 +753,8 @@ Instances belong to their domain folder; templates remain blank and versioned. R
 | T26 `archive.md` | Immutable handover / `15_Archive/` | Release ID; files/artifact versions/hashes; source tag; storage/access; licenses; exclusions; retention; restore proof; owner; receipts | Do not publicly package restricted images |
 | T27 `prompt.md` | Repeatable assistance / `14_Templates_Prompts/` | Role; objective; context; inputs; allowed outputs/paths; prohibited changes; uncertainty rules; checks; human boundary; version | No sensitive content or hidden assumed state |
 | T28 `risk_meeting.md` | Risk and milestone review / `01_Project_Management/meetings/` | Participants; progress/evidence; risks/triggers; options; actual feedback; decisions; actions/owners/dates; milestone forecast | Forecasts provisional; no fabricated meeting or signatures |
+| T29 `web_deployment.md` | Record one hosted deployment / `16_Web_Demo/DEPLOY####.md` | DEPLOY ID; platform/tier; URL; access mode; source commit; container/image digest; MODEL ID/export hash; PP ID; class-map hash; secrets location (not values); data/retention settings; parity-check result and tolerance; smoke-check evidence; known limits; status; superseded deployment | A redeploy with a different model or backend is a new DEPLOY, not an edit |
+| T30 `demo_runbook.md` | Defense-day demonstration script / `16_Web_Demo/demo_runbook.md` | Defense date/room/network; live URL and access; warm-up time; sample images to show and their permission records; talking points and disclaimer; expected outputs; offline fallback command; recording/screenshots location; contact/owner; post-demo actions | Rehearsed fallback, not an untested promise; no claims beyond EVAL evidence |
 
 ## 14.3 Copy-ready decision, gate, and configuration skeletons
 
@@ -770,7 +824,7 @@ This skeleton is not a package-specific runnable YOLO configuration. STEP-024/02
 
 ## A.1 Identifiers and naming
 
-Use stable, zero-padded IDs. Never reuse an assigned ID; mark retired or superseded records instead. IDs shown here are format examples, not actual datasets/models/results. STEP-001 through STEP-046, G01 through G16, UD01 through UD20, RF01 through RF16, and T01 through T28 are planning identifiers defined now.
+Use stable, zero-padded IDs. Never reuse an assigned ID; mark retired or superseded records instead. IDs shown here are format examples, not actual datasets/models/results. STEP-001 through STEP-049, G01 through G17, UD01 through UD24, RF01 through RF16, and T01 through T30 are planning identifiers defined now.
 
 | Entity | ID pattern | Canonical record |
 |---|---|---|
@@ -786,6 +840,7 @@ Use stable, zero-padded IDs. Never reuse an assigned ID; mark retired or superse
 | Evaluation / image | EVAL#### / IMG######## | Evaluation Registry / restricted image manifest |
 | Figure / table / writing unit | FIG#### / TAB#### / WR#### | Asset / Writing registries |
 | Archived release | ARCH#### | Archive manifest |
+| Web deployment | DEPLOY#### | Deployments registry |
 
 General filenames use `snake_case`; canonical document names and ID prefixes retain case. Raw source filenames are preserved in restricted storage. Never put direct patient identifiers in shared filenames. Timestamps use ISO 8601 with timezone where relevant. Checksums use SHA-256. Units and coordinate frames are explicit.
 
@@ -833,10 +888,11 @@ The common fields in A.4 are appended once to every schema below. These are futu
 | Assets — `10_Figures_Tables/assets.csv` | FIG or TAB / analyst | Kind,SourceIDs,DataHash,SpecPath,GeneratorCommand,CodeRevision,OutputPath,Caption,Units,Permission,VisualReview,WritingIDs |
 | Writing — `11_Writing/writing_registry.csv` | WR / author | Document,Section,Topic,ClaimIDs,PaperIDs,EvaluationIDs,AssetIDs,DraftPath,Reviewer,ReviewState,Revision,MissingEvidence |
 | Archive — `15_Archive/archive_manifest.csv` | ArchiveItemID / release owner | ArchiveID,ReleaseTag,ItemType,SourcePath,StoredLocation,Version,SHA256,Bytes,Sensitivity,License,Retention,RestoreEvidence,SubmissionReceipt |
+| Deployments — `16_Web_Demo/deployment_registry.csv` | DEPLOY / deployment owner | Platform,Tier,URL,AccessMode,SourceCommit,ImageDigest,ModelID,ExportHash,PreprocessingID,ClassMapHash,DataPolicyRecord,ParityCheckPath,SmokeCheckPath,DeployedAt,TakenDownAt,Supersedes |
 
 Split manifests reside at `03_Datasets/splits/SPLIT####/manifest.csv` with `ImageID,GroupID,Partition,SourceHash,DuplicateGroup,AssignmentReason`, plus a versioned report and algorithm/configuration. GroupID is pseudonymous and potentially sensitive; classify storage accordingly. The REL row references the SPLIT ID and hash. Per-EXP run manifests include RUN, attempt/start/end, continuation checkpoint, environment, status and log pointers. These subordinate manifests are not duplicate master registries.
 
-Traceability checks: every REL resolves its DS/ANN/SPLIT/PP; each EXP resolves REL and config/code; each MODEL resolves CKPT/EXP; each EVAL resolves MODEL/REL/protocol; each asset resolves data; each empirical claim resolves EVAL; each writing unit resolves its claims. An unresolved foreign key is a verification failure, not a harmless typo.
+Traceability checks: every REL resolves its DS/ANN/SPLIT/PP; each EXP resolves REL and config/code; each MODEL resolves CKPT/EXP; each EVAL resolves MODEL/REL/protocol; each DEPLOY resolves MODEL/PP/class map and source commit; each asset resolves data; each empirical claim resolves EVAL; each writing unit resolves its claims. An unresolved foreign key is a verification failure, not a harmless typo.
 
 <a id="appendix-c"></a>
 # Appendix C. Stage map and dependency chain
@@ -860,6 +916,7 @@ This map is canonical. The [blueprint](./OPG_PROJECT_EXECUTION_BLUEPRINT.md#stag
 | S13 Detection metrics and speed reporting | 033-035 | 7 | G12 |
 | S14 Error analysis, prototype and reproducibility | 036-038 | 7-8 | G13, G14 |
 | S15 Writing, submission and archive | 039-046 | 9, 10, 13 | G15, G16 |
+| S16 Web demonstration hosting and defense showcase | 047-049 | 8.3, 10, 13 | G17 (required for G16 when UD21 confirms) |
 
 ```text
 001/G01 → 002–003/G02 → 004–009/G03
@@ -870,6 +927,11 @@ This map is canonical. The [blueprint](./OPG_PROJECT_EXECUTION_BLUEPRINT.md#stag
 → 036/G13 → 037 prototype → 038/G14
 → 039–042/G15(thesis) → 043 thesis → 044 [G15(paper) before submission OR approved disposition]
 → 045 archive → 046/G16
+
+Parallel web branch (S16):
+037 → 047 web scope/platform → 048 build + parity → (G14 PASS) → 049 deploy/G17 → defense
+G17 (or approved disposition) → 045 archive entry → 046/G16
+Optional hosting spike (synthetic image, non-medical model, no evidence value): any time after G02
 ```
 
 The default path is sequential. Limited parallelism is permitted only where a blueprint step explicitly names independent work and no unmet gate is crossed. Earlier literature updates and documentation may continue during approved training. Final-test analysis cannot loop back into model selection without disclosing exposure and redesigning evaluation. Corrections return to the earliest affected parent step with new versions, then reassess downstream gates.
@@ -893,6 +955,9 @@ The default path is sequential. Limited parallelism is permitted only where a bl
 - **Checkpoint:** serialized model and, where supported, training state tied to a run and hash.
 - **Gate:** evidence-based permission to proceed for specific versions; not an aspiration or score target.
 - **Research prototype:** an experimental tool demonstrating the pipeline, without an implied clinical deployment authorization.
+- **Hosted web demonstration:** a website that runs the frozen research prototype for examiners at the defense; a presentation deliverable, not clinical deployment and not evaluation evidence.
+- **Parity check:** comparison of web-demo outputs against STEP-037 prototype outputs on the same permitted inputs within an approved tolerance.
+- **Offline fallback:** the same inference path run locally (plus recording/screenshots) if the hosted link fails during the defense.
 
 <a id="appendix-e"></a>
 # Appendix E. Acronyms
@@ -916,6 +981,9 @@ The default path is sequential. Limited parallelism is permitted only where a bl
 | DOI | Digital object identifier |
 | CI | Confidence interval |
 | OOM | Out of memory |
+| API | Application programming interface |
+| HTTPS | Hypertext Transfer Protocol Secure |
+| URL | Uniform resource locator |
 
 <a id="appendix-f"></a>
 # Appendix F. Source coverage and self-review
@@ -958,15 +1026,17 @@ Title Evaluation Report (1).pdf
 
 Revision v1.1.0 corrects current source availability, establishes a tested minimal data-tool environment before early scripts, and separates G15 assessments for thesis and paper. These are document/workflow corrections, not evidence of passed execution gates.
 
-Review scope: the two planning documents, their source fidelity, structure, internal references and executable instructions. This is **not** G01-G16 research execution evidence.
+Revision v1.2.0 adds the team-requested hosted web demonstration (Section 8.3; S16; STEP-047–049; G17; UD21–UD24; T29–T30; Deployments registry). Steps 001–046 and gates G01–G16 keep their numbers and meaning; the new branch runs in parallel with writing and feeds G16. This is a planning addition, not evidence of a deployed system.
+
+Review scope: the two planning documents, their source fidelity, structure, internal references and executable instructions. This is **not** G01-G17 research execution evidence.
 
 | Check | Planning disposition |
 |---|---|
 | Approved title and detection scope | Preserved verbatim; 2D OPG/YOLO/boxes and supplementary use maintained |
-| Source versus recommendations versus unknowns | RF ledger, explicit recommendation policy, and UD01-UD20 register |
+| Source versus recommendations versus unknowns | RF ledger, explicit recommendation policy, and UD01-UD24 register |
 | Diagram-only details | Preserved; class examples not promoted to approved ontology |
 | Feedback | Blank source fields acknowledged; no comments invented |
-| Shared architecture | Sections, 15 stages, 46 steps, 16 gates, schemas and template IDs aligned |
+| Shared architecture | Sections, 16 stages, 49 steps, 17 gates, schemas and template IDs aligned |
 | Leakage and test independence | Grouping, training-only fits, deterministic evaluation, final freeze, exposure recovery specified |
 | Annotation uncertainty | Human protocol/pilot/adjudication and versioned correction specified |
 | Failed/negative results | Preserved with immutable records and interpretation rules |
@@ -975,4 +1045,4 @@ Review scope: the two planning documents, their source fidelity, structure, inte
 
 **Initial project state:** two complete planning deliverables; no research execution inferred. Begin with [STEP-001](./OPG_PROJECT_EXECUTION_BLUEPRINT.md#step-001). Do not mark a gate PASS simply because its checklist has been written.
 
-*End of OPG Research Operating System — v1.1.0.*
+*End of OPG Research Operating System — v1.2.0.*
