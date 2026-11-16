@@ -2,6 +2,11 @@
 
 All notable changes to the project governance, plans, and repository structure are recorded here.
 
+## [Unreleased] — STEP-002 Part 3 (Minimal Data-Tool Runtime & Smoke Check)
+
+- Recreated local `.venv` on Python `3.14.6` (excluded from Git) and locked minimal data-tool dependencies (`pillow==13.0.0`, `numpy==2.5.5`, `PyYAML==6.0.3`, `pytest==9.2.0`) in `environment/data/requirements.lock.txt`.
+- Added synthetic smoke checks in `tests/test_smoke_data_env.py` (`3 passed in 1.28s`) and recorded evidence in `environment/data/verification.md` and `12_Documentation/installation.md`.
+
 ## [Unreleased] — STEP-002 Part 2 (Repository Skeleton & Inventory)
 
 - Materialized OS §2.1 domain folders (`02_Literature/`–`16_Web_Demo/`, `environment/data/`, `src/opg/`, `tests/`, `web/`) with contract `README.md` files.

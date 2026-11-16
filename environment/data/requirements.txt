@@ -1,0 +1,5 @@
+# Minimal data-tool dependencies (STEP-002; no YOLO/GPU stack selected yet)
+pillow
+numpy
+pyyaml
+pytest
