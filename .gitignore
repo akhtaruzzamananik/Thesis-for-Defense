@@ -77,3 +77,12 @@ desktop.ini
 *.bak
 *.swp
 scratch/
+
+# Restricted / copyrighted literature PDFs and raw manual download folders
+# (Protocol rule: never push publisher or subscription PDFs to public GitHub)
+*.pdf
+02_Literature/papers/*.pdf
+02_Literature/papers/**/*.pdf
+Paper(downloaded by Anik)/
+Paper (downloaded by Shabah)/
+!02_Literature/papers/README.md

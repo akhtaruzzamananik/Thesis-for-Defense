@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-16 |
-| Current stage / step | S03 / STEP-004 complete (`G01` & `G02` PASS); ready to begin STEP-005 literature searches |
+| Current stage / step | S03 / STEP-005 & STEP-006 complete (`180` PDFs -> `122` unique -> `42` Core); ready for **STEP-007** extraction |
 
 ## 1. Stage & gate summary
 
@@ -15,13 +15,14 @@
 |---|---|---|---|
 | G01 | STEP-001 | **PASS** | Scope/O1–O3 confirmed via Telegram (Supervisor); no extra feedback; `team_roles.md` v1.0.0 confirmed by Anik & Mahajub (`2026-11-16`) |
 | G02 | STEP-003 | **PASS** | Approved by Research Lead Akhtaruzzaman Anik (`2026-11-16`); `validate_repo.py` OK, `pytest` `4 passed` |
-| G03 | STEP-009 | **NOT ASSESSED** | `STEP-004` protocol approved (`v1.0.0`); ready to execute `STEP-005` searches |
+| G03 | STEP-009 | **NOT ASSESSED** | `STEP-005`/`006` complete (`122` papers registered, `42` Core retained); `STEP-007`–`008` pending |
 | G04–G17 | STEP-013–049 | **NOT ASSESSED** | Not started |
 
 ## 2. Immediate priorities & open blockers
 
-1. Begin **STEP-005**: Run logged searches (`Q1–Q3`), verify `RF14` `[1]–[13]`, deduplicate, and register candidate papers in `02_Literature/papers.csv` (confirm open-access vs DIU library database access).
-4. Confirm `UD21` (defense web demo confirmation & expected defense date) with supervisor when scheduling allows.
+1. Execute **STEP-007**: Extract `42` Core full-text PDFs (`P0001`–`P0042`; `21` Anik / `21` Shabah) into `02_Literature/summaries/P####.md` using `T05`, and verify `RF14` `[1]–[13]` (`UD19`).
+2. Execute **STEP-008** & **STEP-009**: Test `G1–G6` in `02_Literature/gaps.csv`, draft `synthesis.md`, finalize `research_questions.md`, and assess `G03`.
+3. Confirm `UD21` (defense web demo confirmation & expected defense date) with supervisor when scheduling allows.
 
 ## 3. Canonical ledgers
 
