@@ -2,6 +2,10 @@
 
 All notable changes to the project governance, plans, and repository structure are recorded here.
 
+## [Unreleased] — STEP-004 Protocol Approved
+
+- Promoted `02_Literature/searches/protocol.md` to `v1.0.0` (Research Lead Akhtaruzzaman Anik approved 2026-11-16).
+
 ## [Unreleased] — G02 PASS Recorded
 
 - Recorded Research Lead (Akhtaruzzaman Anik) approval of `G02` (`PASS`) in `01_Project_Management/reviews/G02_assessment_2026-11-16.md`, `gates.csv`, and `dashboard.md`.

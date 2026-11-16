@@ -4,8 +4,8 @@
 |---|---|
 | Record | `02_Literature/searches/protocol.md` |
 | Step / gate | STEP-004 / feeds G03 (at STEP-009) |
-| Version | v0.1.0 (DRAFT) |
-| Status | **DRAFT — awaiting G01/G02 PASS and Research Lead/Supervisor approval. No search executed yet.** |
+| Version | v1.0.0 (Research Lead approved) |
+| Status | **APPROVED by Research Lead (Akhtaruzzaman Anik, 2026-11-16). Literature Lead (Mahajub) / Supervisor sign-off optional or at G03; no search executed yet (`STEP-005` awaits `G01` & access mode).** |
 | Owners | Mahajub Al Shabah (Literature Lead); Akhtaruzzaman Anik (Reviewer); Ms Faiza Feroz (Supervisor) |
 | Governing sections | OS §1, §3; Blueprint STEP-004 |
 
@@ -106,6 +106,6 @@ AND (detection OR localization OR review OR benchmark)
 
 | Role | Name | Decision | Date | Notes |
 |---|---|---|---|---|
-| Literature Lead | Mahajub Al Shabah | | | |
-| Research Lead / Reviewer | Akhtaruzzaman Anik | | | |
-| Supervisor | Ms Faiza Feroz | | | |
+| Literature Lead | Mahajub Al Shabah | Pending | | Primary search executor |
+| Research Lead / Reviewer | Akhtaruzzaman Anik | **Approved** | 2026-11-16 | Confirmed protocol (`v1.0.0`) |
+| Supervisor | Ms Faiza Feroz | Pending (optional pre-G03) | | Final RQ/gap review at `G03` (`STEP-009`) |
