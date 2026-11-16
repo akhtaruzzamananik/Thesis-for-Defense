@@ -2,6 +2,11 @@
 
 All notable changes to the project governance, plans, and repository structure are recorded here.
 
+## [Unreleased] — STEP-002 Part 2 (Repository Skeleton & Inventory)
+
+- Materialized OS §2.1 domain folders (`02_Literature/`–`16_Web_Demo/`, `environment/data/`, `src/opg/`, `tests/`, `web/`) with contract `README.md` files.
+- Added `src/opg/__init__.py`, `12_Documentation/pipeline.md` (storage tiers & data lineage), and `01_Project_Management/reviews/source_inventory_2026-11-16.md` (SHA-256 inventory and historical deletion record).
+
 ## [Unreleased] — STEP-002 Part 1 (Repository Initialization & Governance)
 
 - Connected local workspace directly to `origin/main` (`Thesis-for-Defense`).
