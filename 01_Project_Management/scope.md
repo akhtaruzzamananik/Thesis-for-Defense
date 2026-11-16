@@ -4,9 +4,9 @@
 |---|---|
 | Record | `01_Project_Management/scope.md` |
 | Step / gate | STEP-001 / G01 |
-| Version | v0.1.0 (draft for supervisor review) |
+| Version | v0.2.0 (scope/O1–O3 Telegram confirmation recorded; owner assignment & feedback check pending) |
 | Created | 2026-11-16 |
-| Status | **DRAFT — awaiting researcher and supervisor approval.** Not an approved scope. G01 NOT ASSESSED. |
+| Status | **PARTIALLY CONFIRMED — Supervisor confirmed scope & O1–O3 interpretation via Telegram (2026-11-16, reported by Akhtaruzzaman Anik). Named UD owners and title-defense feedback status remain open for G01 PASS.** |
 | Governing sections | OS §1, §11, §13; Blueprint STEP-001 |
 | Linked decisions | DEC0001 (UD01), DEC0021 (UD21); full register in `decisions.csv` |
 
@@ -29,7 +29,7 @@
 
 **In scope:**
 
-- Collect and characterize 2D OPG (panoramic dental radiograph) images.
+- Collect and characterize 2D OPG (panoramic dental radiograph) images. **Team intention (2026-11-16):** use a secondary/public OPG dataset; exact dataset selection, license check and quality approval stay unresolved under UD02/UD03 until STEP-010–013.
 - Annotate approved dental objects and selected visible abnormalities with bounding boxes.
 - Preprocess and split the data reproducibly and without leakage (Figure 1 proposes 70/15/15 as the starting point).
 - Select and train a YOLO detector, tune on validation, and test once on a held-out set.
@@ -55,7 +55,7 @@
 | O2 | Test detection using Precision, Recall, mAP | Frozen model evaluated on locked held-out partition; explicit matching/AP definitions | Predictions, ground truth, evaluator version, per-class support, metrics |
 | O3 | Fast computation / reduced overhead as a secondary aid | Latency and FPS under a stated hardware/workload protocol; no clinical efficiency claim | Timing samples, boundary, hardware/software, failure counts |
 
-> **Unresolved / Human Decision Required (part of UD01):** The checklist item "Exact title and O1–O3 preserved" needs the **verbatim** objective text. A researcher must paste O1–O3 exactly from their retained copy of the title report (or another authorized copy), or the supervisor must confirm the summary wording in writing. Until then, this item stays open.
+> **Status (2026-11-16):** Supervisor Ms Faiza Feroz confirmed via Telegram (reported by Akhtaruzzaman Anik) to proceed with the scope and O1–O3 summary above. Paste verbatim report text later if needed for archival completeness.
 
 Candidate primary research question (awaiting G03 at STEP-009, not approved now): *How effectively and efficiently can an approved YOLO detector localize predefined dental objects and selected visible abnormalities in the available 2D OPG dataset under a leakage-controlled evaluation protocol?*
 
@@ -79,9 +79,9 @@ Only actual comments may be recorded here. No feedback is assumed or invented.
 
 | Role | Name | Decision (approve / approve with changes / reject) | Date | Evidence (email, signed sheet, meeting note path) |
 |---|---|---|---|---|
-| Researcher | Akhtaruzzaman Anik | | | |
+| Researcher | Akhtaruzzaman Anik | Approve (submitted brief & reported Telegram confirmation) | 2026-11-16 | Conversation record (`diary/2026-11-16_STEP-001.md`) |
 | Researcher | Mahajub Al Shabah | | | |
-| Supervisor | Ms Faiza Feroz | | | |
+| Supervisor | Ms Faiza Feroz | Confirmed scope & O1–O3 summary to proceed (pending: feedback check, UD21 web demo, named owners) | 2026-11-16 | Telegram reply reported by A. Anik (screenshot/log recommended) |
 | Co-supervisor (if required) | Israt Jahan | | | |
 
 ## 7. Change history
@@ -89,3 +89,4 @@ Only actual comments may be recorded here. No feedback is assumed or invented.
 | Version | Date | Change | Author | Approval |
 |---|---|---|---|---|
 | v0.1.0 | 2026-11-16 | Initial STEP-001 draft from retained RF ledger and OS v1.2.0 | Research team (AI-assisted draft) | Pending |
+| v0.2.0 | 2026-11-16 | Recorded Telegram scope/O1–O3 confirmation and secondary-dataset intention | Research team | Scope/O1–O3 confirmed; owners & feedback open |
