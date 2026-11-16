@@ -68,7 +68,7 @@ def check_folder_readmes(root: Path) -> list[str]:
 
 
 def check_registries(root: Path) -> list[str]:
-    """Validate all 22 Appendix B CSV headers, uniqueness, and UTF-8 readability."""
+    """Validate all 22 Appendix B CSV headers, uniqueness, row widths, and UTF-8 readability."""
     errors: list[str] = []
     for rel in APPENDIX_B_REGISTRIES:
         path = root / rel
@@ -76,16 +76,26 @@ def check_registries(root: Path) -> list[str]:
             errors.append(f"Missing registry: {rel}")
             continue
         with path.open("r", encoding="utf-8", newline="") as handle:
-            reader = csv.reader(handle)
-            header = next(reader, None)
-        if not header:
+            rows = list(csv.reader(handle))
+        if not rows or not rows[0]:
             errors.append(f"Empty registry header: {rel}")
             continue
+        header = rows[0]
         if len(set(header)) != len(header):
             errors.append(f"Duplicate column names in {rel}: {header}")
         missing_common = [col for col in COMMON_COLUMNS if col not in header]
         if missing_common:
             errors.append(f"Missing common columns {missing_common} in {rel}")
+        expected_cols = len(header)
+        for line_no, row in enumerate(rows[1:], start=2):
+            if not row:
+                continue
+            if len(row) != expected_cols:
+                row_id = row[0] if row else ""
+                errors.append(
+                    f"CSV column-count mismatch in {rel} line {line_no} ({row_id!r}): "
+                    f"expected {expected_cols}, found {len(row)}"
+                )
     return errors
 
 
