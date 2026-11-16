@@ -64,7 +64,7 @@ Candidate primary research question (awaiting G03 at STEP-009, not approved now)
 | Item | Status | Evidence |
 |---|---|---|
 | Title-report feedback form (p.15) | Blank: three empty comment lines; examiner signature and date blank | RF15 |
-| Separate supervisor/examiner feedback | **Unknown — confirmation requested** | Ask supervisor (see `meetings/STEP-001_supervisor_brief.md`) |
+| Separate supervisor/examiner feedback | **Confirmed none** — no extra feedback was given at title defense | Confirmed by Akhtaruzzaman Anik (2026-11-16) |
 
 Only actual comments may be recorded here. No feedback is assumed or invented.
 
@@ -72,7 +72,8 @@ Only actual comments may be recorded here. No feedback is assumed or invented.
 
 - Canonical register: `01_Project_Management/decisions.csv` (DEC0001–DEC0024 map one-to-one to UD01–UD24).
 - Detailed records: `decision_log/DEC####.md`. Created now for DEC0001 and DEC0021; others are created when their decision is worked on.
-- Owners listed in the register are **proposed roles**. Named owners are assigned only when the team/supervisor approve them.
+- Proposed 50/50 role split between Akhtaruzzaman Anik and Mahajub Al Shabah is documented in `team_roles.md` and mapped to `decisions.csv` (pending Mahajub's confirmation).
+- GitHub remote (`https://github.com/akhtaruzzamananik/Thesis-for-Defense`) is **public** (confirmed by A. Anik, 2026-11-16); strict `.gitignore` and off-Git storage rules for OPG images and model weights apply under UD11.
 - Later scientific choices (dataset, classes, YOLO version, settings, thresholds) stay **unresolved** until their blocking step. STEP-001 assigns owners and deadlines, not values.
 
 ## 6. Approval block (to be completed only with actual evidence)
@@ -90,3 +91,4 @@ Only actual comments may be recorded here. No feedback is assumed or invented.
 |---|---|---|---|---|
 | v0.1.0 | 2026-11-16 | Initial STEP-001 draft from retained RF ledger and OS v1.2.0 | Research team (AI-assisted draft) | Pending |
 | v0.2.0 | 2026-11-16 | Recorded Telegram scope/O1–O3 confirmation and secondary-dataset intention | Research team | Scope/O1–O3 confirmed; owners & feedback open |
+| v0.3.0 | 2026-11-16 | Recorded no extra defense feedback, public GitHub policy note, and Anik/Mahajub role split (`team_roles.md`) | Akhtaruzzaman Anik | Pending Mahajub confirmation on role split |
