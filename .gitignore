@@ -1,0 +1,79 @@
+# Environments and Python caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Secrets, credentials, and environment variables
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*secret*
+*token*
+
+# Restricted medical / OPG dataset images, native labels, linkage keys, and processed tensors
+# (Public repository rule: never commit OPG images, patient keys, or private labels)
+03_Datasets/raw/
+03_Datasets/**/raw/
+03_Datasets/**/linkage*
+03_Datasets/**/patient_key*
+03_Datasets/manifests/*_restricted*
+04_Annotations/native/
+04_Annotations/exports/
+05_Preprocessing/processed/
+05_Preprocessing/**/processed/
+*.dcm
+*.nii
+*.nii.gz
+
+# Large images inside data/artifact tiers (allow safe documentation assets only via explicit exceptions)
+03_Datasets/**/*.png
+03_Datasets/**/*.jpg
+03_Datasets/**/*.jpeg
+03_Datasets/**/*.tif
+03_Datasets/**/*.tiff
+03_Datasets/**/*.bmp
+05_Preprocessing/**/*.png
+05_Preprocessing/**/*.jpg
+05_Preprocessing/**/*.jpeg
+09_Evaluation/**/predictions_raw/
+09_Evaluation/**/visual_examples_private/
+
+# Trained model weights, checkpoints, and large binary exports
+*.pt
+*.pth
+*.onnx
+*.engine
+*.weights
+*.ckpt
+*.safetensors
+08_Checkpoints/artifacts/
+06_Models/weights/
+15_Archive/bundles/
+
+# Notebooks checkpoints and large logs
+.ipynb_checkpoints/
+07_Experiments/**/wandb/
+07_Experiments/**/tb_logs/
+*.log
+!01_Project_Management/**/*.md
+
+# OS / IDE / scratch
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+*.swp
+scratch/
