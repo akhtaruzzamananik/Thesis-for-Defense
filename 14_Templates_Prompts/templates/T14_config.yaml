@@ -1,0 +1,40 @@
+# TemplateID: T14 | template_version: v1.0.0 | governing_section: OS §5.2, §14.3
+# Planning template only. Null values prohibit launch.
+entity_id: null
+owner: null
+date: null
+status: Unresolved / Human Decision Required
+source_inputs: null
+sensitivity: public-metadata
+reviewer: null
+experiment_id: null
+research_question_id: null
+approval_record: null
+source_commit: null
+release_id: null
+manifest_sha256: null
+class_map_sha256: null
+model:
+  implementation: null
+  version_or_commit: null
+  architecture: null
+  initial_weights_sha256: null
+  license_record: null
+training:
+  seed: null
+  image_size: null
+  batch_size: null
+  epochs_or_budget: null
+  optimizer_and_schedule: null
+  augmentations: null
+  stopping_and_selection: null
+runtime:
+  environment_lock: null
+  hardware_record: null
+evaluation:
+  protocol_sha256: null
+  ap_iou: 0.50  # Report Figure 1 proposal; evaluator still must be specified.
+  precision_recall_operating_point: null
+  nms_and_max_detections: null
+checkpoint_policy: null
+artifact_destination: null

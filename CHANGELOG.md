@@ -2,6 +2,12 @@
 
 All notable changes to the project governance, plans, and repository structure are recorded here.
 
+## [Unreleased] — STEP-003 Part 2 (Templates, Validator, and G02 Readiness Review)
+
+- Installed all 30 blank operational templates (`T01–T30`) and `templates_index.md` under `14_Templates_Prompts/`.
+- Added `src/opg/repo_validator.py`, `13_Automation/validate_repo.py`, and `tests/test_repo_checks.py` (`4 passed in 0.40s`).
+- Created `01_Project_Management/reviews/G02_assessment_2026-11-16.md` and `01_Project_Management/diary/2026-11-16_STEP-003.md` (awaiting Research Lead sign-off for `G02 PASS`).
+
 ## [Unreleased] — STEP-003 Part 1 (Canonical CSV Registries, Dashboard, Timeline)
 
 - Created all 21 remaining Appendix B CSV registries (header-only, zero dummy data; `gates.csv` initialized with `G01–G17` as `NOT ASSESSED`).
