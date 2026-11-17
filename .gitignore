@@ -36,6 +36,13 @@ build/
 *.dcm
 *.nii
 *.nii.gz
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+03_Datasets/**/archives/
 
 # Large images inside data/artifact tiers (allow safe documentation assets only via explicit exceptions)
 03_Datasets/**/*.png
