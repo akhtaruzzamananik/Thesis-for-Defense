@@ -1,0 +1,26 @@
+{
+  "dataset_id": "DS0003",
+  "candidate_id": "CAND0003",
+  "recorded_utc": "2026-11-17T09:16:03+00:00",
+  "archives": [
+    {
+      "filename": "c4hhrkxytw-4.zip",
+      "url": "https://data.mendeley.com/public-api/zip/c4hhrkxytw/download/4",
+      "expected_md5": null,
+      "expected_bytes": 206222368,
+      "verified_md5": "6213283c6de1063a07858470443b84ca",
+      "verified_sha256": "f11eaa3379ffe221adb74f141a5dcd0f8748f00a3d52cbbe462699cc75da7726",
+      "verified_bytes": 206222368
+    }
+  ],
+  "inventory": {
+    "total_scanned_images": 1352,
+    "active_raw_count": 231,
+    "quarantined_count": 1121,
+    "decode_error_count": 0,
+    "unique_sha256_all": 837,
+    "unique_sha256_active": 231,
+    "manifest_sha256": "abdc75c9198840331d802f5a0e2d178e9d2944ef8e188b20ac081858a035edec"
+  },
+  "notes": ""
+}

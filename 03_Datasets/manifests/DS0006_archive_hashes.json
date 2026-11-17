@@ -1,0 +1,26 @@
+{
+  "dataset_id": "DS0006",
+  "candidate_id": "CAND0007",
+  "recorded_utc": "2026-11-17T09:16:49+00:00",
+  "archives": [
+    {
+      "filename": "MD_OPG.rar",
+      "url": "https://zenodo.org/api/records/17786082/files/MD_OPG.rar/content",
+      "expected_md5": "5ea31fe4474307f0bdba9591b39574cf",
+      "expected_bytes": 252876370,
+      "verified_md5": "5ea31fe4474307f0bdba9591b39574cf",
+      "verified_sha256": "e793edead90a62fe2b54d6d01a5612a586d23aef91233ae3de7d7ca7fbe81d07",
+      "verified_bytes": 252876370
+    }
+  ],
+  "inventory": {
+    "total_scanned_images": 510,
+    "active_raw_count": 170,
+    "quarantined_count": 340,
+    "decode_error_count": 0,
+    "unique_sha256_all": 510,
+    "unique_sha256_active": 170,
+    "manifest_sha256": "18678b82101127c70358b5fba0418b007e4f7ad61113685cd3d6b90a1ee77c00"
+  },
+  "notes": ""
+}

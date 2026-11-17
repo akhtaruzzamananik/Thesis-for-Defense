@@ -1,0 +1,27 @@
+{
+  "dataset_id": "DS0005",
+  "candidate_id": "CAND0005",
+  "recorded_utc": "2026-11-17T09:16:37+00:00",
+  "archives": [
+    {
+      "filename": "huggingface:YSFF/AU-OPG",
+      "url": "https://huggingface.co/datasets/YSFF/AU-OPG",
+      "expected_md5": null,
+      "expected_bytes": 1471815794,
+      "verified_md5": null,
+      "verified_sha256": null,
+      "verified_bytes": 1471815794,
+      "file_count": 1041
+    }
+  ],
+  "inventory": {
+    "total_scanned_images": 1036,
+    "active_raw_count": 901,
+    "quarantined_count": 135,
+    "decode_error_count": 0,
+    "unique_sha256_all": 1036,
+    "unique_sha256_active": 901,
+    "manifest_sha256": "5a23a5cd2c7b7f4b981871447ef3aef657da1d54f94e8b7c9d8c7b0810041478"
+  },
+  "notes": ""
+}

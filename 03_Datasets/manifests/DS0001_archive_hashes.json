@@ -1,0 +1,26 @@
+{
+  "dataset_id": "DS0001",
+  "candidate_id": "CAND0001",
+  "recorded_utc": "2026-11-17T09:15:41+00:00",
+  "archives": [
+    {
+      "filename": "panoramic_radiography_yolo_dataset_14_classes.zip",
+      "url": "https://zenodo.org/api/records/15487430/files/panoramic_radiography_yolo_dataset_14_classes.zip/content",
+      "expected_md5": "18d5acaea021f4f3b05b76e9a27fbd42",
+      "expected_bytes": 1397393531,
+      "verified_md5": "18d5acaea021f4f3b05b76e9a27fbd42",
+      "verified_sha256": "cebc49f18944ad21951088d77f1ce83296c9336d6c1244ab1792b91db50b598a",
+      "verified_bytes": 1397393531
+    }
+  ],
+  "inventory": {
+    "total_scanned_images": 1808,
+    "active_raw_count": 1808,
+    "quarantined_count": 0,
+    "decode_error_count": 0,
+    "unique_sha256_all": 1611,
+    "unique_sha256_active": 1611,
+    "manifest_sha256": "4f75c64e9a295553a5c2753e73d0c39122e8274a94e2c883794b5c6b0cae6179"
+  },
+  "notes": ""
+}
