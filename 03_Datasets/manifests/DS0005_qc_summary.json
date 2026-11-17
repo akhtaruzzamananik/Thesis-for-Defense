@@ -1,0 +1,156 @@
+{
+  "dataset_id": "DS0005",
+  "active_inspected_count": 901,
+  "total_qc_scanned_with_branches": 1035,
+  "widths": {
+    "min": 2628.0,
+    "p05": 3288.0,
+    "median": 3292.0,
+    "p95": 3296.0,
+    "max": 3296.0
+  },
+  "heights": {
+    "min": 1500.0,
+    "p05": 1500.0,
+    "median": 1500.0,
+    "p95": 1500.0,
+    "max": 1500.0
+  },
+  "aspect_ratios": {
+    "min": 1.75,
+    "p05": 2.19,
+    "median": 2.19,
+    "p95": 2.2,
+    "max": 2.2
+  },
+  "aspect_ratio_outliers_lt1.3_or_gt2.8": 0,
+  "low_res_width_lt800": 0,
+  "non_identical_rgb_tint_count": 0,
+  "mean_luma": {
+    "min": 57.46,
+    "p05": 88.61,
+    "median": 113.23,
+    "p95": 136.99,
+    "max": 157.2
+  },
+  "std_luma": {
+    "min": 55.12,
+    "p05": 59.98,
+    "median": 64.91,
+    "p95": 70.32,
+    "max": 83.27
+  },
+  "pct_black_le_3": {
+    "min": 0.89,
+    "p05": 1.91,
+    "median": 5.15,
+    "p95": 9.99,
+    "max": 19.42
+  },
+  "pct_white_ge_252": {
+    "min": 2.59,
+    "p05": 2.79,
+    "median": 3.0,
+    "p95": 3.31,
+    "max": 7.34
+  },
+  "laplacian_var": {
+    "min": 41.19,
+    "p05": 61.92,
+    "median": 89.42,
+    "p95": 144.65,
+    "max": 742.22
+  },
+  "exif_images_with_sensitive_tags": 0,
+  "sensitive_exif_key_counts": {},
+  "png_text_key_counts": {},
+  "exact_sha256_pairs_in_active": 0,
+  "near_dup_hamming_le4_non_exact_pairs": 442,
+  "near_dup_bucket_pairs": {
+    "test_annotated<->val_annotated": 22,
+    "train_annotated<->train_annotated": 186,
+    "train_annotated<->val_annotated": 106,
+    "test_annotated<->train_annotated": 101,
+    "test_annotated<->test_annotated": 13,
+    "val_annotated<->val_annotated": 14
+  },
+  "qc_contact_sheet_offgit": "03_Datasets/raw/qc_samples/DS0005_qc_sheet.jpg",
+  "label_and_branch_audit": {
+    "csv_splits": {
+      "train": {
+        "rows": 4964,
+        "unique_images": 630,
+        "conditions": {
+          "Retained Root": 669,
+          "Crowned": 1009,
+          "Filled": 1986,
+          "Cavitated": 587,
+          "Implant": 360,
+          "Impacted": 353
+        },
+        "treatments": {
+          "Extraction": 1188,
+          "None": 3348,
+          "Filling": 188,
+          "Root Canal": 240
+        },
+        "rotation_min_max_deg": [
+          0.0,
+          359.97
+        ],
+        "oob_unrotated": 0,
+        "oob_rotated_corners_gt5px": 0
+      },
+      "val": {
+        "rows": 1010,
+        "unique_images": 135,
+        "conditions": {
+          "Implant": 111,
+          "Crowned": 170,
+          "Cavitated": 117,
+          "Filled": 421,
+          "Retained Root": 137,
+          "Impacted": 54
+        },
+        "treatments": {
+          "None": 702,
+          "Filling": 39,
+          "Extraction": 228,
+          "Root Canal": 41
+        },
+        "rotation_min_max_deg": [
+          0.0,
+          359.91
+        ],
+        "oob_unrotated": 0,
+        "oob_rotated_corners_gt5px": 0
+      },
+      "test": {
+        "rows": 1032,
+        "unique_images": 136,
+        "conditions": {
+          "Implant": 73,
+          "Crowned": 198,
+          "Filled": 450,
+          "Retained Root": 135,
+          "Cavitated": 111,
+          "Impacted": 65
+        },
+        "treatments": {
+          "None": 719,
+          "Extraction": 232,
+          "Root Canal": 45,
+          "Filling": 36
+        },
+        "rotation_min_max_deg": [
+          0.0,
+          359.59
+        ],
+        "oob_unrotated": 1,
+        "oob_rotated_corners_gt5px": 0
+      }
+    },
+    "extra_unannotated_count": 134,
+    "extra_dhash_le6_near_annotated": 90
+  }
+}

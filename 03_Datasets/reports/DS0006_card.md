@@ -7,8 +7,8 @@
 | entity_id | DS0006 |
 | owner | Akhtaruzzaman Anik (`232-15-252`, Data Steward) |
 | date | 2026-11-17 |
-| status | Acquired and Inventoried (`STEP-012` complete; quality/visual audit pending `STEP-013 / G04`) |
-| source_inputs | `https://doi.org/10.5281/zenodo.17786082` (Zenodo `17786082`); `doi:10.3390/s26082481` (`P0010`); `03_Datasets/licenses/CAND0007_MD-OPG_CC-BY-4.0.md`; `03_Datasets/manifests/DS0006_images.csv` |
+| status | Technical Quality Audited (`STEP-013` Batch 1 complete; `G04` review awaiting Batch 2 & dental check) |
+| source_inputs | `https://doi.org/10.5281/zenodo.17786082` (Zenodo `17786082`); `doi:10.3390/s26082481` (`P0010`); `03_Datasets/licenses/CAND0007_MD-OPG_CC-BY-4.0.md`; `03_Datasets/manifests/DS0006_images.csv`; `03_Datasets/reports/DS0006_quality.md` |
 | governing_section | OS §4.1–4.2; Blueprint STEP-012 |
 | sensitivity | Public metadata card (`raw/` & `DS0006_restricted_linkage.csv` strictly off-Git) |
 | reviewer | Mahajub Al Shabah (`232-15-900`) |
@@ -46,11 +46,11 @@
 
 ## quality/exclusions
 
-- Pending `STEP-013 / G04` inspection (`0` decode errors; JSON polygon geometry & Smile Zone conversion audit scheduled in `STEP-013`).
+- Audited in `03_Datasets/reports/DS0006_quality.md`: `170` pediatric PNGs (`1920 × 1535` typical) have **`66.17%` median solid-black letterbox margin padding** framing an inner white rectangle (`DS0006_qc_sheet.jpg`) — requires border autocrop + coord shift (`UD09`). `0` EXIF tags; `170` JSONs embed base64 `imageData`; `1` zero-area shape flagged.
 
 ## duplicates/grouping
 
-- `0` exact SHA-256 duplicates across active `170` OPGs; derived `Smile_Zone_IMG` and `Smile_Zone_MSK` quarantined cleanly to prevent double-counting.
+- `0` exact SHA-256 duplicates; `724` raw `dHash` hits explained by `66%` solid-black padding (`interior-cropped dHash` scheduled for `UD07`). `340` Smile Zone crops/masks stay quarantined.
 
 ## annotations
 

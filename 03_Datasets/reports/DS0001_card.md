@@ -7,8 +7,8 @@
 | entity_id | DS0001 |
 | owner | Akhtaruzzaman Anik (`232-15-252`, Data Steward) |
 | date | 2026-11-17 |
-| status | Acquired and Inventoried (`STEP-012` complete; quality/visual audit pending `STEP-013 / G04`) |
-| source_inputs | `https://zenodo.org/records/15487430` (`doi:10.5281/zenodo.15487429`); `03_Datasets/licenses/CAND0001_UMFIH_CC-BY-4.0.md`; `03_Datasets/manifests/DS0001_images.csv` |
+| status | Technical Quality Audited (`STEP-013` Batch 1 complete; `G04` review awaiting Batch 2 & dental check) |
+| source_inputs | `https://zenodo.org/records/15487430` (`doi:10.5281/zenodo.15487429`); `03_Datasets/licenses/CAND0001_UMFIH_CC-BY-4.0.md`; `03_Datasets/manifests/DS0001_images.csv`; `03_Datasets/reports/DS0001_quality.md` |
 | governing_section | OS §4.1–4.2; Blueprint STEP-012 |
 | sensitivity | Public metadata card (`raw/` & `DS0001_restricted_linkage.csv` strictly off-Git) |
 | reviewer | Mahajub Al Shabah (`232-15-900`) |
@@ -50,11 +50,11 @@
 
 ## quality/exclusions
 
-- Pending `STEP-013 / G04` inspection (`0` decode errors in `STEP-012`; pixel quality, class index alignment, and dental relevance review pending).
+- Audited in `03_Datasets/reports/DS0001_quality.md`: `0` decode errors (`804–5538` px wide, `0` aspect outliers, median Laplacian `1,210.25`), `0` sensitive EXIF tags, Vatech bottom exposure footers + `1 RGBA` PNG (`v60.png`), `3` zero-area boxes, and `Class 11` (`5` boxes total) flagged for `UD04` exclusion. Empirically verified `external_validation` uses `legend.txt` (`0–13`).
 
 ## duplicates/grouping
 
-- **Critical `STEP-012` leakage discovery (`DS0001_images.csv`):** Pre-supplied splits contain **`42` exact SHA-256 duplicates spanning `internal_train <-> internal_valid` (`42 / 153 = 27.5%` validation contamination!)**, plus `141` duplicate groups inside `internal_train`, `2` within `internal_test`, `1` within `external_validation`, and `1` within `internal_valid`. Pre-supplied splits **CANNOT** be used without `UD07` deduplication & re-splitting (`G07`).
+- Audited in `DS0001_quality.md` (`DS0001_restricted_dups.csv`): `197` exact SHA-256 duplicates (**`42` leaking `train <-> valid` = `27.5%` of `valid`**) PLUS **`18` re-encoded exact visual pairs (`corr >= 0.99`)** and `2` pairs at `0.95–0.99`. Zero true cross-cohort matches against `DS0003/0005/0006`. Pre-supplied splits **MUST** be replaced (`G07`).
 
 ## annotations
 

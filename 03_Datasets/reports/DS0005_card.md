@@ -7,8 +7,8 @@
 | entity_id | DS0005 |
 | owner | Akhtaruzzaman Anik (`232-15-252`, Data Steward) |
 | date | 2026-11-17 |
-| status | Acquired and Inventoried (`STEP-012` complete; quality/visual audit pending `STEP-013 / G04`) |
-| source_inputs | `https://huggingface.co/datasets/YSFF/AU-OPG`; `doi:10.1109/ACCESS.2026.3703711` (`P0026`); `03_Datasets/licenses/CAND0005_AU-OPG_CC-BY-4.0.md`; `03_Datasets/manifests/DS0005_images.csv` |
+| status | Technical Quality Audited (`STEP-013` Batch 1 complete; `G04` review awaiting Batch 2 & dental check) |
+| source_inputs | `https://huggingface.co/datasets/YSFF/AU-OPG`; `doi:10.1109/ACCESS.2026.3703711` (`P0026`); `03_Datasets/licenses/CAND0005_AU-OPG_CC-BY-4.0.md`; `03_Datasets/manifests/DS0005_images.csv`; `03_Datasets/reports/DS0005_quality.md` |
 | governing_section | OS §4.1–4.2; Blueprint STEP-012 |
 | sensitivity | Public metadata card (`raw/` & `DS0005_restricted_linkage.csv` strictly off-Git) |
 | reviewer | Mahajub Al Shabah (`232-15-900`) |
@@ -48,11 +48,11 @@
 
 ## quality/exclusions
 
-- Pending `STEP-013 / G04` inspection (`0` decode errors; all `1,036` LFS files verified byte-for-byte against HuggingFace `lfs.oid` SHA-256).
+- Audited in `03_Datasets/reports/DS0005_quality.md`: `901` annotated adult OPGs (`2628–3296 × 1500` px, `0` EXIF tags, `7,006` OBB rows verified with `0` rotated-corner bounds `>5px`), `134` unannotated extra `.jpg`s (`90/134` near-match annotated splits) quarantined.
 
 ## duplicates/grouping
 
-- `0` exact SHA-256 duplicates across all `1,036` files; pre-defined `630 / 135 / 136` splits and the `134` extra unannotated `dataset/` images must undergo perceptual near-duplicate screening in `STEP-013 / G07`.
+- **`6` re-encoded identical pairs (`corr >= 0.99, H=0`) leak `train <-> val`** despite `0` SHA-256 duplicates (`dup_pair_verification.jpg` row 1: `DS0005_IMG_000688` vs `000932`), plus `2` `corr = 0.95–0.99` pairs and `0` true cross-cohort matches vs `DS0001/0003/0006`. Must regroup cleanly before `G07`.
 
 ## annotations
 

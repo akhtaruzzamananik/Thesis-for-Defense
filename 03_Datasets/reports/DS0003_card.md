@@ -7,8 +7,8 @@
 | entity_id | DS0003 |
 | owner | Akhtaruzzaman Anik (`232-15-252`, Data Steward) |
 | date | 2026-11-17 |
-| status | Acquired and Inventoried (`STEP-012` complete; quality/visual audit pending `STEP-013 / G04`) |
-| source_inputs | `https://doi.org/10.17632/c4hhrkxytw.4` (Mendeley Data V4); `03_Datasets/licenses/CAND0003_Rahman_Dhaka_CC-BY-4.0.md`; `03_Datasets/manifests/DS0003_images.csv` |
+| status | Technical Quality Audited (`STEP-013` Batch 1 complete; `G04` review awaiting Batch 2 & dental check) |
+| source_inputs | `https://doi.org/10.17632/c4hhrkxytw.4` (Mendeley Data V4); `03_Datasets/licenses/CAND0003_Rahman_Dhaka_CC-BY-4.0.md`; `03_Datasets/manifests/DS0003_images.csv`; `03_Datasets/reports/DS0003_quality.md` |
 | governing_section | OS §4.1–4.2; Blueprint STEP-012 |
 | sensitivity | Public metadata card (`raw/` & `DS0003_restricted_linkage.csv` strictly off-Git) |
 | reviewer | Mahajub Al Shabah (`232-15-900`) |
@@ -48,11 +48,11 @@
 
 ## quality/exclusions
 
-- Pending `STEP-013 / G04` inspection (`0` decode errors; smartphone glare, perspective tilt, and `EXIF` privacy check required before derived exports or `S16` figures).
+- Audited in `03_Datasets/reports/DS0003_quality.md`: `231` active originals (`497–1988` px, `7 < 800` px wide, median Laplacian `395.91`); `30/231` carry Windows Photo Editor `DateTime/Software` EXIF/XMP; `"OPG"` / partial `"PRESCRIPTION POINT"` corner stamps visible on filmed sheets -> strip EXIF + verify crops (`UD23`). `DS0003_IMG_001202` lacks `.txt` (`230` `.txt`s = `1,189` boxes); `232nd` image exists only in `Classification/`.
 
 ## duplicates/grouping
 
-- All `604` Roboflow pre-split augmented images (`558` train + `23` valid + `23` test) and `517` classification duplicates are strictly **quarantined** out of active intake. Active `231` originals have `231` distinct SHA-256 hashes (`0` exact duplicates within active subset).
+- Quarantined `604` Roboflow aug + `517` classification files. Visually confirmed **`DS0003_IMG_001153 <-> DS0003_IMG_001321` (`dHash H=1, corr=0.8625`) are two handheld photos of the same OPG film** inside `Original Dataset/` (`dup_pair_verification.jpg` row 3) — group together under `UD07`.
 
 ## annotations
 
