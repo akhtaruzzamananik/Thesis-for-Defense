@@ -10,7 +10,7 @@
 | Governing Sections | `OS §1.5 #7`, `OS §4.1`, `OS §10.2–10.4`; `Blueprint STEP-011` |
 
 > [!IMPORTANT]
-> **Compliance Rule (`Blueprint STEP-011`):** Zero raw medical images have been downloaded yet. Authorized acquisition under **`STEP-012`** may proceed **only** for sources cleared in Section 2 after human confirmation of `DEC0003` (`UD03`), and **strictly within off-Git storage (`DEC0011`)**.
+> **Option 1 Cleared (`DEC0003` Resolved, `2026-11-17`):** Supervisor `Ms Faiza Feroz`, Co-researcher `Mahajub Al Shabah`, and Data Steward `Akhtaruzzaman Anik` confirmed **Option 1 (`CAND0001 UMFIH 1.30 GiB CC BY 4.0` + `CAND0003 Rahman 2024 Dhaka 197 MB CC BY 4.0 / CC BY-NC 4.0 MK-198109`)** (`reported by A. Anik, 2026-11-17`). **`STEP-012` off-Git intake (`Local PC 03_Datasets/raw/` + `Private Google Drive`) is now authorized ONLY for `CAND0001` & `CAND0003`. `CAND0002 DENTEX` (`10.32 GiB`) and `CAND0004–0014` remain blocked from acquisition.** Zero medical image bytes are ever pushed to public GitHub.
 
 ---
 
