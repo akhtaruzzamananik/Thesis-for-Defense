@@ -57,7 +57,7 @@
 
 > **Status (2026-11-16):** Supervisor Ms Faiza Feroz confirmed via Telegram (reported by Akhtaruzzaman Anik) to proceed with the scope and O1–O3 summary above. Paste verbatim report text later if needed for archival completeness.
 
-Candidate primary research question (awaiting G03 at STEP-009, not approved now): *How effectively and efficiently can an approved YOLO detector localize predefined dental objects and selected visible abnormalities in the available 2D OPG dataset under a leakage-controlled evaluation protocol?*
+Approved research questions (`G03 PASS`, `2026-11-17`): Cross-referenced to **`02_Literature/research_questions.md` (`v1.0.0`, `RQ0–RQ3`)** and **`01_Project_Management/decision_log/DEC0019.md`** (`UD19` Option 1 resolved).
 
 ## 4. Feedback status (UD01)
 

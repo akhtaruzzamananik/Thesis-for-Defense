@@ -6,8 +6,8 @@
 |---|---|---|---|---|---|
 | S01 Foundation | STEP-001 | Anik & Mahajub | G01 | **G01 PASS** (`2026-11-16`, `DEC0001`) | Complete (`2026-11-16`) |
 | S02 Repo & templates | STEP-002–003 | Anik | G02 | **G02 PASS** (`2026-11-16`, `DEC0011` STEP-002 resolved) | Complete (`2026-11-16`) |
-| S03–S04 Literature & RQs | STEP-004–009 | Mahajub | G03 | **`STEP-004–008` complete** (`122` screened, `42` Core extracted, `synthesis.md`, `gaps.csv`, `claims.csv`); **`STEP-009` package ready, awaiting Supervisor `G03` sign-off & `UD19`** | In progress (`2026-11-17`) |
-| S05–S06 Secondary dataset & QA | STEP-010–013 | Anik | G04 | Not started (secondary/public dataset intended) | After G03 PASS |
+| S03–S04 Literature & RQs | STEP-004–009 | Mahajub | G03 | **G03 PASS** (`2026-11-17`, `RQ0–RQ3` `v1.0.0`, `DEC0019`) | Complete (`2026-11-17`) |
+| S05–S06 Secondary dataset & QA | STEP-010–013 | Anik | G04 | **Ready to start `STEP-010`** (secondary public `2D OPG` candidate comparison; unlocked by `G03 PASS`) | Next active stage |
 | S07–S08 Ontology & label QA | STEP-014–018 | Mahajub + dental reviewer | G05, G06 | Not started | Needs dental reviewer before STEP-014 |
 | S09 Split & preprocessing | STEP-019–021 | Anik | G07, G08 | Not started (70/15/15 grouped starting plan) | After G06 PASS |
 | S10–S11 YOLO & experiments | STEP-022–030 | Mahajub | G09, G10 | Not started | After G08 PASS |

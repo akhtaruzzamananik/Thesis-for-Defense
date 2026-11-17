@@ -3,8 +3,8 @@
 | Metadata | Value |
 |---|---|
 | Record | `02_Literature/research_questions.md` |
-| Version | `v0.9.0` (**Candidate-Final — STEP-009 technical mapping complete; awaiting Supervisor `G03` sign-off**) |
-| Step / Gate | `STEP-009` / `G03` (**`NOT ASSESSED`**, Supervisor reviewer: Ms Faiza Feroz) |
+| Version | `v1.0.0` (**APPROVED — `G03 PASS` (`2026-11-17`)**) |
+| Step / Gate | `STEP-009` / `G03` (**`PASS`**, Supervisor: Ms Faiza Feroz) |
 | Authors / Owners | Mahajub Al Shabah (Literature Lead, `232-15-900`); Akhtaruzzaman Anik (Research Lead, `232-15-252`) |
 | Literature Cutoff Date | **`2026-11-16`** (`SEARCH0001` + `SEARCH0002`: `180` files -> `122` unique screened -> `42` Core extracted `P0001–P0042`, `55` Reserve `P0043–P0097`, `25` Excluded `P0098–P0122`) |
 | Date Updated | `2026-11-17` |
@@ -29,7 +29,7 @@ Testing the six report hypotheses (`G1–G6`) against `42` full-text Core studie
 
 ## 2. Candidate-Approved Research Questions (`O1–O3` <-> `GAP` <-> `CLAIM` <-> `EVAL`)
 
-| RQ ID | Final Proposed Wording (awaiting `G03` sign-off) | Objectives (`O1–O3`) | Linked Gaps & Verified Claims | Data & Annotation Reqs (`S04–S08`) | Experimental Factor & Baseline (`S09–S11`) | Required Evaluation Metrics & Protocol (`S12–S14`) | Permitted Intended Claim Bounds (No Invention!) |
+| RQ ID | Approved Wording (`G03 PASS`, `2026-11-17`) | Objectives (`O1–O3`) | Linked Gaps & Verified Claims | Data & Annotation Reqs (`S04–S08`) | Experimental Factor & Baseline (`S09–S11`) | Required Evaluation Metrics & Protocol (`S12–S14`) | Permitted Intended Claim Bounds (No Invention!) |
 |---|---|---|---|---|---|---|---|
 | **`RQ0`** *(Primary)* | How effectively and efficiently can an approved YOLO bounding-box detector localize predefined dental objects and radiographically visible abnormalities across available public `2D OPG` datasets under a deduplicated, patient/OPG-level leakage-controlled evaluation protocol? | `O1`, `O2`, `O3` | `GAP0001` (`refuted` broad / narrowed tier), `GAP0002`–`GAP0006`; `CLAIM0001`–`0012` | Verified `2D OPG` public dataset(s) (`UD02–UD03`), deduplicated (`UD07`), visible box ontology (`UD04–UD06`), immutable raw manifests (`G04–G08`) | Frozen baseline + compared modern single-stage YOLO detectors (`UD10, UD12`) selected strictly on `val` (`RF11`) | Held-out test evaluation once after `G11` freeze (`UD13, UD14`): `P, R, F1, mAP@0.50, mAP@0.50:0.95`, E2E `ms/FPS` | Bounded to tested cohorts, frozen operating threshold, and research screening scope (`scope.md`; **no autonomous diagnosis or clinical utility claim**). |
 | **`RQ1`** *(Localization & Contrast Tiers)* | Under a deduplicated, patient/OPG-level grouped split (`UD07–UD08`), what overall, visibility-tier (high-contrast restorations/impactions vs. small radiolucent pathologies), and per-class bounding-box localization performance (`P`, `R`, `F1`, `mAP@0.50`, `mAP@0.50:0.95`) does the frozen YOLO detector achieve on held-out and (if available) external `2D OPG` test sets? | `O1`, `O2` | `GAP0001` *(narrowed radiolucent tier)*, `GAP0002`, `GAP0003`, `GAP0004`; `CLAIM0001`–`0007` | Public `2D OPG` source(s) checked for pre-augmented duplicates (`P0008`-style audit); unambiguous visible box schema (`UD04–UD05`); QA-verified boxes (`UD06`); multi-center/external `2D OPG` cohort if permitted (`UD02, UD15`) | Baseline YOLO architecture vs. modern scale/family comparators (`UD10`); unified multi-class detection (no Oracle-ROI `P0029` / tight tooth-crop truncation `P0032`) | Overall + per-class `P, R, F1, AP@0.50, AP@0.50:0.95` at stated single `conf/NMS` operating threshold (`UD13`); explicit background `FP/FN` counts; optional cross-dataset OPG shift check (`UD15`) | Distinguishes true spatial box detection from classifiers; honestly reports low-contrast/minority class drops; never ranks `2D OPG` numerically vs `CBCT`/`BW`. |
@@ -59,11 +59,11 @@ Testing the six report hypotheses (`G1–G6`) against `42` full-text Core studie
 
 ---
 
-## 5. Supervisor Approval Block (`G03` Sign-Off — Required at `STEP-009`)
+## 5. Supervisor Approval Block (`G03 PASS — 2026-11-17`)
 
 | Role | Name | Decision | Date | Evidence |
 |---|---|---|---|---|
-| Literature Lead (`STEP-004–009` owner) | Mahajub Al Shabah | Prepared / Endorsed (`v0.9.0`) | `2026-11-17` | `synthesis.md`, `GAP0001–0006`, `CLAIM0001–0012` |
-| Research Lead / Reviewer | Akhtaruzzaman Anik | Technical Audit Endorsed (`v0.9.0`) | `2026-11-17` | `G03_assessment_2026-11-17.md`, `DEC0019.md` |
-| **Supervisor (`G03` Mandatory Approver, `OS §13.2`)** | **Ms Faiza Feroz** | **Pending Supervisor Sign-Off** | | Brief sent: `01_Project_Management/meetings/STEP-009_supervisor_brief.md` |
+| Literature Lead (`STEP-004–009` owner) | Mahajub Al Shabah | **Approved (`v1.0.0`, `UD19` Option 1)** | `2026-11-17` | Confirmed (`reported by A. Anik`); `synthesis.md`, `GAP0001–0006`, `DEC0019.md` |
+| Research Lead / Reviewer | Akhtaruzzaman Anik | **Approved (`v1.0.0`, `G03` Audit)** | `2026-11-17` | `G03_assessment_2026-11-17.md`, `DEC0019.md` |
+| **Supervisor (`G03` Mandatory Approver, `OS §13.2`)** | **Ms Faiza Feroz** | **Approved (`G03 PASS`, `RQ0–RQ3`, `DEC0019` Option 1)** | `2026-11-17` | Confirmed via team communication (`reported by A. Anik`; retaining confirmation screenshot in `meetings/` recommended) |
 | Co-supervisor *(if required)* | Israt Jahan | _(optional)_ | | |

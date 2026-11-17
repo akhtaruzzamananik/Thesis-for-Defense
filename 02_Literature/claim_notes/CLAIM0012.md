@@ -40,7 +40,7 @@ Timing comparisons across disparate hardware (`T4, P100, 2080 Ti, 3060, 4090, A5
 
 ## verification
 
-Verified across Core `T05` summaries and `GAP0006.md` (`STEP-008`); Phase 2 experimental hypothesis awaiting `STEP-009` / `G03` and `S05–S14`.
+Verified across Core `T05` summaries and `GAP0006.md` (`STEP-008`); Phase 2 experimental hypothesis approved under `RQ0` & `RQ3` at `G03 PASS` (`2026-11-17`), empirical benchmarking awaiting `S05–S14`.
 
 ## writing locations
 
