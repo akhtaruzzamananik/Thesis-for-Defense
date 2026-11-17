@@ -1,0 +1,95 @@
+{
+  "dataset_id": "DS0004",
+  "active_inspected_count": 3924,
+  "total_qc_scanned_with_branches": 3924,
+  "widths": {
+    "min": 2316.0,
+    "p05": 2444.0,
+    "median": 2444.0,
+    "p95": 2624.0,
+    "max": 2636.0
+  },
+  "heights": {
+    "min": 1252.0,
+    "p05": 1252.0,
+    "median": 1292.0,
+    "p95": 1292.0,
+    "max": 1292.0
+  },
+  "aspect_ratios": {
+    "min": 1.79,
+    "p05": 1.89,
+    "median": 1.89,
+    "p95": 2.04,
+    "max": 2.1
+  },
+  "aspect_ratio_outliers_lt1.3_or_gt2.8": 0,
+  "low_res_width_lt800": 0,
+  "non_identical_rgb_tint_count": 1,
+  "mean_luma": {
+    "min": 109.43,
+    "p05": 113.1,
+    "median": 116.53,
+    "p95": 131.05,
+    "max": 140.57
+  },
+  "std_luma": {
+    "min": 52.09,
+    "p05": 56.62,
+    "median": 61.11,
+    "p95": 67.1,
+    "max": 75.13
+  },
+  "pct_black_le_3": {
+    "min": 0.0,
+    "p05": 0.03,
+    "median": 0.08,
+    "p95": 0.53,
+    "max": 3.59
+  },
+  "pct_white_ge_252": {
+    "min": 3.48,
+    "p05": 4.35,
+    "median": 6.67,
+    "p95": 7.54,
+    "max": 9.07
+  },
+  "laplacian_var": {
+    "min": 88.14,
+    "p05": 108.9,
+    "median": 145.62,
+    "p95": 353.52,
+    "max": 490.21
+  },
+  "exif_images_with_sensitive_tags": 0,
+  "sensitive_exif_key_counts": {},
+  "png_text_key_counts": {
+    "progression": 3924,
+    "progressive": 3924,
+    "comment": 3054
+  },
+  "exact_sha256_pairs_in_active": 61,
+  "near_dup_hamming_le4_non_exact_pairs": 47263,
+  "near_dup_bucket_pairs": {
+    "original_jpg_folder<->original_jpg_folder": 47263
+  },
+  "qc_contact_sheet_offgit": "03_Datasets/raw/qc_samples/DS0004_qc_sheet.jpg",
+  "label_and_branch_audit": {
+    "active_originals": 3924,
+    "missing_xml_for_active": 0,
+    "empty_xml_for_active": 0,
+    "malformed_xml": 0,
+    "total_lesion_boxes_on_active": 6741,
+    "pai_grade_counts": {
+      "3": 4277,
+      "4": 1755,
+      "5": 709
+    },
+    "oob_boxes_gt1px": 0,
+    "zero_area_boxes": 0,
+    "total_xml_files_in_dir": 17004,
+    "orphan_xml_without_jpg": 9,
+    "aug_quarantined_count": 13071,
+    "orig_vs_aug_exact_sha_overlap": 0
+  }
+}

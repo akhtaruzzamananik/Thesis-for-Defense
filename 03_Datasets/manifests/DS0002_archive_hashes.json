@@ -1,0 +1,35 @@
+{
+  "dataset_id": "DS0002",
+  "candidate_id": "CAND0002",
+  "recorded_utc": "2026-11-17T19:23:00+00:00",
+  "archives": [
+    {
+      "filename": "training_data.zip",
+      "url": "https://zenodo.org/api/records/7812323/files/training_data.zip/content",
+      "expected_md5": "eba0c44fa4c6e8ec221db3009eccc1f9",
+      "expected_bytes": 10927391529,
+      "verified_md5": "eba0c44fa4c6e8ec221db3009eccc1f9",
+      "verified_sha256": "18b2a2dbc5a2b10b0cc6a7677c46a382f4709ab8c9c3bb94f57b74e38e11ffd3",
+      "verified_bytes": 10927391529
+    },
+    {
+      "filename": "validation_data.zip",
+      "url": "https://zenodo.org/api/records/7812323/files/validation_data.zip/content",
+      "expected_md5": "b2a13267740185e42cb59e968bc3ce83",
+      "expected_bytes": 149512256,
+      "verified_md5": "b2a13267740185e42cb59e968bc3ce83",
+      "verified_sha256": "6370bb4f1024bd610cde13242a465cb2eff195fc02f56ac22126555e7edc7bc3",
+      "verified_bytes": 149512256
+    }
+  ],
+  "inventory": {
+    "total_scanned_images": 3654,
+    "active_raw_count": 755,
+    "quarantined_count": 2899,
+    "decode_error_count": 0,
+    "unique_sha256_all": 2716,
+    "unique_sha256_active": 755,
+    "manifest_sha256": "fb268930e339b90dc70f24a1abaf67c72be4250b1e7fe4f7260c78a4e9a16086"
+  },
+  "notes": ""
+}

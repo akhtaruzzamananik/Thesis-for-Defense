@@ -140,6 +140,9 @@ def inspect_image_qc(image_id: str, path: Path, relpath: str, source_bucket: str
     )
 
 
+_POPCNT8 = np.array([bin(i).count("1") for i in range(256)], dtype=np.uint8)
+
+
 def find_near_duplicate_pairs(
     records: Iterable[tuple[str, str, str, str]],
     *,
@@ -150,28 +153,34 @@ def find_near_duplicate_pairs(
     Each item is ``(image_id, sha256, dhash64, bucket)``.
     """
     items = list(records)
-    ints = [int(item[2], 16) for item in items]
-    pairs: list[dict[str, object]] = []
     n = len(items)
-    for i in range(n):
+    if n < 2:
+        return []
+    byte_rows = np.frombuffer(
+        b"".join(bytes.fromhex(item[2]) for item in items),
+        dtype=np.uint8,
+    ).reshape(n, 8)
+
+    pairs: list[dict[str, object]] = []
+    for i in range(n - 1):
         id_a, sha_a, d_a, b_a = items[i]
-        int_a = ints[i]
-        for j in range(i + 1, n):
-            dist = (int_a ^ ints[j]).bit_count()
-            if dist <= max_hamming:
-                id_b, sha_b, d_b, b_b = items[j]
-                pairs.append(
-                    {
-                        "id_a": id_a,
-                        "id_b": id_b,
-                        "bucket_a": b_a,
-                        "bucket_b": b_b,
-                        "same_sha256": sha_a == sha_b,
-                        "hamming": dist,
-                        "dhash_a": d_a,
-                        "dhash_b": d_b,
-                    }
-                )
+        dists = _POPCNT8[np.bitwise_xor(byte_rows[i + 1 :], byte_rows[i])].sum(axis=1)
+        hit_offsets = np.nonzero(dists <= max_hamming)[0]
+        for off in hit_offsets:
+            j = i + 1 + int(off)
+            id_b, sha_b, d_b, b_b = items[j]
+            pairs.append(
+                {
+                    "id_a": id_a,
+                    "id_b": id_b,
+                    "bucket_a": b_a,
+                    "bucket_b": b_b,
+                    "same_sha256": sha_a == sha_b,
+                    "hamming": int(dists[off]),
+                    "dhash_a": d_a,
+                    "dhash_b": d_b,
+                }
+            )
     return pairs
 
 

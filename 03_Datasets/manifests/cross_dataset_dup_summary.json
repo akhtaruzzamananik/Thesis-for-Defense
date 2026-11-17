@@ -1,12 +1,15 @@
 {
   "datasets_screened": [
     "DS0001",
+    "DS0002",
     "DS0003",
+    "DS0004",
     "DS0005",
     "DS0006"
   ],
-  "total_active_images_screened": 3110,
-  "cross_dataset_matches_count": 48,
+  "total_active_images_screened": 7789,
+  "cross_dataset_exact_sha256_count": 0,
+  "cross_dataset_matches_count": 1462,
   "cross_dataset_matches_preview": [
     {
       "id_a": "DS0001_IMG_000001",
@@ -19,6 +22,56 @@
       "dhash_b": "0f0f574d4d4d6173"
     },
     {
+      "id_a": "DS0001_IMG_000008",
+      "id_b": "DS0004_IMG_013195",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "0f0f172b69697971",
+      "dhash_b": "0b1f172b69697171"
+    },
+    {
+      "id_a": "DS0001_IMG_000008",
+      "id_b": "DS0004_IMG_015038",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f172b69697971",
+      "dhash_b": "0f07972b69696931"
+    },
+    {
+      "id_a": "DS0001_IMG_000008",
+      "id_b": "DS0004_IMG_015096",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f172b69697971",
+      "dhash_b": "0f0f1f2b496d6971"
+    },
+    {
+      "id_a": "DS0001_IMG_000008",
+      "id_b": "DS0004_IMG_016565",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f172b69697971",
+      "dhash_b": "0f1f072b69697161"
+    },
+    {
+      "id_a": "DS0001_IMG_000010",
+      "id_b": "DS0004_IMG_015429",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f052d6d657171",
+      "dhash_b": "0f0f456d6d757173"
+    },
+    {
       "id_a": "DS0001_IMG_000012",
       "id_b": "DS0005_IMG_000743",
       "bucket_a": "DS0001",
@@ -27,6 +80,26 @@
       "hamming": 4,
       "dhash_a": "17175b596d797131",
       "dhash_b": "1717535949797171"
+    },
+    {
+      "id_a": "DS0001_IMG_000024",
+      "id_b": "DS0004_IMG_013989",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f174d6d6d7171",
+      "dhash_b": "0f1f374d4d6d7971"
+    },
+    {
+      "id_a": "DS0001_IMG_000024",
+      "id_b": "DS0004_IMG_015023",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "0f0f174d6d6d7171",
+      "dhash_b": "0f0f174d4d697131"
     },
     {
       "id_a": "DS0001_IMG_000024",
@@ -47,6 +120,136 @@
       "hamming": 4,
       "dhash_a": "0f0f174d6d6d7171",
       "dhash_b": "0f0f174d4de9f171"
+    },
+    {
+      "id_a": "DS0001_IMG_000034",
+      "id_b": "DS0004_IMG_014198",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0b0f0d4d4d497971",
+      "dhash_b": "0f0f0d4d4d597939"
+    },
+    {
+      "id_a": "DS0001_IMG_000034",
+      "id_b": "DS0004_IMG_014925",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0b0f0d4d4d497971",
+      "dhash_b": "0f0f0f4d4d4d6971"
+    },
+    {
+      "id_a": "DS0001_IMG_000034",
+      "id_b": "DS0004_IMG_015895",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0b0f0d4d4d497971",
+      "dhash_b": "0f0f494d4d697971"
+    },
+    {
+      "id_a": "DS0001_IMG_000034",
+      "id_b": "DS0004_IMG_015952",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0b0f0d4d4d497971",
+      "dhash_b": "0f1f4d4d4d497979"
+    },
+    {
+      "id_a": "DS0001_IMG_000034",
+      "id_b": "DS0004_IMG_016085",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "0b0f0d4d4d497971",
+      "dhash_b": "0f0f4d4d4d497171"
+    },
+    {
+      "id_a": "DS0001_IMG_000034",
+      "id_b": "DS0004_IMG_016361",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0b0f0d4d4d497971",
+      "dhash_b": "0d0f0d4d4d496961"
+    },
+    {
+      "id_a": "DS0001_IMG_000036",
+      "id_b": "DS0004_IMG_014300",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "0717176d6d6d6123",
+      "dhash_b": "0f17176d6d696923"
+    },
+    {
+      "id_a": "DS0001_IMG_000036",
+      "id_b": "DS0004_IMG_016689",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0717176d6d6d6123",
+      "dhash_b": "0f1717696d696923"
+    },
+    {
+      "id_a": "DS0001_IMG_000041",
+      "id_b": "DS0002_IMG_000552",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0002",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f17172f4f4d7161",
+      "dhash_b": "8e17172f4d4d7171"
+    },
+    {
+      "id_a": "DS0001_IMG_000041",
+      "id_b": "DS0004_IMG_013178",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f17172f4f4d7161",
+      "dhash_b": "0f17172b4d697161"
+    },
+    {
+      "id_a": "DS0001_IMG_000053",
+      "id_b": "DS0004_IMG_014320",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0717174d4d497979",
+      "dhash_b": "0f17154d4d4d6979"
+    },
+    {
+      "id_a": "DS0001_IMG_000053",
+      "id_b": "DS0004_IMG_014891",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0717174d4d497979",
+      "dhash_b": "17170f4d4d496979"
+    },
+    {
+      "id_a": "DS0001_IMG_000053",
+      "id_b": "DS0004_IMG_016286",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0717174d4d497979",
+      "dhash_b": "0f17174d4d4d6969"
     },
     {
       "id_a": "DS0001_IMG_000058",
@@ -80,6 +283,46 @@
     },
     {
       "id_a": "DS0001_IMG_000270",
+      "id_b": "DS0004_IMG_014320",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "0f17154d4d497971",
+      "dhash_b": "0f17154d4d4d6979"
+    },
+    {
+      "id_a": "DS0001_IMG_000270",
+      "id_b": "DS0004_IMG_014493",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f17154d4d497971",
+      "dhash_b": "0f17154d4d696933"
+    },
+    {
+      "id_a": "DS0001_IMG_000270",
+      "id_b": "DS0004_IMG_014508",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f17154d4d497971",
+      "dhash_b": "0f175d4d4d496979"
+    },
+    {
+      "id_a": "DS0001_IMG_000270",
+      "id_b": "DS0004_IMG_016083",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 2,
+      "dhash_a": "0f17154d4d497971",
+      "dhash_b": "1f17554d4d497971"
+    },
+    {
+      "id_a": "DS0001_IMG_000270",
       "id_b": "DS0005_IMG_000079",
       "bucket_a": "DS0001",
       "bucket_b": "DS0005",
@@ -97,6 +340,156 @@
       "hamming": 4,
       "dhash_a": "0f17154d4d497971",
       "dhash_b": "0f17554d4d696171"
+    },
+    {
+      "id_a": "DS0001_IMG_000310",
+      "id_b": "DS0004_IMG_015023",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "1f0f170f4d697131",
+      "dhash_b": "0f0f174d4d697131"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_014157",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f170f4d4d4d6979"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_014190",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f0f0f4d4d496933"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_014222",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f0f4d4d4d6d6161"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_014274",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f0f4d6d4d4d7171"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_014316",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f070f4d4d4d6921"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_014459",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f0f4d4d4d696171"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_014685",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f0f0d4d4d6d6961"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_014925",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 1,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f0f0f4d4d4d6971"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_015702",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f170f4d4d4d6971"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_016085",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f0f4d4d4d497171"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_016473",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f1f4d4d4d4d6971"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_016538",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f0f4d6d4d4d6971"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_016713",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f070f4d6d696171"
+    },
+    {
+      "id_a": "DS0001_IMG_000320",
+      "id_b": "DS0004_IMG_016874",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f0f4d4d4d6171",
+      "dhash_b": "0f0f4d4d4dcd7171"
     },
     {
       "id_a": "DS0001_IMG_000320",
@@ -137,6 +530,26 @@
       "hamming": 3,
       "dhash_a": "0f17592949597171",
       "dhash_b": "0717594949597171"
+    },
+    {
+      "id_a": "DS0001_IMG_000387",
+      "id_b": "DS0004_IMG_013254",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "1f17554d4d717171",
+      "dhash_b": "0f1757494d717173"
+    },
+    {
+      "id_a": "DS0001_IMG_000387",
+      "id_b": "DS0004_IMG_016083",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "1f17554d4d717171",
+      "dhash_b": "1f17554d4d497971"
     },
     {
       "id_a": "DS0001_IMG_000387",
@@ -210,6 +623,126 @@
     },
     {
       "id_a": "DS0001_IMG_000393",
+      "id_b": "DS0004_IMG_014157",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f17174d4d496971",
+      "dhash_b": "0f170f4d4d4d6979"
+    },
+    {
+      "id_a": "DS0001_IMG_000393",
+      "id_b": "DS0004_IMG_014320",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "0f17174d4d496971",
+      "dhash_b": "0f17154d4d4d6979"
+    },
+    {
+      "id_a": "DS0001_IMG_000393",
+      "id_b": "DS0004_IMG_014493",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f17174d4d496971",
+      "dhash_b": "0f17154d4d696933"
+    },
+    {
+      "id_a": "DS0001_IMG_000393",
+      "id_b": "DS0004_IMG_014508",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f17174d4d496971",
+      "dhash_b": "0f175d4d4d496979"
+    },
+    {
+      "id_a": "DS0001_IMG_000393",
+      "id_b": "DS0004_IMG_014689",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f17174d4d496971",
+      "dhash_b": "0f170f4d4d696961"
+    },
+    {
+      "id_a": "DS0001_IMG_000393",
+      "id_b": "DS0004_IMG_015593",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f17174d4d496971",
+      "dhash_b": "0f1f17494d496939"
+    },
+    {
+      "id_a": "DS0001_IMG_000393",
+      "id_b": "DS0004_IMG_015702",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "0f17174d4d496971",
+      "dhash_b": "0f170f4d4d4d6971"
+    },
+    {
+      "id_a": "DS0001_IMG_000393",
+      "id_b": "DS0004_IMG_015710",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "0f17174d4d496971",
+      "dhash_b": "0f1717694d4d6971"
+    },
+    {
+      "id_a": "DS0001_IMG_000393",
+      "id_b": "DS0004_IMG_015806",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f17174d4d496971",
+      "dhash_b": "0f1f176d4d496969"
+    },
+    {
+      "id_a": "DS0001_IMG_000393",
+      "id_b": "DS0004_IMG_015970",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "0f17174d4d496971",
+      "dhash_b": "0f1f1f4d4d696971"
+    },
+    {
+      "id_a": "DS0001_IMG_000393",
+      "id_b": "DS0004_IMG_016083",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f17174d4d496971",
+      "dhash_b": "1f17554d4d497971"
+    },
+    {
+      "id_a": "DS0001_IMG_000393",
+      "id_b": "DS0004_IMG_016286",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "0f17174d4d496971",
+      "dhash_b": "0f17174d4d4d6969"
+    },
+    {
+      "id_a": "DS0001_IMG_000393",
       "id_b": "DS0005_IMG_000593",
       "bucket_a": "DS0001",
       "bucket_b": "DS0005",
@@ -239,6 +772,66 @@
       "dhash_b": "0f17554d4d696171"
     },
     {
+      "id_a": "DS0001_IMG_000419",
+      "id_b": "DS0004_IMG_014443",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f1f17456d6d6969",
+      "dhash_b": "0f17174d69696969"
+    },
+    {
+      "id_a": "DS0001_IMG_000419",
+      "id_b": "DS0004_IMG_015163",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f1f17456d6d6969",
+      "dhash_b": "0f1f134d6d696979"
+    },
+    {
+      "id_a": "DS0001_IMG_000419",
+      "id_b": "DS0004_IMG_016007",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f1f17456d6d6969",
+      "dhash_b": "0f07170d6d6d6969"
+    },
+    {
+      "id_a": "DS0001_IMG_000419",
+      "id_b": "DS0004_IMG_016286",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f1f17456d6d6969",
+      "dhash_b": "0f17174d4d4d6969"
+    },
+    {
+      "id_a": "DS0001_IMG_000421",
+      "id_b": "DS0004_IMG_013642",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0b07175d4d697171",
+      "dhash_b": "0f17335d4d697171"
+    },
+    {
+      "id_a": "DS0001_IMG_000421",
+      "id_b": "DS0004_IMG_015023",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0b07175d4d697171",
+      "dhash_b": "0f0f174d4d697131"
+    },
+    {
       "id_a": "DS0001_IMG_000421",
       "id_b": "DS0005_IMG_000042",
       "bucket_a": "DS0001",
@@ -247,6 +840,56 @@
       "hamming": 4,
       "dhash_a": "0b07175d4d697171",
       "dhash_b": "0f07174d4d717171"
+    },
+    {
+      "id_a": "DS0001_IMG_000430",
+      "id_b": "DS0004_IMG_015023",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "0f0f17554f697171",
+      "dhash_b": "0f0f174d4d697131"
+    },
+    {
+      "id_a": "DS0001_IMG_000444",
+      "id_b": "DS0004_IMG_014662",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "070f094949697939",
+      "dhash_b": "0f0f494949696979"
+    },
+    {
+      "id_a": "DS0001_IMG_000444",
+      "id_b": "DS0004_IMG_015528",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "070f094949697939",
+      "dhash_b": "0f0b496949697939"
+    },
+    {
+      "id_a": "DS0001_IMG_000444",
+      "id_b": "DS0004_IMG_015682",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 3,
+      "dhash_a": "070f094949697939",
+      "dhash_b": "0f0f494949497939"
+    },
+    {
+      "id_a": "DS0001_IMG_000444",
+      "id_b": "DS0004_IMG_015756",
+      "bucket_a": "DS0001",
+      "bucket_b": "DS0004",
+      "same_sha256": false,
+      "hamming": 4,
+      "dhash_a": "070f094949697939",
+      "dhash_b": "0f0f494d69697939"
     },
     {
       "id_a": "DS0001_IMG_000448",
@@ -260,233 +903,113 @@
     },
     {
       "id_a": "DS0001_IMG_000449",
-      "id_b": "DS0005_IMG_000079",
+      "id_b": "DS0004_IMG_013957",
       "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
+      "bucket_b": "DS0004",
       "same_sha256": false,
       "hamming": 4,
       "dhash_a": "0f175d4d4d696161",
-      "dhash_b": "0f1755494d697171"
+      "dhash_b": "0f0f1d4d4d696961"
     },
     {
       "id_a": "DS0001_IMG_000449",
-      "id_b": "DS0005_IMG_000548",
+      "id_b": "DS0004_IMG_014052",
       "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
+      "bucket_b": "DS0004",
       "same_sha256": false,
-      "hamming": 3,
+      "hamming": 4,
       "dhash_a": "0f175d4d4d696161",
-      "dhash_b": "0f1f5d4d4d697171"
+      "dhash_b": "0f1f4d4d4d696971"
     },
     {
       "id_a": "DS0001_IMG_000449",
-      "id_b": "DS0005_IMG_000593",
+      "id_b": "DS0004_IMG_014055",
       "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
+      "bucket_b": "DS0004",
       "same_sha256": false,
-      "hamming": 2,
+      "hamming": 4,
       "dhash_a": "0f175d4d4d696161",
-      "dhash_b": "0f17554d4d696171"
+      "dhash_b": "0f174d4d4d696929"
     },
     {
       "id_a": "DS0001_IMG_000449",
-      "id_b": "DS0005_IMG_000967",
+      "id_b": "DS0004_IMG_014074",
       "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
+      "bucket_b": "DS0004",
       "same_sha256": false,
       "hamming": 4,
       "dhash_a": "0f175d4d4d696161",
-      "dhash_b": "0f0f554d4de96161"
+      "dhash_b": "17174d4d4d696961"
     },
     {
-      "id_a": "DS0001_IMG_000539",
-      "id_b": "DS0005_IMG_000647",
+      "id_a": "DS0001_IMG_000449",
+      "id_b": "DS0004_IMG_014100",
       "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
-      "same_sha256": false,
-      "hamming": 1,
-      "dhash_a": "1717551755717171",
-      "dhash_b": "0717551755717171"
-    },
-    {
-      "id_a": "DS0001_IMG_000539",
-      "id_b": "DS0005_IMG_000738",
-      "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
-      "same_sha256": false,
-      "hamming": 4,
-      "dhash_a": "1717551755717171",
-      "dhash_b": "0757555555717171"
-    },
-    {
-      "id_a": "DS0001_IMG_000539",
-      "id_b": "DS0005_IMG_001025",
-      "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
-      "same_sha256": false,
-      "hamming": 4,
-      "dhash_a": "1717551755717171",
-      "dhash_b": "1717515155717171"
-    },
-    {
-      "id_a": "DS0001_IMG_000624",
-      "id_b": "DS0005_IMG_000714",
-      "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
-      "same_sha256": false,
-      "hamming": 4,
-      "dhash_a": "17171597b5f17171",
-      "dhash_b": "0f175595b5f17171"
-    },
-    {
-      "id_a": "DS0001_IMG_000650",
-      "id_b": "DS0005_IMG_000530",
-      "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
-      "same_sha256": false,
-      "hamming": 4,
-      "dhash_a": "0f0f17454d4d6533",
-      "dhash_b": "0f0f574d4d4d6173"
-    },
-    {
-      "id_a": "DS0001_IMG_000658",
-      "id_b": "DS0005_IMG_000743",
-      "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
-      "same_sha256": false,
-      "hamming": 4,
-      "dhash_a": "1717535959597979",
-      "dhash_b": "1717535949797171"
-    },
-    {
-      "id_a": "DS0001_IMG_000669",
-      "id_b": "DS0005_IMG_000095",
-      "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
-      "same_sha256": false,
-      "hamming": 4,
-      "dhash_a": "0f4545ccecf17173",
-      "dhash_b": "0f4dcdccecf17171"
-    },
-    {
-      "id_a": "DS0001_IMG_000695",
-      "id_b": "DS0005_IMG_000485",
-      "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
-      "same_sha256": false,
-      "hamming": 4,
-      "dhash_a": "0f4d4d4d5d55793b",
-      "dhash_b": "0f0f4d4d4d557933"
-    },
-    {
-      "id_a": "DS0001_IMG_000823",
-      "id_b": "DS0005_IMG_000626",
-      "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
+      "bucket_b": "DS0004",
       "same_sha256": false,
       "hamming": 3,
-      "dhash_a": "171755594d797971",
-      "dhash_b": "171f554d4d797971"
+      "dhash_a": "0f175d4d4d696161",
+      "dhash_b": "0f170d4d6d696161"
     },
     {
-      "id_a": "DS0001_IMG_000823",
-      "id_b": "DS0005_IMG_000743",
+      "id_a": "DS0001_IMG_000449",
+      "id_b": "DS0004_IMG_014179",
       "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
+      "bucket_b": "DS0004",
       "same_sha256": false,
       "hamming": 4,
-      "dhash_a": "171755594d797971",
-      "dhash_b": "1717535949797171"
+      "dhash_a": "0f175d4d4d696161",
+      "dhash_b": "0f134d4d4d696969"
     },
     {
-      "id_a": "DS0001_IMG_000832",
-      "id_b": "DS0005_IMG_000481",
+      "id_a": "DS0001_IMG_000449",
+      "id_b": "DS0004_IMG_014222",
       "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
+      "bucket_b": "DS0004",
       "same_sha256": false,
       "hamming": 4,
-      "dhash_a": "0f17576161797171",
-      "dhash_b": "0f17574969717171"
+      "dhash_a": "0f175d4d4d696161",
+      "dhash_b": "0f0f4d4d4d6d6161"
     },
     {
-      "id_a": "DS0001_IMG_000871",
-      "id_b": "DS0005_IMG_000073",
+      "id_a": "DS0001_IMG_000449",
+      "id_b": "DS0004_IMG_014412",
       "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
+      "bucket_b": "DS0004",
       "same_sha256": false,
       "hamming": 4,
-      "dhash_a": "0f0f374971617171",
-      "dhash_b": "0f07174971616971"
+      "dhash_a": "0f175d4d4d696161",
+      "dhash_b": "0f1f594d4d696969"
     },
     {
-      "id_a": "DS0001_IMG_000950",
-      "id_b": "DS0005_IMG_000647",
+      "id_a": "DS0001_IMG_000449",
+      "id_b": "DS0004_IMG_014459",
       "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
+      "bucket_b": "DS0004",
       "same_sha256": false,
       "hamming": 4,
-      "dhash_a": "1717551745716161",
-      "dhash_b": "0717551755717171"
+      "dhash_a": "0f175d4d4d696161",
+      "dhash_b": "0f0f4d4d4d696171"
     },
     {
-      "id_a": "DS0001_IMG_001059",
-      "id_b": "DS0005_IMG_000248",
+      "id_a": "DS0001_IMG_000449",
+      "id_b": "DS0004_IMG_014499",
       "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
-      "same_sha256": false,
-      "hamming": 3,
-      "dhash_a": "17174d4d69717169",
-      "dhash_b": "17174d4969717171"
-    },
-    {
-      "id_a": "DS0001_IMG_001059",
-      "id_b": "DS0005_IMG_000661",
-      "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
+      "bucket_b": "DS0004",
       "same_sha256": false,
       "hamming": 4,
-      "dhash_a": "17174d4d69717169",
-      "dhash_b": "1717554d69717171"
+      "dhash_a": "0f175d4d4d696161",
+      "dhash_b": "0f174d4d4d696979"
     },
     {
-      "id_a": "DS0001_IMG_001630",
-      "id_b": "DS0005_IMG_000492",
+      "id_a": "DS0001_IMG_000449",
+      "id_b": "DS0004_IMG_014508",
       "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
+      "bucket_b": "DS0004",
       "same_sha256": false,
       "hamming": 4,
-      "dhash_a": "0f17170f2b697971",
-      "dhash_b": "0f17171b6b697171"
-    },
-    {
-      "id_a": "DS0001_IMG_001648",
-      "id_b": "DS0005_IMG_000875",
-      "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
-      "same_sha256": false,
-      "hamming": 4,
-      "dhash_a": "0f0f17554dd57171",
-      "dhash_b": "0f2f57554df17171"
-    },
-    {
-      "id_a": "DS0001_IMG_001674",
-      "id_b": "DS0005_IMG_000684",
-      "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
-      "same_sha256": false,
-      "hamming": 4,
-      "dhash_a": "1713416969716169",
-      "dhash_b": "1713496969717171"
-    },
-    {
-      "id_a": "DS0001_IMG_001679",
-      "id_b": "DS0005_IMG_000294",
-      "bucket_a": "DS0001",
-      "bucket_b": "DS0005",
-      "same_sha256": false,
-      "hamming": 4,
-      "dhash_a": "0f17174569697171",
-      "dhash_b": "0f1717656d6d6171"
+      "dhash_a": "0f175d4d4d696161",
+      "dhash_b": "0f175d4d4d496979"
     }
   ]
 }

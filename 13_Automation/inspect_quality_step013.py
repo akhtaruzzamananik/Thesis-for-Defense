@@ -8,6 +8,7 @@ import csv
 import json
 import math
 import sys
+import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -234,6 +235,140 @@ def _audit_ds0006_json(extracted_dir: Path) -> dict[str, object]:
     }
 
 
+def _audit_ds0002_coco(extracted_dir: Path, manifest_rows: list[dict[str, str]]) -> dict[str, object]:
+    """Audit DS0002 (DENTEX) disease COCO JSON annotations and subfolder SHA-256 overlaps."""
+    jpath = (
+        extracted_dir
+        / "training_data"
+        / "training_data"
+        / "quadrant-enumeration-disease"
+        / "train_quadrant_enumeration_disease.json"
+    )
+    data = json.loads(jpath.read_text(encoding="utf-8"))
+    cat3 = {c["id"]: c["name"] for c in data.get("categories_3", [])}
+    cat1 = {c["id"]: c["name"] for c in data.get("categories_1", [])}
+    img_map = {im["id"]: im for im in data.get("images", [])}
+
+    dis_cnt: Counter[str] = Counter()
+    quad_cnt: Counter[str] = Counter()
+    oob_boxes = 0
+    zero_area = 0
+    for ann in data.get("annotations", []):
+        dis_cnt[cat3.get(ann.get("category_id_3"), str(ann.get("category_id_3")))] += 1
+        quad_cnt[cat1.get(ann.get("category_id_1"), str(ann.get("category_id_1")))] += 1
+        x, y, w, h = (float(v) for v in ann["bbox"])
+        im = img_map.get(ann["image_id"], {})
+        iw, ih = float(im.get("width", 0)), float(im.get("height", 0))
+        if w <= 0 or h <= 0:
+            zero_area += 1
+        if x < -1 or y < -1 or x + w > iw + 1 or y + h > ih + 1:
+            oob_boxes += 1
+
+    # Check exact SHA-256 overlap across active (705 + 50) vs quarantined sub-pools
+    active_shas = {r["sha256"] for r in manifest_rows if not r["intake_status"].startswith("quarantined")}
+    bucket_overlaps: dict[str, dict[str, int]] = {}
+    for bucket in (
+        "training_quadrant_enumeration_disease",
+        "validation_quadrant_enumeration_disease_no_gt",
+        "training_quadrant_only",
+        "training_quadrant_enumeration_only",
+        "training_unlabelled_xrays",
+        "validation_ipynb_checkpoint",
+    ):
+        sub = [r for r in manifest_rows if r["source_bucket"] == bucket]
+        sub_shas = {r["sha256"] for r in sub}
+        bucket_overlaps[bucket] = {
+            "count": len(sub),
+            "unique_sha256": len(sub_shas),
+            "overlap_with_active_disease_shas": len(sub_shas & active_shas),
+        }
+
+    return {
+        "coco_images": len(img_map),
+        "coco_annotations": len(data.get("annotations", [])),
+        "disease_categories": dict(dis_cnt),
+        "quadrant_categories": dict(quad_cnt),
+        "oob_boxes_gt1px": oob_boxes,
+        "zero_area_boxes": zero_area,
+        "validation_public_gt_json_present": False,
+        "bucket_sha256_summary": bucket_overlaps,
+    }
+
+
+def _audit_ds0004_xml(extracted_dir: Path, manifest_rows: list[dict[str, str]], linkage: dict[str, str], active_qc: list[dict[str, object]]) -> dict[str, object]:
+    """Audit DS0004 (Do 2024 Hanoi) Original JPG XMLs, orphan XMLs, and augmentation SHA overlap."""
+    ann_dir = (
+        extracted_dir
+        / "Panoramic radiographs with periapical lesions Dataset"
+        / "Periapical Dataset"
+        / "Periapical Lesions"
+        / "Image Annots"
+    )
+    active_dim_by_stem = {
+        Path(linkage[str(r["image_id"])]).stem: (int(r["width"]), int(r["height"]))
+        for r in active_qc
+    }
+
+    missing_xml = 0
+    empty_xml = 0
+    malformed_xml = 0
+    oob_boxes = 0
+    zero_area = 0
+    pai_counts: Counter[str] = Counter()
+    total_boxes = 0
+    for stem, (iw, ih) in active_dim_by_stem.items():
+        xp = ann_dir / f"{stem}.xml"
+        if not xp.is_file():
+            missing_xml += 1
+            continue
+        try:
+            root = ET.parse(xp).getroot()
+        except ET.ParseError:
+            malformed_xml += 1
+            continue
+        objs = root.findall("object")
+        if not objs:
+            empty_xml += 1
+        for obj in objs:
+            total_boxes += 1
+            pai_counts[str(obj.findtext("name", "")).strip()] += 1
+            box = obj.find("bndbox")
+            if box is None:
+                malformed_xml += 1
+                continue
+            xmin = float(box.findtext("xmin", "0"))
+            ymin = float(box.findtext("ymin", "0"))
+            xmax = float(box.findtext("xmax", "0"))
+            ymax = float(box.findtext("ymax", "0"))
+            if xmax <= xmin or ymax <= ymin:
+                zero_area += 1
+            if xmin < -1 or ymin < -1 or xmax > iw + 1 or ymax > ih + 1:
+                oob_boxes += 1
+
+    # Count all XML stems vs active original + quarantined aug stems
+    all_xml_stems = {p.stem for p in ann_dir.glob("*.xml")}
+    all_img_stems = {Path(linkage[r["ImageID"]]).stem for r in manifest_rows}
+    orphan_xml_count = len(all_xml_stems - all_img_stems)
+
+    orig_shas = {r["sha256"] for r in manifest_rows if r["source_bucket"] == "original_jpg_folder"}
+    aug_shas = {r["sha256"] for r in manifest_rows if r["source_bucket"] == "augmentation_jpg_folder"}
+
+    return {
+        "active_originals": len(active_dim_by_stem),
+        "missing_xml_for_active": missing_xml,
+        "empty_xml_for_active": empty_xml,
+        "malformed_xml": malformed_xml,
+        "total_lesion_boxes_on_active": total_boxes,
+        "pai_grade_counts": dict(sorted(pai_counts.items())),
+        "oob_boxes_gt1px": oob_boxes,
+        "zero_area_boxes": zero_area,
+        "total_xml_files_in_dir": len(all_xml_stems),
+        "orphan_xml_without_jpg": orphan_xml_count,
+        "aug_quarantined_count": sum(1 for r in manifest_rows if r["source_bucket"] == "augmentation_jpg_folder"),
+        "orig_vs_aug_exact_sha_overlap": len(orig_shas & aug_shas),
+    }
+
+
 def _save_qc_contact_sheet(
     dataset_id: str,
     qc_records: list[dict[str, object]],
@@ -383,8 +518,12 @@ def run_dataset_qc(dataset_id: str) -> tuple[dict[str, object], list[dict[str, o
     extra_audit: dict[str, object] = {}
     if dataset_id == "DS0001":
         extra_audit = _audit_ds0001_labels(extracted_dir)
+    elif dataset_id == "DS0002":
+        extra_audit = _audit_ds0002_coco(extracted_dir, manifest_rows)
     elif dataset_id == "DS0003":
         extra_audit = _audit_ds0003_labels_and_branch(extracted_dir, qc_records)
+    elif dataset_id == "DS0004":
+        extra_audit = _audit_ds0004_xml(extracted_dir, manifest_rows, linkage, active_qc)
     elif dataset_id == "DS0005":
         extra_audit = _audit_ds0005_csv(extracted_dir, qc_records)
     elif dataset_id == "DS0006":
@@ -426,7 +565,7 @@ def main() -> int:
 
     all_active_pool: list[tuple[str, str, str, str]] = []
     for ds_id in args.datasets:
-        summary, active_qc = run_dataset_qc(ds_id)
+        summary, _ = run_dataset_qc(ds_id)
         print(
             f"[QC {ds_id}] active={summary['active_inspected_count']}, "
             f"exif_sensitive={summary['exif_images_with_sensitive_tags']}, "
@@ -436,27 +575,42 @@ def main() -> int:
             f"ar_outliers={summary['aspect_ratio_outliers_lt1.3_or_gt2.8']}",
             flush=True,
         )
-        for r in active_qc:
-            all_active_pool.append((str(r["image_id"]), str(r["sha256"]), str(r["dhash64"]), ds_id))
+
+    # Load ALL existing DS####_restricted_qc.csv files so cross-cohort check covers all cohorts together
+    screened_ds: list[str] = []
+    for ds_id in ("DS0001", "DS0002", "DS0003", "DS0004", "DS0005", "DS0006"):
+        qc_csv = MANIFEST_ROOT / f"{ds_id}_restricted_qc.csv"
+        if qc_csv.is_file():
+            screened_ds.append(ds_id)
+            with qc_csv.open("r", encoding="utf-8", newline="") as handle:
+                for r in csv.DictReader(handle):
+                    if not r["intake_status"].startswith("quarantined"):
+                        all_active_pool.append((r["image_id"], r["sha256"], r["dhash64"], ds_id))
 
     # Cross-dataset exact & near-duplicate screen across all inspected cohorts
     cross_pairs = find_near_duplicate_pairs(all_active_pool, max_hamming=4)
     cross_diff_ds = [p for p in cross_pairs if p["bucket_a"] != p["bucket_b"]]
+    exact_cross = [p for p in cross_diff_ds if p["same_sha256"]]
     cross_out = MANIFEST_ROOT / "cross_dataset_dup_summary.json"
     cross_out.write_text(
         json.dumps(
             {
-                "datasets_screened": args.datasets,
+                "datasets_screened": screened_ds,
                 "total_active_images_screened": len(all_active_pool),
+                "cross_dataset_exact_sha256_count": len(exact_cross),
                 "cross_dataset_matches_count": len(cross_diff_ds),
-                "cross_dataset_matches_preview": cross_diff_ds[:50],
+                "cross_dataset_matches_preview": cross_diff_ds[:100],
             },
             indent=2,
         )
         + "\n",
         encoding="utf-8",
     )
-    print(f"[CROSS-COHORT DUP CHECK] matches across different DS#### = {len(cross_diff_ds)}", flush=True)
+    print(
+        f"[CROSS-COHORT DUP CHECK ({','.join(screened_ds)})] "
+        f"total={len(all_active_pool)}, exact={len(exact_cross)}, dHash<=4={len(cross_diff_ds)}",
+        flush=True,
+    )
     return 0
 
 

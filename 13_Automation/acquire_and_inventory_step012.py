@@ -407,13 +407,18 @@ def _build_classifier(spec: DatasetSpec, extracted_dir: Path) -> Callable[[str],
         def _cls_ds2(relpath: str) -> tuple[str, str]:
             low = relpath.lower()
             parts = [p.lower() for p in Path(relpath).parts]
+            if ".ipynb_checkpoints" in parts:
+                return "validation_ipynb_checkpoint", "quarantined-author-checkpoint"
             if "validation_data" in parts:
-                return "validation_data", "acquired-uninspected"
-            if "unlabeled" in low:
-                return "training_unlabeled_xrays", "quarantined-unlabeled-pool"
-            for key in ("quadrant-enumeration-disease", "quadrant_enumeration_disease", "quadrant_enumeration", "quadrant-enumeration", "quadrant"):
-                if key in low:
-                    return f"training_{key.replace('-', '_')}", "acquired-uninspected"
+                return "validation_quadrant_enumeration_disease_no_gt", "acquired-uninspected"
+            if "unlabelled" in low or "unlabeled" in low:
+                return "training_unlabelled_xrays", "quarantined-unlabeled-pool"
+            if "quadrant-enumeration-disease" in low:
+                return "training_quadrant_enumeration_disease", "acquired-uninspected"
+            if "quadrant_enumeration" in low:
+                return "training_quadrant_enumeration_only", "quarantined-no-disease-labels"
+            if "/quadrant/" in f"/{low}":
+                return "training_quadrant_only", "quarantined-no-disease-labels"
             return "training_other", "acquired-uninspected"
 
         return _cls_ds2

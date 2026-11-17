@@ -1,0 +1,125 @@
+{
+  "dataset_id": "DS0002",
+  "active_inspected_count": 755,
+  "total_qc_scanned_with_branches": 755,
+  "widths": {
+    "min": 1976.0,
+    "p05": 2512.0,
+    "median": 2872.0,
+    "p95": 2983.3,
+    "max": 3139.0
+  },
+  "heights": {
+    "min": 976.0,
+    "p05": 1316.0,
+    "median": 1316.0,
+    "p95": 1504.0,
+    "max": 1536.0
+  },
+  "aspect_ratios": {
+    "min": 1.6,
+    "p05": 1.91,
+    "median": 2.13,
+    "p95": 2.26,
+    "max": 2.33
+  },
+  "aspect_ratio_outliers_lt1.3_or_gt2.8": 0,
+  "low_res_width_lt800": 0,
+  "non_identical_rgb_tint_count": 0,
+  "mean_luma": {
+    "min": 53.85,
+    "p05": 94.86,
+    "median": 113.07,
+    "p95": 125.88,
+    "max": 145.86
+  },
+  "std_luma": {
+    "min": 44.04,
+    "p05": 52.71,
+    "median": 59.54,
+    "p95": 67.8,
+    "max": 83.82
+  },
+  "pct_black_le_3": {
+    "min": 0.55,
+    "p05": 1.4,
+    "median": 1.87,
+    "p95": 5.21,
+    "max": 39.43
+  },
+  "pct_white_ge_252": {
+    "min": 0.06,
+    "p05": 0.15,
+    "median": 1.39,
+    "p95": 1.74,
+    "max": 3.22
+  },
+  "laplacian_var": {
+    "min": 91.74,
+    "p05": 124.74,
+    "median": 260.06,
+    "p95": 665.3,
+    "max": 2247.54
+  },
+  "exif_images_with_sensitive_tags": 0,
+  "sensitive_exif_key_counts": {},
+  "png_text_key_counts": {},
+  "exact_sha256_pairs_in_active": 0,
+  "near_dup_hamming_le4_non_exact_pairs": 25,
+  "near_dup_bucket_pairs": {
+    "training_quadrant_enumeration_disease<->training_quadrant_enumeration_disease": 20,
+    "training_quadrant_enumeration_disease<->validation_quadrant_enumeration_disease_no_gt": 5
+  },
+  "qc_contact_sheet_offgit": "03_Datasets/raw/qc_samples/DS0002_qc_sheet.jpg",
+  "label_and_branch_audit": {
+    "coco_images": 705,
+    "coco_annotations": 3529,
+    "disease_categories": {
+      "Impacted": 604,
+      "Caries": 2189,
+      "Periapical Lesion": 158,
+      "Deep Caries": 578
+    },
+    "quadrant_categories": {
+      "4": 942,
+      "3": 965,
+      "2": 799,
+      "1": 823
+    },
+    "oob_boxes_gt1px": 0,
+    "zero_area_boxes": 0,
+    "validation_public_gt_json_present": false,
+    "bucket_sha256_summary": {
+      "training_quadrant_enumeration_disease": {
+        "count": 705,
+        "unique_sha256": 705,
+        "overlap_with_active_disease_shas": 705
+      },
+      "validation_quadrant_enumeration_disease_no_gt": {
+        "count": 50,
+        "unique_sha256": 50,
+        "overlap_with_active_disease_shas": 50
+      },
+      "training_quadrant_only": {
+        "count": 693,
+        "unique_sha256": 676,
+        "overlap_with_active_disease_shas": 277
+      },
+      "training_quadrant_enumeration_only": {
+        "count": 634,
+        "unique_sha256": 623,
+        "overlap_with_active_disease_shas": 278
+      },
+      "training_unlabelled_xrays": {
+        "count": 1571,
+        "unique_sha256": 1566,
+        "overlap_with_active_disease_shas": 12
+      },
+      "validation_ipynb_checkpoint": {
+        "count": 1,
+        "unique_sha256": 1,
+        "overlap_with_active_disease_shas": 1
+      }
+    }
+  }
+}
