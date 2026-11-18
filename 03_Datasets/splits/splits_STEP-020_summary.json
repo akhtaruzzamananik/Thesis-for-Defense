@@ -1,0 +1,791 @@
+{
+  "SPLIT0001": {
+    "split_id": "SPLIT0001",
+    "dataset_id": "DS0001",
+    "annotation_id": "ANN0001",
+    "track_id": "TrackA",
+    "seed": 20261121,
+    "input_dataset_manifest_sha256": "15627853af1a545c86801afb6be5e3a503d3e60921f1da259a65fed21013015f",
+    "input_annotation_export_sha256": "464057e57980d29f7a97df93fa7a15bd512d22efcd155966426c522c2f6daf64",
+    "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+    "split_manifest_sha256": "8260d222aba799aa7e46720bd604e625ecd43228ad49dc53c8e0ddd6c61c4dc9",
+    "config_sha256": "2abaafa7768fe05881fec4df40b75eaa8102110c47bb8f6f2d46e08df2d71f00",
+    "total_active_images": 1808,
+    "total_labeled_images": 1808,
+    "total_active_canonical_images": 1594,
+    "total_deduplicated_copies": 214,
+    "total_quarantined_missing_labels": 0,
+    "total_unique_groups": 1592,
+    "exact_or_reencoded_edge_count": 215,
+    "near_or_reshoot_edge_count": 2,
+    "partitions": {
+      "train": {
+        "total_files": 1139,
+        "unique_groups": 992,
+        "active_canonical_images": 994,
+        "canonical_pct": 70.2,
+        "deduplicated_copies": 145,
+        "canonical_boxes": 13253,
+        "box_pct": 69.85
+      },
+      "val": {
+        "total_files": 249,
+        "unique_groups": 214,
+        "active_canonical_images": 214,
+        "canonical_pct": 15.11,
+        "deduplicated_copies": 35,
+        "canonical_boxes": 2833,
+        "box_pct": 14.93
+      },
+      "test": {
+        "total_files": 240,
+        "unique_groups": 208,
+        "active_canonical_images": 208,
+        "canonical_pct": 14.69,
+        "deduplicated_copies": 32,
+        "canonical_boxes": 2888,
+        "box_pct": 15.22
+      },
+      "external_test": {
+        "total_files": 180,
+        "unique_groups": 178,
+        "active_canonical_images": 178,
+        "canonical_pct": 100.0,
+        "deduplicated_copies": 2,
+        "canonical_boxes": 2925,
+        "box_pct": 100.0
+      }
+    },
+    "class_support": {
+      "0": {
+        "total_canonical_boxes": 478,
+        "total_canonical_images": 131,
+        "train_boxes": 322,
+        "train_images": 89,
+        "val_boxes": 70,
+        "val_images": 17,
+        "test_boxes": 70,
+        "test_images": 20,
+        "external_test_boxes": 16,
+        "external_test_images": 5
+      },
+      "1": {
+        "total_canonical_boxes": 1747,
+        "total_canonical_images": 643,
+        "train_boxes": 1087,
+        "train_images": 389,
+        "val_boxes": 233,
+        "val_images": 86,
+        "test_boxes": 235,
+        "test_images": 88,
+        "external_test_boxes": 192,
+        "external_test_images": 80
+      },
+      "2": {
+        "total_canonical_boxes": 4753,
+        "total_canonical_images": 922,
+        "train_boxes": 2738,
+        "train_images": 545,
+        "val_boxes": 568,
+        "val_images": 130,
+        "test_boxes": 573,
+        "test_images": 119,
+        "external_test_boxes": 874,
+        "external_test_images": 128
+      },
+      "3": {
+        "total_canonical_boxes": 3389,
+        "total_canonical_images": 942,
+        "train_boxes": 2002,
+        "train_images": 588,
+        "val_boxes": 437,
+        "val_images": 120,
+        "test_boxes": 437,
+        "test_images": 116,
+        "external_test_boxes": 513,
+        "external_test_images": 118
+      },
+      "4": {
+        "total_canonical_boxes": 3037,
+        "total_canonical_images": 932,
+        "train_boxes": 1891,
+        "train_images": 585,
+        "val_boxes": 404,
+        "val_images": 120,
+        "test_boxes": 446,
+        "test_images": 126,
+        "external_test_boxes": 296,
+        "external_test_images": 101
+      },
+      "5": {
+        "total_canonical_boxes": 3257,
+        "total_canonical_images": 519,
+        "train_boxes": 1804,
+        "train_images": 313,
+        "val_boxes": 386,
+        "val_images": 56,
+        "test_boxes": 390,
+        "test_images": 72,
+        "external_test_boxes": 677,
+        "external_test_images": 78
+      },
+      "6": {
+        "total_canonical_boxes": 994,
+        "total_canonical_images": 400,
+        "train_boxes": 617,
+        "train_images": 247,
+        "val_boxes": 133,
+        "val_images": 49,
+        "test_boxes": 133,
+        "test_images": 53,
+        "external_test_boxes": 111,
+        "external_test_images": 51
+      },
+      "7": {
+        "total_canonical_boxes": 1050,
+        "total_canonical_images": 567,
+        "train_boxes": 660,
+        "train_images": 369,
+        "val_boxes": 142,
+        "val_images": 76,
+        "test_boxes": 142,
+        "test_images": 74,
+        "external_test_boxes": 106,
+        "external_test_images": 48
+      },
+      "8": {
+        "total_canonical_boxes": 1266,
+        "total_canonical_images": 436,
+        "train_boxes": 819,
+        "train_images": 277,
+        "val_boxes": 176,
+        "val_images": 64,
+        "test_boxes": 178,
+        "test_images": 62,
+        "external_test_boxes": 93,
+        "external_test_images": 33
+      },
+      "9": {
+        "total_canonical_boxes": 277,
+        "total_canonical_images": 196,
+        "train_boxes": 180,
+        "train_images": 130,
+        "val_boxes": 39,
+        "val_images": 28,
+        "test_boxes": 39,
+        "test_images": 26,
+        "external_test_boxes": 19,
+        "external_test_images": 12
+      },
+      "10": {
+        "total_canonical_boxes": 84,
+        "total_canonical_images": 46,
+        "train_boxes": 47,
+        "train_images": 29,
+        "val_boxes": 10,
+        "val_images": 5,
+        "test_boxes": 10,
+        "test_images": 6,
+        "external_test_boxes": 17,
+        "external_test_images": 6
+      },
+      "11": {
+        "total_canonical_boxes": 485,
+        "total_canonical_images": 202,
+        "train_boxes": 334,
+        "train_images": 142,
+        "val_boxes": 73,
+        "val_images": 28,
+        "test_boxes": 72,
+        "test_images": 29,
+        "external_test_boxes": 6,
+        "external_test_images": 3
+      },
+      "12": {
+        "total_canonical_boxes": 1082,
+        "total_canonical_images": 213,
+        "train_boxes": 752,
+        "train_images": 147,
+        "val_boxes": 162,
+        "val_images": 32,
+        "test_boxes": 163,
+        "test_images": 33,
+        "external_test_boxes": 5,
+        "external_test_images": 1
+      }
+    },
+    "leakage_Verification": {
+      "evaluated_records": 1808,
+      "unique_groups": 1592,
+      "cross_partition_groups": 0,
+      "cross_partition_sha256": 0,
+      "cross_partition_exact_edges": 0,
+      "cross_partition_near_edges": 0
+    }
+  },
+  "SPLIT0002": {
+    "split_id": "SPLIT0002",
+    "dataset_id": "DS0002",
+    "annotation_id": "ANN0002",
+    "track_id": "TrackB",
+    "seed": 20261122,
+    "input_dataset_manifest_sha256": "f8a6218fc1e3700b1508fa100f114976f42507cf1dc3f91b256a861be8f1815d",
+    "input_annotation_export_sha256": "b127fa293af54a9b0a3d2fec49a35ab2afee27f506ae65ad957f3cba5f724b29",
+    "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+    "split_manifest_sha256": "a31c3245ff5eee84135528b4caa477e7886ee959aeaaa49e9a4077db572b2de1",
+    "config_sha256": "9e340a40966de43e1ee77a376d9def05aaa69f804d15f4c4bf4fb0551c564d85",
+    "total_active_images": 755,
+    "total_labeled_images": 705,
+    "total_active_canonical_images": 705,
+    "total_deduplicated_copies": 0,
+    "total_quarantined_missing_labels": 50,
+    "total_unique_groups": 705,
+    "exact_or_reencoded_edge_count": 0,
+    "near_or_reshoot_edge_count": 0,
+    "partitions": {
+      "train": {
+        "total_files": 493,
+        "unique_groups": 493,
+        "active_canonical_images": 493,
+        "canonical_pct": 69.93,
+        "deduplicated_copies": 0,
+        "canonical_boxes": 2468,
+        "box_pct": 69.95
+      },
+      "val": {
+        "total_files": 106,
+        "unique_groups": 106,
+        "active_canonical_images": 106,
+        "canonical_pct": 15.04,
+        "deduplicated_copies": 0,
+        "canonical_boxes": 530,
+        "box_pct": 15.02
+      },
+      "test": {
+        "total_files": 106,
+        "unique_groups": 106,
+        "active_canonical_images": 106,
+        "canonical_pct": 15.04,
+        "deduplicated_copies": 0,
+        "canonical_boxes": 530,
+        "box_pct": 15.02
+      },
+      "quarantined_missing_labels": {
+        "total_files": 50,
+        "unique_groups": 50,
+        "active_canonical_images": 0,
+        "canonical_pct": 100.0,
+        "deduplicated_copies": 0,
+        "canonical_boxes": 0,
+        "box_pct": 100.0
+      }
+    },
+    "class_support": {
+      "0": {
+        "total_canonical_boxes": 604,
+        "total_canonical_images": 254,
+        "train_boxes": 422,
+        "train_images": 176,
+        "val_boxes": 91,
+        "val_images": 38,
+        "test_boxes": 91,
+        "test_images": 40,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "1": {
+        "total_canonical_boxes": 2188,
+        "total_canonical_images": 623,
+        "train_boxes": 1532,
+        "train_images": 438,
+        "val_boxes": 328,
+        "val_images": 94,
+        "test_boxes": 328,
+        "test_images": 91,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "2": {
+        "total_canonical_boxes": 158,
+        "total_canonical_images": 116,
+        "train_boxes": 110,
+        "train_images": 82,
+        "val_boxes": 24,
+        "val_images": 17,
+        "test_boxes": 24,
+        "test_images": 17,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "3": {
+        "total_canonical_boxes": 578,
+        "total_canonical_images": 321,
+        "train_boxes": 404,
+        "train_images": 223,
+        "val_boxes": 87,
+        "val_images": 51,
+        "test_boxes": 87,
+        "test_images": 47,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      }
+    },
+    "leakage_Verification": {
+      "evaluated_records": 705,
+      "unique_groups": 705,
+      "cross_partition_groups": 0,
+      "cross_partition_sha256": 0,
+      "cross_partition_exact_edges": 0,
+      "cross_partition_near_edges": 0
+    }
+  },
+  "SPLIT0003": {
+    "split_id": "SPLIT0003",
+    "dataset_id": "DS0003",
+    "annotation_id": "ANN0003",
+    "track_id": "TrackC",
+    "seed": 20261123,
+    "input_dataset_manifest_sha256": "da849181d2e7360c6335d6343426c6bc819cc9062a4f1921b4fc903bf2c36cfe",
+    "input_annotation_export_sha256": "557ec6ccaf110bba13d641ee16dc58a4cb104e93880a04c7c28243a377ee3d24",
+    "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+    "split_manifest_sha256": "add134cc9e74b86b1efcae2a8f60c960397251ddb2f8ba5886260a1b85c87952",
+    "config_sha256": "32e40a38c063b5accf1a65e933936bc7820531ec6f219b1d52eb9b824ccbc076",
+    "total_active_images": 231,
+    "total_labeled_images": 230,
+    "total_active_canonical_images": 230,
+    "total_deduplicated_copies": 0,
+    "total_quarantined_missing_labels": 1,
+    "total_unique_groups": 229,
+    "exact_or_reencoded_edge_count": 0,
+    "near_or_reshoot_edge_count": 2,
+    "partitions": {
+      "train": {
+        "total_files": 163,
+        "unique_groups": 162,
+        "active_canonical_images": 163,
+        "canonical_pct": 70.87,
+        "deduplicated_copies": 0,
+        "canonical_boxes": 824,
+        "box_pct": 69.3
+      },
+      "val": {
+        "total_files": 34,
+        "unique_groups": 34,
+        "active_canonical_images": 34,
+        "canonical_pct": 14.78,
+        "deduplicated_copies": 0,
+        "canonical_boxes": 183,
+        "box_pct": 15.39
+      },
+      "test": {
+        "total_files": 33,
+        "unique_groups": 33,
+        "active_canonical_images": 33,
+        "canonical_pct": 14.35,
+        "deduplicated_copies": 0,
+        "canonical_boxes": 182,
+        "box_pct": 15.31
+      },
+      "quarantined_missing_labels": {
+        "total_files": 1,
+        "unique_groups": 1,
+        "active_canonical_images": 0,
+        "canonical_pct": 100.0,
+        "deduplicated_copies": 0,
+        "canonical_boxes": 0,
+        "box_pct": 100.0
+      }
+    },
+    "class_support": {
+      "0": {
+        "total_canonical_boxes": 194,
+        "total_canonical_images": 117,
+        "train_boxes": 134,
+        "train_images": 83,
+        "val_boxes": 30,
+        "val_images": 17,
+        "test_boxes": 30,
+        "test_images": 17,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "1": {
+        "total_canonical_boxes": 37,
+        "total_canonical_images": 23,
+        "train_boxes": 25,
+        "train_images": 16,
+        "val_boxes": 6,
+        "val_images": 4,
+        "test_boxes": 6,
+        "test_images": 3,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "2": {
+        "total_canonical_boxes": 196,
+        "total_canonical_images": 86,
+        "train_boxes": 136,
+        "train_images": 61,
+        "val_boxes": 30,
+        "val_images": 12,
+        "test_boxes": 30,
+        "test_images": 13,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "3": {
+        "total_canonical_boxes": 14,
+        "total_canonical_images": 13,
+        "train_boxes": 10,
+        "train_images": 9,
+        "val_boxes": 2,
+        "val_images": 2,
+        "test_boxes": 2,
+        "test_images": 2,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "4": {
+        "total_canonical_boxes": 97,
+        "total_canonical_images": 50,
+        "train_boxes": 67,
+        "train_images": 37,
+        "val_boxes": 15,
+        "val_images": 6,
+        "test_boxes": 15,
+        "test_images": 7,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "5": {
+        "total_canonical_boxes": 651,
+        "total_canonical_images": 221,
+        "train_boxes": 452,
+        "train_images": 156,
+        "val_boxes": 100,
+        "val_images": 32,
+        "test_boxes": 99,
+        "test_images": 33,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      }
+    },
+    "leakage_Verification": {
+      "evaluated_records": 230,
+      "unique_groups": 229,
+      "cross_partition_groups": 0,
+      "cross_partition_sha256": 0,
+      "cross_partition_exact_edges": 0,
+      "cross_partition_near_edges": 0
+    }
+  },
+  "SPLIT0004": {
+    "split_id": "SPLIT0004",
+    "dataset_id": "DS0004",
+    "annotation_id": "ANN0004",
+    "track_id": "TrackD",
+    "seed": 20261124,
+    "input_dataset_manifest_sha256": "0647437ed3778b31c16f2056f0e8f0224dbb2654b2661eef6a71922fc47c29c2",
+    "input_annotation_export_sha256": "e2ae185dd3f61ffd66bcb901728d30f40ca03876c73ee626ade26c3d392f25c1",
+    "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+    "split_manifest_sha256": "3b8a2bf9da87076e0b7dcb81f7b620738415702e33e22d2a690c42834c61af1f",
+    "config_sha256": "68a3f849d09ce89890a2a726a3a7f4e710ee4171124f1f4e5a5ed536a5fb7be5",
+    "total_active_images": 3924,
+    "total_labeled_images": 3924,
+    "total_active_canonical_images": 3863,
+    "total_deduplicated_copies": 61,
+    "total_quarantined_missing_labels": 0,
+    "total_unique_groups": 3862,
+    "exact_or_reencoded_edge_count": 61,
+    "near_or_reshoot_edge_count": 1,
+    "partitions": {
+      "train": {
+        "total_files": 2752,
+        "unique_groups": 2707,
+        "active_canonical_images": 2707,
+        "canonical_pct": 70.08,
+        "deduplicated_copies": 45,
+        "canonical_boxes": 4648,
+        "box_pct": 69.95
+      },
+      "val": {
+        "total_files": 583,
+        "unique_groups": 577,
+        "active_canonical_images": 578,
+        "canonical_pct": 14.96,
+        "deduplicated_copies": 5,
+        "canonical_boxes": 998,
+        "box_pct": 15.02
+      },
+      "test": {
+        "total_files": 589,
+        "unique_groups": 578,
+        "active_canonical_images": 578,
+        "canonical_pct": 14.96,
+        "deduplicated_copies": 11,
+        "canonical_boxes": 999,
+        "box_pct": 15.03
+      }
+    },
+    "class_support": {
+      "0": {
+        "total_canonical_boxes": 4211,
+        "total_canonical_images": 2755,
+        "train_boxes": 2946,
+        "train_images": 1929,
+        "val_boxes": 632,
+        "val_images": 413,
+        "test_boxes": 633,
+        "test_images": 413,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "1": {
+        "total_canonical_boxes": 1731,
+        "total_canonical_images": 1367,
+        "train_boxes": 1211,
+        "train_images": 957,
+        "val_boxes": 260,
+        "val_images": 206,
+        "test_boxes": 260,
+        "test_images": 204,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "2": {
+        "total_canonical_boxes": 703,
+        "total_canonical_images": 649,
+        "train_boxes": 491,
+        "train_images": 453,
+        "val_boxes": 106,
+        "val_images": 98,
+        "test_boxes": 106,
+        "test_images": 98,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      }
+    },
+    "leakage_Verification": {
+      "evaluated_records": 3924,
+      "unique_groups": 3862,
+      "cross_partition_groups": 0,
+      "cross_partition_sha256": 0,
+      "cross_partition_exact_edges": 0,
+      "cross_partition_near_edges": 0
+    }
+  },
+  "SPLIT0005": {
+    "split_id": "SPLIT0005",
+    "dataset_id": "DS0005",
+    "annotation_id": "ANN0005",
+    "track_id": "TrackE",
+    "seed": 20261125,
+    "input_dataset_manifest_sha256": "002e869126a19806d9f6aa1827893ed0c390f8154e8fdce6075df309681450ac",
+    "input_annotation_export_sha256": "10ab3bcd08a9592df3d524a3eec26315e48068c2e95b6dae8d8fc011575d21d0",
+    "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+    "split_manifest_sha256": "f81ffcd59eaf8733d3917751ae2c3c242979ab418d352bfdfa1c5eae81ea6c14",
+    "config_sha256": "7f0be85f1c723baf0cdd7dca423bb88abde6142c669db06b544756c2785aec43",
+    "total_active_images": 901,
+    "total_labeled_images": 901,
+    "total_active_canonical_images": 895,
+    "total_deduplicated_copies": 6,
+    "total_quarantined_missing_labels": 0,
+    "total_unique_groups": 893,
+    "exact_or_reencoded_edge_count": 6,
+    "near_or_reshoot_edge_count": 2,
+    "partitions": {
+      "train": {
+        "total_files": 632,
+        "unique_groups": 626,
+        "active_canonical_images": 628,
+        "canonical_pct": 70.17,
+        "deduplicated_copies": 4,
+        "canonical_boxes": 4857,
+        "box_pct": 69.91
+      },
+      "val": {
+        "total_files": 135,
+        "unique_groups": 134,
+        "active_canonical_images": 134,
+        "canonical_pct": 14.97,
+        "deduplicated_copies": 1,
+        "canonical_boxes": 1043,
+        "box_pct": 15.01
+      },
+      "test": {
+        "total_files": 134,
+        "unique_groups": 133,
+        "active_canonical_images": 133,
+        "canonical_pct": 14.86,
+        "deduplicated_copies": 1,
+        "canonical_boxes": 1048,
+        "box_pct": 15.08
+      }
+    },
+    "class_support": {
+      "0": {
+        "total_canonical_boxes": 2831,
+        "total_canonical_images": 658,
+        "train_boxes": 1978,
+        "train_images": 457,
+        "val_boxes": 425,
+        "val_images": 104,
+        "test_boxes": 428,
+        "test_images": 97,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "1": {
+        "total_canonical_boxes": 1366,
+        "total_canonical_images": 359,
+        "train_boxes": 957,
+        "train_images": 257,
+        "val_boxes": 204,
+        "val_images": 49,
+        "test_boxes": 205,
+        "test_images": 53,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "2": {
+        "total_canonical_boxes": 939,
+        "total_canonical_images": 385,
+        "train_boxes": 659,
+        "train_images": 271,
+        "val_boxes": 140,
+        "val_images": 57,
+        "test_boxes": 140,
+        "test_images": 57,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "3": {
+        "total_canonical_boxes": 812,
+        "total_canonical_images": 431,
+        "train_boxes": 566,
+        "train_images": 305,
+        "val_boxes": 122,
+        "val_images": 63,
+        "test_boxes": 124,
+        "test_images": 63,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "4": {
+        "total_canonical_boxes": 528,
+        "total_canonical_images": 180,
+        "train_boxes": 368,
+        "train_images": 127,
+        "val_boxes": 80,
+        "val_images": 26,
+        "test_boxes": 80,
+        "test_images": 27,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "5": {
+        "total_canonical_boxes": 472,
+        "total_canonical_images": 262,
+        "train_boxes": 329,
+        "train_images": 186,
+        "val_boxes": 72,
+        "val_images": 38,
+        "test_boxes": 71,
+        "test_images": 38,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      }
+    },
+    "leakage_Verification": {
+      "evaluated_records": 901,
+      "unique_groups": 893,
+      "cross_partition_groups": 0,
+      "cross_partition_sha256": 0,
+      "cross_partition_exact_edges": 0,
+      "cross_partition_near_edges": 0
+    }
+  },
+  "SPLIT0006": {
+    "split_id": "SPLIT0006",
+    "dataset_id": "DS0006",
+    "annotation_id": "ANN0006",
+    "track_id": "TrackF",
+    "seed": 20261126,
+    "input_dataset_manifest_sha256": "e4fe6f06dc45a38ff01ab721eb1759c5237ce13d1b5402fc66183f3aefea8f2d",
+    "input_annotation_export_sha256": "cd03980418a35123e01b1f1f14ebb8ce72f635320c016b07bcabe7e82759cd2e",
+    "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+    "split_manifest_sha256": "e75744071eeb3a31af233490d01ec9c15d54a65c9353140881573a0031aa9e6f",
+    "config_sha256": "2946759f1bc34baa3ceac1c3d46e6b46b44558a464344c263b31aae6f3950915",
+    "total_active_images": 170,
+    "total_labeled_images": 170,
+    "total_active_canonical_images": 170,
+    "total_deduplicated_copies": 0,
+    "total_quarantined_missing_labels": 0,
+    "total_unique_groups": 170,
+    "exact_or_reencoded_edge_count": 0,
+    "near_or_reshoot_edge_count": 0,
+    "partitions": {
+      "train": {
+        "total_files": 121,
+        "unique_groups": 121,
+        "active_canonical_images": 121,
+        "canonical_pct": 71.18,
+        "deduplicated_copies": 0,
+        "canonical_boxes": 622,
+        "box_pct": 69.57
+      },
+      "val": {
+        "total_files": 25,
+        "unique_groups": 25,
+        "active_canonical_images": 25,
+        "canonical_pct": 14.71,
+        "deduplicated_copies": 0,
+        "canonical_boxes": 135,
+        "box_pct": 15.1
+      },
+      "test": {
+        "total_files": 24,
+        "unique_groups": 24,
+        "active_canonical_images": 24,
+        "canonical_pct": 14.12,
+        "deduplicated_copies": 0,
+        "canonical_boxes": 137,
+        "box_pct": 15.32
+      }
+    },
+    "class_support": {
+      "0": {
+        "total_canonical_boxes": 716,
+        "total_canonical_images": 166,
+        "train_boxes": 498,
+        "train_images": 119,
+        "val_boxes": 108,
+        "val_images": 24,
+        "test_boxes": 110,
+        "test_images": 23,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      },
+      "1": {
+        "total_canonical_boxes": 178,
+        "total_canonical_images": 84,
+        "train_boxes": 124,
+        "train_images": 60,
+        "val_boxes": 27,
+        "val_images": 12,
+        "test_boxes": 27,
+        "test_images": 12,
+        "external_test_boxes": 0,
+        "external_test_images": 0
+      }
+    },
+    "leakage_Verification": {
+      "evaluated_records": 170,
+      "unique_groups": 170,
+      "cross_partition_groups": 0,
+      "cross_partition_sha256": 0,
+      "cross_partition_exact_edges": 0,
+      "cross_partition_near_edges": 0
+    }
+  }
+}

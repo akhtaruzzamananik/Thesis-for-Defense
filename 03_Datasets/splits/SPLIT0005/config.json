@@ -1,0 +1,16 @@
+{
+  "split_id": "SPLIT0005",
+  "dataset_id": "DS0005",
+  "annotation_id": "ANN0005",
+  "track_id": "TrackE",
+  "algorithm": "connected_component_union_find + sechidis_iterative_multilabel_group_stratified_70_15_15",
+  "seed": 20261125,
+  "target_ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "input_dataset_manifest_sha256": "002e869126a19806d9f6aa1827893ed0c390f8154e8fdce6075df309681450ac",
+  "input_annotation_export_sha256": "10ab3bcd08a9592df3d524a3eec26315e48068c2e95b6dae8d8fc011575d21d0",
+  "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af"
+}

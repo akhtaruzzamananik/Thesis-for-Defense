@@ -1,0 +1,95 @@
+{
+  "split_id": "SPLIT0004",
+  "dataset_id": "DS0004",
+  "annotation_id": "ANN0004",
+  "track_id": "TrackD",
+  "seed": 20261124,
+  "input_dataset_manifest_sha256": "0647437ed3778b31c16f2056f0e8f0224dbb2654b2661eef6a71922fc47c29c2",
+  "input_annotation_export_sha256": "e2ae185dd3f61ffd66bcb901728d30f40ca03876c73ee626ade26c3d392f25c1",
+  "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+  "split_manifest_sha256": "3b8a2bf9da87076e0b7dcb81f7b620738415702e33e22d2a690c42834c61af1f",
+  "config_sha256": "68a3f849d09ce89890a2a726a3a7f4e710ee4171124f1f4e5a5ed536a5fb7be5",
+  "total_active_images": 3924,
+  "total_labeled_images": 3924,
+  "total_active_canonical_images": 3863,
+  "total_deduplicated_copies": 61,
+  "total_quarantined_missing_labels": 0,
+  "total_unique_groups": 3862,
+  "exact_or_reencoded_edge_count": 61,
+  "near_or_reshoot_edge_count": 1,
+  "partitions": {
+    "train": {
+      "total_files": 2752,
+      "unique_groups": 2707,
+      "active_canonical_images": 2707,
+      "canonical_pct": 70.08,
+      "deduplicated_copies": 45,
+      "canonical_boxes": 4648,
+      "box_pct": 69.95
+    },
+    "val": {
+      "total_files": 583,
+      "unique_groups": 577,
+      "active_canonical_images": 578,
+      "canonical_pct": 14.96,
+      "deduplicated_copies": 5,
+      "canonical_boxes": 998,
+      "box_pct": 15.02
+    },
+    "test": {
+      "total_files": 589,
+      "unique_groups": 578,
+      "active_canonical_images": 578,
+      "canonical_pct": 14.96,
+      "deduplicated_copies": 11,
+      "canonical_boxes": 999,
+      "box_pct": 15.03
+    }
+  },
+  "class_support": {
+    "0": {
+      "total_canonical_boxes": 4211,
+      "total_canonical_images": 2755,
+      "train_boxes": 2946,
+      "train_images": 1929,
+      "val_boxes": 632,
+      "val_images": 413,
+      "test_boxes": 633,
+      "test_images": 413,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    },
+    "1": {
+      "total_canonical_boxes": 1731,
+      "total_canonical_images": 1367,
+      "train_boxes": 1211,
+      "train_images": 957,
+      "val_boxes": 260,
+      "val_images": 206,
+      "test_boxes": 260,
+      "test_images": 204,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    },
+    "2": {
+      "total_canonical_boxes": 703,
+      "total_canonical_images": 649,
+      "train_boxes": 491,
+      "train_images": 453,
+      "val_boxes": 106,
+      "val_images": 98,
+      "test_boxes": 106,
+      "test_images": 98,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    }
+  },
+  "leakage_Verification": {
+    "evaluated_records": 3924,
+    "unique_groups": 3862,
+    "cross_partition_groups": 0,
+    "cross_partition_sha256": 0,
+    "cross_partition_exact_edges": 0,
+    "cross_partition_near_edges": 0
+  }
+}

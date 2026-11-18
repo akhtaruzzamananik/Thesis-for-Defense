@@ -1,0 +1,131 @@
+{
+  "split_id": "SPLIT0005",
+  "dataset_id": "DS0005",
+  "annotation_id": "ANN0005",
+  "track_id": "TrackE",
+  "seed": 20261125,
+  "input_dataset_manifest_sha256": "002e869126a19806d9f6aa1827893ed0c390f8154e8fdce6075df309681450ac",
+  "input_annotation_export_sha256": "10ab3bcd08a9592df3d524a3eec26315e48068c2e95b6dae8d8fc011575d21d0",
+  "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+  "split_manifest_sha256": "f81ffcd59eaf8733d3917751ae2c3c242979ab418d352bfdfa1c5eae81ea6c14",
+  "config_sha256": "7f0be85f1c723baf0cdd7dca423bb88abde6142c669db06b544756c2785aec43",
+  "total_active_images": 901,
+  "total_labeled_images": 901,
+  "total_active_canonical_images": 895,
+  "total_deduplicated_copies": 6,
+  "total_quarantined_missing_labels": 0,
+  "total_unique_groups": 893,
+  "exact_or_reencoded_edge_count": 6,
+  "near_or_reshoot_edge_count": 2,
+  "partitions": {
+    "train": {
+      "total_files": 632,
+      "unique_groups": 626,
+      "active_canonical_images": 628,
+      "canonical_pct": 70.17,
+      "deduplicated_copies": 4,
+      "canonical_boxes": 4857,
+      "box_pct": 69.91
+    },
+    "val": {
+      "total_files": 135,
+      "unique_groups": 134,
+      "active_canonical_images": 134,
+      "canonical_pct": 14.97,
+      "deduplicated_copies": 1,
+      "canonical_boxes": 1043,
+      "box_pct": 15.01
+    },
+    "test": {
+      "total_files": 134,
+      "unique_groups": 133,
+      "active_canonical_images": 133,
+      "canonical_pct": 14.86,
+      "deduplicated_copies": 1,
+      "canonical_boxes": 1048,
+      "box_pct": 15.08
+    }
+  },
+  "class_support": {
+    "0": {
+      "total_canonical_boxes": 2831,
+      "total_canonical_images": 658,
+      "train_boxes": 1978,
+      "train_images": 457,
+      "val_boxes": 425,
+      "val_images": 104,
+      "test_boxes": 428,
+      "test_images": 97,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    },
+    "1": {
+      "total_canonical_boxes": 1366,
+      "total_canonical_images": 359,
+      "train_boxes": 957,
+      "train_images": 257,
+      "val_boxes": 204,
+      "val_images": 49,
+      "test_boxes": 205,
+      "test_images": 53,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    },
+    "2": {
+      "total_canonical_boxes": 939,
+      "total_canonical_images": 385,
+      "train_boxes": 659,
+      "train_images": 271,
+      "val_boxes": 140,
+      "val_images": 57,
+      "test_boxes": 140,
+      "test_images": 57,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    },
+    "3": {
+      "total_canonical_boxes": 812,
+      "total_canonical_images": 431,
+      "train_boxes": 566,
+      "train_images": 305,
+      "val_boxes": 122,
+      "val_images": 63,
+      "test_boxes": 124,
+      "test_images": 63,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    },
+    "4": {
+      "total_canonical_boxes": 528,
+      "total_canonical_images": 180,
+      "train_boxes": 368,
+      "train_images": 127,
+      "val_boxes": 80,
+      "val_images": 26,
+      "test_boxes": 80,
+      "test_images": 27,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    },
+    "5": {
+      "total_canonical_boxes": 472,
+      "total_canonical_images": 262,
+      "train_boxes": 329,
+      "train_images": 186,
+      "val_boxes": 72,
+      "val_images": 38,
+      "test_boxes": 71,
+      "test_images": 38,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    }
+  },
+  "leakage_Verification": {
+    "evaluated_records": 901,
+    "unique_groups": 893,
+    "cross_partition_groups": 0,
+    "cross_partition_sha256": 0,
+    "cross_partition_exact_edges": 0,
+    "cross_partition_near_edges": 0
+  }
+}

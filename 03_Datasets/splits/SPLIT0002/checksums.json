@@ -1,0 +1,116 @@
+{
+  "split_id": "SPLIT0002",
+  "dataset_id": "DS0002",
+  "annotation_id": "ANN0002",
+  "track_id": "TrackB",
+  "seed": 20261122,
+  "input_dataset_manifest_sha256": "f8a6218fc1e3700b1508fa100f114976f42507cf1dc3f91b256a861be8f1815d",
+  "input_annotation_export_sha256": "b127fa293af54a9b0a3d2fec49a35ab2afee27f506ae65ad957f3cba5f724b29",
+  "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+  "split_manifest_sha256": "a31c3245ff5eee84135528b4caa477e7886ee959aeaaa49e9a4077db572b2de1",
+  "config_sha256": "9e340a40966de43e1ee77a376d9def05aaa69f804d15f4c4bf4fb0551c564d85",
+  "total_active_images": 755,
+  "total_labeled_images": 705,
+  "total_active_canonical_images": 705,
+  "total_deduplicated_copies": 0,
+  "total_quarantined_missing_labels": 50,
+  "total_unique_groups": 705,
+  "exact_or_reencoded_edge_count": 0,
+  "near_or_reshoot_edge_count": 0,
+  "partitions": {
+    "train": {
+      "total_files": 493,
+      "unique_groups": 493,
+      "active_canonical_images": 493,
+      "canonical_pct": 69.93,
+      "deduplicated_copies": 0,
+      "canonical_boxes": 2468,
+      "box_pct": 69.95
+    },
+    "val": {
+      "total_files": 106,
+      "unique_groups": 106,
+      "active_canonical_images": 106,
+      "canonical_pct": 15.04,
+      "deduplicated_copies": 0,
+      "canonical_boxes": 530,
+      "box_pct": 15.02
+    },
+    "test": {
+      "total_files": 106,
+      "unique_groups": 106,
+      "active_canonical_images": 106,
+      "canonical_pct": 15.04,
+      "deduplicated_copies": 0,
+      "canonical_boxes": 530,
+      "box_pct": 15.02
+    },
+    "quarantined_missing_labels": {
+      "total_files": 50,
+      "unique_groups": 50,
+      "active_canonical_images": 0,
+      "canonical_pct": 100.0,
+      "deduplicated_copies": 0,
+      "canonical_boxes": 0,
+      "box_pct": 100.0
+    }
+  },
+  "class_support": {
+    "0": {
+      "total_canonical_boxes": 604,
+      "total_canonical_images": 254,
+      "train_boxes": 422,
+      "train_images": 176,
+      "val_boxes": 91,
+      "val_images": 38,
+      "test_boxes": 91,
+      "test_images": 40,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    },
+    "1": {
+      "total_canonical_boxes": 2188,
+      "total_canonical_images": 623,
+      "train_boxes": 1532,
+      "train_images": 438,
+      "val_boxes": 328,
+      "val_images": 94,
+      "test_boxes": 328,
+      "test_images": 91,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    },
+    "2": {
+      "total_canonical_boxes": 158,
+      "total_canonical_images": 116,
+      "train_boxes": 110,
+      "train_images": 82,
+      "val_boxes": 24,
+      "val_images": 17,
+      "test_boxes": 24,
+      "test_images": 17,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    },
+    "3": {
+      "total_canonical_boxes": 578,
+      "total_canonical_images": 321,
+      "train_boxes": 404,
+      "train_images": 223,
+      "val_boxes": 87,
+      "val_images": 51,
+      "test_boxes": 87,
+      "test_images": 47,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    }
+  },
+  "leakage_Verification": {
+    "evaluated_records": 705,
+    "unique_groups": 705,
+    "cross_partition_groups": 0,
+    "cross_partition_sha256": 0,
+    "cross_partition_exact_edges": 0,
+    "cross_partition_near_edges": 0
+  }
+}

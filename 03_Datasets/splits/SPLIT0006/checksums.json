@@ -1,0 +1,83 @@
+{
+  "split_id": "SPLIT0006",
+  "dataset_id": "DS0006",
+  "annotation_id": "ANN0006",
+  "track_id": "TrackF",
+  "seed": 20261126,
+  "input_dataset_manifest_sha256": "e4fe6f06dc45a38ff01ab721eb1759c5237ce13d1b5402fc66183f3aefea8f2d",
+  "input_annotation_export_sha256": "cd03980418a35123e01b1f1f14ebb8ce72f635320c016b07bcabe7e82759cd2e",
+  "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+  "split_manifest_sha256": "e75744071eeb3a31af233490d01ec9c15d54a65c9353140881573a0031aa9e6f",
+  "config_sha256": "2946759f1bc34baa3ceac1c3d46e6b46b44558a464344c263b31aae6f3950915",
+  "total_active_images": 170,
+  "total_labeled_images": 170,
+  "total_active_canonical_images": 170,
+  "total_deduplicated_copies": 0,
+  "total_quarantined_missing_labels": 0,
+  "total_unique_groups": 170,
+  "exact_or_reencoded_edge_count": 0,
+  "near_or_reshoot_edge_count": 0,
+  "partitions": {
+    "train": {
+      "total_files": 121,
+      "unique_groups": 121,
+      "active_canonical_images": 121,
+      "canonical_pct": 71.18,
+      "deduplicated_copies": 0,
+      "canonical_boxes": 622,
+      "box_pct": 69.57
+    },
+    "val": {
+      "total_files": 25,
+      "unique_groups": 25,
+      "active_canonical_images": 25,
+      "canonical_pct": 14.71,
+      "deduplicated_copies": 0,
+      "canonical_boxes": 135,
+      "box_pct": 15.1
+    },
+    "test": {
+      "total_files": 24,
+      "unique_groups": 24,
+      "active_canonical_images": 24,
+      "canonical_pct": 14.12,
+      "deduplicated_copies": 0,
+      "canonical_boxes": 137,
+      "box_pct": 15.32
+    }
+  },
+  "class_support": {
+    "0": {
+      "total_canonical_boxes": 716,
+      "total_canonical_images": 166,
+      "train_boxes": 498,
+      "train_images": 119,
+      "val_boxes": 108,
+      "val_images": 24,
+      "test_boxes": 110,
+      "test_images": 23,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    },
+    "1": {
+      "total_canonical_boxes": 178,
+      "total_canonical_images": 84,
+      "train_boxes": 124,
+      "train_images": 60,
+      "val_boxes": 27,
+      "val_images": 12,
+      "test_boxes": 27,
+      "test_images": 12,
+      "external_test_boxes": 0,
+      "external_test_images": 0
+    }
+  },
+  "leakage_Verification": {
+    "evaluated_records": 170,
+    "unique_groups": 170,
+    "cross_partition_groups": 0,
+    "cross_partition_sha256": 0,
+    "cross_partition_exact_edges": 0,
+    "cross_partition_near_edges": 0
+  }
+}
