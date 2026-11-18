@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-19 |
-| Current stage / step | **S09 Complete (`STEP-019`–`021` / `G07 & G08 = PASS` closed: `REL0001–REL0006` materialized across `7,457` canonical OPGs, `41,103` boxes, `0.0036 px` round-trip accuracy, `0` val/test fit leakage)**; ready for **`S10` (`STEP-022`–`026`: YOLO Baseline Selection, Runtime Lock, Protocol & Smoke Test `G09`)** |
+| Current stage / step | **S10 in progress (`STEP-022` YOLO Selection COMPLETE: `MC0001 YOLO11s` baseline + `MC0002 YOLOv8s` + `MC0003 YOLO11m`, `AGPL-3.0` / `DEC0010`)**; ready for **`STEP-023` (`environment/model/` Runtime Lock), `STEP-024` (Experiment/Eval Plan), `STEP-025` (Pipeline Code), & `STEP-026` (`G09` Smoke Test)** |
 
 ## 1. Stage & gate summary
 
