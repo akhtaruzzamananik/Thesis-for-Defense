@@ -29,3 +29,24 @@ Because `https://github.com/akhtaruzzamananik/Thesis-for-Defense` is **public** 
 - Never commit raw images, linkage keys, weights, `.env`, or `.venv/`.
 - Inspect `git status` and `git diff --cached` before every push.
 - Record SHA-256 checksums for every external dataset, release, checkpoint, and exported model in the corresponding CSV registry.
+
+## 4. Pipeline Entry Commands (`STEP-025`)
+
+All pipeline logic resides in `src/opg/`; `13_Automation/run_pipeline.py` provides thin CLI entry points:
+
+```powershell
+# 1. Validate a resolved T14 experiment YAML (rejects nulls, hash drift, or test access before G11)
+python 13_Automation/run_pipeline.py validate-config --config 07_Experiments/EXP0001/config.yaml
+
+# 2. Export a Kaggle-ready PP####-prepared train/val YOLO bundle (test sealed until G11)
+python 13_Automation/run_pipeline.py build-kaggle-bundle `
+  --dataset-id DS0001 --split-id SPLIT0001 --batch-id ANNB0001 --track-id TrackA `
+  --pp-config 05_Preprocessing/configs/PP0001_raw_letterbox_baseline.yaml `
+  --out-dir 05_Preprocessing/processed/kaggle_bundles/REL0001_PP0001
+
+# 3. Launch registered training (Kaggle GPU or authorized runtime)
+python 13_Automation/run_pipeline.py train `
+  --config 07_Experiments/EXP0001/config.yaml `
+  --data-yaml /kaggle/input/rel0001-pp0001/dataset.yaml `
+  --out-dir /kaggle/working/runs
+```

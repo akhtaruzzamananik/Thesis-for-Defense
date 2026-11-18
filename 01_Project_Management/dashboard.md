@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-19 |
-| Current stage / step | **S10 in progress (`STEP-022` YOLO Selection, `STEP-023` Runtime Pin & `STEP-024` Experiment/Eval Plans `EXP0000_SMOKE` + `EXP0001–EXP0013` COMPLETE; `DEC0010–0016` Resolved)**; ready for **`STEP-025` (Loader/Trainer/Evaluator Pipeline Code) & `STEP-026` (`G09` Smoke & Checkpoint Recovery)** |
+| Current stage / step | **S10 in progress (`STEP-022`–`025` COMPLETE: `src/opg/data_loader.py`, `evaluator.py`, `trainer.py`, `run_pipeline.py` implemented & unit-tested)**; ready for **`STEP-026` (Checkpoint Recovery Policy, Smoke Test & `G09 = PASS`)** |
 
 ## 1. Stage & gate summary
 
