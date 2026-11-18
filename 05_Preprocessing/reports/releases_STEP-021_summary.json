@@ -1,0 +1,351 @@
+{
+  "step": "STEP-021",
+  "gate": "G08",
+  "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+  "pp_config_sha256": {
+    "PP0001": "04493e1e2bcdfcadbef5b044b392bf7091822439381e158d85c144d420e0b93b",
+    "PP0002": "7482eac3c347664672f287781aba8f5b952bfc219059bc5fdd2570d539eedfbf",
+    "PP0003": "65b7ffd170ce05d5e2ae9f8acbd1f401acaf430e69754ba86caaedc64166c64e",
+    "PP0004": "08fd22b42f9fa31465eedc092251d92d7b5338b76de4fc7d321a7c77741dd2de"
+  },
+  "total_releases": 6,
+  "total_canonical_images": 7457,
+  "total_train_images_used_for_fit": 5106,
+  "total_canonical_boxes": 41103,
+  "val_or_test_accessed_for_fit": false,
+  "total_dropped_boxes": 0,
+  "max_round_trip_px_err_640": 0.00363,
+  "max_round_trip_px_err_1280": 0.004068,
+  "releases": {
+    "REL0001": {
+      "release_id": "REL0001",
+      "dataset_id": "DS0001",
+      "dataset_version": "v1.1.0",
+      "annotation_id": "ANN0001",
+      "split_id": "SPLIT0001",
+      "track_id": "TrackA",
+      "primary_preprocessing_id": "PP0001",
+      "supported_rq2_preprocessing_ids": [
+        "PP0001",
+        "PP0002",
+        "PP0003",
+        "PP0004"
+      ],
+      "parent_hashes": {
+        "dataset_manifest_sha256": "15627853af1a545c86801afb6be5e3a503d3e60921f1da259a65fed21013015f",
+        "annotation_export_manifest_sha256": "464057e57980d29f7a97df93fa7a15bd512d22efcd155966426c522c2f6daf64",
+        "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+        "split_manifest_sha256": "8260d222aba799aa7e46720bd604e625ecd43228ad49dc53c8e0ddd6c61c4dc9",
+        "pp_config_sha256": {
+          "PP0001": "04493e1e2bcdfcadbef5b044b392bf7091822439381e158d85c144d420e0b93b",
+          "PP0002": "7482eac3c347664672f287781aba8f5b952bfc219059bc5fdd2570d539eedfbf",
+          "PP0003": "65b7ffd170ce05d5e2ae9f8acbd1f401acaf430e69754ba86caaedc64166c64e",
+          "PP0004": "08fd22b42f9fa31465eedc092251d92d7b5338b76de4fc7d321a7c77741dd2de"
+        }
+      },
+      "fit_state_train_only_sha256": "38fea56dbcbb5bb376668dda4de7eb38e2e217836e089ed6f4d989aaa1382eeb",
+      "transform_ledger_sha256": "667982c0c0fe72e4cf544769f3703c17ab61b2f13e625aa7291bd9b1ec1a0926",
+      "val_or_test_used_for_fit": false,
+      "dropped_or_collapsed_boxes": 0,
+      "max_round_trip_px_err_640": 0.00363,
+      "max_round_trip_px_err_1280": 0.004068,
+      "total_canonical_images": 1594,
+      "total_canonical_boxes": 21899,
+      "partition_image_counts": {
+        "train": 994,
+        "test": 208,
+        "val": 214,
+        "external_test": 178
+      },
+      "partition_box_counts": {
+        "train": 13253,
+        "test": 2888,
+        "val": 2833,
+        "external_test": 2925
+      },
+      "class_box_counts": {
+        "0": 478,
+        "1": 1747,
+        "2": 4753,
+        "3": 3389,
+        "4": 3037,
+        "5": 3257,
+        "6": 994,
+        "7": 1050,
+        "8": 1266,
+        "9": 277,
+        "10": 84,
+        "11": 485,
+        "12": 1082
+      },
+      "visual_qa_sheet_offgit": "05_Preprocessing/processed/REL0001/visual_qa/REL0001_pp_comparison_sheet.jpg",
+      "release_manifest_sha256": "40d7db1d4a9a2d87d9d689a16dc784a01a79f6a4df6f84b29f66241990d0ef9c"
+    },
+    "REL0002": {
+      "release_id": "REL0002",
+      "dataset_id": "DS0002",
+      "dataset_version": "v1.0.0",
+      "annotation_id": "ANN0002",
+      "split_id": "SPLIT0002",
+      "track_id": "TrackB",
+      "primary_preprocessing_id": "PP0001",
+      "supported_rq2_preprocessing_ids": [
+        "PP0001",
+        "PP0002",
+        "PP0003",
+        "PP0004"
+      ],
+      "parent_hashes": {
+        "dataset_manifest_sha256": "f8a6218fc1e3700b1508fa100f114976f42507cf1dc3f91b256a861be8f1815d",
+        "annotation_export_manifest_sha256": "b127fa293af54a9b0a3d2fec49a35ab2afee27f506ae65ad957f3cba5f724b29",
+        "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+        "split_manifest_sha256": "a31c3245ff5eee84135528b4caa477e7886ee959aeaaa49e9a4077db572b2de1",
+        "pp_config_sha256": {
+          "PP0001": "04493e1e2bcdfcadbef5b044b392bf7091822439381e158d85c144d420e0b93b",
+          "PP0002": "7482eac3c347664672f287781aba8f5b952bfc219059bc5fdd2570d539eedfbf",
+          "PP0003": "65b7ffd170ce05d5e2ae9f8acbd1f401acaf430e69754ba86caaedc64166c64e",
+          "PP0004": "08fd22b42f9fa31465eedc092251d92d7b5338b76de4fc7d321a7c77741dd2de"
+        }
+      },
+      "fit_state_train_only_sha256": "95b5d4571495131b2493cabdf82ebd8f08613a8202e03dad6fa837e926a14799",
+      "transform_ledger_sha256": "d9cc4678fc41148f13aa4703f8513c60366b0f01865ed340350bfc86e05c05a6",
+      "val_or_test_used_for_fit": false,
+      "dropped_or_collapsed_boxes": 0,
+      "max_round_trip_px_err_640": 0.002304,
+      "max_round_trip_px_err_1280": 0.00221,
+      "total_canonical_images": 705,
+      "total_canonical_boxes": 3528,
+      "partition_image_counts": {
+        "test": 106,
+        "train": 493,
+        "val": 106
+      },
+      "partition_box_counts": {
+        "test": 530,
+        "train": 2468,
+        "val": 530
+      },
+      "class_box_counts": {
+        "0": 604,
+        "1": 2188,
+        "2": 158,
+        "3": 578
+      },
+      "visual_qa_sheet_offgit": "05_Preprocessing/processed/REL0002/visual_qa/REL0002_pp_comparison_sheet.jpg",
+      "release_manifest_sha256": "b187d514402a3145ae136127278c125ca563e2d329cdee0bdedd214268ddd8a7"
+    },
+    "REL0003": {
+      "release_id": "REL0003",
+      "dataset_id": "DS0003",
+      "dataset_version": "v1.1.0",
+      "annotation_id": "ANN0003",
+      "split_id": "SPLIT0003",
+      "track_id": "TrackC",
+      "primary_preprocessing_id": "PP0001",
+      "supported_rq2_preprocessing_ids": [
+        "PP0001",
+        "PP0002",
+        "PP0003",
+        "PP0004"
+      ],
+      "parent_hashes": {
+        "dataset_manifest_sha256": "da849181d2e7360c6335d6343426c6bc819cc9062a4f1921b4fc903bf2c36cfe",
+        "annotation_export_manifest_sha256": "557ec6ccaf110bba13d641ee16dc58a4cb104e93880a04c7c28243a377ee3d24",
+        "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+        "split_manifest_sha256": "add134cc9e74b86b1efcae2a8f60c960397251ddb2f8ba5886260a1b85c87952",
+        "pp_config_sha256": {
+          "PP0001": "04493e1e2bcdfcadbef5b044b392bf7091822439381e158d85c144d420e0b93b",
+          "PP0002": "7482eac3c347664672f287781aba8f5b952bfc219059bc5fdd2570d539eedfbf",
+          "PP0003": "65b7ffd170ce05d5e2ae9f8acbd1f401acaf430e69754ba86caaedc64166c64e",
+          "PP0004": "08fd22b42f9fa31465eedc092251d92d7b5338b76de4fc7d321a7c77741dd2de"
+        }
+      },
+      "fit_state_train_only_sha256": "fb7680f3fd9d59c9bf4fc37e08eef0fce78d762812d5fcae83d0a5f2d95bff03",
+      "transform_ledger_sha256": "ed0a9e4a565204b2897870511eb8f5feb9ec37d4e37bcc0df4774f9c4f569f37",
+      "val_or_test_used_for_fit": false,
+      "dropped_or_collapsed_boxes": 0,
+      "max_round_trip_px_err_640": 0.001383,
+      "max_round_trip_px_err_1280": 0.00139,
+      "total_canonical_images": 230,
+      "total_canonical_boxes": 1189,
+      "partition_image_counts": {
+        "train": 163,
+        "val": 34,
+        "test": 33
+      },
+      "partition_box_counts": {
+        "train": 824,
+        "val": 183,
+        "test": 182
+      },
+      "class_box_counts": {
+        "0": 194,
+        "1": 37,
+        "2": 196,
+        "3": 14,
+        "4": 97,
+        "5": 651
+      },
+      "visual_qa_sheet_offgit": "05_Preprocessing/processed/REL0003/visual_qa/REL0003_pp_comparison_sheet.jpg",
+      "release_manifest_sha256": "5ffe497a21f6ec0a27e04371fa3b8bcb027f5fee224228c64e646c00aee28bb6"
+    },
+    "REL0004": {
+      "release_id": "REL0004",
+      "dataset_id": "DS0004",
+      "dataset_version": "v1.0.0",
+      "annotation_id": "ANN0004",
+      "split_id": "SPLIT0004",
+      "track_id": "TrackD",
+      "primary_preprocessing_id": "PP0001",
+      "supported_rq2_preprocessing_ids": [
+        "PP0001",
+        "PP0002",
+        "PP0003",
+        "PP0004"
+      ],
+      "parent_hashes": {
+        "dataset_manifest_sha256": "0647437ed3778b31c16f2056f0e8f0224dbb2654b2661eef6a71922fc47c29c2",
+        "annotation_export_manifest_sha256": "e2ae185dd3f61ffd66bcb901728d30f40ca03876c73ee626ade26c3d392f25c1",
+        "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+        "split_manifest_sha256": "3b8a2bf9da87076e0b7dcb81f7b620738415702e33e22d2a690c42834c61af1f",
+        "pp_config_sha256": {
+          "PP0001": "04493e1e2bcdfcadbef5b044b392bf7091822439381e158d85c144d420e0b93b",
+          "PP0002": "7482eac3c347664672f287781aba8f5b952bfc219059bc5fdd2570d539eedfbf",
+          "PP0003": "65b7ffd170ce05d5e2ae9f8acbd1f401acaf430e69754ba86caaedc64166c64e",
+          "PP0004": "08fd22b42f9fa31465eedc092251d92d7b5338b76de4fc7d321a7c77741dd2de"
+        }
+      },
+      "fit_state_train_only_sha256": "3c4129edbbabb1d147c0a3ef20d0663b33da1f885f57764dd8435f9ec251d5cc",
+      "transform_ledger_sha256": "5384185db0349b3f2cc6e0bc18eb2c160ee8827b21bd5c0b1d5b3ef73fe92edb",
+      "val_or_test_used_for_fit": false,
+      "dropped_or_collapsed_boxes": 0,
+      "max_round_trip_px_err_640": 0.001893,
+      "max_round_trip_px_err_1280": 0.001857,
+      "total_canonical_images": 3863,
+      "total_canonical_boxes": 6645,
+      "partition_image_counts": {
+        "train": 2707,
+        "test": 578,
+        "val": 578
+      },
+      "partition_box_counts": {
+        "train": 4648,
+        "test": 999,
+        "val": 998
+      },
+      "class_box_counts": {
+        "0": 4211,
+        "1": 1731,
+        "2": 703
+      },
+      "visual_qa_sheet_offgit": "05_Preprocessing/processed/REL0004/visual_qa/REL0004_pp_comparison_sheet.jpg",
+      "release_manifest_sha256": "570f33b421ad415c94055a244ea60b5e9e7afbbe789dec08fc98d1e4e3b08e57"
+    },
+    "REL0005": {
+      "release_id": "REL0005",
+      "dataset_id": "DS0005",
+      "dataset_version": "v1.1.0",
+      "annotation_id": "ANN0005",
+      "split_id": "SPLIT0005",
+      "track_id": "TrackE",
+      "primary_preprocessing_id": "PP0001",
+      "supported_rq2_preprocessing_ids": [
+        "PP0001",
+        "PP0002",
+        "PP0003",
+        "PP0004"
+      ],
+      "parent_hashes": {
+        "dataset_manifest_sha256": "002e869126a19806d9f6aa1827893ed0c390f8154e8fdce6075df309681450ac",
+        "annotation_export_manifest_sha256": "10ab3bcd08a9592df3d524a3eec26315e48068c2e95b6dae8d8fc011575d21d0",
+        "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+        "split_manifest_sha256": "f81ffcd59eaf8733d3917751ae2c3c242979ab418d352bfdfa1c5eae81ea6c14",
+        "pp_config_sha256": {
+          "PP0001": "04493e1e2bcdfcadbef5b044b392bf7091822439381e158d85c144d420e0b93b",
+          "PP0002": "7482eac3c347664672f287781aba8f5b952bfc219059bc5fdd2570d539eedfbf",
+          "PP0003": "65b7ffd170ce05d5e2ae9f8acbd1f401acaf430e69754ba86caaedc64166c64e",
+          "PP0004": "08fd22b42f9fa31465eedc092251d92d7b5338b76de4fc7d321a7c77741dd2de"
+        }
+      },
+      "fit_state_train_only_sha256": "f7018d4f2a4eb6688a211f0f35f6aa7ca4ada9f384cd41e0ccee4eccd2633b34",
+      "transform_ledger_sha256": "de33c53ac21bec26c5f2ee8b3d1ce8a245a9b3a8ab2f5603b3cceb125681693f",
+      "val_or_test_used_for_fit": false,
+      "dropped_or_collapsed_boxes": 0,
+      "max_round_trip_px_err_640": 0.002445,
+      "max_round_trip_px_err_1280": 0.002452,
+      "total_canonical_images": 895,
+      "total_canonical_boxes": 6948,
+      "partition_image_counts": {
+        "val": 134,
+        "train": 628,
+        "test": 133
+      },
+      "partition_box_counts": {
+        "val": 1043,
+        "train": 4857,
+        "test": 1048
+      },
+      "class_box_counts": {
+        "0": 2831,
+        "1": 1366,
+        "2": 939,
+        "3": 812,
+        "4": 528,
+        "5": 472
+      },
+      "visual_qa_sheet_offgit": "05_Preprocessing/processed/REL0005/visual_qa/REL0005_pp_comparison_sheet.jpg",
+      "release_manifest_sha256": "1642e409741a5d102a4b0bc8afa45fe2ac6b47ea2ec96794d1b40555a8a35975"
+    },
+    "REL0006": {
+      "release_id": "REL0006",
+      "dataset_id": "DS0006",
+      "dataset_version": "v1.1.0",
+      "annotation_id": "ANN0006",
+      "split_id": "SPLIT0006",
+      "track_id": "TrackF",
+      "primary_preprocessing_id": "PP0001",
+      "supported_rq2_preprocessing_ids": [
+        "PP0001",
+        "PP0002",
+        "PP0003",
+        "PP0004"
+      ],
+      "parent_hashes": {
+        "dataset_manifest_sha256": "e4fe6f06dc45a38ff01ab721eb1759c5237ce13d1b5402fc66183f3aefea8f2d",
+        "annotation_export_manifest_sha256": "cd03980418a35123e01b1f1f14ebb8ce72f635320c016b07bcabe7e82759cd2e",
+        "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+        "split_manifest_sha256": "e75744071eeb3a31af233490d01ec9c15d54a65c9353140881573a0031aa9e6f",
+        "pp_config_sha256": {
+          "PP0001": "04493e1e2bcdfcadbef5b044b392bf7091822439381e158d85c144d420e0b93b",
+          "PP0002": "7482eac3c347664672f287781aba8f5b952bfc219059bc5fdd2570d539eedfbf",
+          "PP0003": "65b7ffd170ce05d5e2ae9f8acbd1f401acaf430e69754ba86caaedc64166c64e",
+          "PP0004": "08fd22b42f9fa31465eedc092251d92d7b5338b76de4fc7d321a7c77741dd2de"
+        }
+      },
+      "fit_state_train_only_sha256": "c593549dd1c67612a84c36155d420fc574d45025fdb88a83cb0dc7cb2ae10a11",
+      "transform_ledger_sha256": "e3ceff8e52faeb2e8cb22839e8f808d14300807c5c73696d7b83d2549ec36ae8",
+      "val_or_test_used_for_fit": false,
+      "dropped_or_collapsed_boxes": 0,
+      "max_round_trip_px_err_640": 0.001208,
+      "max_round_trip_px_err_1280": 0.001205,
+      "total_canonical_images": 170,
+      "total_canonical_boxes": 894,
+      "partition_image_counts": {
+        "val": 25,
+        "train": 121,
+        "test": 24
+      },
+      "partition_box_counts": {
+        "val": 135,
+        "train": 622,
+        "test": 137
+      },
+      "class_box_counts": {
+        "0": 716,
+        "1": 178
+      },
+      "visual_qa_sheet_offgit": "05_Preprocessing/processed/REL0006/visual_qa/REL0006_pp_comparison_sheet.jpg",
+      "release_manifest_sha256": "721126e42e302903d5b9970d3a6c1bc14ccbcafba218fff93d29d10d174cce8f"
+    }
+  }
+}
