@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-19 |
-| Current stage / step | **S10 (`STEP-022`–`026` local prep COMPLETE)**: `checkpoint_policy.md`, `EXP0000_SMOKE.yaml`, `kaggle_smoke_g09.py`, and `EXP0000_SMOKE_bundle.zip` (`5.14 MB`, `32/32` `REL0001` `PP0001`) ready; **awaiting user Kaggle GPU smoke execution to flip `G09 -> PASS`** |
+| Current stage / step | **S10–S11 (`STEP-026`–`027` local prep COMPLETE)**: `EXP0000_SMOKE` (`5.14 MB`) & immutable **`EXP0001`** (`994 train / 214 val = 94.47 MB`) bundles validated & registered; **awaiting Kaggle GPU `G09` smoke execution before launching `EXP0001` (`STEP-028`)** |
 
 ## 1. Stage & gate summary
 
