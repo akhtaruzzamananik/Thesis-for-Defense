@@ -1,0 +1,8 @@
+# Model & GPU runtime dependency pin for Kaggle Notebook (STEP-023 / UD11)
+# Explicitly pins safe 8.3.x release branch excluding compromised PyPI patches 8.3.41/42/45/46.
+# Preserves Kaggle base CUDA PyTorch/TorchVision stack when installed with:
+#   pip install -q ultralytics==8.3.253 PyYAML==6.0.3
+ultralytics==8.3.253
+PyYAML>=6.0.2
+onnx>=1.16.0
+onnxruntime>=1.18.0

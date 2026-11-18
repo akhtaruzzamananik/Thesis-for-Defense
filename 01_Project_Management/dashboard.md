@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-19 |
-| Current stage / step | **S10 in progress (`STEP-022` YOLO Selection COMPLETE: `MC0001 YOLO11s` baseline + `MC0002 YOLOv8s` + `MC0003 YOLO11m`, `AGPL-3.0` / `DEC0010`)**; ready for **`STEP-023` (`environment/model/` Runtime Lock), `STEP-024` (Experiment/Eval Plan), `STEP-025` (Pipeline Code), & `STEP-026` (`G09` Smoke Test)** |
+| Current stage / step | **S10 in progress (`STEP-022` YOLO Selection & `STEP-023` Runtime Pin COMPLETE: `ultralytics==8.3.253` on Kaggle GPU + Local CPU/ONNX `Python 3.14.6`, `DEC0010–0011`)**; ready for **`STEP-024` (Experiment & Evaluation Protocol), `STEP-025` (Pipeline Code), & `STEP-026` (`G09` Smoke Test)** |
 
 ## 1. Stage & gate summary
 
