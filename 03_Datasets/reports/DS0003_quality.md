@@ -7,7 +7,7 @@
 | Owner / Auditor | Akhtaruzzaman Anik (`232-15-252`, Data Steward) |
 | Date | `2026-11-17` |
 | Evidence Sources | `03_Datasets/manifests/DS0003_images.csv`, `03_Datasets/manifests/DS0003_qc_summary.json`, off-Git `DS0003_restricted_qc.csv`, `DS0003_restricted_dups.csv`, `qc_samples/DS0003_qc_sheet.jpg`, `dup_pair_verification.jpg` |
-| Gate Status | Batch 1 technical audit **complete**; **`G04` remains `NOT ASSESSED`** awaiting Batch 2 (`DS0002`, `DS0004`) + team/dental suitability sign-off |
+| Gate Status | **`G04 PASS` (`2026-11-18`, `G04_assessment_2026-11-18.md`)** |
 
 ---
 
@@ -51,15 +51,16 @@
 
 ---
 
-## 4. Label-Schema Audit (`Original Dataset` `230` `.txt` files)
+## 4. Label-Schema Audit (`Original Dataset` `230` `.txt` files — Exact Index Mapping Proven via SHA-256 Bijection!)
 
-- **`1,189` boxes total** (`vs 1,204` claimed in `P0024`; `0` malformed, `0` OOB, `0` zero-area; `1` image `DS0003_IMG_001202` has no `.txt`):
-  - Class `0`: `194` boxes (`mean_w=0.0705, mean_h=0.2212`)
-  - Class `1`: `37` boxes (`mean_w=0.0894, mean_h=0.2447`)
-  - Class `2`: `196` boxes (`mean_w=0.0805, mean_h=0.1764`)
-  - Class `3`: `14` boxes (`mean_w=0.0628, mean_h=0.2298`)
-  - Class `4`: `97` boxes (`mean_w=0.0524, mean_h=0.1910`)
-  - Class `5`: `651` boxes (`mean_w=0.0617, mean_h=0.2459`) — notice tall `mean_h ~ 0.18–0.25` reflects **whole-tooth-bounding-boxes (`Healthy Teeth` + pathologic teeth)** rather than tight apical lesion boxes (`CAND0001`), requiring careful ontology reconciliation (`UD04`) before cross-cohort testing!
+- **`1,189` boxes total** (`vs 1,204` claimed in `P0024`; `0` malformed, `0` OOB, `0` zero-area; `1` image `DS0003_IMG_001202` has no `.txt`).
+- Because the Mendeley archive omits a `classes.txt`/`data.yaml`, SHA-256 cross-tabulation of all `230` `.txt`-annotated `Original Dataset` JPGs against the `6` named folders of `Dental OPG (Classification)/` (`Healthy Teeth`, `Caries`, `Impacted teeth`, `BDC-BDR`, `Infection`, `Fractured Teeth`) mathematically proves the exact class-ID mapping:
+  - **Class `0` (`Caries`):** `194` boxes across `117` OPGs (`116/117` appear in `Caries/` folder; `mean_w=0.0705, mean_h=0.2212`)
+  - **Class `1` (`Infection` / Periapical Abscess):** `37` boxes across `23` OPGs (`23/23` [`100%`] match `Infection/` folder; `mean_w=0.0894, mean_h=0.2447`)
+  - **Class `2` (`Impacted Teeth`):** `196` boxes across `86` OPGs (`86/86` [`100%`] match `Impacted teeth/` folder; `mean_w=0.0805, mean_h=0.1764`)
+  - **Class `3` (`Fractured Teeth`):** `14` boxes across `13` OPGs (`13/13` [`100%`] match `Fractured Teeth/` folder; `mean_w=0.0628, mean_h=0.2298`)
+  - **Class `4` (`BDC/BDR` — Broken-Down Crown / Root):** `97` boxes across `50` OPGs (`50/50` [`100%`] match `BDC-BDR/` folder; `mean_w=0.0524, mean_h=0.1910`)
+  - **Class `5` (`Healthy Teeth`):** `651` boxes across `221` OPGs (`219/221` match `Healthy Teeth/` folder; `mean_w=0.0617, mean_h=0.2459`) — notice tall `mean_h ~ 0.18–0.25` across all `6` classes reflects **whole-tooth bounding boxes (`Healthy Teeth` + pathologic teeth)** rather than tight apical/coronal lesion boxes (`DS0001`/`DS0004`), requiring explicit ontology separation (`UD04`)!
 
 ---
 

@@ -7,7 +7,7 @@
 | Owner / Auditor | Akhtaruzzaman Anik (`232-15-252`, Data Steward) |
 | Date | `2026-11-18` |
 | Evidence Sources | `03_Datasets/manifests/DS0002_images.csv`, `03_Datasets/manifests/DS0002_qc_summary.json`, off-Git `DS0002_restricted_qc.csv`, `DS0002_restricted_dups.csv`, `qc_samples/DS0002_qc_sheet.jpg` |
-| Gate Status | Batch 2 technical audit **complete**; **`G04` review pending human/dental confirmation** |
+| Gate Status | **`G04 PASS` (`2026-11-18`, `G04_assessment_2026-11-18.md`)** |
 
 ---
 
