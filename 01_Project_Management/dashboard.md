@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-19 |
-| Current stage / step | **S08 in progress (`STEP-016` 60-OPG Annotation Pilot `ACCEPTED`: `100.0%` agreement, `kappa=1.0`, `max_rt_err=0.002343 px`)**; ready for **`STEP-017` (`ANNB0001–0006` Production Batch Export & QA) and `STEP-018` (`G06` Release Freeze)** |
+| Current stage / step | **S08 (`STEP-016` Pilot & `STEP-017` Production Batches `ANNB0001–ANNB0006` COMPLETE: `7,738` canonical `.txt` exports, `44,241` valid boxes, `180` excluded/deduplicated, `240` visual QA overlays)**; ready for **`STEP-018` (`ANN0001–ANN0006` Release Freeze & `G06 = PASS`)** |
 
 ## 1. Stage & gate summary
 

@@ -104,9 +104,11 @@ def audit_box_list(
     width: int,
     height: int,
     raw_items: Sequence[tuple[int | None, str, float, float, float, float, str]],
+    *,
+    deduplicate_same_class_iou: float | None = 0.90,
 ) -> tuple[list[BoxRecord], list[dict[str, Any]], list[dict[str, Any]]]:
     """Convert and audit raw (mapped_cls, src_label, xmin, ymin, xmax, ymax, status_hint) tuples."""
-    valid_boxes: list[BoxRecord] = []
+    candidate_boxes: list[BoxRecord] = []
     excluded: list[dict[str, Any]] = []
     anomalies: list[dict[str, Any]] = []
 
@@ -179,9 +181,9 @@ def audit_box_list(
                 }
             )
 
-        valid_boxes.append(
+        candidate_boxes.append(
             BoxRecord(
-                box_index=len(valid_boxes),
+                box_index=len(candidate_boxes),
                 class_id=cid,
                 source_label=src_label,
                 xmin=round(cx0, 4),
@@ -200,28 +202,64 @@ def audit_box_list(
         )
 
     # Check intra-image same-class duplicate boxes (IoU > 0.90) & multi-class overlaps (IoU > 0.50)
-    for i in range(len(valid_boxes)):
-        for j in range(i + 1, len(valid_boxes)):
-            bi = valid_boxes[i]
-            bj = valid_boxes[j]
+    suppressed_indices: set[int] = set()
+    for i in range(len(candidate_boxes)):
+        if i in suppressed_indices:
+            continue
+        for j in range(i + 1, len(candidate_boxes)):
+            if j in suppressed_indices:
+                continue
+            bi = candidate_boxes[i]
+            bj = candidate_boxes[j]
             iou = box_iou_xyxy([bi.xmin, bi.ymin, bi.xmax, bi.ymax], [bj.xmin, bj.ymin, bj.xmax, bj.ymax])
-            if bi.class_id == bj.class_id and iou > 0.90:
-                bi.flags.append(f"same_class_dup_iou_{iou:.3f}")
-                bj.flags.append(f"same_class_dup_iou_{iou:.3f}")
-                anomalies.append(
-                    {
-                        "image_id": image_id,
-                        "dataset_id": dataset_id,
-                        "box_index": f"{bi.box_index}&{bj.box_index}",
-                        "source_label": bi.source_label,
-                        "issue_type": "same_class_duplicate_iou_gt_0.90",
-                        "detail": f"IoU={iou:.4f}",
-                        "resolution": "flagged_for_adjudication",
-                    }
-                )
+            if bi.class_id == bj.class_id and iou > (deduplicate_same_class_iou or 0.90):
+                if deduplicate_same_class_iou is not None:
+                    suppressed_indices.add(j)
+                    excluded.append(
+                        {
+                            "image_id": image_id,
+                            "dataset_id": dataset_id,
+                            "box_index": j,
+                            "source_label": bj.source_label,
+                            "reason": "same_class_duplicate_iou_gt_0.90_adjudicated",
+                            "detail": f"dup_of_box_{i}_IoU={iou:.4f}",
+                        }
+                    )
+                    anomalies.append(
+                        {
+                            "image_id": image_id,
+                            "dataset_id": dataset_id,
+                            "box_index": f"{i}&{j}",
+                            "source_label": bi.source_label,
+                            "issue_type": "same_class_duplicate_iou_gt_0.90",
+                            "detail": f"IoU={iou:.4f}",
+                            "resolution": "deduplicated_keep_first_canonical_box_STEP-016_rule",
+                        }
+                    )
+                else:
+                    bi.flags.append(f"same_class_dup_iou_{iou:.3f}")
+                    bj.flags.append(f"same_class_dup_iou_{iou:.3f}")
+                    anomalies.append(
+                        {
+                            "image_id": image_id,
+                            "dataset_id": dataset_id,
+                            "box_index": f"{bi.box_index}&{bj.box_index}",
+                            "source_label": bi.source_label,
+                            "issue_type": "same_class_duplicate_iou_gt_0.90",
+                            "detail": f"IoU={iou:.4f}",
+                            "resolution": "flagged_for_adjudication",
+                        }
+                    )
             elif bi.class_id != bj.class_id and iou >= 0.50:
                 bi.flags.append(f"multi_class_coexistence_iou_{iou:.2f}")
                 bj.flags.append(f"multi_class_coexistence_iou_{iou:.2f}")
+
+    valid_boxes: list[BoxRecord] = []
+    for idx, b in enumerate(candidate_boxes):
+        if idx in suppressed_indices:
+            continue
+        b.box_index = len(valid_boxes)
+        valid_boxes.append(b)
 
     return valid_boxes, excluded, anomalies
 

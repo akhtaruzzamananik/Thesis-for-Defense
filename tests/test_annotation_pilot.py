@@ -21,14 +21,16 @@ from opg.annotation_pilot import (  # noqa: E402
 def test_audit_box_list_filters_degenerate_and_excluded() -> None:
     raw = [
         (0, "Implant", 100.0, 200.0, 180.0, 420.0, "ok"),
+        (0, "Implant", 100.0, 200.0, 180.0, 420.0, "ok"),  # exact same-class duplicate IoU=1.0
         (None, "Root resorption", 300.0, 400.0, 350.0, 480.0, "excluded_class"),
         (5, "Bone resorbtion", 500.0, 600.0, 500.0, 600.0, "ok"),  # degenerate zero-area
         (2, "Obturation", -3.5, 100.0, 80.0, 190.0, "ok"),          # boundary overhang > 1px
     ]
     valid, excluded, anomalies = audit_box_list("DS0001_IMG_000001", "DS0001", 2652, 1536, raw)
     assert len(valid) == 2
-    assert len(excluded) == 2
+    assert len(excluded) == 3
     assert any(a["issue_type"] == "degenerate_zero_area" for a in anomalies)
+    assert any(a["issue_type"] == "same_class_duplicate_iou_gt_0.90" for a in anomalies)
     assert any(a["issue_type"] == "boundary_overhang_gt1px" for a in anomalies)
     assert valid[1].xmin == 0.0
     assert valid[0].round_trip_px_err < 0.01

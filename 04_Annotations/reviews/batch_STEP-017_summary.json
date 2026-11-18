@@ -1,0 +1,322 @@
+{
+  "step": "STEP-017",
+  "protocol_version": "v1.0.0",
+  "classes_csv_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+  "total_batches": 6,
+  "total_active_images": 7789,
+  "total_exported_labeled_images": 7738,
+  "total_quarantined_missing_labels": 51,
+  "total_raw_shapes_scanned": 44421,
+  "total_valid_canonical_boxes": 44241,
+  "total_excluded_or_deduplicated_shapes": 180,
+  "total_anomalies_adjudicated": 5,
+  "total_stratified_visual_qa_images": 240,
+  "max_round_trip_px_err": 0.002466,
+  "overall_disposition_agreement": {
+    "n": 44421,
+    "n_accept_both": 44241,
+    "n_flag_both": 180,
+    "n_disagree": 0,
+    "agreement_pct": 100.0,
+    "kappa": 1.0
+  },
+  "batches": {
+    "ANNB0001": {
+      "batch_id": "ANNB0001",
+      "ann_id": "ANN0001",
+      "dataset_id": "DS0001",
+      "track_id": "TrackA",
+      "active_images_total": 1808,
+      "first_image_id": "DS0001_IMG_000001",
+      "last_image_id": "DS0001_IMG_001808",
+      "state_counts": {
+        "reviewed_positive": 1808
+      },
+      "exported_txt_files": 1808,
+      "raw_shapes_total": 24891,
+      "valid_boxes_total": 24883,
+      "excluded_shapes_total": 8,
+      "excluded_by_reason": {
+        "degenerate_zero_area_UD05": 3,
+        "excluded_class_UD04": 5
+      },
+      "anomalies_total": 3,
+      "anomalies_by_type": {
+        "degenerate_zero_area": 3
+      },
+      "defect_rate_pct": 0.0121,
+      "class_distribution": {
+        "0": 522,
+        "1": 1890,
+        "2": 5262,
+        "3": 3691,
+        "4": 3589,
+        "5": 3856,
+        "6": 1088,
+        "7": 1259,
+        "8": 1502,
+        "9": 328,
+        "10": 91,
+        "11": 533,
+        "12": 1272
+      },
+      "matched_boxes": 24883,
+      "f1_box_agreement": 1.0,
+      "mean_matched_iou": 0.999996,
+      "max_round_trip_px_err": 0.002098,
+      "disposition_agreement": {
+        "n": 24891,
+        "n_accept_both": 24883,
+        "n_flag_both": 8,
+        "n_disagree": 0,
+        "agreement_pct": 100.0,
+        "kappa": 1.0
+      },
+      "visual_qa_sample_count": 40,
+      "visual_qa_pct": 2.21,
+      "visual_qa_seed": 20261118,
+      "native_inventory_relpath": "04_Annotations/native/ANNB0001_DS0001/batch_native_inventory.json",
+      "native_inventory_sha256": "57de101d61b91117148dd58807ef3e91eb7af544e265f42663a7778b61619252",
+      "export_manifest_relpath": "04_Annotations/exports/ANNB0001_TrackA/export_manifest.csv",
+      "export_manifest_sha256": "464057e57980d29f7a97df93fa7a15bd512d22efcd155966426c522c2f6daf64"
+    },
+    "ANNB0002": {
+      "batch_id": "ANNB0002",
+      "ann_id": "ANN0002",
+      "dataset_id": "DS0002",
+      "track_id": "TrackB",
+      "active_images_total": 755,
+      "first_image_id": "DS0002_IMG_000001",
+      "last_image_id": "DS0002_IMG_003654",
+      "state_counts": {
+        "reviewed_positive": 678,
+        "reviewed_empty": 27,
+        "missing_labels": 50
+      },
+      "exported_txt_files": 705,
+      "raw_shapes_total": 3529,
+      "valid_boxes_total": 3528,
+      "excluded_shapes_total": 1,
+      "excluded_by_reason": {
+        "same_class_duplicate_iou_gt_0.90_adjudicated": 1
+      },
+      "anomalies_total": 1,
+      "anomalies_by_type": {
+        "same_class_duplicate_iou_gt_0.90": 1
+      },
+      "defect_rate_pct": 0.0283,
+      "class_distribution": {
+        "0": 604,
+        "1": 2188,
+        "2": 158,
+        "3": 578
+      },
+      "matched_boxes": 3528,
+      "f1_box_agreement": 1.0,
+      "mean_matched_iou": 0.999988,
+      "max_round_trip_px_err": 0.002159,
+      "disposition_agreement": {
+        "n": 3529,
+        "n_accept_both": 3528,
+        "n_flag_both": 1,
+        "n_disagree": 0,
+        "agreement_pct": 100.0,
+        "kappa": 1.0
+      },
+      "visual_qa_sample_count": 40,
+      "visual_qa_pct": 5.67,
+      "visual_qa_seed": 20261119,
+      "native_inventory_relpath": "04_Annotations/native/ANNB0002_DS0002/batch_native_inventory.json",
+      "native_inventory_sha256": "c1ac3fa4e7a938aaaf78be3e6c213961ffd21584573fc6e6c603149e0ad9a971",
+      "export_manifest_relpath": "04_Annotations/exports/ANNB0002_TrackB/export_manifest.csv",
+      "export_manifest_sha256": "b127fa293af54a9b0a3d2fec49a35ab2afee27f506ae65ad957f3cba5f724b29"
+    },
+    "ANNB0003": {
+      "batch_id": "ANNB0003",
+      "ann_id": "ANN0003",
+      "dataset_id": "DS0003",
+      "track_id": "TrackC",
+      "active_images_total": 231,
+      "first_image_id": "DS0003_IMG_001122",
+      "last_image_id": "DS0003_IMG_001352",
+      "state_counts": {
+        "reviewed_positive": 230,
+        "missing_labels": 1
+      },
+      "exported_txt_files": 230,
+      "raw_shapes_total": 1189,
+      "valid_boxes_total": 1189,
+      "excluded_shapes_total": 0,
+      "excluded_by_reason": {},
+      "anomalies_total": 0,
+      "anomalies_by_type": {},
+      "defect_rate_pct": 0.0,
+      "class_distribution": {
+        "0": 194,
+        "1": 37,
+        "2": 196,
+        "3": 14,
+        "4": 97,
+        "5": 651
+      },
+      "matched_boxes": 1189,
+      "f1_box_agreement": 1.0,
+      "mean_matched_iou": 0.999999,
+      "max_round_trip_px_err": 0.0,
+      "disposition_agreement": {
+        "n": 1189,
+        "n_accept_both": 1189,
+        "n_flag_both": 0,
+        "n_disagree": 0,
+        "agreement_pct": 100.0,
+        "kappa": 1.0
+      },
+      "visual_qa_sample_count": 40,
+      "visual_qa_pct": 17.39,
+      "visual_qa_seed": 20261120,
+      "native_inventory_relpath": "04_Annotations/native/ANNB0003_DS0003/batch_native_inventory.json",
+      "native_inventory_sha256": "6c69abd47fc64ea89bfe73b79b85dac835a4c8d306a350acc5526ac9de4e6f1f",
+      "export_manifest_relpath": "04_Annotations/exports/ANNB0003_TrackC/export_manifest.csv",
+      "export_manifest_sha256": "557ec6ccaf110bba13d641ee16dc58a4cb104e93880a04c7c28243a377ee3d24"
+    },
+    "ANNB0004": {
+      "batch_id": "ANNB0004",
+      "ann_id": "ANN0004",
+      "dataset_id": "DS0004",
+      "track_id": "TrackD",
+      "active_images_total": 3924,
+      "first_image_id": "DS0004_IMG_013072",
+      "last_image_id": "DS0004_IMG_016995",
+      "state_counts": {
+        "reviewed_positive": 3924
+      },
+      "exported_txt_files": 3924,
+      "raw_shapes_total": 6741,
+      "valid_boxes_total": 6741,
+      "excluded_shapes_total": 0,
+      "excluded_by_reason": {},
+      "anomalies_total": 0,
+      "anomalies_by_type": {},
+      "defect_rate_pct": 0.0,
+      "class_distribution": {
+        "0": 4277,
+        "1": 1755,
+        "2": 709
+      },
+      "matched_boxes": 6741,
+      "f1_box_agreement": 1.0,
+      "mean_matched_iou": 0.999966,
+      "max_round_trip_px_err": 0.001946,
+      "disposition_agreement": {
+        "n": 6741,
+        "n_accept_both": 6741,
+        "n_flag_both": 0,
+        "n_disagree": 0,
+        "agreement_pct": 100.0,
+        "kappa": 1.0
+      },
+      "visual_qa_sample_count": 40,
+      "visual_qa_pct": 1.02,
+      "visual_qa_seed": 20261121,
+      "native_inventory_relpath": "04_Annotations/native/ANNB0004_DS0004/batch_native_inventory.json",
+      "native_inventory_sha256": "a8bfcd045887e5922f91e59bc84d59c26c15763dfbe717da9a8819ef48491d44",
+      "export_manifest_relpath": "04_Annotations/exports/ANNB0004_TrackD/export_manifest.csv",
+      "export_manifest_sha256": "e2ae185dd3f61ffd66bcb901728d30f40ca03876c73ee626ade26c3d392f25c1"
+    },
+    "ANNB0005": {
+      "batch_id": "ANNB0005",
+      "ann_id": "ANN0005",
+      "dataset_id": "DS0005",
+      "track_id": "TrackE",
+      "active_images_total": 901,
+      "first_image_id": "DS0005_IMG_000001",
+      "last_image_id": "DS0005_IMG_001034",
+      "state_counts": {
+        "reviewed_positive": 901
+      },
+      "exported_txt_files": 901,
+      "raw_shapes_total": 7006,
+      "valid_boxes_total": 7006,
+      "excluded_shapes_total": 0,
+      "excluded_by_reason": {},
+      "anomalies_total": 0,
+      "anomalies_by_type": {},
+      "defect_rate_pct": 0.0,
+      "class_distribution": {
+        "0": 2857,
+        "1": 1377,
+        "2": 941,
+        "3": 815,
+        "4": 544,
+        "5": 472
+      },
+      "matched_boxes": 7006,
+      "f1_box_agreement": 1.0,
+      "mean_matched_iou": 0.999986,
+      "max_round_trip_px_err": 0.002466,
+      "disposition_agreement": {
+        "n": 7006,
+        "n_accept_both": 7006,
+        "n_flag_both": 0,
+        "n_disagree": 0,
+        "agreement_pct": 100.0,
+        "kappa": 1.0
+      },
+      "visual_qa_sample_count": 40,
+      "visual_qa_pct": 4.44,
+      "visual_qa_seed": 20261122,
+      "native_inventory_relpath": "04_Annotations/native/ANNB0005_DS0005/batch_native_inventory.json",
+      "native_inventory_sha256": "7f47b40a10af15123e00877c87af71b886ba0edc946e139779dd0facec4c2ba0",
+      "export_manifest_relpath": "04_Annotations/exports/ANNB0005_TrackE/export_manifest.csv",
+      "export_manifest_sha256": "10ab3bcd08a9592df3d524a3eec26315e48068c2e95b6dae8d8fc011575d21d0"
+    },
+    "ANNB0006": {
+      "batch_id": "ANNB0006",
+      "ann_id": "ANN0006",
+      "dataset_id": "DS0006",
+      "track_id": "TrackF",
+      "active_images_total": 170,
+      "first_image_id": "DS0006_IMG_000001",
+      "last_image_id": "DS0006_IMG_000170",
+      "state_counts": {
+        "reviewed_positive": 170
+      },
+      "exported_txt_files": 170,
+      "raw_shapes_total": 1065,
+      "valid_boxes_total": 894,
+      "excluded_shapes_total": 171,
+      "excluded_by_reason": {
+        "excluded_auxiliary_roi_UD04": 170,
+        "degenerate_zero_area_UD05": 1
+      },
+      "anomalies_total": 1,
+      "anomalies_by_type": {
+        "degenerate_zero_area": 1
+      },
+      "defect_rate_pct": 0.0939,
+      "class_distribution": {
+        "0": 716,
+        "1": 178
+      },
+      "matched_boxes": 894,
+      "f1_box_agreement": 1.0,
+      "mean_matched_iou": 0.999824,
+      "max_round_trip_px_err": 0.001426,
+      "disposition_agreement": {
+        "n": 1065,
+        "n_accept_both": 894,
+        "n_flag_both": 171,
+        "n_disagree": 0,
+        "agreement_pct": 100.0,
+        "kappa": 1.0
+      },
+      "visual_qa_sample_count": 40,
+      "visual_qa_pct": 23.53,
+      "visual_qa_seed": 20261123,
+      "native_inventory_relpath": "04_Annotations/native/ANNB0006_DS0006/batch_native_inventory.json",
+      "native_inventory_sha256": "caacbcd4d4b8250c7ff3b3258c21c6f2a1d8f6ec24d41f87f88334e31e836775",
+      "export_manifest_relpath": "04_Annotations/exports/ANNB0006_TrackF/export_manifest.csv",
+      "export_manifest_sha256": "cd03980418a35123e01b1f1f14ebb8ce72f635320c016b07bcabe7e82759cd2e"
+    }
+  }
+}
