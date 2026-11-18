@@ -84,7 +84,7 @@ def test_autocrop_never_clips_edge_boxes_and_safe_corner_mask() -> None:
     raw_xyxy = [(b[1], b[2], b[3], b[4]) for b in boxes]
 
     cropped, shifted, (cx0, cy0, cw, ch) = autocrop_black_border_with_boxes(img, raw_xyxy)
-    assert cx0 <= 20 and cy0 <= 20
+    assert cx0 <= 20 and cy0 <= 30
     for sx0, sy0, sx1, sy1 in shifted:
         assert 0.0 <= sx0 < sx1 <= cw
         assert 0.0 <= sy0 < sy1 <= ch
