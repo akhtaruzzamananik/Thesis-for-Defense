@@ -45,6 +45,7 @@ def main() -> None:
     p_exp.add_argument("--track-id", required=True)
     p_exp.add_argument("--pp-config", type=Path, required=True)
     p_exp.add_argument("--out-dir", type=Path, required=True)
+    p_exp.add_argument("--max-items-per-partition", type=int, default=None)
 
     p_tr = sub.add_parser("train", help="Launch registered experiment training via Ultralytics")
     p_tr.add_argument("--config", type=Path, required=True)
@@ -70,6 +71,7 @@ def main() -> None:
             class_names=names,
             partitions=("train", "val"),
             allow_test_partition=False,
+            max_items_per_partition=args.max_items_per_partition,
         )
         print(json.dumps(manifest, indent=2))
     elif args.cmd == "train":

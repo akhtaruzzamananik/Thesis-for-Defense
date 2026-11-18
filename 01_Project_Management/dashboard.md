@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-19 |
-| Current stage / step | **S10 in progress (`STEP-022`–`025` COMPLETE: `src/opg/data_loader.py`, `evaluator.py`, `trainer.py`, `run_pipeline.py` implemented & unit-tested)**; ready for **`STEP-026` (Checkpoint Recovery Policy, Smoke Test & `G09 = PASS`)** |
+| Current stage / step | **S10 (`STEP-022`–`026` local prep COMPLETE)**: `checkpoint_policy.md`, `EXP0000_SMOKE.yaml`, `kaggle_smoke_g09.py`, and `EXP0000_SMOKE_bundle.zip` (`5.14 MB`, `32/32` `REL0001` `PP0001`) ready; **awaiting user Kaggle GPU smoke execution to flip `G09 -> PASS`** |
 
 ## 1. Stage & gate summary
 
@@ -21,7 +21,7 @@
 | G06 | STEP-018 | **PASS** | **Approved (`2026-11-19`):** Pilot (`60` OPGs) & production batches (`ANNB0001–0006`, `240` visual QA OPGs) accepted; **`ANN0001–ANN0006`** frozen (`7,738` `.txt` files, `44,241` valid boxes, `180` excluded/deduplicated, `0` orphans/invalid, `G06_assessment_2026-11-19.md`) |
 | G07 | STEP-020 | **PASS** | **Approved (`2026-11-19`):** Connected-component grouped-stratified `70/15/15` splits **`SPLIT0001–SPLIT0006`** locked (`7,457` canonical OPGs [`5,106 train / 1,091 val / 1,082 test / 178 external_test`], `281` redundant copies deduplicated, `0` cross-partition leaks, `DEC0007–0008`, `G07_assessment_2026-11-19.md`) |
 | G08 | STEP-021 | **PASS** | **Approved (`2026-11-19`):** Prepared dataset releases **`REL0001–REL0006`** & **`PP0001–PP0004`** verified (`7,457` canonical OPGs, `41,103` boxes, `0` dropped boxes, `max_rt_err = 0.003630 px @ 640 / 0.004068 px @ 1280`, train-only fit on `5,106` train OPGs, `G08_assessment_2026-11-19.md`) |
-| G09 | STEP-026 | **NOT ASSESSED** | Ready to start **`S10` (`STEP-022` YOLO selection, `STEP-023` runtime lock, `STEP-024` experiment/eval protocol, `STEP-025` pipeline code, `STEP-026` smoke test & `G09`)** |
+| G09 | STEP-026 | **PENDING_KAGGLE_SMOKE** | Local `checkpoint_policy.md`, `EXP0000_SMOKE.yaml`, `kaggle_smoke_g09.py`, and `EXP0000_SMOKE_bundle.zip` (`5.14 MB`) verified; awaiting Kaggle GPU recovery run (`G09_assessment_2026-11-19.md`) |
 | G10–G17 | STEP-029–049 | **NOT ASSESSED** | Not started |
 
 ## 2. Immediate priorities & open blockers

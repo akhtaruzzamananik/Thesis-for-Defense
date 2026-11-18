@@ -191,6 +191,7 @@ def export_yolo_dataset_bundle(
     class_names: Sequence[str],
     partitions: Sequence[str] = ("train", "val"),
     allow_test_partition: bool = False,
+    max_items_per_partition: int | None = None,
 ) -> dict[str, Any]:
     """Materialize a Kaggle/Ultralytics-ready dataset directory applying exact PP#### transforms."""
     pp_cfg = load_and_validate_pp_yaml(pp_config_path)
@@ -223,6 +224,8 @@ def export_yolo_dataset_bundle(
             partition=part,
             allow_test_partition=allow_test_partition,
         )
+        if max_items_per_partition is not None:
+            items = items[:max_items_per_partition]
         img_out_dir = output_dir / "images" / part
         lbl_out_dir = output_dir / "labels" / part
         img_out_dir.mkdir(parents=True, exist_ok=True)
