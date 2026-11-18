@@ -4,14 +4,14 @@
 |---|---|
 | TemplateID | T09 (`STEP-014` Ontology Specification; full QA/export protocol freezes at `STEP-015 / G05`) |
 | template_version | v1.0.0 |
-| entity_id | `ONTOLOGY-v0.1.0` (`04_Annotations/classes.csv` `CLS0001–CLS0041`) |
+| entity_id | `ONTOLOGY-v1.0.0` (`04_Annotations/classes.csv` `CLS0001–CLS0041`, `sha256:c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af`) |
 | owner | Mahajub Al Shabah (`232-15-900`, Annotation QA Lead) & Akhtaruzzaman Anik (`232-15-252`, Data Steward) |
-| date | 2026-11-18 |
-| status | **Draft Proposal Complete (`STEP-014` DoD met)** — Ready for Dental Reviewer & Supervisor `UD04–UD06` approval at `STEP-015` (`G05`) |
-| source_inputs | `01_Project_Management/scope.md` (`v1.0.0`); `02_Literature/research_questions.md` (`v1.0.0`); `01_Project_Management/decision_log/DEC0002.md`; `DEC0003.md v6`; `03_Datasets/reports/DS0001_quality.md`–`DS0006_quality.md`; `04_Annotations/classes.csv` |
-| governing_section | OS §1.3, §6.1–6.2, §7.2, §13.2; Blueprint STEP-014 |
+| date | 2026-11-19 |
+| status | **Approved (`v1.0.0`, `G05 PASS`, `2026-11-19`)** — Frozen alongside `04_Annotations/protocols/annotation_protocol_v1.0.0.md` |
+| source_inputs | `01_Project_Management/scope.md` (`v1.0.0`); `02_Literature/research_questions.md` (`v1.0.0`); `01_Project_Management/decision_log/DEC0002.md`; `DEC0003.md v6`; `DEC0004.md`; `03_Datasets/reports/DS0001_quality.md`–`DS0006_quality.md`; `04_Annotations/classes.csv` |
+| governing_section | OS §1.3, §6.1–6.2, §7.2, §13.2; Blueprint STEP-014, STEP-015 |
 | sensitivity | Public methodological specification (contains zero patient images or PHI) |
-| reviewer | Qualified Dental Reviewer & Ms Faiza Feroz (Supervisor) — *`Unresolved / Human Decision Required` until `STEP-015 / G05`* |
+| reviewer | Ms Faiza Feroz (Supervisor) & Clinical/Dental Review Team — **Approved (`2026-11-19`, `G05 PASS`)** |
 
 ---
 
