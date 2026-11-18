@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-19 |
-| Current stage / step | **S07 Complete (`STEP-015` / `G05 = PASS` closed: `annotation_protocol_v1.0.0.md`, `classes.csv v1.0.0`, `annotation_schema.py` verified)**; ready for **`S08` (`STEP-016`–`018` Pilot, Batch QA & `ANN` Release Freeze / `G06`)** |
+| Current stage / step | **S08 in progress (`STEP-016` 60-OPG Annotation Pilot `ACCEPTED`: `100.0%` agreement, `kappa=1.0`, `max_rt_err=0.002343 px`)**; ready for **`STEP-017` (`ANNB0001–0006` Production Batch Export & QA) and `STEP-018` (`G06` Release Freeze)** |
 
 ## 1. Stage & gate summary
 

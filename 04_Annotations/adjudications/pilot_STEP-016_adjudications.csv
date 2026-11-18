@@ -1,0 +1,5 @@
+dataset_id,image_id,box_index,source_label,issue_type,detail,resolution
+DS0001,DS0001_IMG_000133,14,DS0001_src_3,degenerate_zero_area,,dropped_by_preapproved_rule_UD05
+DS0001,DS0001_IMG_001218,11,DS0001_src_5,degenerate_zero_area,,dropped_by_preapproved_rule_UD05
+DS0002,DS0002_IMG_000310,0&2,Caries,same_class_duplicate_iou_gt_0.90,IoU=1.0000,flagged_for_adjudication
+DS0006,DS0006_IMG_000055,13,MD_OPG_o,degenerate_zero_area,,dropped_by_preapproved_rule_UD05

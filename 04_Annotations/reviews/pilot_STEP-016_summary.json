@@ -1,0 +1,286 @@
+{
+  "step": "STEP-016",
+  "protocol_version": "v1.0.0",
+  "classes_csv_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+  "seed": 20261119,
+  "total_pilot_images": 60,
+  "total_pilot_valid_boxes": 586,
+  "total_pilot_excluded_items": 13,
+  "max_round_trip_px_err": 0.002343,
+  "overall_disposition_agreement": {
+    "n": 599,
+    "n_accept_both": 584,
+    "n_flag_both": 15,
+    "n_disagree": 0,
+    "agreement_pct": 100.0,
+    "kappa": 1.0
+  },
+  "total_anomalies_adjudicated": 4,
+  "datasets": {
+    "DS0001": {
+      "track_id": "TrackA",
+      "pilot_images": 10,
+      "pilot_image_ids": [
+        "DS0001_IMG_000119",
+        "DS0001_IMG_000123",
+        "DS0001_IMG_000133",
+        "DS0001_IMG_000192",
+        "DS0001_IMG_000237",
+        "DS0001_IMG_000266",
+        "DS0001_IMG_000282",
+        "DS0001_IMG_000451",
+        "DS0001_IMG_001218",
+        "DS0001_IMG_001584"
+      ],
+      "strata": {
+        "S2_high_density_overlap": 3,
+        "S3_quality_variation_tail": 3,
+        "S1_rare_or_edge_class": 4
+      },
+      "valid_boxes": 232,
+      "excluded_items": 2,
+      "class_distribution": {
+        "0": 3,
+        "1": 15,
+        "2": 59,
+        "3": 49,
+        "4": 36,
+        "5": 33,
+        "6": 4,
+        "7": 17,
+        "8": 13,
+        "9": 2,
+        "12": 1
+      },
+      "matched_boxes_passA_vs_passB": 232,
+      "f1_box_agreement": 1.0,
+      "mean_matched_iou": 0.999999,
+      "max_round_trip_px_err": 0.0,
+      "disposition_agreement": {
+        "n": 234,
+        "n_accept_both": 232,
+        "n_flag_both": 2,
+        "n_disagree": 0,
+        "agreement_pct": 100.0,
+        "kappa": 1.0
+      },
+      "anomalies_flagged_and_adjudicated": 2,
+      "overlay_sheet_offgit": "04_Annotations/exports/pilot_STEP-016/overlays/DS0001_pilot_overlay.jpg"
+    },
+    "DS0002": {
+      "track_id": "TrackB",
+      "pilot_images": 10,
+      "pilot_image_ids": [
+        "DS0002_IMG_000015",
+        "DS0002_IMG_000082",
+        "DS0002_IMG_000097",
+        "DS0002_IMG_000218",
+        "DS0002_IMG_000304",
+        "DS0002_IMG_000310",
+        "DS0002_IMG_000420",
+        "DS0002_IMG_000538",
+        "DS0002_IMG_000607",
+        "DS0002_IMG_000624"
+      ],
+      "strata": {
+        "S3_quality_variation_tail": 3,
+        "S2_high_density_overlap": 3,
+        "S1_rare_or_edge_class": 4
+      },
+      "valid_boxes": 68,
+      "excluded_items": 0,
+      "class_distribution": {
+        "0": 8,
+        "1": 29,
+        "2": 4,
+        "3": 27
+      },
+      "matched_boxes_passA_vs_passB": 68,
+      "f1_box_agreement": 1.0,
+      "mean_matched_iou": 0.999986,
+      "max_round_trip_px_err": 0.002009,
+      "disposition_agreement": {
+        "n": 68,
+        "n_accept_both": 66,
+        "n_flag_both": 2,
+        "n_disagree": 0,
+        "agreement_pct": 100.0,
+        "kappa": 1.0
+      },
+      "anomalies_flagged_and_adjudicated": 1,
+      "overlay_sheet_offgit": "04_Annotations/exports/pilot_STEP-016/overlays/DS0002_pilot_overlay.jpg"
+    },
+    "DS0003": {
+      "track_id": "TrackC",
+      "pilot_images": 10,
+      "pilot_image_ids": [
+        "DS0003_IMG_001133",
+        "DS0003_IMG_001134",
+        "DS0003_IMG_001148",
+        "DS0003_IMG_001157",
+        "DS0003_IMG_001207",
+        "DS0003_IMG_001211",
+        "DS0003_IMG_001216",
+        "DS0003_IMG_001218",
+        "DS0003_IMG_001234",
+        "DS0003_IMG_001317"
+      ],
+      "strata": {
+        "S1_rare_or_edge_class": 4,
+        "S3_quality_variation_tail": 3,
+        "S2_high_density_overlap": 3
+      },
+      "valid_boxes": 72,
+      "excluded_items": 0,
+      "class_distribution": {
+        "0": 3,
+        "1": 4,
+        "2": 26,
+        "4": 14,
+        "5": 25
+      },
+      "matched_boxes_passA_vs_passB": 72,
+      "f1_box_agreement": 1.0,
+      "mean_matched_iou": 0.999999,
+      "max_round_trip_px_err": 0.0,
+      "disposition_agreement": {
+        "n": 72,
+        "n_accept_both": 72,
+        "n_flag_both": 0,
+        "n_disagree": 0,
+        "agreement_pct": 100.0,
+        "kappa": 1.0
+      },
+      "anomalies_flagged_and_adjudicated": 0,
+      "overlay_sheet_offgit": "04_Annotations/exports/pilot_STEP-016/overlays/DS0003_pilot_overlay.jpg"
+    },
+    "DS0004": {
+      "track_id": "TrackD",
+      "pilot_images": 10,
+      "pilot_image_ids": [
+        "DS0004_IMG_013168",
+        "DS0004_IMG_013588",
+        "DS0004_IMG_013681",
+        "DS0004_IMG_014539",
+        "DS0004_IMG_014649",
+        "DS0004_IMG_014852",
+        "DS0004_IMG_015265",
+        "DS0004_IMG_015390",
+        "DS0004_IMG_015602",
+        "DS0004_IMG_016702"
+      ],
+      "strata": {
+        "S1_rare_or_edge_class": 4,
+        "S2_high_density_overlap": 3,
+        "S3_quality_variation_tail": 3
+      },
+      "valid_boxes": 27,
+      "excluded_items": 0,
+      "class_distribution": {
+        "0": 16,
+        "1": 10,
+        "2": 1
+      },
+      "matched_boxes_passA_vs_passB": 27,
+      "f1_box_agreement": 1.0,
+      "mean_matched_iou": 0.999967,
+      "max_round_trip_px_err": 0.001726,
+      "disposition_agreement": {
+        "n": 27,
+        "n_accept_both": 27,
+        "n_flag_both": 0,
+        "n_disagree": 0,
+        "agreement_pct": 100.0,
+        "kappa": 1.0
+      },
+      "anomalies_flagged_and_adjudicated": 0,
+      "overlay_sheet_offgit": "04_Annotations/exports/pilot_STEP-016/overlays/DS0004_pilot_overlay.jpg"
+    },
+    "DS0005": {
+      "track_id": "TrackE",
+      "pilot_images": 10,
+      "pilot_image_ids": [
+        "DS0005_IMG_000075",
+        "DS0005_IMG_000130",
+        "DS0005_IMG_000311",
+        "DS0005_IMG_000361",
+        "DS0005_IMG_000411",
+        "DS0005_IMG_000596",
+        "DS0005_IMG_000761",
+        "DS0005_IMG_000942",
+        "DS0005_IMG_001009",
+        "DS0005_IMG_001027"
+      ],
+      "strata": {
+        "S2_high_density_overlap": 3,
+        "S1_rare_or_edge_class": 4,
+        "S3_quality_variation_tail": 3
+      },
+      "valid_boxes": 97,
+      "excluded_items": 0,
+      "class_distribution": {
+        "0": 47,
+        "1": 14,
+        "2": 6,
+        "3": 13,
+        "4": 7,
+        "5": 10
+      },
+      "matched_boxes_passA_vs_passB": 97,
+      "f1_box_agreement": 1.0,
+      "mean_matched_iou": 0.999987,
+      "max_round_trip_px_err": 0.002343,
+      "disposition_agreement": {
+        "n": 97,
+        "n_accept_both": 97,
+        "n_flag_both": 0,
+        "n_disagree": 0,
+        "agreement_pct": 100.0,
+        "kappa": 1.0
+      },
+      "anomalies_flagged_and_adjudicated": 0,
+      "overlay_sheet_offgit": "04_Annotations/exports/pilot_STEP-016/overlays/DS0005_pilot_overlay.jpg"
+    },
+    "DS0006": {
+      "track_id": "TrackF",
+      "pilot_images": 10,
+      "pilot_image_ids": [
+        "DS0006_IMG_000001",
+        "DS0006_IMG_000003",
+        "DS0006_IMG_000015",
+        "DS0006_IMG_000019",
+        "DS0006_IMG_000022",
+        "DS0006_IMG_000048",
+        "DS0006_IMG_000055",
+        "DS0006_IMG_000075",
+        "DS0006_IMG_000094",
+        "DS0006_IMG_000129"
+      ],
+      "strata": {
+        "S1_rare_or_edge_class": 4,
+        "S3_quality_variation_tail": 3,
+        "S2_high_density_overlap": 3
+      },
+      "valid_boxes": 90,
+      "excluded_items": 11,
+      "class_distribution": {
+        "0": 70,
+        "1": 20
+      },
+      "matched_boxes_passA_vs_passB": 90,
+      "f1_box_agreement": 1.0,
+      "mean_matched_iou": 0.999809,
+      "max_round_trip_px_err": 0.001346,
+      "disposition_agreement": {
+        "n": 101,
+        "n_accept_both": 90,
+        "n_flag_both": 11,
+        "n_disagree": 0,
+        "agreement_pct": 100.0,
+        "kappa": 1.0
+      },
+      "anomalies_flagged_and_adjudicated": 1,
+      "overlay_sheet_offgit": "04_Annotations/exports/pilot_STEP-016/overlays/DS0006_pilot_overlay.jpg"
+    }
+  }
+}

@@ -31,6 +31,10 @@ build/
 03_Datasets/manifests/*_restricted*
 04_Annotations/native/
 04_Annotations/exports/
+04_Annotations/manifests/*_restricted*
+04_Annotations/**/*.png
+04_Annotations/**/*.jpg
+04_Annotations/**/*.jpeg
 05_Preprocessing/processed/
 05_Preprocessing/**/processed/
 *.dcm
