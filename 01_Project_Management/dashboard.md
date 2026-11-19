@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-20 |
-| Current stage / step | **S11 Baseline COMPLETE (`STEP-027`–`029` / `G10 = PASS` for `EXP0001` -> `MODEL0001`, `val mAP@0.50 = 0.381`)**; **ready for `STEP-030` (Approved Controlled Experiment Matrix: `EXP0002` `YOLOv8s`, `EXP0010` `1280×1280`, `EXP0003–0009`, `EXP0011–0013`)** |
+| Current stage / step | **S11 (`STEP-030` Matrix Active)**: `EXP0001` (`MODEL0001`, `G10 = PASS`, `val mAP@0.50 = 0.381`); **`EXP0002–EXP0013`** (`12` configs `T14`-validated & Kaggle `.zip` bundles built off-Git) ready for Kaggle GPU waves (`07_Experiments/STEP030_matrix_tracker.md`) |
 
 ## 1. Stage & gate summary
 

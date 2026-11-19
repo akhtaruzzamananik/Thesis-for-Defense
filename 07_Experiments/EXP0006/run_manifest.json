@@ -1,0 +1,40 @@
+{
+  "experiment_id": "EXP0006",
+  "schema_version": "T14-v1.0.0",
+  "status": "READY_TO_LAUNCH_STEP030",
+  "purpose": "track_baseline",
+  "parent_comparison_id": "NONE",
+  "research_questions": [
+    "RQ0",
+    "RQ1"
+  ],
+  "release_id": "REL0005",
+  "dataset_id": "DS0005",
+  "split_id": "SPLIT0005",
+  "annotation_batch_id": "ANNB0005",
+  "track_id": "TrackE",
+  "preprocessing_id": "PP0001",
+  "model_candidate": "MC0001",
+  "architecture": "yolo11s",
+  "image_size": 640,
+  "batch_size": 16,
+  "source_commit": "2f7d41af4a65ccede5d05e602b42eef75e947ab0",
+  "allowed_partitions": [
+    "train",
+    "val"
+  ],
+  "forbidden_partitions": [
+    "test",
+    "external_test"
+  ],
+  "hashes": {
+    "config_sha256": "cdf65b1795776aec6e42b20f25efb425a4b9a52a953344731f78112f712b3508",
+    "release_manifest_sha256": "1642e409741a5d102a4b0bc8afa45fe2ac6b47ea2ec96794d1b40555a8a35975",
+    "split_manifest_sha256": "cb894f5bd138ada998687cfa80a756127db7e70bdc94b4b25335d3ce3dc6d504",
+    "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+    "pp_config_sha256": "04493e1e2bcdfcadbef5b044b392bf7091822439381e158d85c144d420e0b93b",
+    "protocol_sha256": "26fede09e31475e7e7a5a1cdd3bc2a111815f727d8925300976dc6060a9024c1"
+  },
+  "off_git_bundle_zip": "08_Checkpoints/artifacts/kaggle_bundles/REL0005_PP0001_bundle.zip",
+  "artifact_destination": "08_Checkpoints/artifacts/EXP0006/"
+}

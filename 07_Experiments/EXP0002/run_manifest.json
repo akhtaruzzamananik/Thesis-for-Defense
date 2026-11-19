@@ -1,0 +1,40 @@
+{
+  "experiment_id": "EXP0002",
+  "schema_version": "T14-v1.0.0",
+  "status": "READY_TO_LAUNCH_STEP030",
+  "purpose": "comparator",
+  "parent_comparison_id": "EXP0001",
+  "research_questions": [
+    "RQ1",
+    "RQ3"
+  ],
+  "release_id": "REL0001",
+  "dataset_id": "DS0001",
+  "split_id": "SPLIT0001",
+  "annotation_batch_id": "ANNB0001",
+  "track_id": "TrackA",
+  "preprocessing_id": "PP0001",
+  "model_candidate": "MC0002",
+  "architecture": "yolov8s",
+  "image_size": 640,
+  "batch_size": 16,
+  "source_commit": "2f7d41af4a65ccede5d05e602b42eef75e947ab0",
+  "allowed_partitions": [
+    "train",
+    "val"
+  ],
+  "forbidden_partitions": [
+    "test",
+    "external_test"
+  ],
+  "hashes": {
+    "config_sha256": "1284e862bc6105181076d46c6a085889f4c51e93b1b0d4662a8a84948ab8407a",
+    "release_manifest_sha256": "40d7db1d4a9a2d87d9d689a16dc784a01a79f6a4df6f84b29f66241990d0ef9c",
+    "split_manifest_sha256": "b7b40a1af8518644fc14a3a1aa4fa0569cb299f0ed2cc06533f534ff46e1e8ee",
+    "class_map_sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+    "pp_config_sha256": "04493e1e2bcdfcadbef5b044b392bf7091822439381e158d85c144d420e0b93b",
+    "protocol_sha256": "26fede09e31475e7e7a5a1cdd3bc2a111815f727d8925300976dc6060a9024c1"
+  },
+  "off_git_bundle_zip": "08_Checkpoints/artifacts/EXP0001_REL0001_PP0001_bundle.zip",
+  "artifact_destination": "08_Checkpoints/artifacts/EXP0002/"
+}

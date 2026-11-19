@@ -1,0 +1,73 @@
+# EXP0008 — Single-factor RQ2 ablation: CLAHE 2.0 8x8 vs EXP0001 raw 640 on TrackA
+schema_version: T14-v1.0.0
+identity:
+  experiment_id: EXP0008
+  research_question_ids:
+  - RQ2
+  purpose: rq2_ablation
+  parent_comparison_id: EXP0001
+  approval_record: DEC0010 / DEC0012 / STEP-024 / STEP-030
+  source_commit: 2f7d41af4a65ccede5d05e602b42eef75e947ab0
+data:
+  release_id: REL0001
+  dataset_id: DS0001
+  annotation_id: ANN0001
+  split_id: SPLIT0001
+  preprocessing_id: PP0002
+  release_manifest_sha256: 40d7db1d4a9a2d87d9d689a16dc784a01a79f6a4df6f84b29f66241990d0ef9c
+  split_manifest_sha256: b7b40a1af8518644fc14a3a1aa4fa0569cb299f0ed2cc06533f534ff46e1e8ee
+  class_map_sha256: c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af
+  pp_config_sha256: 7482eac3c347664672f287781aba8f5b952bfc219059bc5fdd2570d539eedfbf
+  allowed_partitions:
+  - train
+  - val
+model:
+  candidate_id: MC0001
+  implementation: ultralytics
+  package_version: 8.3.253
+  architecture: yolo11s
+  initial_weights: yolo11s.pt
+  initial_weights_sha256: recorded_on_kaggle_download_in_effective_manifest
+  license_record: AGPL-3.0
+  num_classes: 13
+training:
+  seed: 20261124
+  deterministic: true
+  image_size: 640
+  batch_size: 16
+  epochs: 100
+  patience: 20
+  optimizer: AdamW
+  lr0: 0.001
+  lrf: 0.01
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 3.0
+  amp: true
+  workers: 4
+  selection_metric: mAP@0.50
+  augmentations:
+    degrees: 5.0
+    translate: 0.05
+    scale: 0.1
+    hsv_v: 0.1
+    fliplr: 0.0
+    flipud: 0.0
+    mosaic: 0.5
+    close_mosaic: 10
+runtime:
+  platform: kaggle_gpu
+  environment_lock: environment/model/requirements-kaggle.txt
+  hardware_record: Kaggle T4/P100 16GB (captured at runtime)
+evaluation:
+  protocol_path: 09_Evaluation/protocol.md
+  protocol_sha256: 26fede09e31475e7e7a5a1cdd3bc2a111815f727d8925300976dc6060a9024c1
+  matching_iou: 0.5
+  nms_iou: 0.65
+  agnostic_nms: false
+  max_detections: 300
+  metric_conf_floor: 0.001
+  operating_conf_threshold: val_selected_at_G11
+outputs:
+  checkpoint_policy: 08_Checkpoints/checkpoint_policy.md
+  artifact_destination: 08_Checkpoints/artifacts/EXP0008/
