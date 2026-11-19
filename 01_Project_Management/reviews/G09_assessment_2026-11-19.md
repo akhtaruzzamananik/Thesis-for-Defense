@@ -4,29 +4,29 @@
 |---|---|
 | Gate ID | `G09` (`GA0009`) |
 | Step / Stage | `STEP-026` (`S10` — Verify checkpoint recovery and baseline readiness) |
-| Outcome | **`PENDING_KAGGLE_SMOKE`** *(Local readiness verified; Kaggle GPU execution & human sign-off pending)* |
-| Assessors | Mahajub Al Shabah (`232-15-900`, Model & Eval Lead) & Akhtaruzzaman Anik (`232-15-252`, Research Lead) |
+| Outcome | **`PASS`** (`2026-11-19`) |
+| Assessors | Akhtaruzzaman Anik (`232-15-252`, Research Lead) & Mahajub Al Shabah (`232-15-900`, Model & Eval Lead) |
+| Kaggle Runtime Observed | `Tesla T4` (`torch==2.11.0+cu130`, `ultralytics==8.3.253`) |
+| Evidence Manifest | [EXP0000_SMOKE_g09_report.json](../../08_Checkpoints/manifests/EXP0000_SMOKE_g09_report.json) |
 | Date | `2026-11-19` |
 
 ---
 
-## 1. Local Readiness Verification (Completed & Observed)
+## 1. Gate Criteria Verification (All Observed & Passed)
 
-| Check | Result | Evidence |
+| Mandatory Criterion (`STEP-026` / `OS §13.2`) | Result | Observed Evidence |
 |---|---|---|
-| Checkpoint & recovery policy | **PASS** | [checkpoint_policy.md](../../08_Checkpoints/checkpoint_policy.md) defines `last`/`best`/`smoke`/`exported_onnx` roles, immutable naming, off-Git binary boundary, and honest `ultralytics==8.3.253` exact-resume limitations. |
-| Diagnostic `T14` config validation | **PASS** | `python 13_Automation/run_pipeline.py validate-config --config 07_Experiments/configs/EXP0000_SMOKE.yaml` -> `CONFIG_VALID: EXP0000_SMOKE` (`allowed_partitions: ["train", "val"]`, `test` blocked). |
-| Kaggle `EXP0000_SMOKE` bundle export | **PASS** | Built via `run_pipeline.py build-kaggle-bundle` (`DS0001` / `SPLIT0001` / `ANNB0001` / `TrackA` / `PP0001`, `--max-items-per-partition 32`): `32` train + `32` val images, `nc=13`, `877` boxes, `0` invalid boxes, `0` `test` entries, zipped to `08_Checkpoints/artifacts/EXP0000_SMOKE_bundle.zip` (`5.14 MB`, off-Git). |
-| Kaggle GPU recovery script | **READY** | [kaggle_smoke_g09.py](../../13_Automation/kaggle_smoke_g09.py) tests `1`-epoch interrupt -> backup SHA-256 verification -> `resume=True` restore to epoch `2` -> finite `val` `mAP@0.50` / `mAP@0.50:0.95` + `FPS_e2e`. |
-| Repo & unit tests | **PASS** | `validate_repo.py` + `pytest` (`22 passed`) verified in `STEP-025`/`026`. |
+| **1. Checkpoint policy & honest exact-resume disclosure** | **PASS** | [checkpoint_policy.md](../../08_Checkpoints/checkpoint_policy.md) defines `last`/`best`/`smoke`/`exported_onnx`, immutable naming, off-Git weights boundary, and honest limited exact-resume note (`Restores epoch, model, EMA, and AdamW optimizer state; dataloader RNG is not bit-identical`). |
+| **2. Diagnostic `T14` config & leak-free `train/val` bundle** | **PASS** | `EXP0000_SMOKE.yaml` (`CONFIG_VALID`), `32 train + 32 val` (`REL0001` / `PP0001`, `nc=13`, `877` boxes, `0` invalid, `0` `test` entries). |
+| **3. Observed interruption & state capture (`epoch 1`)** | **PASS** | `phase1_interrupted_cleanly: true`, `phase1_epoch1_saved_epoch_field: 0`, `phase1_has_optimizer_state: true`, `phase1_has_ema_state: true` on Kaggle `Tesla T4`. |
+| **4. Backup copy & retrieval SHA-256 verification** | **PASS** | `phase1_last_pt_sha256 == backup_retrieval_sha256 == 3f4452be644c1e8abcc2fb715d36aa01e83eeae50c635a64cd9e170472661aa4` (`backup_hash_match: true`). |
+| **5. Checkpoint restore (`resume=True`) & completion (`epoch 2`)** | **PASS** | Resumed cleanly from backup checkpoint to complete epoch `2/2` (`phase2_completed_epochs_in_results_csv: 2`, `best_pt_sha256: a53dab45a8507162d82095bf6f55ce08eb68a991785eda478ac24ca485d7c756`). |
+| **6. Finite validation & timing instrumentation** | **PASS** | `val_map50_finite: 0.0`, `val_map50_95_finite: 0.0` (expected after `2` smoke epochs on `32` images), `smoke_e2e_fps_5imgs: 19.51` (`Tesla T4`), `0` sealed `test` data accessed. |
 
 ---
 
-## 2. Pending Kaggle GPU Evidence Required to Flip `G09` -> `PASS`
+## 2. Decision & Authorization
 
-Because `torch` / `ultralytics` GPU execution runs on **Kaggle GPU** (`DEC0011`), `G09` cannot be marked `PASS` until the user executes [kaggle_smoke_g09.py](../../13_Automation/kaggle_smoke_g09.py) on Kaggle with `EXP0000_SMOKE_bundle.zip` and returns `EXP0000_SMOKE_g09_report.json` confirming:
-1. `phase1_has_optimizer_state == true` and `phase1_has_ema_state == true`;
-2. `backup_hash_match == true` (`last.pt` SHA-256 == backup retrieval SHA-256);
-3. `phase2_resumed_final_epoch_field == 1` (`0`-indexed epoch `2/2` completed after `resume=True`);
-4. Finite `val_map50_finite` and `val_map50_95_finite` and `smoke_e2e_fps_5imgs > 0`;
-5. Researcher / Supervisor acceptance of `G09` (including honest limited exact-resume policy).
+- **`G09` Outcome:** **`PASS` (`2026-11-19`)**.
+- **Unlocks:** Stage **`S11` (`STEP-028` full Kaggle GPU training for `EXP0001`)**.
+- **Diagnostic Boundary:** `EXP0000_SMOKE` (`CKPT0001`, `CKPT0002`) is strictly diagnostic and **never reportable** in thesis tables.

@@ -1,0 +1,20 @@
+{
+  "experiment_id": "EXP0000_SMOKE",
+  "purpose": "diagnostic_smoke_G09_not_reportable",
+  "ultralytics_version": "8.3.253",
+  "torch_version": "2.11.0+cu130",
+  "cuda_device": "Tesla T4",
+  "phase1_interrupted_cleanly": true,
+  "phase1_epoch1_saved_epoch_field": 0,
+  "phase1_has_optimizer_state": true,
+  "phase1_has_ema_state": true,
+  "phase1_last_pt_sha256": "3f4452be644c1e8abcc2fb715d36aa01e83eeae50c635a64cd9e170472661aa4",
+  "backup_retrieval_sha256": "3f4452be644c1e8abcc2fb715d36aa01e83eeae50c635a64cd9e170472661aa4",
+  "backup_hash_match": true,
+  "phase2_completed_epochs_in_results_csv": 2,
+  "val_map50_finite": 0.0,
+  "val_map50_95_finite": 0.0,
+  "smoke_e2e_fps_5imgs": 19.51,
+  "best_pt_sha256": "a53dab45a8507162d82095bf6f55ce08eb68a991785eda478ac24ca485d7c756",
+  "exact_resume_note": "Restores epoch, model, EMA, and AdamW optimizer state; dataloader RNG is not bit-identical."
+}

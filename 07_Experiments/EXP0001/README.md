@@ -8,7 +8,7 @@
 | Release / Split / Batch | `REL0001` / `SPLIT0001` / `ANNB0001` (`DS0001` `TrackA`, `13` classes) |
 | Model / Preprocessing | `MC0001` (`YOLO11s`, `ultralytics==8.3.253`) / `PP0001` (`640×640` raw letterbox) |
 | Partitions Allowed | `train` (`994` OPGs) + `val` (`214` OPGs) — **`test` (`208`) & `external_test` (`178`) SEALED** |
-| Prelaunch Status | **`READY_BLOCKED_ON_G09_PASS`** *(Do NOT launch full training until `G09 == PASS`)* |
+| Prelaunch Status | **`READY_TO_LAUNCH_G09_PASS`** *(G09 PASS verified on Kaggle Tesla T4 `2026-11-19`)* |
 
 ---
 
@@ -32,5 +32,5 @@
 - [x] All input SHA-256 hashes (`REL0001`, `SPLIT0001`, `classes.csv`, `PP0001`, `protocol.md`) verified.
 - [x] `test` and `external_test` partitions excluded from `allowed_partitions` and Kaggle bundle.
 - [x] Full `REL0001` `PP0001` Kaggle bundle (`994 train / 214 val`) exported off-Git (`08_Checkpoints/artifacts/EXP0001_REL0001_PP0001_bundle.zip`).
-- [ ] **`G09 == PASS`** (user runs `EXP0000_SMOKE` on Kaggle GPU and returns `EXP0000_SMOKE_g09_report.json`).
+- [x] **`G09 == PASS`** (verified `2026-11-19` on Kaggle `Tesla T4` via `08_Checkpoints/manifests/EXP0000_SMOKE_g09_report.json`).
 - [ ] Researcher launches `EXP0001` (`STEP-028`) only after `G09 == PASS`.

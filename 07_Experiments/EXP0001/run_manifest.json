@@ -1,7 +1,7 @@
 {
   "experiment_id": "EXP0001",
   "schema_version": "T14-v1.0.0",
-  "status": "READY_BLOCKED_ON_G09_PASS",
+  "status": "READY_TO_LAUNCH_G09_PASS",
   "purpose": "primary_baseline",
   "research_questions": ["RQ0", "RQ1"],
   "release_id": "REL0001",
@@ -24,5 +24,5 @@
   },
   "off_git_bundle_zip": "08_Checkpoints/artifacts/EXP0001_REL0001_PP0001_bundle.zip",
   "artifact_destination": "08_Checkpoints/artifacts/EXP0001/",
-  "blocking_prerequisite": "G09 == PASS (STEP-026 Kaggle smoke recovery verification)"
+  "blocking_prerequisite": "NONE (G09 PASS verified on Kaggle Tesla T4 2026-11-19)"
 }

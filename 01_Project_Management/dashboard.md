@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-19 |
-| Current stage / step | **S10–S11 (`STEP-026`–`028` local prep COMPLETE)**: `EXP0000_SMOKE` (`5.14 MB`), **`EXP0001`** (`94.47 MB`), `13_Automation/kaggle_train_exp.py`, and `07_Experiments/EXP0001/kaggle_runbook.md` ready; **awaiting user Kaggle GPU execution (`G09` smoke -> `EXP0001` training)** |
+| Current stage / step | **S10 COMPLETE (`G09 = PASS` on Kaggle `Tesla T4`, `2026-11-19`)**; **S11 (`STEP-028`) UNLOCKED** — ready to launch **`EXP0001`** (`94.47 MB` bundle) on Kaggle GPU |
 
 ## 1. Stage & gate summary
 
@@ -21,7 +21,7 @@
 | G06 | STEP-018 | **PASS** | **Approved (`2026-11-19`):** Pilot (`60` OPGs) & production batches (`ANNB0001–0006`, `240` visual QA OPGs) accepted; **`ANN0001–ANN0006`** frozen (`7,738` `.txt` files, `44,241` valid boxes, `180` excluded/deduplicated, `0` orphans/invalid, `G06_assessment_2026-11-19.md`) |
 | G07 | STEP-020 | **PASS** | **Approved (`2026-11-19`):** Connected-component grouped-stratified `70/15/15` splits **`SPLIT0001–SPLIT0006`** locked (`7,457` canonical OPGs [`5,106 train / 1,091 val / 1,082 test / 178 external_test`], `281` redundant copies deduplicated, `0` cross-partition leaks, `DEC0007–0008`, `G07_assessment_2026-11-19.md`) |
 | G08 | STEP-021 | **PASS** | **Approved (`2026-11-19`):** Prepared dataset releases **`REL0001–REL0006`** & **`PP0001–PP0004`** verified (`7,457` canonical OPGs, `41,103` boxes, `0` dropped boxes, `max_rt_err = 0.003630 px @ 640 / 0.004068 px @ 1280`, train-only fit on `5,106` train OPGs, `G08_assessment_2026-11-19.md`) |
-| G09 | STEP-026 | **PENDING_KAGGLE_SMOKE** | Local `checkpoint_policy.md`, `EXP0000_SMOKE.yaml`, `kaggle_smoke_g09.py`, and `EXP0000_SMOKE_bundle.zip` (`5.14 MB`) verified; awaiting Kaggle GPU recovery run (`G09_assessment_2026-11-19.md`) |
+| G09 | STEP-026 | **PASS** | **Verified (`2026-11-19` on Kaggle `Tesla T4`, `torch 2.11.0+cu130`, `ultralytics 8.3.253`):** `EXP0000_SMOKE` epoch-1 interrupt (`optimizer`+`EMA` saved), backup SHA-256 match (`3f4452be...`), clean `resume=True` to epoch `2/2`, `19.51 FPS_e2e` (`G09_assessment_2026-11-19.md`) |
 | G10–G17 | STEP-029–049 | **NOT ASSESSED** | Not started |
 
 ## 2. Immediate priorities & open blockers
