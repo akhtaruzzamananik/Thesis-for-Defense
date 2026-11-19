@@ -1,7 +1,7 @@
 {
   "experiment_id": "EXP0001",
   "schema_version": "T14-v1.0.0",
-  "status": "READY_TO_LAUNCH_G09_PASS",
+  "status": "COMPLETED_G10_PASS_MODEL0001",
   "purpose": "primary_baseline",
   "research_questions": ["RQ0", "RQ1"],
   "release_id": "REL0001",
