@@ -71,8 +71,10 @@ def main() -> None:
     tr = cfg["training"]
     aug = tr["augmentations"]
     ev = cfg["evaluation"]
+    device = 0 if torch.cuda.is_available() else "cpu"
 
     started_utc = datetime.now(timezone.utc).isoformat()
+    initial_weights_sha256 = None
     if args.resume is not None:
         model = YOLO(str(args.resume))
         model.train(resume=True)
@@ -80,8 +82,12 @@ def main() -> None:
     else:
         weights_name = cfg["model"]["initial_weights"]
         model = YOLO(weights_name)
+        wp = Path(weights_name)
+        if wp.exists():
+            initial_weights_sha256 = sha256_file(wp)
         model.train(
             data=str(kaggle_data_yaml),
+            device=device,
             epochs=int(tr["epochs"]),
             patience=int(tr["patience"]),
             batch=int(tr["batch_size"]),
@@ -132,6 +138,7 @@ def main() -> None:
         "started_utc": started_utc,
         "finished_utc": finished_utc,
         "config_sha256": sha256_file(args.config),
+        "initial_weights_sha256": initial_weights_sha256,
         "ultralytics_version": ultralytics.__version__,
         "torch_version": torch.__version__,
         "cuda_device": torch.cuda.get_device_name(0) if torch.cuda.is_available() else "cpu",
@@ -148,6 +155,7 @@ def main() -> None:
     (git_export / f"{exp_id}_effective_manifest.json").write_text(
         json.dumps(ckpt_manifest, indent=2), encoding="utf-8"
     )
+    shutil.make_archive(str(work_dir / f"{exp_id}_for_git"), "zip", root_dir=str(git_export))
     print(json.dumps(ckpt_manifest, indent=2))
 
 

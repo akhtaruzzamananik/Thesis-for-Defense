@@ -51,34 +51,44 @@ def main() -> None:
     lines = [ln if not ln.startswith("path:") else f"path: {data_root}" for ln in raw_yaml.splitlines()]
     kaggle_data_yaml.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
-    # Phase 1: Run 1 epoch, simulate interruption, capture state & backup hash
+    # Phase 1: Run 1 epoch, simulate real preemption via on_model_save AFTER unstripped last.pt is saved
     run_dir = work_dir / "exp0000_smoke"
     if run_dir.exists():
         shutil.rmtree(run_dir)
 
-    def stop_after_epoch_1(trainer) -> None:
-        if trainer.epoch == 0:
-            # Epoch 0 (1st epoch) just finished and saved last.pt
-            trainer.stop = True
+    class SimulatedPreemption(RuntimeError):
+        pass
 
+    def interrupt_after_epoch_1_save(trainer) -> None:
+        if trainer.epoch == 0:
+            # Fires right after save_model() wrote unstripped last.pt (with optimizer + EMA + epoch=0)
+            raise SimulatedPreemption("Simulated Kaggle interruption after epoch 1 checkpoint save")
+
+    device = 0 if torch.cuda.is_available() else "cpu"
     m1 = YOLO(args.weights)
-    m1.add_callback("on_fit_epoch_end", stop_after_epoch_1)
-    m1.train(
-        data=str(kaggle_data_yaml),
-        epochs=2,
-        imgsz=640,
-        batch=8,
-        seed=20261124,
-        deterministic=True,
-        optimizer="AdamW",
-        lr0=0.001,
-        lrf=0.01,
-        amp=True,
-        workers=2,
-        project=str(work_dir),
-        name="exp0000_smoke",
-        exist_ok=True,
-    )
+    m1.add_callback("on_model_save", interrupt_after_epoch_1_save)
+    interrupted_cleanly = False
+    try:
+        m1.train(
+            data=str(kaggle_data_yaml),
+            epochs=2,
+            imgsz=640,
+            batch=8,
+            device=device,
+            seed=20261124,
+            deterministic=True,
+            optimizer="AdamW",
+            lr0=0.001,
+            lrf=0.01,
+            amp=True,
+            workers=2,
+            project=str(work_dir),
+            name="exp0000_smoke",
+            exist_ok=True,
+        )
+    except SimulatedPreemption:
+        interrupted_cleanly = True
+    assert interrupted_cleanly, "Simulated preemption callback did not trigger!"
 
     last_pt = run_dir / "weights" / "last.pt"
     assert last_pt.exists(), f"Missing {last_pt}"
@@ -86,6 +96,9 @@ def main() -> None:
     ep1_epoch_val = int(ckpt_ep1.get("epoch", -999))
     has_optimizer = ckpt_ep1.get("optimizer") is not None
     has_ema = ckpt_ep1.get("ema") is not None
+    assert ep1_epoch_val == 0 and has_optimizer, (
+        f"Expected unstripped epoch-0 checkpoint with optimizer, got epoch={ep1_epoch_val}, opt={has_optimizer}"
+    )
     last_sha_orig = sha256_file(last_pt)
 
     # Backup copy + retrieval hash check
@@ -104,11 +117,14 @@ def main() -> None:
 
     final_last = run_dir / "weights" / "last.pt"
     final_best = run_dir / "weights" / "best.pt"
-    ckpt_ep2 = torch.load(final_last, map_location="cpu", weights_only=False)
+    results_csv = run_dir / "results.csv"
+    res_rows = [ln for ln in results_csv.read_text(encoding="utf-8").splitlines() if ln.strip()] if results_csv.exists() else []
+    completed_epochs_logged = max(0, len(res_rows) - 1)
+    assert completed_epochs_logged == 2, f"Expected 2 epochs in results.csv after resume, got {completed_epochs_logged}"
 
     # Phase 3: Validation + single-image serial latency smoke check
     val_res = YOLO(str(final_best if final_best.exists() else final_last)).val(
-        data=str(kaggle_data_yaml), imgsz=640, batch=8, conf=0.001, iou=0.65, max_det=300
+        data=str(kaggle_data_yaml), imgsz=640, batch=8, device=device, conf=0.001, iou=0.65, max_det=300
     )
     map50 = float(val_res.box.map50)
     map50_95 = float(val_res.box.map)
@@ -118,7 +134,7 @@ def main() -> None:
     eval_model = YOLO(str(final_best if final_best.exists() else final_last))
     t0 = time.perf_counter()
     for p in val_imgs:
-        eval_model.predict(source=str(p), imgsz=640, conf=0.25, iou=0.65, verbose=False)
+        eval_model.predict(source=str(p), imgsz=640, device=device, conf=0.25, iou=0.65, verbose=False)
     elapsed = time.perf_counter() - t0
 
     report = {
@@ -127,13 +143,14 @@ def main() -> None:
         "ultralytics_version": ultralytics.__version__,
         "torch_version": torch.__version__,
         "cuda_device": torch.cuda.get_device_name(0) if torch.cuda.is_available() else "cpu",
+        "phase1_interrupted_cleanly": interrupted_cleanly,
         "phase1_epoch1_saved_epoch_field": ep1_epoch_val,
         "phase1_has_optimizer_state": has_optimizer,
         "phase1_has_ema_state": has_ema,
         "phase1_last_pt_sha256": last_sha_orig,
         "backup_retrieval_sha256": backup_sha,
         "backup_hash_match": last_sha_orig == backup_sha,
-        "phase2_resumed_final_epoch_field": int(ckpt_ep2.get("epoch", -999)),
+        "phase2_completed_epochs_in_results_csv": completed_epochs_logged,
         "val_map50_finite": map50,
         "val_map50_95_finite": map50_95,
         "smoke_e2e_fps_5imgs": round(len(val_imgs) / max(elapsed, 1e-9), 2),
