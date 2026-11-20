@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **`STEP-039` COMPLETE (`writing_plan.md`, `submission_requirements.md`, `DEC0017`, `writing_registry.csv` [`WRIT0001–0014`], & `10_Figures_Tables/assets.csv` [`FIG0001–0006`, `TAB0001–0006`] mapped 100% to verified evidence)**; **ready for `STEP-040` (Draft Complete Evidence-Grounded DIU CSE Thesis Chapters `11_Writing/thesis/`)** |
+| Current stage / step | **`STEP-040` COMPLETE (All `8/8` evidence-grounded DIU CSE B.Sc. Thesis manuscript files `WRIT0001–WRIT0008` drafted under `11_Writing/thesis/` — Front Matter, Chapters 1–6 & Appendices A–D — strictly grounded in `CLAIM0001–CLAIM0017`, `EVAL0001–EVAL0014`, `XSHIFT01–06`, `ERRREV0001`, & `REPRO0001`)**; **ready for `STEP-041` (Generate publication-ready vector SVG figures `FIG0001–FIG0006`, tables `TAB0001–TAB0006`, & run automated citation/claim audit)** |
 
 ## 1. Stage & gate summary
 
@@ -31,8 +31,8 @@
 
 ## 2. Immediate priorities & open blockers
 
-1. Execute **`STEP-039`–`STEP-040`** (`S14` — Finalize thesis/paper writing plan `DEC0017` and generate all publication-ready figures & LaTeX/Markdown tables in `10_Figures_Tables/` directly from `G12–G13` verified data).
-2. Execute **`STEP-041`–`STEP-044`** (Full DIU CSE Thesis Manuscript Chapters 1–6 + Defense Slides + **`G15`**), **`STEP-045`–`046`** (Archive **`G16`**), and **`STEP-047`–`049`** (Live Hosted Web Showcase reusing `OPGPrototypeEngine` **`G17`**).
+1. Execute **`STEP-041`** (`S14` — Generate all `6` publication-ready vector SVG figures `FIG0001–FIG0006` and `6` tables `TAB0001–TAB0006` in `10_Figures_Tables/` directly from `G12–G13` JSON/CSV evidence + run automated BibTeX/claim verification across `WRIT0001–WRIT0008`).
+2. Execute **`STEP-042`–`STEP-044`** (Concise Paper Draft `WRIT0009–0013`, DIU Defense Slide Deck `WRIT0014`, Final Polish & **`G15 PASS`**), **`STEP-045`–`046`** (Archival Release **`G16 PASS`**), and **`STEP-047`–`049`** (Live Hosted Web Showcase reusing `OPGPrototypeEngine` **`G17 PASS`**).
 3. Maintain strict custody: `git ls-files "*.pdf" "*.zip" "*.rar" "*.jpg" "*.png" "*.pt" "*.onnx"` stays empty.
 
 ## 3. Canonical ledgers
