@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **`STEP-031` (`G11 = PASS`) COMPLETE (`FREEZE0001` locked: `6` track winners + `4` `RQ1`/`RQ3` comparators, `val`-only `conf_op`, `0` prior test access)**; **ready for `STEP-032` (Sealed Final-Test Predictions, GPU Timing & ONNX Export)** |
+| Current stage / step | **`STEP-032` COMPLETE (`14/14` `EVAL0001–EVAL0014` + `10/10` `HC01–HC05` `XSHIFT` passes = `100%` coverage, `0` errors, `10` GPU `Tesla T4` timing logs, `7/7` `ONNX` exports verified bit-for-bit)**; **ready for `STEP-033` (Canonical `mAP@0.50` / `mAP@0.50:0.95` / `P/R/F1` + `1,000`-Resample `GroupID` Bootstrap `95% CI`)** |
 
 ## 1. Stage & gate summary
 
@@ -28,10 +28,8 @@
 
 ## 2. Immediate priorities & open blockers
 
-1. Execute **`STEP-032`** (*Generate and validate final-test predictions*):
-   - Build single off-Git sealed test + weights Kaggle bundle verifying every `SHA-256` against `09_Evaluation/freeze_manifest.json`.
-   - Run deterministic single-pass inference (`EVAL0001–EVAL0014` + `12` `HC01–HC05` zero-shot cross-country bridges), GPU `batch=1` timing (`T_pre/T_infer/T_post/FPS_e2e`), and `ONNX` export (`MODEL0005/0001/0002/0003/0013/0010/0008`) on Kaggle `Tesla T4`.
-2. Proceed to **`STEP-033`–`STEP-035`** (canonical `src/opg/evaluator.py` metrics + `1,000`-resample `GroupID` bootstrap `95% CI`, local CPU `ONNXRuntime` timing, error review `T19`, and `G12` assessment).
+1. Execute **`STEP-033`** (*Compute Precision, Recall, `mAP@0.50`, `mAP@0.50:0.95`, per-class AP, `HC01–HC05` cross-country shift metrics, and `1,000`-resample `GroupID` cluster bootstrap `95% CI`* using frozen `src/opg/evaluator.py` on the validated `STEP-032` predictions).
+2. Proceed to **`STEP-034`–`STEP-035`** (local Windows 11 CPU `ONNXRuntime` timing on the `7` exported `.onnx` models, `T19` error review, and **`G12`** gate assessment).
 3. Maintain strict custody: `git ls-files "*.pdf" "*.zip" "*.rar" "*.jpg" "*.png" "*.pt" "*.onnx"` stays empty.
 
 ## 3. Canonical ledgers

@@ -51,30 +51,30 @@ def main() -> None:
     parser.add_argument("--source", type=Path, required=True, help="Downloaded Kaggle output .zip or extracted folder")
     args = parser.parse_args()
 
-    offgit_dst = ROOT / "08_Checkpoints" / "artifacts" / "STEP032_outputs"
-    if offgit_dst.exists():
-        shutil.rmtree(offgit_dst)
-    offgit_dst.mkdir(parents=True, exist_ok=True)
-
+    offgit_dst = (ROOT / "08_Checkpoints" / "artifacts" / "STEP032_outputs").resolve()
     src = args.source.resolve()
-    if src.is_file() and src.suffix.lower() == ".zip":
-        tmp_unpack = offgit_dst / "_unpack"
-        with zipfile.ZipFile(src, "r") as zf:
-            zf.extractall(tmp_unpack)
-        found_root = locate_outputs_root(tmp_unpack)
-        for child in found_root.iterdir():
-            shutil.move(str(child), str(offgit_dst / child.name))
-        shutil.rmtree(tmp_unpack, ignore_errors=True)
-    elif src.is_dir():
-        found_root = locate_outputs_root(src)
-        for child in found_root.iterdir():
-            dst_c = offgit_dst / child.name
-            if child.is_dir():
-                shutil.copytree(child, dst_c)
-            else:
-                shutil.copy2(child, dst_c)
-    else:
-        raise FileNotFoundError(f"Invalid --source: {src}")
+    if src != offgit_dst:
+        if offgit_dst.exists():
+            shutil.rmtree(offgit_dst)
+        offgit_dst.mkdir(parents=True, exist_ok=True)
+        if src.is_file() and src.suffix.lower() == ".zip":
+            tmp_unpack = offgit_dst / "_unpack"
+            with zipfile.ZipFile(src, "r") as zf:
+                zf.extractall(tmp_unpack)
+            found_root = locate_outputs_root(tmp_unpack)
+            for child in found_root.iterdir():
+                shutil.move(str(child), str(offgit_dst / child.name))
+            shutil.rmtree(tmp_unpack, ignore_errors=True)
+        elif src.is_dir():
+            found_root = locate_outputs_root(src)
+            for child in found_root.iterdir():
+                dst_c = offgit_dst / child.name
+                if child.is_dir():
+                    shutil.copytree(child, dst_c)
+                else:
+                    shutil.copy2(child, dst_c)
+        else:
+            raise FileNotFoundError(f"Invalid --source: {src}")
 
     # Load freeze & execution manifests
     freeze_path = ROOT / "09_Evaluation" / "freeze_manifest.json"
@@ -124,7 +124,23 @@ def main() -> None:
         exp_n = rel_info["test_images"] if ev["partition"] == "test" else rel_info["external_test_images"]
         assert rm["total_intended_images"] == exp_n, f"{ev_id} count mismatch: {rm['total_intended_images']} != {exp_n}"
         assert rm["ok_images"] == exp_n and rm["error_images"] == 0, f"{ev_id} incomplete coverage!"
-        assert rm["invalid_box_count"] == 0 and rm["invalid_class_count"] == 0, f"{ev_id} invalid geometry/class!"
+        assert rm["invalid_class_count"] == 0, f"{ev_id} invalid class IDs!"
+
+        # Verify every single persisted prediction box in predictions.jsonl has valid source geometry & class ID
+        fm = models_by_id[ev["model_id"]]
+        model_nc = int(freeze["releases"][fm["release_id"]]["num_classes"])
+        persisted_bad = 0
+        persisted_ids: list[str] = []
+        with (src_ev_dir / "predictions.jsonl").open("r", encoding="utf-8") as pf:
+            for line in pf:
+                rec = json.loads(line)
+                persisted_ids.append(rec["image_id"])
+                sw, sh = float(rec["src_width"]), float(rec["src_height"])
+                for cid, sc, x0, y0, x1, y1 in rec["boxes"]:
+                    if not (0 <= cid < model_nc and 0.0 <= sc <= 1.0 and 0.0 <= x0 < x1 <= sw + 1e-3 and 0.0 <= y0 < y1 <= sh + 1e-3):
+                        persisted_bad += 1
+        assert persisted_bad == 0, f"{ev_id} persisted {persisted_bad} invalid boxes!"
+        assert len(persisted_ids) == exp_n and len(set(persisted_ids)) == exp_n, f"{ev_id} predictions.jsonl image coverage mismatch!"
 
         with (src_ev_dir / "coverage.csv").open("r", encoding="utf-8", newline="") as f:
             cov_ids = [r["ImageID"] for r in csv.DictReader(f)]
@@ -136,7 +152,6 @@ def main() -> None:
         shutil.copy2(src_ev_dir / "coverage.csv", git_ev_dir / "coverage.csv")
         shutil.copy2(src_ev_dir / "run_manifest.json", git_ev_dir / "run_manifest.json")
 
-        fm = models_by_id[ev["model_id"]]
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         eval_rows.append(
             [
@@ -166,7 +181,7 @@ def main() -> None:
         report_lines.append(
             f"| `{ev_id}` | `{fm['model_id']}` | `{ev['release_id']}:{ev['partition']}` | "
             f"`{rm['ok_images']}/{exp_n}` (`100%`) | `{rm['zero_det_op_images']}` | `{rm['total_boxes_op']}` | "
-            f"`0/0` | `{actual_pred_sha[:12]}...` |"
+            f"`{rm['invalid_box_count']}` filtered (`0` persisted) / `0` | `{actual_pred_sha[:12]}...` |"
         )
 
     # Verify all XSHIFT passes & copy Git-safe metadata

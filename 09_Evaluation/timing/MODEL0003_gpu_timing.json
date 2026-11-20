@@ -1,0 +1,42 @@
+{
+  "model_id": "MODEL0003",
+  "architecture": "YOLO11m",
+  "imgsz": 640,
+  "release_id": "REL0001",
+  "hardware": "Tesla T4",
+  "precision": "FP32",
+  "batch_size": 1,
+  "warmup_images": 10,
+  "timed_images": 100,
+  "cuda_synchronized": true,
+  "T_pre_ms": {
+    "mean_ms": 44.4847,
+    "std_ms": 5.8375,
+    "median_ms": 45.6262,
+    "iqr_ms": 4.6983,
+    "p95_ms": 49.8752
+  },
+  "T_infer_with_ultralytics_nms_ms": {
+    "mean_ms": 31.2183,
+    "std_ms": 1.3045,
+    "median_ms": 31.0918,
+    "iqr_ms": 0.8747,
+    "p95_ms": 33.7393
+  },
+  "T_post_inv_ledger_ms": {
+    "mean_ms": 0.4223,
+    "std_ms": 0.1015,
+    "median_ms": 0.4095,
+    "iqr_ms": 0.1165,
+    "p95_ms": 0.5903
+  },
+  "T_e2e_ms": {
+    "mean_ms": 76.1254,
+    "std_ms": 6.1402,
+    "median_ms": 77.1753,
+    "iqr_ms": 5.6737,
+    "p95_ms": 82.5857
+  },
+  "FPS_infer": 32.032,
+  "FPS_e2e": 13.136
+}
