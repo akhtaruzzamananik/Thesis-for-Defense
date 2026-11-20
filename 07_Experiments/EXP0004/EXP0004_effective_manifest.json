@@ -1,0 +1,23 @@
+{
+  "experiment_id": "EXP0004",
+  "run_mode": "fresh_start",
+  "started_utc": "2026-11-20T14:20:34.978219+00:00",
+  "finished_utc": "2026-11-20T14:24:48.910683+00:00",
+  "config_sha256": "d46be20f45c63cc8ed340af1f413cb9e9cff9af3d6240969b9e7fdc8f284e205",
+  "initial_weights_sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+  "ultralytics_version": "8.3.253",
+  "torch_version": "2.11.0+cu130",
+  "cuda_device": "Tesla T4",
+  "checkpoints": {
+    "best": {
+      "filename": "best.pt",
+      "sha256": "966d9abcc60a7f27259cedd8882bcbbf5a2378e0847fbf7682115d41bfc4c674",
+      "bytes": 19181978
+    },
+    "last": {
+      "filename": "last.pt",
+      "sha256": "5ec5a4c263f838e8490ee417a388aee8fcd76a3a9f87596f21083c7b1f063edb",
+      "bytes": 19181978
+    }
+  }
+}
