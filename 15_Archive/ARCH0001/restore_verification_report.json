@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "step": "STEP-045",
+  "archive_id": "ARCH0001",
+  "release_tag": "v1.0.0-arch0001",
+  "overall_restore_status": "PASS",
+  "elapsed_seconds": 3.94,
+  "git_archive_snapshot": {
+    "tar_bytes": 11786240,
+    "tar_sha256": "3a9d8a1b34ec42ad332b81eeae9d808c0992461a312ae2b86534477fec6525f0",
+    "public_tier1_items_restored_and_verified": 25,
+    "restricted_offgit_items_verified_and_unleaked": 17
+  },
+  "restored_validator_output": "OK: 21 folder READMEs, 22 Appendix B CSVs, T01-T30 templates, G01-G17 gates, and STEP-002 environment checks passed.",
+  "restored_submission_bundle_verified_files": "33/33",
+  "restored_evaluator_metric_replay": {
+    "EVAL0001": {
+      "mAP@0.50": 0.416549,
+      "delta_mAP50": 0.0,
+      "tp": 1468,
+      "fp": 1077,
+      "fn": 1420
+    },
+    "EVAL0013": {
+      "mAP@0.50": 0.824552,
+      "delta_mAP50": 0.0,
+      "tp": 863,
+      "fp": 145,
+      "fn": 185
+    }
+  },
+  "restored_prototype_onnx_live_check": {
+    "image_id": "DS0005_IMG_000005",
+    "status": "OK",
+    "num_detections": 12,
+    "latency_e2e_ms": 203.48
+  }
+}
