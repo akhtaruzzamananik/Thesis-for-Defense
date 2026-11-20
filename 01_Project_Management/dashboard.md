@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **`STEP-033` COMPLETE (`14/14` held-out `EVAL0001–EVAL0014` + `12` `HC01–HC05` zero-shot cross-country bridges + `1,000`-resample `GroupID` `95% CI` computed via frozen `evaluator.py`)**; **ready for `STEP-034`–`STEP-035` (Local CPU `ONNXRuntime` Timing, `T19` Error Review & `G12` Assessment)** |
+| Current stage / step | **`STEP-034` COMPLETE (`10` GPU `Tesla T4` + `7` Local CPU `Intel i5-1135G7` `ONNXRuntime` `BS=1` timing benchmarks, `0` failures, `0.983–0.997` PyTorch-ONNX box parity IoU, `timing_report.md` complete)**; **ready for `STEP-035` (`T19` Error Review & `G12` Gate Assessment)** |
 
 ## 1. Stage & gate summary
 
@@ -28,8 +28,8 @@
 
 ## 2. Immediate priorities & open blockers
 
-1. Execute **`STEP-034`** (*Measure end-to-end local Windows 11 CPU `ONNXRuntime` inference latency & `FPS_e2e` on the `7` exported `.onnx` models, and synthesize GPU vs CPU Pareto tables for `RQ3`*).
-2. Execute **`STEP-035`** (*Conduct class-aware error review `T19` on held-out `test`/`external_test` errors, finalize `RQ0–RQ3` synthesis, and assess **`G12`** — Evaluation Validity & Results Acceptance*).
+1. Execute **`STEP-035`** (*Conduct class-aware error review `T19` on held-out `test`/`external_test` errors, synthesize `RQ0–RQ3` claims/limitations, and assess **`G12`** — Evaluation Validity & Results Acceptance*).
+2. Proceed to **`STEP-036`–`STEP-038`** (`S13` Minimal Research Prototype & `G14` / `S14` Thesis & Paper Writing Plan `STEP-039`–`STEP-044`).
 3. Maintain strict custody: `git ls-files "*.pdf" "*.zip" "*.rar" "*.jpg" "*.png" "*.pt" "*.onnx"` stays empty.
 
 ## 3. Canonical ledgers

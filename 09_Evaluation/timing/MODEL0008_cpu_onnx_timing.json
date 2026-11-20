@@ -1,0 +1,58 @@
+{
+  "model_id": "MODEL0008",
+  "architecture": "YOLO11s",
+  "imgsz": 640,
+  "release_id": "REL0005",
+  "onnx_filename": "MODEL0008.onnx",
+  "onnx_sha256": "b26b4367346ffd2e5116265be3110ca60337d9104bbd72cbbb31c0b8161481e0",
+  "onnx_bytes": 37896149,
+  "hardware": "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz",
+  "ram_gib": 7.7,
+  "os": "Windows 11",
+  "python_version": "3.14.6",
+  "runtime": "onnxruntime 1.32.0 (CPUExecutionProvider)",
+  "intra_op_num_threads": 4,
+  "inter_op_num_threads": 1,
+  "precision": "FP32",
+  "batch_size": 1,
+  "warmup_images": 10,
+  "timed_images": 100,
+  "error_images": 0,
+  "cold_start_load_ms": 158.774,
+  "T_pre_ms": {
+    "mean_ms": 59.5847,
+    "std_ms": 4.2661,
+    "median_ms": 58.9213,
+    "iqr_ms": 5.4326,
+    "p95_ms": 67.0488
+  },
+  "T_infer_ms": {
+    "mean_ms": 141.236,
+    "std_ms": 17.7217,
+    "median_ms": 141.2655,
+    "iqr_ms": 15.8663,
+    "p95_ms": 160.5155
+  },
+  "T_post_ms": {
+    "mean_ms": 0.7677,
+    "std_ms": 0.1725,
+    "median_ms": 0.7252,
+    "iqr_ms": 0.2456,
+    "p95_ms": 1.0701
+  },
+  "T_e2e_ms": {
+    "mean_ms": 201.5884,
+    "std_ms": 18.7699,
+    "median_ms": 201.4159,
+    "iqr_ms": 18.8394,
+    "p95_ms": 225.5215
+  },
+  "FPS_infer": 7.08,
+  "FPS_e2e": 4.961,
+  "pytorch_onnx_parity_5img": {
+    "matched_boxes": 46,
+    "mean_iou": 0.99416,
+    "mean_abs_score_diff": 0.00229
+  },
+  "measured_utc": "2026-11-20T21:03:46.665670+00:00"
+}
