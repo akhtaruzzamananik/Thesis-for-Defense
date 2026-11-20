@@ -1,0 +1,1226 @@
+{
+  "schema_version": "1.0.0",
+  "step": "STEP-036",
+  "sampling_policy": "Deterministic non-cherry-picked 4-category selection per primary winner EVAL: (1) Top Success [max TP with 0/min FP+FN], (2) Worst Miss [max FN_Complete_Miss], (3) Worst Background/Mimic FP [max FP_Bkg], (4) Worst Confusion/Localization Error [max FP_Cls + FP_Loc].",
+  "evals": {
+    "EVAL0001": {
+      "model_id": "MODEL0005",
+      "track_id": "TrackA",
+      "release_partition": "REL0001:test",
+      "frozen_conf_op": 0.227,
+      "total_images": 208,
+      "reviewed_empty": {
+        "reviewed_empty_count": 0,
+        "empty_with_fp_op": 0,
+        "total_fp_on_empty": 0
+      },
+      "fp_total": 1077,
+      "fp_taxonomy": {
+        "FP_Bkg": 447,
+        "FP_Loc": 281,
+        "FP_Cls": 260,
+        "FP_Dup": 89
+      },
+      "fn_total": 1420,
+      "fn_taxonomy": {
+        "FN_Loc_Only": 322,
+        "FN_Missed_By_Score": 484,
+        "FN_Complete_Miss": 343,
+        "FN_Confused_Cls": 271
+      },
+      "size_bucket_recall": {
+        "small(<0.2%)": {
+          "gt": 1385,
+          "tp": 428,
+          "recall": 0.309
+        },
+        "medium(0.2-1.0%)": {
+          "gt": 1198,
+          "tp": 795,
+          "recall": 0.6636
+        },
+        "large(>=1.0%)": {
+          "gt": 305,
+          "tp": 245,
+          "recall": 0.8033
+        }
+      },
+      "top_cross_class_confusions": [
+        {
+          "gt_class": "DS0001_Obturation",
+          "pred_class": "DS0001_Prosthetic_Restoration",
+          "count": 48
+        },
+        {
+          "gt_class": "DS0001_Prosthetic_Restoration",
+          "pred_class": "DS0001_Obturation",
+          "count": 33
+        },
+        {
+          "gt_class": "DS0001_Implant",
+          "pred_class": "DS0001_Obturation",
+          "count": 16
+        },
+        {
+          "gt_class": "DS0001_Obturation",
+          "pred_class": "DS0001_Carious_Lesion",
+          "count": 14
+        },
+        {
+          "gt_class": "DS0001_Bone_Resorption",
+          "pred_class": "DS0001_Impacted_Tooth",
+          "count": 14
+        },
+        {
+          "gt_class": "DS0001_Carious_Lesion",
+          "pred_class": "DS0001_Root_Fragment",
+          "count": 13
+        },
+        {
+          "gt_class": "DS0001_Impacted_Tooth",
+          "pred_class": "DS0001_Bone_Resorption",
+          "count": 8
+        },
+        {
+          "gt_class": "DS0001_Implant",
+          "pred_class": "DS0001_Prosthetic_Restoration",
+          "count": 8
+        }
+      ],
+      "sampled_cases": [
+        {
+          "category": "Top_Success",
+          "image_id": "DS0001_IMG_000043",
+          "group_id": "GRP_DS0001_0041",
+          "dims": "2902x1483",
+          "gt": 37,
+          "pred_op": 34,
+          "tp": 32,
+          "fp_total": 2,
+          "fp_breakdown": {
+            "loc": 1,
+            "dup": 0,
+            "cls": 1,
+            "bkg": 0
+          },
+          "fn_total": 5,
+          "fn_breakdown": {
+            "complete_miss": 1,
+            "missed_by_score": 1,
+            "loc_only": 2,
+            "confused_cls": 1
+          }
+        },
+        {
+          "category": "Worst_Complete_Miss",
+          "image_id": "DS0001_IMG_000509",
+          "group_id": "GRP_DS0001_0478",
+          "dims": "2775x1473",
+          "gt": 27,
+          "pred_op": 15,
+          "tp": 5,
+          "fp_total": 10,
+          "fp_breakdown": {
+            "loc": 1,
+            "dup": 0,
+            "cls": 7,
+            "bkg": 2
+          },
+          "fn_total": 22,
+          "fn_breakdown": {
+            "complete_miss": 14,
+            "missed_by_score": 2,
+            "loc_only": 1,
+            "confused_cls": 5
+          }
+        },
+        {
+          "category": "Worst_Background_Mimic_FP",
+          "image_id": "DS0001_IMG_000722",
+          "group_id": "GRP_DS0001_0652",
+          "dims": "2868x1504",
+          "gt": 6,
+          "pred_op": 30,
+          "tp": 1,
+          "fp_total": 29,
+          "fp_breakdown": {
+            "loc": 1,
+            "dup": 0,
+            "cls": 1,
+            "bkg": 27
+          },
+          "fn_total": 5,
+          "fn_breakdown": {
+            "complete_miss": 2,
+            "missed_by_score": 1,
+            "loc_only": 1,
+            "confused_cls": 1
+          }
+        },
+        {
+          "category": "Worst_Class_or_Loc_Error",
+          "image_id": "DS0001_IMG_000578",
+          "group_id": "GRP_DS0001_0518",
+          "dims": "2775x1498",
+          "gt": 24,
+          "pred_op": 24,
+          "tp": 4,
+          "fp_total": 20,
+          "fp_breakdown": {
+            "loc": 0,
+            "dup": 0,
+            "cls": 20,
+            "bkg": 0
+          },
+          "fn_total": 20,
+          "fn_breakdown": {
+            "complete_miss": 1,
+            "missed_by_score": 4,
+            "loc_only": 0,
+            "confused_cls": 15
+          }
+        }
+      ],
+      "offgit_review_sheet": "08_Checkpoints/artifacts/STEP032_outputs/error_review_sheets/EVAL0001_review_sheet.jpg"
+    },
+    "EVAL0002": {
+      "model_id": "MODEL0005",
+      "track_id": "TrackA",
+      "release_partition": "REL0001:external_test",
+      "frozen_conf_op": 0.227,
+      "total_images": 178,
+      "reviewed_empty": {
+        "reviewed_empty_count": 0,
+        "empty_with_fp_op": 0,
+        "total_fp_on_empty": 0
+      },
+      "fp_total": 832,
+      "fp_taxonomy": {
+        "FP_Bkg": 347,
+        "FP_Cls": 182,
+        "FP_Dup": 84,
+        "FP_Loc": 219
+      },
+      "fn_total": 1458,
+      "fn_taxonomy": {
+        "FN_Missed_By_Score": 606,
+        "FN_Complete_Miss": 387,
+        "FN_Confused_Cls": 250,
+        "FN_Loc_Only": 215
+      },
+      "size_bucket_recall": {
+        "small(<0.2%)": {
+          "gt": 1351,
+          "tp": 417,
+          "recall": 0.3087
+        },
+        "medium(0.2-1.0%)": {
+          "gt": 1418,
+          "tp": 925,
+          "recall": 0.6523
+        },
+        "large(>=1.0%)": {
+          "gt": 156,
+          "tp": 125,
+          "recall": 0.8013
+        }
+      },
+      "top_cross_class_confusions": [
+        {
+          "gt_class": "DS0001_Prosthetic_Restoration",
+          "pred_class": "DS0001_Obturation",
+          "count": 23
+        },
+        {
+          "gt_class": "DS0001_Obturation",
+          "pred_class": "DS0001_Prosthetic_Restoration",
+          "count": 19
+        },
+        {
+          "gt_class": "DS0001_Carious_Lesion",
+          "pred_class": "DS0001_Obturation",
+          "count": 18
+        },
+        {
+          "gt_class": "DS0001_Obturation",
+          "pred_class": "DS0001_Carious_Lesion",
+          "count": 11
+        },
+        {
+          "gt_class": "DS0001_Carious_Lesion",
+          "pred_class": "DS0001_Root_Fragment",
+          "count": 9
+        },
+        {
+          "gt_class": "DS0001_Carious_Lesion",
+          "pred_class": "DS0001_Endodontic_Treatment",
+          "count": 9
+        },
+        {
+          "gt_class": "DS0001_Endodontic_Treatment",
+          "pred_class": "DS0001_Bone_Resorption",
+          "count": 7
+        },
+        {
+          "gt_class": "DS0001_Bone_Resorption",
+          "pred_class": "DS0001_Endodontic_Treatment",
+          "count": 7
+        }
+      ],
+      "sampled_cases": [
+        {
+          "category": "Top_Success",
+          "image_id": "DS0001_IMG_000167",
+          "group_id": "GRP_DS0001_0165",
+          "dims": "2760x1504",
+          "gt": 29,
+          "pred_op": 30,
+          "tp": 26,
+          "fp_total": 4,
+          "fp_breakdown": {
+            "loc": 1,
+            "dup": 1,
+            "cls": 1,
+            "bkg": 1
+          },
+          "fn_total": 3,
+          "fn_breakdown": {
+            "complete_miss": 0,
+            "missed_by_score": 1,
+            "loc_only": 2,
+            "confused_cls": 0
+          }
+        },
+        {
+          "category": "Worst_Complete_Miss",
+          "image_id": "DS0001_IMG_000272",
+          "group_id": "GRP_DS0001_0268",
+          "dims": "2760x1504",
+          "gt": 27,
+          "pred_op": 13,
+          "tp": 1,
+          "fp_total": 12,
+          "fp_breakdown": {
+            "loc": 1,
+            "dup": 0,
+            "cls": 1,
+            "bkg": 10
+          },
+          "fn_total": 26,
+          "fn_breakdown": {
+            "complete_miss": 23,
+            "missed_by_score": 0,
+            "loc_only": 1,
+            "confused_cls": 2
+          }
+        },
+        {
+          "category": "Worst_Background_Mimic_FP",
+          "image_id": "DS0001_IMG_000278",
+          "group_id": "GRP_DS0001_0274",
+          "dims": "2760x1504",
+          "gt": 12,
+          "pred_op": 23,
+          "tp": 0,
+          "fp_total": 23,
+          "fp_breakdown": {
+            "loc": 1,
+            "dup": 0,
+            "cls": 3,
+            "bkg": 19
+          },
+          "fn_total": 12,
+          "fn_breakdown": {
+            "complete_miss": 8,
+            "missed_by_score": 0,
+            "loc_only": 1,
+            "confused_cls": 3
+          }
+        },
+        {
+          "category": "Worst_Class_or_Loc_Error",
+          "image_id": "DS0001_IMG_000212",
+          "group_id": "GRP_DS0001_0208",
+          "dims": "2760x1504",
+          "gt": 22,
+          "pred_op": 18,
+          "tp": 7,
+          "fp_total": 11,
+          "fp_breakdown": {
+            "loc": 9,
+            "dup": 0,
+            "cls": 2,
+            "bkg": 0
+          },
+          "fn_total": 15,
+          "fn_breakdown": {
+            "complete_miss": 1,
+            "missed_by_score": 9,
+            "loc_only": 4,
+            "confused_cls": 1
+          }
+        }
+      ],
+      "offgit_review_sheet": "08_Checkpoints/artifacts/STEP032_outputs/error_review_sheets/EVAL0002_review_sheet.jpg"
+    },
+    "EVAL0009": {
+      "model_id": "MODEL0004",
+      "track_id": "TrackB",
+      "release_partition": "REL0002:test",
+      "frozen_conf_op": 0.21,
+      "total_images": 106,
+      "reviewed_empty": {
+        "reviewed_empty_count": 4,
+        "empty_with_fp_op": 3,
+        "total_fp_on_empty": 11
+      },
+      "fp_total": 403,
+      "fp_taxonomy": {
+        "FP_Bkg": 264,
+        "FP_Cls": 85,
+        "FP_Loc": 53,
+        "FP_Dup": 1
+      },
+      "fn_total": 243,
+      "fn_taxonomy": {
+        "FN_Missed_By_Score": 87,
+        "FN_Confused_Cls": 68,
+        "FN_Complete_Miss": 38,
+        "FN_Loc_Only": 50
+      },
+      "size_bucket_recall": {
+        "small(<0.2%)": {
+          "gt": 0,
+          "tp": 0,
+          "recall": null
+        },
+        "medium(0.2-1.0%)": {
+          "gt": 154,
+          "tp": 74,
+          "recall": 0.4805
+        },
+        "large(>=1.0%)": {
+          "gt": 376,
+          "tp": 213,
+          "recall": 0.5665
+        }
+      },
+      "top_cross_class_confusions": [
+        {
+          "gt_class": "DS0002_Deep_Caries",
+          "pred_class": "DS0002_Caries",
+          "count": 44
+        },
+        {
+          "gt_class": "DS0002_Impacted",
+          "pred_class": "DS0002_Caries",
+          "count": 14
+        },
+        {
+          "gt_class": "DS0002_Caries",
+          "pred_class": "DS0002_Deep_Caries",
+          "count": 12
+        },
+        {
+          "gt_class": "DS0002_Periapical_Lesion",
+          "pred_class": "DS0002_Caries",
+          "count": 7
+        },
+        {
+          "gt_class": "DS0002_Deep_Caries",
+          "pred_class": "DS0002_Impacted",
+          "count": 4
+        },
+        {
+          "gt_class": "DS0002_Caries",
+          "pred_class": "DS0002_Impacted",
+          "count": 2
+        },
+        {
+          "gt_class": "DS0002_Caries",
+          "pred_class": "DS0002_Periapical_Lesion",
+          "count": 1
+        },
+        {
+          "gt_class": "DS0002_Impacted",
+          "pred_class": "DS0002_Deep_Caries",
+          "count": 1
+        }
+      ],
+      "sampled_cases": [
+        {
+          "category": "Top_Success",
+          "image_id": "DS0002_IMG_000009",
+          "group_id": "GRP_DS0002_0009",
+          "dims": "2843x1316",
+          "gt": 8,
+          "pred_op": 12,
+          "tp": 8,
+          "fp_total": 4,
+          "fp_breakdown": {
+            "loc": 1,
+            "dup": 0,
+            "cls": 1,
+            "bkg": 2
+          },
+          "fn_total": 0,
+          "fn_breakdown": {
+            "complete_miss": 0,
+            "missed_by_score": 0,
+            "loc_only": 0,
+            "confused_cls": 0
+          }
+        },
+        {
+          "category": "Worst_Complete_Miss",
+          "image_id": "DS0002_IMG_000425",
+          "group_id": "GRP_DS0002_0425",
+          "dims": "2444x1504",
+          "gt": 12,
+          "pred_op": 6,
+          "tp": 3,
+          "fp_total": 3,
+          "fp_breakdown": {
+            "loc": 0,
+            "dup": 0,
+            "cls": 2,
+            "bkg": 1
+          },
+          "fn_total": 9,
+          "fn_breakdown": {
+            "complete_miss": 4,
+            "missed_by_score": 3,
+            "loc_only": 1,
+            "confused_cls": 1
+          }
+        },
+        {
+          "category": "Worst_Background_Mimic_FP",
+          "image_id": "DS0002_IMG_000400",
+          "group_id": "GRP_DS0002_0400",
+          "dims": "2868x1504",
+          "gt": 5,
+          "pred_op": 16,
+          "tp": 3,
+          "fp_total": 13,
+          "fp_breakdown": {
+            "loc": 2,
+            "dup": 0,
+            "cls": 1,
+            "bkg": 10
+          },
+          "fn_total": 2,
+          "fn_breakdown": {
+            "complete_miss": 0,
+            "missed_by_score": 0,
+            "loc_only": 1,
+            "confused_cls": 1
+          }
+        },
+        {
+          "category": "Worst_Class_or_Loc_Error",
+          "image_id": "DS0002_IMG_000102",
+          "group_id": "GRP_DS0002_0102",
+          "dims": "2881x1316",
+          "gt": 9,
+          "pred_op": 10,
+          "tp": 4,
+          "fp_total": 6,
+          "fp_breakdown": {
+            "loc": 2,
+            "dup": 0,
+            "cls": 3,
+            "bkg": 1
+          },
+          "fn_total": 5,
+          "fn_breakdown": {
+            "complete_miss": 0,
+            "missed_by_score": 1,
+            "loc_only": 2,
+            "confused_cls": 2
+          }
+        }
+      ],
+      "offgit_review_sheet": "08_Checkpoints/artifacts/STEP032_outputs/error_review_sheets/EVAL0009_review_sheet.jpg"
+    },
+    "EVAL0010": {
+      "model_id": "MODEL0006",
+      "track_id": "TrackC",
+      "release_partition": "REL0003:test",
+      "frozen_conf_op": 0.075,
+      "total_images": 33,
+      "reviewed_empty": {
+        "reviewed_empty_count": 0,
+        "empty_with_fp_op": 0,
+        "total_fp_on_empty": 0
+      },
+      "fp_total": 183,
+      "fp_taxonomy": {
+        "FP_Bkg": 127,
+        "FP_Loc": 21,
+        "FP_Cls": 35
+      },
+      "fn_total": 109,
+      "fn_taxonomy": {
+        "FN_Complete_Miss": 29,
+        "FN_Missed_By_Score": 46,
+        "FN_Loc_Only": 14,
+        "FN_Confused_Cls": 20
+      },
+      "size_bucket_recall": {
+        "small(<0.2%)": {
+          "gt": 0,
+          "tp": 0,
+          "recall": null
+        },
+        "medium(0.2-1.0%)": {
+          "gt": 30,
+          "tp": 11,
+          "recall": 0.3667
+        },
+        "large(>=1.0%)": {
+          "gt": 152,
+          "tp": 62,
+          "recall": 0.4079
+        }
+      },
+      "top_cross_class_confusions": [
+        {
+          "gt_class": "DS0003_Caries_Tooth",
+          "pred_class": "DS0003_Healthy_Tooth",
+          "count": 10
+        },
+        {
+          "gt_class": "DS0003_Healthy_Tooth",
+          "pred_class": "DS0003_Caries_Tooth",
+          "count": 8
+        },
+        {
+          "gt_class": "DS0003_BDC_BDR",
+          "pred_class": "DS0003_Caries_Tooth",
+          "count": 3
+        },
+        {
+          "gt_class": "DS0003_Impacted_Tooth",
+          "pred_class": "DS0003_Healthy_Tooth",
+          "count": 3
+        },
+        {
+          "gt_class": "DS0003_Impacted_Tooth",
+          "pred_class": "DS0003_Caries_Tooth",
+          "count": 2
+        },
+        {
+          "gt_class": "DS0003_BDC_BDR",
+          "pred_class": "DS0003_Healthy_Tooth",
+          "count": 2
+        },
+        {
+          "gt_class": "DS0003_Caries_Tooth",
+          "pred_class": "DS0003_BDC_BDR",
+          "count": 2
+        },
+        {
+          "gt_class": "DS0003_Caries_Tooth",
+          "pred_class": "DS0003_Impacted_Tooth",
+          "count": 1
+        }
+      ],
+      "sampled_cases": [
+        {
+          "category": "Top_Success",
+          "image_id": "DS0003_IMG_001218",
+          "group_id": "GRP_DS0003_0096",
+          "dims": "1323x701",
+          "gt": 6,
+          "pred_op": 6,
+          "tp": 4,
+          "fp_total": 2,
+          "fp_breakdown": {
+            "loc": 0,
+            "dup": 0,
+            "cls": 0,
+            "bkg": 2
+          },
+          "fn_total": 2,
+          "fn_breakdown": {
+            "complete_miss": 1,
+            "missed_by_score": 1,
+            "loc_only": 0,
+            "confused_cls": 0
+          }
+        },
+        {
+          "category": "Worst_Complete_Miss",
+          "image_id": "DS0003_IMG_001175",
+          "group_id": "GRP_DS0003_0054",
+          "dims": "1078x462",
+          "gt": 7,
+          "pred_op": 7,
+          "tp": 2,
+          "fp_total": 5,
+          "fp_breakdown": {
+            "loc": 1,
+            "dup": 0,
+            "cls": 1,
+            "bkg": 3
+          },
+          "fn_total": 5,
+          "fn_breakdown": {
+            "complete_miss": 2,
+            "missed_by_score": 1,
+            "loc_only": 1,
+            "confused_cls": 1
+          }
+        },
+        {
+          "category": "Worst_Background_Mimic_FP",
+          "image_id": "DS0003_IMG_001145",
+          "group_id": "GRP_DS0003_0024",
+          "dims": "1175x603",
+          "gt": 4,
+          "pred_op": 12,
+          "tp": 3,
+          "fp_total": 9,
+          "fp_breakdown": {
+            "loc": 1,
+            "dup": 0,
+            "cls": 0,
+            "bkg": 8
+          },
+          "fn_total": 1,
+          "fn_breakdown": {
+            "complete_miss": 0,
+            "missed_by_score": 1,
+            "loc_only": 0,
+            "confused_cls": 0
+          }
+        },
+        {
+          "category": "Worst_Class_or_Loc_Error",
+          "image_id": "DS0003_IMG_001151",
+          "group_id": "GRP_DS0003_0030",
+          "dims": "1230x516",
+          "gt": 7,
+          "pred_op": 13,
+          "tp": 2,
+          "fp_total": 11,
+          "fp_breakdown": {
+            "loc": 1,
+            "dup": 0,
+            "cls": 7,
+            "bkg": 3
+          },
+          "fn_total": 5,
+          "fn_breakdown": {
+            "complete_miss": 1,
+            "missed_by_score": 1,
+            "loc_only": 1,
+            "confused_cls": 2
+          }
+        }
+      ],
+      "offgit_review_sheet": "08_Checkpoints/artifacts/STEP032_outputs/error_review_sheets/EVAL0010_review_sheet.jpg"
+    },
+    "EVAL0011": {
+      "model_id": "MODEL0013",
+      "track_id": "TrackD",
+      "release_partition": "REL0004:test",
+      "frozen_conf_op": 0.201,
+      "total_images": 578,
+      "reviewed_empty": {
+        "reviewed_empty_count": 0,
+        "empty_with_fp_op": 0,
+        "total_fp_on_empty": 0
+      },
+      "fp_total": 497,
+      "fp_taxonomy": {
+        "FP_Cls": 218,
+        "FP_Bkg": 247,
+        "FP_Loc": 22,
+        "FP_Dup": 10
+      },
+      "fn_total": 423,
+      "fn_taxonomy": {
+        "FN_Confused_Cls": 120,
+        "FN_Complete_Miss": 68,
+        "FN_Missed_By_Score": 210,
+        "FN_Loc_Only": 25
+      },
+      "size_bucket_recall": {
+        "small(<0.2%)": {
+          "gt": 756,
+          "tp": 462,
+          "recall": 0.6111
+        },
+        "medium(0.2-1.0%)": {
+          "gt": 237,
+          "tp": 112,
+          "recall": 0.4726
+        },
+        "large(>=1.0%)": {
+          "gt": 6,
+          "tp": 2,
+          "recall": 0.3333
+        }
+      },
+      "top_cross_class_confusions": [
+        {
+          "gt_class": "DS0004_PAI_4",
+          "pred_class": "DS0004_PAI_3",
+          "count": 87
+        },
+        {
+          "gt_class": "DS0004_PAI_3",
+          "pred_class": "DS0004_PAI_4",
+          "count": 44
+        },
+        {
+          "gt_class": "DS0004_PAI_5",
+          "pred_class": "DS0004_PAI_4",
+          "count": 33
+        },
+        {
+          "gt_class": "DS0004_PAI_4",
+          "pred_class": "DS0004_PAI_5",
+          "count": 25
+        },
+        {
+          "gt_class": "DS0004_PAI_5",
+          "pred_class": "DS0004_PAI_3",
+          "count": 21
+        },
+        {
+          "gt_class": "DS0004_PAI_3",
+          "pred_class": "DS0004_PAI_5",
+          "count": 8
+        }
+      ],
+      "sampled_cases": [
+        {
+          "category": "Top_Success",
+          "image_id": "DS0004_IMG_015728",
+          "group_id": "GRP_DS0004_2620",
+          "dims": "2444x1292",
+          "gt": 4,
+          "pred_op": 4,
+          "tp": 4,
+          "fp_total": 0,
+          "fp_breakdown": {
+            "loc": 0,
+            "dup": 0,
+            "cls": 0,
+            "bkg": 0
+          },
+          "fn_total": 0,
+          "fn_breakdown": {
+            "complete_miss": 0,
+            "missed_by_score": 0,
+            "loc_only": 0,
+            "confused_cls": 0
+          }
+        },
+        {
+          "category": "Worst_Complete_Miss",
+          "image_id": "DS0004_IMG_013141",
+          "group_id": "GRP_DS0004_0067",
+          "dims": "2473x1252",
+          "gt": 11,
+          "pred_op": 7,
+          "tp": 4,
+          "fp_total": 3,
+          "fp_breakdown": {
+            "loc": 1,
+            "dup": 0,
+            "cls": 2,
+            "bkg": 0
+          },
+          "fn_total": 7,
+          "fn_breakdown": {
+            "complete_miss": 2,
+            "missed_by_score": 3,
+            "loc_only": 1,
+            "confused_cls": 1
+          }
+        },
+        {
+          "category": "Worst_Background_Mimic_FP",
+          "image_id": "DS0004_IMG_015992",
+          "group_id": "GRP_DS0004_2881",
+          "dims": "2444x1292",
+          "gt": 1,
+          "pred_op": 6,
+          "tp": 1,
+          "fp_total": 5,
+          "fp_breakdown": {
+            "loc": 0,
+            "dup": 1,
+            "cls": 0,
+            "bkg": 4
+          },
+          "fn_total": 0,
+          "fn_breakdown": {
+            "complete_miss": 0,
+            "missed_by_score": 0,
+            "loc_only": 0,
+            "confused_cls": 0
+          }
+        },
+        {
+          "category": "Worst_Class_or_Loc_Error",
+          "image_id": "DS0004_IMG_014169",
+          "group_id": "GRP_DS0004_1080",
+          "dims": "2444x1292",
+          "gt": 3,
+          "pred_op": 5,
+          "tp": 1,
+          "fp_total": 4,
+          "fp_breakdown": {
+            "loc": 0,
+            "dup": 0,
+            "cls": 4,
+            "bkg": 0
+          },
+          "fn_total": 2,
+          "fn_breakdown": {
+            "complete_miss": 0,
+            "missed_by_score": 0,
+            "loc_only": 0,
+            "confused_cls": 2
+          }
+        }
+      ],
+      "offgit_review_sheet": "08_Checkpoints/artifacts/STEP032_outputs/error_review_sheets/EVAL0011_review_sheet.jpg"
+    },
+    "EVAL0013": {
+      "model_id": "MODEL0008",
+      "track_id": "TrackE",
+      "release_partition": "REL0005:test",
+      "frozen_conf_op": 0.379,
+      "total_images": 133,
+      "reviewed_empty": {
+        "reviewed_empty_count": 0,
+        "empty_with_fp_op": 0,
+        "total_fp_on_empty": 0
+      },
+      "fp_total": 145,
+      "fp_taxonomy": {
+        "FP_Loc": 14,
+        "FP_Cls": 80,
+        "FP_Bkg": 44,
+        "FP_Dup": 7
+      },
+      "fn_total": 185,
+      "fn_taxonomy": {
+        "FN_Loc_Only": 34,
+        "FN_Confused_Cls": 74,
+        "FN_Missed_By_Score": 43,
+        "FN_Complete_Miss": 34
+      },
+      "size_bucket_recall": {
+        "small(<0.2%)": {
+          "gt": 1,
+          "tp": 0,
+          "recall": 0.0
+        },
+        "medium(0.2-1.0%)": {
+          "gt": 527,
+          "tp": 447,
+          "recall": 0.8482
+        },
+        "large(>=1.0%)": {
+          "gt": 520,
+          "tp": 416,
+          "recall": 0.8
+        }
+      },
+      "top_cross_class_confusions": [
+        {
+          "gt_class": "DS0005_Crowned_Tooth",
+          "pred_class": "DS0005_Filled_Tooth",
+          "count": 19
+        },
+        {
+          "gt_class": "DS0005_Cavitated_Tooth",
+          "pred_class": "DS0005_Filled_Tooth",
+          "count": 13
+        },
+        {
+          "gt_class": "DS0005_Retained_Root",
+          "pred_class": "DS0005_Cavitated_Tooth",
+          "count": 12
+        },
+        {
+          "gt_class": "DS0005_Cavitated_Tooth",
+          "pred_class": "DS0005_Retained_Root",
+          "count": 11
+        },
+        {
+          "gt_class": "DS0005_Filled_Tooth",
+          "pred_class": "DS0005_Cavitated_Tooth",
+          "count": 5
+        },
+        {
+          "gt_class": "DS0005_Filled_Tooth",
+          "pred_class": "DS0005_Crowned_Tooth",
+          "count": 5
+        },
+        {
+          "gt_class": "DS0005_Implant",
+          "pred_class": "DS0005_Filled_Tooth",
+          "count": 3
+        },
+        {
+          "gt_class": "DS0005_Crowned_Tooth",
+          "pred_class": "DS0005_Implant",
+          "count": 2
+        }
+      ],
+      "sampled_cases": [
+        {
+          "category": "Top_Success",
+          "image_id": "DS0005_IMG_000961",
+          "group_id": "GRP_DS0005_0838",
+          "dims": "3292x1500",
+          "gt": 21,
+          "pred_op": 20,
+          "tp": 19,
+          "fp_total": 1,
+          "fp_breakdown": {
+            "loc": 0,
+            "dup": 0,
+            "cls": 1,
+            "bkg": 0
+          },
+          "fn_total": 2,
+          "fn_breakdown": {
+            "complete_miss": 0,
+            "missed_by_score": 1,
+            "loc_only": 0,
+            "confused_cls": 1
+          }
+        },
+        {
+          "category": "Worst_Complete_Miss",
+          "image_id": "DS0005_IMG_000367",
+          "group_id": "GRP_DS0005_0326",
+          "dims": "3288x1500",
+          "gt": 14,
+          "pred_op": 5,
+          "tp": 4,
+          "fp_total": 1,
+          "fp_breakdown": {
+            "loc": 0,
+            "dup": 0,
+            "cls": 1,
+            "bkg": 0
+          },
+          "fn_total": 10,
+          "fn_breakdown": {
+            "complete_miss": 4,
+            "missed_by_score": 3,
+            "loc_only": 3,
+            "confused_cls": 0
+          }
+        },
+        {
+          "category": "Worst_Background_Mimic_FP",
+          "image_id": "DS0005_IMG_000247",
+          "group_id": "GRP_DS0005_0215",
+          "dims": "3292x1500",
+          "gt": 14,
+          "pred_op": 11,
+          "tp": 4,
+          "fp_total": 7,
+          "fp_breakdown": {
+            "loc": 3,
+            "dup": 0,
+            "cls": 1,
+            "bkg": 3
+          },
+          "fn_total": 10,
+          "fn_breakdown": {
+            "complete_miss": 3,
+            "missed_by_score": 0,
+            "loc_only": 3,
+            "confused_cls": 4
+          }
+        },
+        {
+          "category": "Worst_Class_or_Loc_Error",
+          "image_id": "DS0005_IMG_000523",
+          "group_id": "GRP_DS0005_0463",
+          "dims": "3292x1500",
+          "gt": 11,
+          "pred_op": 16,
+          "tp": 8,
+          "fp_total": 8,
+          "fp_breakdown": {
+            "loc": 0,
+            "dup": 1,
+            "cls": 6,
+            "bkg": 1
+          },
+          "fn_total": 3,
+          "fn_breakdown": {
+            "complete_miss": 0,
+            "missed_by_score": 1,
+            "loc_only": 0,
+            "confused_cls": 2
+          }
+        }
+      ],
+      "offgit_review_sheet": "08_Checkpoints/artifacts/STEP032_outputs/error_review_sheets/EVAL0013_review_sheet.jpg"
+    },
+    "EVAL0014": {
+      "model_id": "MODEL0007",
+      "track_id": "TrackF",
+      "release_partition": "REL0006:test",
+      "frozen_conf_op": 0.091,
+      "total_images": 24,
+      "reviewed_empty": {
+        "reviewed_empty_count": 0,
+        "empty_with_fp_op": 0,
+        "total_fp_on_empty": 0
+      },
+      "fp_total": 82,
+      "fp_taxonomy": {
+        "FP_Loc": 27,
+        "FP_Bkg": 41,
+        "FP_Dup": 3,
+        "FP_Cls": 11
+      },
+      "fn_total": 120,
+      "fn_taxonomy": {
+        "FN_Complete_Miss": 69,
+        "FN_Loc_Only": 29,
+        "FN_Confused_Cls": 10,
+        "FN_Missed_By_Score": 12
+      },
+      "size_bucket_recall": {
+        "small(<0.2%)": {
+          "gt": 137,
+          "tp": 17,
+          "recall": 0.1241
+        },
+        "medium(0.2-1.0%)": {
+          "gt": 0,
+          "tp": 0,
+          "recall": null
+        },
+        "large(>=1.0%)": {
+          "gt": 0,
+          "tp": 0,
+          "recall": null
+        }
+      },
+      "top_cross_class_confusions": [
+        {
+          "gt_class": "DS0006_Proximal_Caries",
+          "pred_class": "DS0006_Occlusal_Caries",
+          "count": 6
+        },
+        {
+          "gt_class": "DS0006_Occlusal_Caries",
+          "pred_class": "DS0006_Proximal_Caries",
+          "count": 5
+        }
+      ],
+      "sampled_cases": [
+        {
+          "category": "Top_Success",
+          "image_id": "DS0006_IMG_000164",
+          "group_id": "GRP_DS0006_0164",
+          "dims": "1920x1535",
+          "gt": 2,
+          "pred_op": 1,
+          "tp": 1,
+          "fp_total": 0,
+          "fp_breakdown": {
+            "loc": 0,
+            "dup": 0,
+            "cls": 0,
+            "bkg": 0
+          },
+          "fn_total": 1,
+          "fn_breakdown": {
+            "complete_miss": 0,
+            "missed_by_score": 1,
+            "loc_only": 0,
+            "confused_cls": 0
+          }
+        },
+        {
+          "category": "Worst_Complete_Miss",
+          "image_id": "DS0006_IMG_000023",
+          "group_id": "GRP_DS0006_0023",
+          "dims": "1920x1535",
+          "gt": 17,
+          "pred_op": 13,
+          "tp": 1,
+          "fp_total": 12,
+          "fp_breakdown": {
+            "loc": 4,
+            "dup": 0,
+            "cls": 2,
+            "bkg": 6
+          },
+          "fn_total": 16,
+          "fn_breakdown": {
+            "complete_miss": 9,
+            "missed_by_score": 0,
+            "loc_only": 6,
+            "confused_cls": 1
+          }
+        },
+        {
+          "category": "Worst_Background_Mimic_FP",
+          "image_id": "DS0006_IMG_000050",
+          "group_id": "GRP_DS0006_0050",
+          "dims": "1920x1535",
+          "gt": 3,
+          "pred_op": 7,
+          "tp": 0,
+          "fp_total": 7,
+          "fp_breakdown": {
+            "loc": 0,
+            "dup": 0,
+            "cls": 0,
+            "bkg": 7
+          },
+          "fn_total": 3,
+          "fn_breakdown": {
+            "complete_miss": 2,
+            "missed_by_score": 1,
+            "loc_only": 0,
+            "confused_cls": 0
+          }
+        },
+        {
+          "category": "Worst_Class_or_Loc_Error",
+          "image_id": "DS0006_IMG_000075",
+          "group_id": "GRP_DS0006_0075",
+          "dims": "1920x1535",
+          "gt": 18,
+          "pred_op": 10,
+          "tp": 2,
+          "fp_total": 8,
+          "fp_breakdown": {
+            "loc": 5,
+            "dup": 0,
+            "cls": 2,
+            "bkg": 1
+          },
+          "fn_total": 16,
+          "fn_breakdown": {
+            "complete_miss": 5,
+            "missed_by_score": 3,
+            "loc_only": 6,
+            "confused_cls": 2
+          }
+        }
+      ],
+      "offgit_review_sheet": "08_Checkpoints/artifacts/STEP032_outputs/error_review_sheets/EVAL0014_review_sheet.jpg"
+    }
+  }
+}
