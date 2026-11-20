@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "step": "STEP-032",
+  "freeze_id": "FREEZE0001",
+  "freeze_manifest_sha256": "d6147ffe5a0e6173da4440185c7cddacc2296aaf71908f0388e7aecf9e234ba1",
+  "created_utc": "2026-11-20T19:54:55.081987+00:00",
+  "off_git_bundle_path": "08_Checkpoints/artifacts/kaggle_bundles/STEP032_SEALED_TEST_BUNDLE.zip",
+  "bundle_sha256": "4bddf742d11a072e402a9f89944de852879d6b0f2afdc77e6c055d155845e29f",
+  "bundle_bytes": 1005872394,
+  "bundle_mb": 959.27,
+  "blind_inference_only": true,
+  "labels_included": false,
+  "total_frozen_models": 10,
+  "total_test_images": 1082,
+  "total_external_test_images": 178,
+  "partition_counts": {
+    "REL0001:test": 208,
+    "REL0001:external_test": 178,
+    "REL0002:test": 106,
+    "REL0003:test": 33,
+    "REL0004:test": 578,
+    "REL0005:test": 133,
+    "REL0006:test": 24
+  }
+}
