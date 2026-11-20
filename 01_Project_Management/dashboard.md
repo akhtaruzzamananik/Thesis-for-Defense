@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **Stage `S12` (`STEP-031`–`036`) 100% COMPLETE (`G11`, `G12`, `G13` ALL `PASS` — `13/17` gates passed!)**; **ready for `STEP-037` (`S13` Bounded Research Inference Prototype & `G14`)** |
+| Current stage / step | **`STEP-037` COMPLETE (`OPGPrototypeEngine` in `src/opg/inference_prototype.py`, CLI `run_opg_inference.py`, `DEC0018`, `prototype_guide.md`, & `test_prototype_interface.py` passing with PyTorch-ONNX parity)**; **ready for `STEP-038` (Clean-Environment Reproducibility Audit & `G14` Assessment)** |
 
 ## 1. Stage & gate summary
 
@@ -30,8 +30,8 @@
 
 ## 2. Immediate priorities & open blockers
 
-1. Execute **`STEP-037`–`STEP-038`** (`S13` — Package the evaluated ONNX research inference prototype CLI/local app + verification + `DEC0018` + **`G14`**).
-2. Execute **`S14–S16`** (`STEP-039`–`STEP-049`: publication-ready figures/tables, full thesis manuscript, defense slides, archive `G16`, and live hosted web showcase `G17`).
+1. Execute **`STEP-038`** (*Perform clean-environment reproducibility audit*, write `12_Documentation/reproduce.md` & `reproducibility_audit.md`, and pass **`G14`**).
+2. Execute **`S14–S16`** (`STEP-039`–`STEP-049`: publication-ready figures/tables, full thesis manuscript `G15`, archival package `G16`, and live hosted web showcase `G17` reusing `OPGPrototypeEngine`).
 3. Maintain strict custody: `git ls-files "*.pdf" "*.zip" "*.rar" "*.jpg" "*.png" "*.pt" "*.onnx"` stays empty.
 
 ## 3. Canonical ledgers
