@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "step": "STEP-042",
+  "version": "v1.0.0",
+  "source_chapters": [
+    "00_front_matter_and_abstract.md",
+    "01_chapter1_introduction.md",
+    "02_chapter2_literature_review.md",
+    "03_chapter3_methodology.md",
+    "04_chapter4_results.md",
+    "05_chapter5_discussion_and_prototype.md",
+    "06_chapter6_conclusion.md",
+    "07_appendices.md"
+  ],
+  "cited_references_formatted": 40,
+  "figures_embedded_inline": 6,
+  "tables_indexed": 6,
+  "assembled_word_count": 16187,
+  "outputs": {
+    "markdown": {
+      "path": "11_Writing/thesis/DIU_CSE_Thesis_Assembled_v1.0.0.md",
+      "bytes": 119276,
+      "sha256": "621fd7c2cea07a6258a08e74c512e5938febcc2054310a467ca641ea815988d6"
+    },
+    "html_print_ready": {
+      "path": "11_Writing/thesis/DIU_CSE_Thesis_Assembled_v1.0.0.html",
+      "bytes": 264817,
+      "sha256": "4aa968371dd18ecbc35f3e0352fcc4f128693e24533e23749bba3907c6c37d2e"
+    }
+  },
+  "submission_gate_status": "HOLD_PENDING_SUPERVISOR_AUTHORIZATION_G15"
+}

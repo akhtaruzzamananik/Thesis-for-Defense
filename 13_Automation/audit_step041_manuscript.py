@@ -37,8 +37,8 @@ def load_csv(rel: str) -> list[dict[str, str]]:
 
 def main() -> None:
     REVIEWS_DIR.mkdir(parents=True, exist_ok=True)
-    thesis_files = sorted(THESIS_DIR.glob("*.md"))
-    assert len(thesis_files) == 8, f"Expected 8 thesis markdown files, found {len(thesis_files)}"
+    thesis_files = sorted(f for f in THESIS_DIR.glob("*.md") if re.match(r"^\d{2}_", f.name))
+    assert len(thesis_files) == 8, f"Expected 8 numbered chapter markdown files, found {len(thesis_files)}"
 
     texts = {f.name: f.read_text(encoding="utf-8") for f in thesis_files}
     full_text = "\n".join(texts.values())

@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **`STEP-041` COMPLETE (All `6` publication-ready vector SVG figures `FIG0001–FIG0006`, `6` MD+LaTeX table pairs `TAB0001–TAB0006`, `6` figure specs, `6` safe JSON extracts generated programmatically from live `G03–G14` records; `STEP041_citation_claim_asset_audit.md = PASS`: `40/40` verified citations, `17/17` claims, `12/12` assets, `21/21` exact metric matches, `0` overclaims)**; **ready for `STEP-042` (Supervisor Review Assembly, Defense Slides & Submission-Readiness Audit -> `G15`)** |
+| Current stage / step | **`STEP-042` COMPLETE (Full DIU CSE Thesis assembled into `DIU_CSE_Thesis_Assembled_v1.0.0.{md,html}` with inline SVGs & 40 IEEE refs + SHA-256 `assembled_manifest.json`; 17-slide `defense_slides.md` `WRIT0014` drafted; honest `supervisor_review_ledger.md` & `G15` readiness audit recorded as `HOLD` pending actual Ms Faiza Feroz sign-off & `UD17` defense date)**; **ready for Supervisor Sign-Off / `STEP-043` (Submission Snapshot) or `STEP-044` (Optional Concise Paper Draft)** |
 
 ## 1. Stage & gate summary
 
@@ -27,7 +27,8 @@
 | G12 | STEP-035 | **PASS** | **Verified (`2026-11-21`):** Programmatic audit (`g12_reconciliation_audit.json`) reconciled `14/14` EVALs, `128/128` per-class `TP+FN==GT` rows, `12/12` `HC01–HC05` shift bridges, `10` GPU + `7` CPU ONNX timing logs (`0` errors), `G11 < STEP-032` custody, and `CLAIM0013–CLAIM0017` (`final_evaluation_report.md`, `G12_assessment_2026-11-21.md`) |
 | G13 | STEP-036 | **PASS** | **Verified (`2026-11-21`):** Exhaustive FP/FN taxonomy (`6,718` GT boxes), size-bucket recall (`Small 30.9% -> Large 80.3%`), `28` non-cherry-picked cases visually reviewed (`7` off-Git overlay sheets), source-label incompleteness & ordinal boundary uncertainty documented, and strict non-clinical limits frozen (`error_review.md`, `limitations.md`, `G13_assessment_2026-11-21.md`) |
 | G14 | STEP-038 | **PASS** | **Verified (`2026-11-21`):** `OPGPrototypeEngine` + `REPRO0001`: **`R1`** `50/50` checksums, **`R2`** exact `0.0` metric replay (`EVAL0001/0011/0013`), **`R3A`** `0.0` self-diff & `0.994` ONNX-PyTorch IoU parity on `40` raw OPGs, **`R3B`** clean `git archive` checkout passing (`reproduce.md`, `reproducibility_audit.md`, `G14_assessment_2026-11-21.md`; `R4` GPU retraining transparently archived) |
-| G15–G17 | STEP-039–049 | **NOT ASSESSED** | Ready for **`S14` (`STEP-039`–`044` Figures/Tables & Thesis Manuscript -> `G15`)**, **`S15` (`STEP-045`–`046` Archive -> `G16`)**, and **`S16` (`STEP-047`–`049` Web Showcase -> `G17`)** |
+| G15 | STEP-042 | **HOLD** *(Tech `PASS`)* | **Assembled & Audited (`2026-11-21`):** `DIU_CSE_Thesis_Assembled_v1.0.0.{md,html}` (`6` inline SVGs, `40` IEEE refs), `defense_slides.md` (`17` slides), `STEP-041` audit `PASS`; **`HOLD` strictly awaiting actual Ms Faiza Feroz supervisor sign-off & `UD17` defense date** (`G15_thesis_readiness_2026-11-21.md`) |
+| G16–G17 | STEP-043–049 | **NOT ASSESSED** | Ready for **`STEP-043` (Submission Record once `G15 PASS`)**, **`STEP-044` (Concise Paper Package `WRIT0009–0013`)**, **`S15` (`STEP-045`–`046` Archive -> `G16`)**, & **`S16` (`STEP-047`–`049` Live Web Showcase -> `G17`)** |
 
 ## 2. Immediate priorities & open blockers
 
