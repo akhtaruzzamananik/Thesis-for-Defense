@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **Stage `S13` (`STEP-037`–`038`) 100% COMPLETE (`G14 = PASS` — `14/17` gates passed! `R1` `50/50` hashes, `R2` `0.0` metric replay, `R3A` `0.994` ONNX parity, `R3B` clean `git archive` checkout verified)**; **ready for `S14` (`STEP-039`–`044` Thesis Figures/Tables & Manuscript -> `G15`) and parallel `S16` (`STEP-047`–`049` Live Web Showcase -> `G17`)** |
+| Current stage / step | **`STEP-039` COMPLETE (`writing_plan.md`, `submission_requirements.md`, `DEC0017`, `writing_registry.csv` [`WRIT0001–0014`], & `10_Figures_Tables/assets.csv` [`FIG0001–0006`, `TAB0001–0006`] mapped 100% to verified evidence)**; **ready for `STEP-040` (Draft Complete Evidence-Grounded DIU CSE Thesis Chapters `11_Writing/thesis/`)** |
 
 ## 1. Stage & gate summary
 
