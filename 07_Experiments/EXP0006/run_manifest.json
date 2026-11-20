@@ -1,7 +1,7 @@
 {
   "experiment_id": "EXP0006",
   "schema_version": "T14-v1.0.0",
-  "status": "READY_TO_LAUNCH_STEP030",
+  "status": "COMPLETED_G10_PASS_MODEL0008",
   "purpose": "track_baseline",
   "parent_comparison_id": "NONE",
   "research_questions": [
