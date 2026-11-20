@@ -1,0 +1,658 @@
+[
+  {
+    "bridge_id": "XSHIFT01",
+    "source_model_id": "MODEL0005",
+    "source_track": "TrackA",
+    "target_release_id": "REL0005",
+    "target_track": "TrackE",
+    "target_partition": "test",
+    "concepts": [
+      "HC03_Impacted_Tooth",
+      "HC04_Residual_Root",
+      "HC05_Dental_Implant"
+    ],
+    "frozen_conf_op": 0.227,
+    "mAP@0.50": 0.437349,
+    "mAP@0.50_ci95": {
+      "mean": 0.45131,
+      "std": 0.047632,
+      "lo": 0.355711,
+      "hi": 0.54922
+    },
+    "mAP@0.50:0.95": 0.164582,
+    "mAP@0.50:0.95_ci95": {
+      "mean": 0.173659,
+      "std": 0.021623,
+      "lo": 0.134999,
+      "hi": 0.217582
+    },
+    "macro_f1": 0.48526,
+    "per_concept": {
+      "HC03_Impacted_Tooth": {
+        "class_id": 0,
+        "gt_count": 71,
+        "pred_count_total": 266,
+        "tp_op": 32,
+        "fp_op": 11,
+        "fn_op": 39,
+        "precision": 0.744186,
+        "recall": 0.450704,
+        "f1": 0.561404,
+        "ap": 0.611579,
+        "eligible": true,
+        "class_name": "HC03_Impacted_Tooth",
+        "ap_50_95": 0.251273
+      },
+      "HC04_Residual_Root": {
+        "class_id": 1,
+        "gt_count": 140,
+        "pred_count_total": 436,
+        "tp_op": 45,
+        "fp_op": 26,
+        "fn_op": 95,
+        "precision": 0.633803,
+        "recall": 0.321429,
+        "f1": 0.42654,
+        "ap": 0.381553,
+        "eligible": true,
+        "class_name": "HC04_Residual_Root",
+        "ap_50_95": 0.119528
+      },
+      "HC05_Dental_Implant": {
+        "class_id": 2,
+        "gt_count": 80,
+        "pred_count_total": 207,
+        "tp_op": 40,
+        "fp_op": 51,
+        "fn_op": 40,
+        "precision": 0.43956,
+        "recall": 0.5,
+        "f1": 0.467836,
+        "ap": 0.318915,
+        "eligible": true,
+        "class_name": "HC05_Dental_Implant",
+        "ap_50_95": 0.122945
+      }
+    }
+  },
+  {
+    "bridge_id": "XSHIFT02_INT",
+    "source_model_id": "MODEL0008",
+    "source_track": "TrackE",
+    "target_release_id": "REL0001",
+    "target_track": "TrackA",
+    "target_partition": "test",
+    "concepts": [
+      "HC03_Impacted_Tooth",
+      "HC04_Residual_Root",
+      "HC05_Dental_Implant"
+    ],
+    "frozen_conf_op": 0.379,
+    "mAP@0.50": 0.231903,
+    "mAP@0.50_ci95": {
+      "mean": 0.245154,
+      "std": 0.035388,
+      "lo": 0.179958,
+      "hi": 0.312686
+    },
+    "mAP@0.50:0.95": 0.092003,
+    "mAP@0.50:0.95_ci95": {
+      "mean": 0.099286,
+      "std": 0.017822,
+      "lo": 0.068446,
+      "hi": 0.135707
+    },
+    "macro_f1": 0.381487,
+    "per_concept": {
+      "HC03_Impacted_Tooth": {
+        "class_id": 0,
+        "gt_count": 133,
+        "pred_count_total": 234,
+        "tp_op": 61,
+        "fp_op": 33,
+        "fn_op": 72,
+        "precision": 0.648936,
+        "recall": 0.458647,
+        "f1": 0.537445,
+        "ap": 0.381401,
+        "eligible": true,
+        "class_name": "HC03_Impacted_Tooth",
+        "ap_50_95": 0.168432
+      },
+      "HC04_Residual_Root": {
+        "class_id": 1,
+        "gt_count": 178,
+        "pred_count_total": 725,
+        "tp_op": 79,
+        "fp_op": 120,
+        "fn_op": 99,
+        "precision": 0.396985,
+        "recall": 0.44382,
+        "f1": 0.419098,
+        "ap": 0.242036,
+        "eligible": true,
+        "class_name": "HC04_Residual_Root",
+        "ap_50_95": 0.072611
+      },
+      "HC05_Dental_Implant": {
+        "class_id": 2,
+        "gt_count": 70,
+        "pred_count_total": 340,
+        "tp_op": 14,
+        "fp_op": 65,
+        "fn_op": 56,
+        "precision": 0.177215,
+        "recall": 0.2,
+        "f1": 0.187919,
+        "ap": 0.072271,
+        "eligible": true,
+        "class_name": "HC05_Dental_Implant",
+        "ap_50_95": 0.034967
+      }
+    }
+  },
+  {
+    "bridge_id": "XSHIFT02_EXT",
+    "source_model_id": "MODEL0008",
+    "source_track": "TrackE",
+    "target_release_id": "REL0001",
+    "target_track": "TrackA",
+    "target_partition": "external_test",
+    "concepts": [
+      "HC03_Impacted_Tooth",
+      "HC04_Residual_Root",
+      "HC05_Dental_Implant"
+    ],
+    "frozen_conf_op": 0.379,
+    "mAP@0.50": 0.423798,
+    "mAP@0.50_ci95": {
+      "mean": 0.429482,
+      "std": 0.070066,
+      "lo": 0.262365,
+      "hi": 0.550084
+    },
+    "mAP@0.50:0.95": 0.179018,
+    "mAP@0.50:0.95_ci95": {
+      "mean": 0.183592,
+      "std": 0.030363,
+      "lo": 0.113407,
+      "hi": 0.234537
+    },
+    "macro_f1": 0.498521,
+    "per_concept": {
+      "HC03_Impacted_Tooth": {
+        "class_id": 0,
+        "gt_count": 111,
+        "pred_count_total": 222,
+        "tp_op": 55,
+        "fp_op": 34,
+        "fn_op": 56,
+        "precision": 0.617978,
+        "recall": 0.495495,
+        "f1": 0.55,
+        "ap": 0.493542,
+        "eligible": true,
+        "class_name": "HC03_Impacted_Tooth",
+        "ap_50_95": 0.224233
+      },
+      "HC04_Residual_Root": {
+        "class_id": 1,
+        "gt_count": 93,
+        "pred_count_total": 534,
+        "tp_op": 53,
+        "fp_op": 76,
+        "fn_op": 40,
+        "precision": 0.410853,
+        "recall": 0.569892,
+        "f1": 0.477477,
+        "ap": 0.315228,
+        "eligible": true,
+        "class_name": "HC04_Residual_Root",
+        "ap_50_95": 0.115825
+      },
+      "HC05_Dental_Implant": {
+        "class_id": 2,
+        "gt_count": 16,
+        "pred_count_total": 103,
+        "tp_op": 11,
+        "fp_op": 20,
+        "fn_op": 5,
+        "precision": 0.354839,
+        "recall": 0.6875,
+        "f1": 0.468085,
+        "ap": 0.462623,
+        "eligible": true,
+        "class_name": "HC05_Dental_Implant",
+        "ap_50_95": 0.196997
+      }
+    }
+  },
+  {
+    "bridge_id": "XSHIFT03_A",
+    "source_model_id": "MODEL0005",
+    "source_track": "TrackA",
+    "target_release_id": "REL0003",
+    "target_track": "TrackC",
+    "target_partition": "test",
+    "concepts": [
+      "HC03_Impacted_Tooth",
+      "HC04_Residual_Root"
+    ],
+    "frozen_conf_op": 0.227,
+    "mAP@0.50": 0.397697,
+    "mAP@0.50_ci95": {
+      "mean": 0.404847,
+      "std": 0.073393,
+      "lo": 0.251758,
+      "hi": 0.542764
+    },
+    "mAP@0.50:0.95": 0.196502,
+    "mAP@0.50:0.95_ci95": {
+      "mean": 0.200364,
+      "std": 0.035969,
+      "lo": 0.121312,
+      "hi": 0.266321
+    },
+    "macro_f1": 0.410257,
+    "per_concept": {
+      "HC03_Impacted_Tooth": {
+        "class_id": 0,
+        "gt_count": 30,
+        "pred_count_total": 117,
+        "tp_op": 17,
+        "fp_op": 5,
+        "fn_op": 13,
+        "precision": 0.772727,
+        "recall": 0.566667,
+        "f1": 0.653846,
+        "ap": 0.710949,
+        "eligible": true,
+        "class_name": "HC03_Impacted_Tooth",
+        "ap_50_95": 0.375243
+      },
+      "HC04_Residual_Root": {
+        "class_id": 1,
+        "gt_count": 15,
+        "pred_count_total": 95,
+        "tp_op": 2,
+        "fp_op": 7,
+        "fn_op": 13,
+        "precision": 0.222222,
+        "recall": 0.133333,
+        "f1": 0.166667,
+        "ap": 0.084444,
+        "eligible": true,
+        "class_name": "HC04_Residual_Root",
+        "ap_50_95": 0.017762
+      }
+    }
+  },
+  {
+    "bridge_id": "XSHIFT03_E",
+    "source_model_id": "MODEL0008",
+    "source_track": "TrackE",
+    "target_release_id": "REL0003",
+    "target_track": "TrackC",
+    "target_partition": "test",
+    "concepts": [
+      "HC03_Impacted_Tooth",
+      "HC04_Residual_Root"
+    ],
+    "frozen_conf_op": 0.379,
+    "mAP@0.50": 0.476197,
+    "mAP@0.50_ci95": {
+      "mean": 0.48394,
+      "std": 0.092971,
+      "lo": 0.30918,
+      "hi": 0.689654
+    },
+    "mAP@0.50:0.95": 0.233146,
+    "mAP@0.50:0.95_ci95": {
+      "mean": 0.24276,
+      "std": 0.0433,
+      "lo": 0.161836,
+      "hi": 0.335425
+    },
+    "macro_f1": 0.494445,
+    "per_concept": {
+      "HC03_Impacted_Tooth": {
+        "class_id": 0,
+        "gt_count": 30,
+        "pred_count_total": 57,
+        "tp_op": 11,
+        "fp_op": 4,
+        "fn_op": 19,
+        "precision": 0.733333,
+        "recall": 0.366667,
+        "f1": 0.488889,
+        "ap": 0.446875,
+        "eligible": true,
+        "class_name": "HC03_Impacted_Tooth",
+        "ap_50_95": 0.241809
+      },
+      "HC04_Residual_Root": {
+        "class_id": 1,
+        "gt_count": 15,
+        "pred_count_total": 114,
+        "tp_op": 7,
+        "fp_op": 6,
+        "fn_op": 8,
+        "precision": 0.538462,
+        "recall": 0.466667,
+        "f1": 0.5,
+        "ap": 0.505519,
+        "eligible": true,
+        "class_name": "HC04_Residual_Root",
+        "ap_50_95": 0.224482
+      }
+    }
+  },
+  {
+    "bridge_id": "XSHIFT04_A",
+    "source_model_id": "MODEL0005",
+    "source_track": "TrackA",
+    "target_release_id": "REL0002",
+    "target_track": "TrackB",
+    "target_partition": "test",
+    "concepts": [
+      "HC03_Impacted_Tooth"
+    ],
+    "frozen_conf_op": 0.227,
+    "mAP@0.50": 0.818134,
+    "mAP@0.50_ci95": {
+      "mean": 0.819688,
+      "std": 0.050247,
+      "lo": 0.710467,
+      "hi": 0.905098
+    },
+    "mAP@0.50:0.95": 0.408268,
+    "mAP@0.50:0.95_ci95": {
+      "mean": 0.413782,
+      "std": 0.033765,
+      "lo": 0.35138,
+      "hi": 0.47968
+    },
+    "macro_f1": 0.802469,
+    "per_concept": {
+      "HC03_Impacted_Tooth": {
+        "class_id": 0,
+        "gt_count": 91,
+        "pred_count_total": 295,
+        "tp_op": 65,
+        "fp_op": 6,
+        "fn_op": 26,
+        "precision": 0.915493,
+        "recall": 0.714286,
+        "f1": 0.802469,
+        "ap": 0.818134,
+        "eligible": true,
+        "class_name": "HC03_Impacted_Tooth",
+        "ap_50_95": 0.408268
+      }
+    }
+  },
+  {
+    "bridge_id": "XSHIFT04_E",
+    "source_model_id": "MODEL0008",
+    "source_track": "TrackE",
+    "target_release_id": "REL0002",
+    "target_track": "TrackB",
+    "target_partition": "test",
+    "concepts": [
+      "HC03_Impacted_Tooth"
+    ],
+    "frozen_conf_op": 0.379,
+    "mAP@0.50": 0.696653,
+    "mAP@0.50_ci95": {
+      "mean": 0.700953,
+      "std": 0.055599,
+      "lo": 0.584585,
+      "hi": 0.806024
+    },
+    "mAP@0.50:0.95": 0.347168,
+    "mAP@0.50:0.95_ci95": {
+      "mean": 0.355592,
+      "std": 0.040955,
+      "lo": 0.275164,
+      "hi": 0.436692
+    },
+    "macro_f1": 0.594203,
+    "per_concept": {
+      "HC03_Impacted_Tooth": {
+        "class_id": 0,
+        "gt_count": 91,
+        "pred_count_total": 114,
+        "tp_op": 41,
+        "fp_op": 6,
+        "fn_op": 50,
+        "precision": 0.87234,
+        "recall": 0.450549,
+        "f1": 0.594203,
+        "ap": 0.696653,
+        "eligible": true,
+        "class_name": "HC03_Impacted_Tooth",
+        "ap_50_95": 0.347168
+      }
+    }
+  },
+  {
+    "bridge_id": "XSHIFT05_A2D",
+    "source_model_id": "MODEL0005",
+    "source_track": "TrackA",
+    "target_release_id": "REL0004",
+    "target_track": "TrackD",
+    "target_partition": "test",
+    "concepts": [
+      "HC02_Periapical_Lesion"
+    ],
+    "frozen_conf_op": 0.227,
+    "mAP@0.50": 0.235546,
+    "mAP@0.50_ci95": {
+      "mean": 0.237841,
+      "std": 0.015713,
+      "lo": 0.206045,
+      "hi": 0.270015
+    },
+    "mAP@0.50:0.95": 0.05732,
+    "mAP@0.50:0.95_ci95": {
+      "mean": 0.058352,
+      "std": 0.004289,
+      "lo": 0.049981,
+      "hi": 0.067064
+    },
+    "macro_f1": 0.171875,
+    "per_concept": {
+      "HC02_Periapical_Lesion": {
+        "class_id": 0,
+        "gt_count": 999,
+        "pred_count_total": 4515,
+        "tp_op": 99,
+        "fp_op": 54,
+        "fn_op": 900,
+        "precision": 0.647059,
+        "recall": 0.099099,
+        "f1": 0.171875,
+        "ap": 0.235546,
+        "eligible": true,
+        "class_name": "HC02_Periapical_Lesion",
+        "ap_50_95": 0.05732
+      }
+    }
+  },
+  {
+    "bridge_id": "XSHIFT05_D2A_INT",
+    "source_model_id": "MODEL0013",
+    "source_track": "TrackD",
+    "target_release_id": "REL0001",
+    "target_track": "TrackA",
+    "target_partition": "test",
+    "concepts": [
+      "HC02_Periapical_Lesion"
+    ],
+    "frozen_conf_op": 0.201,
+    "mAP@0.50": 0.177905,
+    "mAP@0.50_ci95": {
+      "mean": 0.184658,
+      "std": 0.033044,
+      "lo": 0.123658,
+      "hi": 0.253686
+    },
+    "mAP@0.50:0.95": 0.051685,
+    "mAP@0.50:0.95_ci95": {
+      "mean": 0.054797,
+      "std": 0.010899,
+      "lo": 0.03468,
+      "hi": 0.078483
+    },
+    "macro_f1": 0.239631,
+    "per_concept": {
+      "HC02_Periapical_Lesion": {
+        "class_id": 0,
+        "gt_count": 142,
+        "pred_count_total": 4542,
+        "tp_op": 52,
+        "fp_op": 240,
+        "fn_op": 90,
+        "precision": 0.178082,
+        "recall": 0.366197,
+        "f1": 0.239631,
+        "ap": 0.177905,
+        "eligible": true,
+        "class_name": "HC02_Periapical_Lesion",
+        "ap_50_95": 0.051685
+      }
+    }
+  },
+  {
+    "bridge_id": "XSHIFT05_D2A_EXT",
+    "source_model_id": "MODEL0013",
+    "source_track": "TrackD",
+    "target_release_id": "REL0001",
+    "target_track": "TrackA",
+    "target_partition": "external_test",
+    "concepts": [
+      "HC02_Periapical_Lesion"
+    ],
+    "frozen_conf_op": 0.201,
+    "mAP@0.50": 0.216312,
+    "mAP@0.50_ci95": {
+      "mean": 0.221985,
+      "std": 0.042477,
+      "lo": 0.144872,
+      "hi": 0.310786
+    },
+    "mAP@0.50:0.95": 0.060169,
+    "mAP@0.50:0.95_ci95": {
+      "mean": 0.063552,
+      "std": 0.014212,
+      "lo": 0.039198,
+      "hi": 0.093701
+    },
+    "macro_f1": 0.268097,
+    "per_concept": {
+      "HC02_Periapical_Lesion": {
+        "class_id": 0,
+        "gt_count": 106,
+        "pred_count_total": 3928,
+        "tp_op": 50,
+        "fp_op": 217,
+        "fn_op": 56,
+        "precision": 0.187266,
+        "recall": 0.471698,
+        "f1": 0.268097,
+        "ap": 0.216312,
+        "eligible": true,
+        "class_name": "HC02_Periapical_Lesion",
+        "ap_50_95": 0.060169
+      }
+    }
+  },
+  {
+    "bridge_id": "XSHIFT06_E2B",
+    "source_model_id": "MODEL0008",
+    "source_track": "TrackE",
+    "target_release_id": "REL0002",
+    "target_track": "TrackB",
+    "target_partition": "test",
+    "concepts": [
+      "HC01_WholeTooth_Caries"
+    ],
+    "frozen_conf_op": 0.379,
+    "mAP@0.50": 0.162709,
+    "mAP@0.50_ci95": {
+      "mean": 0.164939,
+      "std": 0.024675,
+      "lo": 0.117589,
+      "hi": 0.213898
+    },
+    "mAP@0.50:0.95": 0.09185,
+    "mAP@0.50:0.95_ci95": {
+      "mean": 0.093955,
+      "std": 0.014306,
+      "lo": 0.066832,
+      "hi": 0.122141
+    },
+    "macro_f1": 0.182979,
+    "per_concept": {
+      "HC01_WholeTooth_Caries": {
+        "class_id": 0,
+        "gt_count": 415,
+        "pred_count_total": 185,
+        "tp_op": 43,
+        "fp_op": 12,
+        "fn_op": 372,
+        "precision": 0.781818,
+        "recall": 0.103614,
+        "f1": 0.182979,
+        "ap": 0.162709,
+        "eligible": true,
+        "class_name": "HC01_WholeTooth_Caries",
+        "ap_50_95": 0.09185
+      }
+    }
+  },
+  {
+    "bridge_id": "XSHIFT06_E2C",
+    "source_model_id": "MODEL0008",
+    "source_track": "TrackE",
+    "target_release_id": "REL0003",
+    "target_track": "TrackC",
+    "target_partition": "test",
+    "concepts": [
+      "HC01_WholeTooth_Caries"
+    ],
+    "frozen_conf_op": 0.379,
+    "mAP@0.50": 0.163451,
+    "mAP@0.50_ci95": {
+      "mean": 0.18451,
+      "std": 0.079263,
+      "lo": 0.049998,
+      "hi": 0.351447
+    },
+    "mAP@0.50:0.95": 0.090867,
+    "mAP@0.50:0.95_ci95": {
+      "mean": 0.104097,
+      "std": 0.044012,
+      "lo": 0.028606,
+      "hi": 0.198318
+    },
+    "macro_f1": 0.307692,
+    "per_concept": {
+      "HC01_WholeTooth_Caries": {
+        "class_id": 0,
+        "gt_count": 30,
+        "pred_count_total": 111,
+        "tp_op": 8,
+        "fp_op": 14,
+        "fn_op": 22,
+        "precision": 0.363636,
+        "recall": 0.266667,
+        "f1": 0.307692,
+        "ap": 0.163451,
+        "eligible": true,
+        "class_name": "HC01_WholeTooth_Caries",
+        "ap_50_95": 0.090867
+      }
+    }
+  }
+]

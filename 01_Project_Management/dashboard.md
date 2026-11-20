@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **`STEP-032` COMPLETE (`14/14` `EVAL0001–EVAL0014` + `10/10` `HC01–HC05` `XSHIFT` passes = `100%` coverage, `0` errors, `10` GPU `Tesla T4` timing logs, `7/7` `ONNX` exports verified bit-for-bit)**; **ready for `STEP-033` (Canonical `mAP@0.50` / `mAP@0.50:0.95` / `P/R/F1` + `1,000`-Resample `GroupID` Bootstrap `95% CI`)** |
+| Current stage / step | **`STEP-033` COMPLETE (`14/14` held-out `EVAL0001–EVAL0014` + `12` `HC01–HC05` zero-shot cross-country bridges + `1,000`-resample `GroupID` `95% CI` computed via frozen `evaluator.py`)**; **ready for `STEP-034`–`STEP-035` (Local CPU `ONNXRuntime` Timing, `T19` Error Review & `G12` Assessment)** |
 
 ## 1. Stage & gate summary
 
@@ -28,8 +28,8 @@
 
 ## 2. Immediate priorities & open blockers
 
-1. Execute **`STEP-033`** (*Compute Precision, Recall, `mAP@0.50`, `mAP@0.50:0.95`, per-class AP, `HC01–HC05` cross-country shift metrics, and `1,000`-resample `GroupID` cluster bootstrap `95% CI`* using frozen `src/opg/evaluator.py` on the validated `STEP-032` predictions).
-2. Proceed to **`STEP-034`–`STEP-035`** (local Windows 11 CPU `ONNXRuntime` timing on the `7` exported `.onnx` models, `T19` error review, and **`G12`** gate assessment).
+1. Execute **`STEP-034`** (*Measure end-to-end local Windows 11 CPU `ONNXRuntime` inference latency & `FPS_e2e` on the `7` exported `.onnx` models, and synthesize GPU vs CPU Pareto tables for `RQ3`*).
+2. Execute **`STEP-035`** (*Conduct class-aware error review `T19` on held-out `test`/`external_test` errors, finalize `RQ0–RQ3` synthesis, and assess **`G12`** — Evaluation Validity & Results Acceptance*).
 3. Maintain strict custody: `git ls-files "*.pdf" "*.zip" "*.rar" "*.jpg" "*.png" "*.pt" "*.onnx"` stays empty.
 
 ## 3. Canonical ledgers

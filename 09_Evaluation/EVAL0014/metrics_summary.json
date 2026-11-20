@@ -1,0 +1,124 @@
+{
+  "eval_id": "EVAL0014",
+  "role": "trackF_pediatric_winner",
+  "model_id": "MODEL0007",
+  "experiment_id": "EXP0007",
+  "architecture": "YOLO11s",
+  "imgsz": 640,
+  "release_id": "REL0006",
+  "track_id": "TrackF",
+  "partition": "test",
+  "frozen_conf_op": 0.091,
+  "val_mAP50_reference": 0.0991,
+  "val_mAP50_95_reference": 0.03,
+  "predictions_sha256": "4475e578f56d700a33820212dddd52b9071e78d1b0016cd6f4d56e88d9c3a22e",
+  "metrics_at_frozen_conf_op": {
+    "evaluated_images": 24,
+    "reviewed_empty_images": 0,
+    "total_classes": 2,
+    "eligible_class_count": 2,
+    "absent_class_ids": [],
+    "operating_conf": 0.091,
+    "score_floor": 0.001,
+    "max_detections": 300,
+    "mAP@0.50": 0.053718,
+    "mAP@0.50:0.95": 0.011091,
+    "micro_precision": 0.171717,
+    "micro_recall": 0.124088,
+    "micro_f1": 0.144068,
+    "macro_precision": 0.141201,
+    "macro_recall": 0.105219,
+    "macro_f1": 0.119703,
+    "total_tp": 17,
+    "total_fp": 82,
+    "total_fn": 120,
+    "per_class": {
+      "0": {
+        "class_id": 0,
+        "gt_count": 110,
+        "pred_count_total": 636,
+        "tp_op": 15,
+        "fp_op": 58,
+        "fn_op": 95,
+        "precision": 0.205479,
+        "recall": 0.136364,
+        "f1": 0.163934,
+        "ap": 0.082251,
+        "eligible": true,
+        "class_name": "DS0006_Proximal_Caries",
+        "ap_50_95": 0.017239
+      },
+      "1": {
+        "class_id": 1,
+        "gt_count": 27,
+        "pred_count_total": 317,
+        "tp_op": 2,
+        "fp_op": 24,
+        "fn_op": 25,
+        "precision": 0.076923,
+        "recall": 0.074074,
+        "f1": 0.075472,
+        "ap": 0.025184,
+        "eligible": true,
+        "class_name": "DS0006_Occlusal_Caries",
+        "ap_50_95": 0.004943
+      }
+    }
+  },
+  "metrics_at_ref_conf_025": {
+    "operating_conf": 0.25,
+    "macro_precision": 0.226601,
+    "macro_recall": 0.077946,
+    "macro_f1": 0.113529,
+    "micro_precision": 0.255814,
+    "micro_recall": 0.080292,
+    "micro_f1": 0.122222,
+    "total_tp": 11,
+    "total_fp": 32,
+    "total_fn": 126
+  },
+  "bootstrap_95ci": {
+    "n_resamples": 1000,
+    "n_clusters_GroupID": 24,
+    "seed": 20261144,
+    "ci_95": {
+      "mAP@0.50": {
+        "mean": 0.061253,
+        "std": 0.020602,
+        "lo": 0.02632,
+        "hi": 0.10554
+      },
+      "mAP@0.50:0.95": {
+        "mean": 0.013454,
+        "std": 0.00529,
+        "lo": 0.004915,
+        "hi": 0.024887
+      },
+      "macro_precision": {
+        "mean": 0.142247,
+        "std": 0.034116,
+        "lo": 0.079982,
+        "hi": 0.215234
+      },
+      "macro_recall": {
+        "mean": 0.105963,
+        "std": 0.028253,
+        "lo": 0.054475,
+        "hi": 0.165711
+      },
+      "macro_f1": {
+        "mean": 0.119239,
+        "std": 0.028973,
+        "lo": 0.065706,
+        "hi": 0.182534
+      },
+      "micro_f1": {
+        "mean": 0.145123,
+        "std": 0.030686,
+        "lo": 0.088106,
+        "hi": 0.210526
+      }
+    }
+  },
+  "trackC_5class_pathology_dual": null
+}

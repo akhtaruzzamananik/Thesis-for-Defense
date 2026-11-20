@@ -1,0 +1,326 @@
+{
+  "eval_id": "EVAL0010",
+  "role": "trackC_dhaka_winner",
+  "model_id": "MODEL0006",
+  "experiment_id": "EXP0004",
+  "architecture": "YOLO11s",
+  "imgsz": 640,
+  "release_id": "REL0003",
+  "track_id": "TrackC",
+  "partition": "test",
+  "frozen_conf_op": 0.075,
+  "val_mAP50_reference": 0.2588,
+  "val_mAP50_95_reference": 0.1506,
+  "predictions_sha256": "2f651a49d18d4773036b08313ebc3fce97796df83eba9dc6cdd08b5e3638c5b7",
+  "metrics_at_frozen_conf_op": {
+    "evaluated_images": 33,
+    "reviewed_empty_images": 0,
+    "total_classes": 6,
+    "eligible_class_count": 6,
+    "absent_class_ids": [],
+    "operating_conf": 0.075,
+    "score_floor": 0.001,
+    "max_detections": 300,
+    "mAP@0.50": 0.250848,
+    "mAP@0.50:0.95": 0.140596,
+    "micro_precision": 0.285156,
+    "micro_recall": 0.401099,
+    "micro_f1": 0.333333,
+    "macro_precision": 0.254536,
+    "macro_recall": 0.278451,
+    "macro_f1": 0.260038,
+    "total_tp": 73,
+    "total_fp": 183,
+    "total_fn": 109,
+    "per_class": {
+      "0": {
+        "class_id": 0,
+        "gt_count": 30,
+        "pred_count_total": 188,
+        "tp_op": 10,
+        "fp_op": 34,
+        "fn_op": 20,
+        "precision": 0.227273,
+        "recall": 0.333333,
+        "f1": 0.27027,
+        "ap": 0.203058,
+        "eligible": true,
+        "class_name": "DS0003_Caries_Tooth",
+        "ap_50_95": 0.119898
+      },
+      "1": {
+        "class_id": 1,
+        "gt_count": 6,
+        "pred_count_total": 185,
+        "tp_op": 0,
+        "fp_op": 7,
+        "fn_op": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "ap": 0.001603,
+        "eligible": true,
+        "class_name": "DS0003_Infection_Tooth",
+        "ap_50_95": 0.000641
+      },
+      "2": {
+        "class_id": 2,
+        "gt_count": 30,
+        "pred_count_total": 165,
+        "tp_op": 18,
+        "fp_op": 12,
+        "fn_op": 12,
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1": 0.6,
+        "ap": 0.660081,
+        "eligible": true,
+        "class_name": "DS0003_Impacted_Tooth",
+        "ap_50_95": 0.422963
+      },
+      "3": {
+        "class_id": 3,
+        "gt_count": 2,
+        "pred_count_total": 42,
+        "tp_op": 0,
+        "fp_op": 1,
+        "fn_op": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "ap": 0.0,
+        "eligible": true,
+        "class_name": "DS0003_Fractured_Tooth",
+        "ap_50_95": 0.0
+      },
+      "4": {
+        "class_id": 4,
+        "gt_count": 15,
+        "pred_count_total": 111,
+        "tp_op": 5,
+        "fp_op": 6,
+        "fn_op": 10,
+        "precision": 0.454545,
+        "recall": 0.333333,
+        "f1": 0.384615,
+        "ap": 0.450526,
+        "eligible": true,
+        "class_name": "DS0003_BDC_BDR",
+        "ap_50_95": 0.189223
+      },
+      "5": {
+        "class_id": 5,
+        "gt_count": 99,
+        "pred_count_total": 653,
+        "tp_op": 40,
+        "fp_op": 123,
+        "fn_op": 59,
+        "precision": 0.245399,
+        "recall": 0.40404,
+        "f1": 0.305344,
+        "ap": 0.18982,
+        "eligible": true,
+        "class_name": "DS0003_Healthy_Tooth",
+        "ap_50_95": 0.110851
+      }
+    }
+  },
+  "metrics_at_ref_conf_025": {
+    "operating_conf": 0.25,
+    "macro_precision": 0.443382,
+    "macro_recall": 0.221549,
+    "macro_f1": 0.321662,
+    "micro_precision": 0.388489,
+    "micro_recall": 0.296703,
+    "micro_f1": 0.336449,
+    "total_tp": 54,
+    "total_fp": 85,
+    "total_fn": 128
+  },
+  "bootstrap_95ci": {
+    "n_resamples": 1000,
+    "n_clusters_GroupID": 33,
+    "seed": 20261140,
+    "ci_95": {
+      "mAP@0.50": {
+        "mean": 0.268516,
+        "std": 0.03509,
+        "lo": 0.202427,
+        "hi": 0.34137
+      },
+      "mAP@0.50:0.95": {
+        "mean": 0.15324,
+        "std": 0.021362,
+        "lo": 0.115523,
+        "hi": 0.199122
+      },
+      "macro_precision": {
+        "mean": 0.27762,
+        "std": 0.049702,
+        "lo": 0.186994,
+        "hi": 0.380819
+      },
+      "macro_recall": {
+        "mean": 0.291597,
+        "std": 0.037862,
+        "lo": 0.232968,
+        "hi": 0.380602
+      },
+      "macro_f1": {
+        "mean": 0.283104,
+        "std": 0.041274,
+        "lo": 0.210687,
+        "hi": 0.362946
+      },
+      "micro_f1": {
+        "mean": 0.331365,
+        "std": 0.028761,
+        "lo": 0.274792,
+        "hi": 0.38597
+      }
+    }
+  },
+  "trackC_5class_pathology_dual": {
+    "metrics": {
+      "evaluated_images": 33,
+      "reviewed_empty_images": 7,
+      "total_classes": 5,
+      "eligible_class_count": 5,
+      "absent_class_ids": [],
+      "operating_conf": 0.075,
+      "score_floor": 0.001,
+      "max_detections": 300,
+      "mAP@0.50": 0.263054,
+      "mAP@0.50:0.95": 0.146545,
+      "micro_precision": 0.354839,
+      "micro_recall": 0.39759,
+      "micro_f1": 0.375,
+      "macro_precision": 0.256364,
+      "macro_recall": 0.253333,
+      "macro_f1": 0.250977,
+      "total_tp": 33,
+      "total_fp": 60,
+      "total_fn": 50,
+      "per_class": {
+        "0": {
+          "class_id": 0,
+          "gt_count": 30,
+          "pred_count_total": 188,
+          "tp_op": 10,
+          "fp_op": 34,
+          "fn_op": 20,
+          "precision": 0.227273,
+          "recall": 0.333333,
+          "f1": 0.27027,
+          "ap": 0.203058,
+          "eligible": true,
+          "class_name": "DS0003_Caries_Tooth",
+          "ap_50_95": 0.119898
+        },
+        "1": {
+          "class_id": 1,
+          "gt_count": 6,
+          "pred_count_total": 185,
+          "tp_op": 0,
+          "fp_op": 7,
+          "fn_op": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "ap": 0.001603,
+          "eligible": true,
+          "class_name": "DS0003_Infection_Tooth",
+          "ap_50_95": 0.000641
+        },
+        "2": {
+          "class_id": 2,
+          "gt_count": 30,
+          "pred_count_total": 165,
+          "tp_op": 18,
+          "fp_op": 12,
+          "fn_op": 12,
+          "precision": 0.6,
+          "recall": 0.6,
+          "f1": 0.6,
+          "ap": 0.660081,
+          "eligible": true,
+          "class_name": "DS0003_Impacted_Tooth",
+          "ap_50_95": 0.422963
+        },
+        "3": {
+          "class_id": 3,
+          "gt_count": 2,
+          "pred_count_total": 42,
+          "tp_op": 0,
+          "fp_op": 1,
+          "fn_op": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "ap": 0.0,
+          "eligible": true,
+          "class_name": "DS0003_Fractured_Tooth",
+          "ap_50_95": 0.0
+        },
+        "4": {
+          "class_id": 4,
+          "gt_count": 15,
+          "pred_count_total": 111,
+          "tp_op": 5,
+          "fp_op": 6,
+          "fn_op": 10,
+          "precision": 0.454545,
+          "recall": 0.333333,
+          "f1": 0.384615,
+          "ap": 0.450526,
+          "eligible": true,
+          "class_name": "DS0003_BDC_BDR",
+          "ap_50_95": 0.189223
+        }
+      }
+    },
+    "bootstrap_95ci": {
+      "n_resamples": 1000,
+      "n_clusters_GroupID": 33,
+      "seed": 20261230,
+      "ci_95": {
+        "mAP@0.50": {
+          "mean": 0.282358,
+          "std": 0.043055,
+          "lo": 0.203955,
+          "hi": 0.378157
+        },
+        "mAP@0.50:0.95": {
+          "mean": 0.159897,
+          "std": 0.025194,
+          "lo": 0.117308,
+          "hi": 0.215783
+        },
+        "macro_precision": {
+          "mean": 0.281336,
+          "std": 0.062316,
+          "lo": 0.177224,
+          "hi": 0.42418
+        },
+        "macro_recall": {
+          "mean": 0.266966,
+          "std": 0.043845,
+          "lo": 0.195814,
+          "hi": 0.370719
+        },
+        "macro_f1": {
+          "mean": 0.274707,
+          "std": 0.050147,
+          "lo": 0.191135,
+          "hi": 0.37625
+        },
+        "micro_f1": {
+          "mean": 0.370938,
+          "std": 0.051209,
+          "lo": 0.275117,
+          "hi": 0.46876
+        }
+      }
+    }
+  }
+}

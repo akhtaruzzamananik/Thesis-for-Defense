@@ -1,0 +1,184 @@
+{
+  "eval_id": "EVAL0013",
+  "role": "trackE_uae_winner",
+  "model_id": "MODEL0008",
+  "experiment_id": "EXP0006",
+  "architecture": "YOLO11s",
+  "imgsz": 640,
+  "release_id": "REL0005",
+  "track_id": "TrackE",
+  "partition": "test",
+  "frozen_conf_op": 0.379,
+  "val_mAP50_reference": 0.858,
+  "val_mAP50_95_reference": 0.5705,
+  "predictions_sha256": "7ac32d8cdf758cff06da2aed1c57c702932f5cd5a4e6680ef9a2bd611dc48cbb",
+  "metrics_at_frozen_conf_op": {
+    "evaluated_images": 133,
+    "reviewed_empty_images": 0,
+    "total_classes": 6,
+    "eligible_class_count": 6,
+    "absent_class_ids": [],
+    "operating_conf": 0.379,
+    "score_floor": 0.001,
+    "max_detections": 300,
+    "mAP@0.50": 0.824552,
+    "mAP@0.50:0.95": 0.516259,
+    "micro_precision": 0.856151,
+    "micro_recall": 0.823473,
+    "micro_f1": 0.839494,
+    "macro_precision": 0.848341,
+    "macro_recall": 0.807598,
+    "macro_f1": 0.823772,
+    "total_tp": 863,
+    "total_fp": 145,
+    "total_fn": 185,
+    "per_class": {
+      "0": {
+        "class_id": 0,
+        "gt_count": 428,
+        "pred_count_total": 797,
+        "tp_op": 366,
+        "fp_op": 64,
+        "fn_op": 62,
+        "precision": 0.851163,
+        "recall": 0.85514,
+        "f1": 0.853147,
+        "ap": 0.879159,
+        "eligible": true,
+        "class_name": "DS0005_Filled_Tooth",
+        "ap_50_95": 0.60654
+      },
+      "1": {
+        "class_id": 1,
+        "gt_count": 205,
+        "pred_count_total": 267,
+        "tp_op": 190,
+        "fp_op": 13,
+        "fn_op": 15,
+        "precision": 0.935961,
+        "recall": 0.926829,
+        "f1": 0.931373,
+        "ap": 0.92032,
+        "eligible": true,
+        "class_name": "DS0005_Crowned_Tooth",
+        "ap_50_95": 0.574939
+      },
+      "2": {
+        "class_id": 2,
+        "gt_count": 140,
+        "pred_count_total": 299,
+        "tp_op": 113,
+        "fp_op": 30,
+        "fn_op": 27,
+        "precision": 0.79021,
+        "recall": 0.807143,
+        "f1": 0.798587,
+        "ap": 0.779206,
+        "eligible": true,
+        "class_name": "DS0005_Retained_Root",
+        "ap_50_95": 0.391296
+      },
+      "3": {
+        "class_id": 3,
+        "gt_count": 124,
+        "pred_count_total": 230,
+        "tp_op": 58,
+        "fp_op": 25,
+        "fn_op": 66,
+        "precision": 0.698795,
+        "recall": 0.467742,
+        "f1": 0.560386,
+        "ap": 0.541987,
+        "eligible": true,
+        "class_name": "DS0005_Cavitated_Tooth",
+        "ap_50_95": 0.395282
+      },
+      "4": {
+        "class_id": 4,
+        "gt_count": 80,
+        "pred_count_total": 110,
+        "tp_op": 80,
+        "fp_op": 4,
+        "fn_op": 0,
+        "precision": 0.952381,
+        "recall": 1.0,
+        "f1": 0.97561,
+        "ap": 0.997986,
+        "eligible": true,
+        "class_name": "DS0005_Implant",
+        "ap_50_95": 0.599079
+      },
+      "5": {
+        "class_id": 5,
+        "gt_count": 71,
+        "pred_count_total": 91,
+        "tp_op": 56,
+        "fp_op": 9,
+        "fn_op": 15,
+        "precision": 0.861538,
+        "recall": 0.788732,
+        "f1": 0.823529,
+        "ap": 0.828655,
+        "eligible": true,
+        "class_name": "DS0005_Impacted_Tooth",
+        "ap_50_95": 0.53042
+      }
+    }
+  },
+  "metrics_at_ref_conf_025": {
+    "operating_conf": 0.25,
+    "macro_precision": 0.823483,
+    "macro_recall": 0.818152,
+    "macro_f1": 0.817576,
+    "micro_precision": 0.829222,
+    "micro_recall": 0.833969,
+    "micro_f1": 0.831589,
+    "total_tp": 874,
+    "total_fp": 180,
+    "total_fn": 174
+  },
+  "bootstrap_95ci": {
+    "n_resamples": 1000,
+    "n_clusters_GroupID": 133,
+    "seed": 20261143,
+    "ci_95": {
+      "mAP@0.50": {
+        "mean": 0.825779,
+        "std": 0.017537,
+        "lo": 0.79066,
+        "hi": 0.859221
+      },
+      "mAP@0.50:0.95": {
+        "mean": 0.519509,
+        "std": 0.014329,
+        "lo": 0.491191,
+        "hi": 0.548154
+      },
+      "macro_precision": {
+        "mean": 0.848172,
+        "std": 0.015503,
+        "lo": 0.814866,
+        "hi": 0.877107
+      },
+      "macro_recall": {
+        "mean": 0.807522,
+        "std": 0.015992,
+        "lo": 0.774003,
+        "hi": 0.837439
+      },
+      "macro_f1": {
+        "mean": 0.823072,
+        "std": 0.013573,
+        "lo": 0.795166,
+        "hi": 0.848773
+      },
+      "micro_f1": {
+        "mean": 0.839773,
+        "std": 0.014519,
+        "lo": 0.80954,
+        "hi": 0.868232
+      }
+    }
+  },
+  "trackC_5class_pathology_dual": null
+}

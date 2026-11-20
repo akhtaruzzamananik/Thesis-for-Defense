@@ -1,0 +1,139 @@
+{
+  "eval_id": "EVAL0011",
+  "role": "trackD_hanoi_1280_winner",
+  "model_id": "MODEL0013",
+  "experiment_id": "EXP0011",
+  "architecture": "YOLO11s",
+  "imgsz": 1280,
+  "release_id": "REL0004",
+  "track_id": "TrackD",
+  "partition": "test",
+  "frozen_conf_op": 0.201,
+  "val_mAP50_reference": 0.536,
+  "val_mAP50_95_reference": 0.2514,
+  "predictions_sha256": "52458d3592bac88720bc11e1c6217dd98741707f183a204a6176ea0e29572c41",
+  "metrics_at_frozen_conf_op": {
+    "evaluated_images": 578,
+    "reviewed_empty_images": 0,
+    "total_classes": 3,
+    "eligible_class_count": 3,
+    "absent_class_ids": [],
+    "operating_conf": 0.201,
+    "score_floor": 0.001,
+    "max_detections": 300,
+    "mAP@0.50": 0.486813,
+    "mAP@0.50:0.95": 0.220748,
+    "micro_precision": 0.536813,
+    "micro_recall": 0.576577,
+    "micro_f1": 0.555985,
+    "macro_precision": 0.494953,
+    "macro_recall": 0.524224,
+    "macro_f1": 0.508651,
+    "total_tp": 576,
+    "total_fp": 497,
+    "total_fn": 423,
+    "per_class": {
+      "0": {
+        "class_id": 0,
+        "gt_count": 633,
+        "pred_count_total": 6452,
+        "tp_op": 397,
+        "fp_op": 307,
+        "fn_op": 236,
+        "precision": 0.56392,
+        "recall": 0.627172,
+        "f1": 0.593867,
+        "ap": 0.587782,
+        "eligible": true,
+        "class_name": "DS0004_PAI_3",
+        "ap_50_95": 0.248329
+      },
+      "1": {
+        "class_id": 1,
+        "gt_count": 260,
+        "pred_count_total": 2322,
+        "tp_op": 133,
+        "fp_op": 119,
+        "fn_op": 127,
+        "precision": 0.527778,
+        "recall": 0.511538,
+        "f1": 0.519531,
+        "ap": 0.497555,
+        "eligible": true,
+        "class_name": "DS0004_PAI_4",
+        "ap_50_95": 0.228932
+      },
+      "2": {
+        "class_id": 2,
+        "gt_count": 106,
+        "pred_count_total": 800,
+        "tp_op": 46,
+        "fp_op": 71,
+        "fn_op": 60,
+        "precision": 0.393162,
+        "recall": 0.433962,
+        "f1": 0.412556,
+        "ap": 0.375103,
+        "eligible": true,
+        "class_name": "DS0004_PAI_5",
+        "ap_50_95": 0.184982
+      }
+    }
+  },
+  "metrics_at_ref_conf_025": {
+    "operating_conf": 0.25,
+    "macro_precision": 0.529049,
+    "macro_recall": 0.485065,
+    "macro_f1": 0.505772,
+    "micro_precision": 0.571275,
+    "micro_recall": 0.533534,
+    "micro_f1": 0.55176,
+    "total_tp": 533,
+    "total_fp": 400,
+    "total_fn": 466
+  },
+  "bootstrap_95ci": {
+    "n_resamples": 1000,
+    "n_clusters_GroupID": 578,
+    "seed": 20261141,
+    "ci_95": {
+      "mAP@0.50": {
+        "mean": 0.49208,
+        "std": 0.020147,
+        "lo": 0.452666,
+        "hi": 0.530674
+      },
+      "mAP@0.50:0.95": {
+        "mean": 0.225483,
+        "std": 0.012082,
+        "lo": 0.20248,
+        "hi": 0.249548
+      },
+      "macro_precision": {
+        "mean": 0.495348,
+        "std": 0.016399,
+        "lo": 0.461775,
+        "hi": 0.527494
+      },
+      "macro_recall": {
+        "mean": 0.524393,
+        "std": 0.019409,
+        "lo": 0.48568,
+        "hi": 0.564159
+      },
+      "macro_f1": {
+        "mean": 0.508324,
+        "std": 0.015581,
+        "lo": 0.477688,
+        "hi": 0.539563
+      },
+      "micro_f1": {
+        "mean": 0.556817,
+        "std": 0.013066,
+        "lo": 0.530843,
+        "hi": 0.582619
+      }
+    }
+  },
+  "trackC_5class_pathology_dual": null
+}

@@ -1,0 +1,154 @@
+{
+  "eval_id": "EVAL0009",
+  "role": "trackB_dentex_winner",
+  "model_id": "MODEL0004",
+  "experiment_id": "EXP0003",
+  "architecture": "YOLO11s",
+  "imgsz": 640,
+  "release_id": "REL0002",
+  "track_id": "TrackB",
+  "partition": "test",
+  "frozen_conf_op": 0.21,
+  "val_mAP50_reference": 0.4438,
+  "val_mAP50_95_reference": 0.2913,
+  "predictions_sha256": "560671ee46188c6b36c8bfed545fb5196cdc6494ed580a49d1967cc1ee73739e",
+  "metrics_at_frozen_conf_op": {
+    "evaluated_images": 106,
+    "reviewed_empty_images": 4,
+    "total_classes": 4,
+    "eligible_class_count": 4,
+    "absent_class_ids": [],
+    "operating_conf": 0.21,
+    "score_floor": 0.001,
+    "max_detections": 300,
+    "mAP@0.50": 0.439748,
+    "mAP@0.50:0.95": 0.267333,
+    "micro_precision": 0.415942,
+    "micro_recall": 0.541509,
+    "micro_f1": 0.470492,
+    "macro_precision": 0.475713,
+    "macro_recall": 0.456884,
+    "macro_f1": 0.446595,
+    "total_tp": 287,
+    "total_fp": 403,
+    "total_fn": 243,
+    "per_class": {
+      "0": {
+        "class_id": 0,
+        "gt_count": 91,
+        "pred_count_total": 210,
+        "tp_op": 80,
+        "fp_op": 14,
+        "fn_op": 11,
+        "precision": 0.851064,
+        "recall": 0.879121,
+        "f1": 0.864865,
+        "ap": 0.901173,
+        "eligible": true,
+        "class_name": "DS0002_Impacted",
+        "ap_50_95": 0.531432
+      },
+      "1": {
+        "class_id": 1,
+        "gt_count": 328,
+        "pred_count_total": 2601,
+        "tp_op": 173,
+        "fp_op": 358,
+        "fn_op": 155,
+        "precision": 0.3258,
+        "recall": 0.527439,
+        "f1": 0.402794,
+        "ap": 0.338492,
+        "eligible": true,
+        "class_name": "DS0002_Caries",
+        "ap_50_95": 0.233567
+      },
+      "2": {
+        "class_id": 2,
+        "gt_count": 24,
+        "pred_count_total": 175,
+        "tp_op": 1,
+        "fp_op": 5,
+        "fn_op": 23,
+        "precision": 0.166667,
+        "recall": 0.041667,
+        "f1": 0.066667,
+        "ap": 0.175858,
+        "eligible": true,
+        "class_name": "DS0002_Periapical_Lesion",
+        "ap_50_95": 0.094153
+      },
+      "3": {
+        "class_id": 3,
+        "gt_count": 87,
+        "pred_count_total": 318,
+        "tp_op": 33,
+        "fp_op": 26,
+        "fn_op": 54,
+        "precision": 0.559322,
+        "recall": 0.37931,
+        "f1": 0.452055,
+        "ap": 0.343468,
+        "eligible": true,
+        "class_name": "DS0002_Deep_Caries",
+        "ap_50_95": 0.210179
+      }
+    }
+  },
+  "metrics_at_ref_conf_025": {
+    "operating_conf": 0.25,
+    "macro_precision": 0.504843,
+    "macro_recall": 0.441991,
+    "macro_f1": 0.446341,
+    "micro_precision": 0.442464,
+    "micro_recall": 0.515094,
+    "micro_f1": 0.476024,
+    "total_tp": 273,
+    "total_fp": 344,
+    "total_fn": 257
+  },
+  "bootstrap_95ci": {
+    "n_resamples": 1000,
+    "n_clusters_GroupID": 106,
+    "seed": 20261139,
+    "ci_95": {
+      "mAP@0.50": {
+        "mean": 0.446111,
+        "std": 0.025218,
+        "lo": 0.398515,
+        "hi": 0.495818
+      },
+      "mAP@0.50:0.95": {
+        "mean": 0.275417,
+        "std": 0.017992,
+        "lo": 0.241767,
+        "hi": 0.310026
+      },
+      "macro_precision": {
+        "mean": 0.475473,
+        "std": 0.047227,
+        "lo": 0.396988,
+        "hi": 0.581418
+      },
+      "macro_recall": {
+        "mean": 0.456276,
+        "std": 0.021896,
+        "lo": 0.415504,
+        "hi": 0.499327
+      },
+      "macro_f1": {
+        "mean": 0.444976,
+        "std": 0.024452,
+        "lo": 0.40002,
+        "hi": 0.496688
+      },
+      "micro_f1": {
+        "mean": 0.468753,
+        "std": 0.020754,
+        "lo": 0.427944,
+        "hi": 0.507672
+      }
+    }
+  },
+  "trackC_5class_pathology_dual": null
+}
