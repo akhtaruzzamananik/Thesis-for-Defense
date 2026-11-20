@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 import sys
 from pathlib import Path
+from typing import Sequence
 
 import pytest
 import yaml
@@ -96,14 +97,14 @@ def test_t14_config_guards_and_locked_loader(monkeypatch: pytest.MonkeyPatch) ->
 
 def test_evaluator_known_detection_cases() -> None:
     classes = ["Caries", "Impacted", "Implant"]  # Class 2 (Implant) will be absent from GT!
-    gt = {
+    gt: dict[str, Sequence[DetectionBox]] = {
         "img_perfect": [DetectionBox(0, (100, 100, 200, 200))],
         "img_miss": [DetectionBox(0, (100, 100, 200, 200))],
         "img_dup": [DetectionBox(1, (50, 50, 150, 150))],
         "img_wrong_cls": [DetectionBox(1, (300, 300, 400, 400))],
         "img_empty": [],  # reviewed_empty image MUST be counted in coverage!
     }
-    preds = {
+    preds: dict[str, Sequence[DetectionBox]] = {
         "img_perfect": [DetectionBox(0, (100, 100, 200, 200), score=0.95)],
         "img_miss": [],  # no predictions
         "img_dup": [
