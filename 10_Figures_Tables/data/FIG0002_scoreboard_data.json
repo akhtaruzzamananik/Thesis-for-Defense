@@ -1,0 +1,180 @@
+{
+  "panel_a": [
+    {
+      "eval_id": "EVAL0013",
+      "label": "TrackE: UAE (6-cls, Whole-Tooth)",
+      "map50": 0.824552,
+      "map50_lo": 0.79066,
+      "map50_hi": 0.859221,
+      "map95": 0.516259,
+      "map95_lo": 0.491191,
+      "map95_hi": 0.548154
+    },
+    {
+      "eval_id": "EVAL0011",
+      "label": "TrackD: Hanoi PAI@1280 (3-cls, Focal)",
+      "map50": 0.486813,
+      "map50_lo": 0.452666,
+      "map50_hi": 0.530674,
+      "map95": 0.220748,
+      "map95_lo": 0.20248,
+      "map95_hi": 0.249548
+    },
+    {
+      "eval_id": "EVAL0009",
+      "label": "TrackB: DENTEX (4-cls, Whole-Tooth)",
+      "map50": 0.439748,
+      "map50_lo": 0.398515,
+      "map50_hi": 0.495818,
+      "map95": 0.267333,
+      "map95_lo": 0.241767,
+      "map95_hi": 0.310026
+    },
+    {
+      "eval_id": "EVAL0002",
+      "label": "TrackA Ext: Romania@1280 (13-cls, Focal)",
+      "map50": 0.4338,
+      "map50_lo": 0.390142,
+      "map50_hi": 0.515515,
+      "map95": 0.203812,
+      "map95_lo": 0.180642,
+      "map95_hi": 0.254421
+    },
+    {
+      "eval_id": "EVAL0001",
+      "label": "TrackA Int: Romania@1280 (13-cls, Focal)",
+      "map50": 0.416549,
+      "map50_lo": 0.379746,
+      "map50_hi": 0.474448,
+      "map95": 0.174057,
+      "map95_lo": 0.154723,
+      "map95_hi": 0.205846
+    },
+    {
+      "eval_id": "EVAL0010",
+      "label": "TrackC: Dhaka (6-cls* / 5-cls=0.263)",
+      "map50": 0.250848,
+      "map50_lo": 0.202427,
+      "map50_hi": 0.34137,
+      "map95": 0.140596,
+      "map95_lo": 0.115523,
+      "map95_hi": 0.199122
+    },
+    {
+      "eval_id": "EVAL0014",
+      "label": "TrackF: Pediatric (2-cls, Small-N Focal)",
+      "map50": 0.053718,
+      "map50_lo": 0.02632,
+      "map50_hi": 0.10554,
+      "map95": 0.011091,
+      "map95_lo": 0.004915,
+      "map95_hi": 0.024887
+    }
+  ],
+  "panel_b": [
+    {
+      "eval_id": "EVAL0013",
+      "class_name": "DS0005_Implant",
+      "label": "TrackE: Implant (Metallic)",
+      "ap50": 0.997986,
+      "gt": 80,
+      "tier": "high"
+    },
+    {
+      "eval_id": "EVAL0002",
+      "class_name": "DS0001_Implant",
+      "label": "TrackA Ext: Implant (Metallic)",
+      "ap50": 0.929688,
+      "gt": 16,
+      "tier": "high"
+    },
+    {
+      "eval_id": "EVAL0013",
+      "class_name": "DS0005_Crowned_Tooth",
+      "label": "TrackE: Crowned Tooth (Metallic)",
+      "ap50": 0.92032,
+      "gt": 205,
+      "tier": "high"
+    },
+    {
+      "eval_id": "EVAL0009",
+      "class_name": "DS0002_Impacted",
+      "label": "TrackB: Impacted Tooth (Struct.)",
+      "ap50": 0.901173,
+      "gt": 91,
+      "tier": "high"
+    },
+    {
+      "eval_id": "EVAL0001",
+      "class_name": "DS0001_Surgical_Device",
+      "label": "TrackA Int: Surgical Device (Metal)",
+      "ap50": 0.856725,
+      "gt": 163,
+      "tier": "high"
+    },
+    {
+      "eval_id": "EVAL0001",
+      "class_name": "DS0001_Endodontic_Treatment",
+      "label": "TrackA Int: Endodontic Fill",
+      "ap50": 0.682469,
+      "gt": 437,
+      "tier": "mid"
+    },
+    {
+      "eval_id": "EVAL0011",
+      "class_name": "DS0004_PAI_3",
+      "label": "TrackD: PAI 3 Apical (@1280)",
+      "ap50": 0.587782,
+      "gt": 633,
+      "tier": "mid"
+    },
+    {
+      "eval_id": "EVAL0013",
+      "class_name": "DS0005_Cavitated_Tooth",
+      "label": "TrackE: Cavitated Tooth (Whole)",
+      "ap50": 0.541987,
+      "gt": 124,
+      "tier": "mid"
+    },
+    {
+      "eval_id": "EVAL0001",
+      "class_name": "DS0001_Carious_Lesion",
+      "label": "TrackA Int: Carious Lesion (Focal)",
+      "ap50": 0.330342,
+      "gt": 446,
+      "tier": "low"
+    },
+    {
+      "eval_id": "EVAL0001",
+      "class_name": "DS0001_Apical_Periodontitis",
+      "label": "TrackA Int: Apical Periodontitis",
+      "ap50": 0.30783,
+      "gt": 142,
+      "tier": "low"
+    },
+    {
+      "eval_id": "EVAL0001",
+      "class_name": "DS0001_Bone_Resorption",
+      "label": "TrackA Int: Bone Resorption (Diff.)",
+      "ap50": 0.090645,
+      "gt": 390,
+      "tier": "low"
+    },
+    {
+      "eval_id": "EVAL0014",
+      "class_name": "DS0006_Proximal_Caries",
+      "label": "TrackF: Pediatric Proximal Caries",
+      "ap50": 0.082251,
+      "gt": 110,
+      "tier": "low"
+    },
+    {
+      "eval_id": "EVAL0001",
+      "class_name": "DS0001_Apical_Surgery",
+      "label": "TrackA Int: Apical Surgery (Rare)",
+      "ap50": 0.042754,
+      "gt": 10,
+      "tier": "low"
+    }
+  ]
+}

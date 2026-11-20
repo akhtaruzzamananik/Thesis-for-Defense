@@ -1,0 +1,14 @@
+# TAB0001: Methodological gap census across 122 screened and 42 full-text extracted Core 2D OPG studies (GAP0001–GAP0006).
+
+> **Provenance:** 02_Literature/papers.csv, 02_Literature/synthesis.md, and 02_Literature/claims.csv (G03 PASS).
+
+| Audit Dimension | Observed Count | Share | Traceable Evidence & Governance Consequence |
+| --- | :---: | ---: | --- |
+| Total Unique Screened Records | 122 | 100.0% | P0001–P0122 (180 harvested, 58 cross-batch duplicates removed) |
+| Extracted Full-Text Core (Group A + B) | 42 (23A + 19B) | 34.4% | Verified T05 summaries with exact table/page locators (CLAIM0001–0012) |
+| Reserve + Excluded Records | 55 Res. + 25 Exc. | 65.6% | 27/55 Reserve use YOLO; 25 excluded (task/modality/no-FT/withdrawn) |
+| Core Studies Omitting Per-Image FPS/ms | 31 / 42 Core | 73.8% | 14/23 Group A + 17/19 Group B; 6 make unverified 'real-time' claims (CLAIM0011) |
+| Systematic Review: Omitting mAP@0.50:0.95 | 62 / 73 (P0027) | 84.9% | Masks box-alignment collapse e.g. P0019 Tooth 71 (0.995 vs 0.0995) (CLAIM0004) |
+| Systematic Review: Lacking External Validation | 64 / 73 (P0027) | 87.7% | Verified external 2D OPG shifts drop -9.0% to -22.2% mAP@0.50 (CLAIM0007) |
+| Core Studies With Leakage / Math Artifacts | 14 / 42 Core | 33.3% | Pre-split aug (+30.4% P0011 vs P0008), train-in-test, F1>max(P,R) (CLAIM0010) |
+| Controlled CLAHE Negative / Null Evidence | 7 / 8 Core Tests | 87.5% | Contradicts P0004 single-ROI gain; drives controlled RQ2 ablation (CLAIM0008) |

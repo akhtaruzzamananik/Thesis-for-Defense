@@ -1,0 +1,72 @@
+{
+  "deltas": [
+    {
+      "label": "TrackA: CLAHE 2.0 8x8 (EXP0008, val*)",
+      "delta": -0.037,
+      "kind": "clahe",
+      "note": "0.344 vs 0.381"
+    },
+    {
+      "label": "TrackA: CLAHE 3.0 16x16 (EXP0009, val*)",
+      "delta": -0.018,
+      "kind": "clahe",
+      "note": "0.363 vs 0.381"
+    },
+    {
+      "label": "TrackC: CLAHE 2.0 8x8 (EXP0012, val*)",
+      "delta": -0.027,
+      "kind": "clahe",
+      "note": "0.232 vs 0.259"
+    },
+    {
+      "label": "TrackA Int: 1280px vs 640px (EVAL0001/03)",
+      "delta": 0.035,
+      "kind": "res1280",
+      "note": "0.4165 vs 0.3815"
+    },
+    {
+      "label": "TrackA Ext: 1280px vs 640px (EVAL0002/04)",
+      "delta": 0.0622,
+      "kind": "res1280",
+      "note": "0.4338 vs 0.3716"
+    },
+    {
+      "label": "TrackD Hanoi: 1280px vs 640px (EVAL0011/12)",
+      "delta": 0.0449,
+      "kind": "res1280",
+      "note": "0.4868 vs 0.4419"
+    }
+  ],
+  "panel_b": [
+    {
+      "label": "TrackA Int (REL0001:test)",
+      "m95_640": 0.157657,
+      "lo95_640": 0.141,
+      "hi95_640": 0.184676,
+      "m95_1280": 0.174057,
+      "lo95_1280": 0.154723,
+      "hi95_1280": 0.205846,
+      "rel_gain_pct": 10.4
+    },
+    {
+      "label": "TrackA Ext (REL0001:ext)",
+      "m95_640": 0.166285,
+      "lo95_640": 0.143264,
+      "hi95_640": 0.217137,
+      "m95_1280": 0.203812,
+      "lo95_1280": 0.180642,
+      "hi95_1280": 0.254421,
+      "rel_gain_pct": 22.6
+    },
+    {
+      "label": "TrackD Hanoi (REL0004:test)",
+      "m95_640": 0.183555,
+      "lo95_640": 0.165855,
+      "hi95_640": 0.208469,
+      "m95_1280": 0.220748,
+      "lo95_1280": 0.20248,
+      "hi95_1280": 0.249548,
+      "rel_gain_pct": 20.3
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-label="FIG0002: Held-Out Multi-Cohort Scoreboard (95% Bootstrap CIs) &amp; Radiographic Contrast Hierarchy">
+<defs>
+  <style>text { font-family: Segoe UI, Helvetica Neue, Arial, sans-serif; }</style>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="1200" height="620" fill="#FFFFFF" rx="8"/>
+<rect x="1" y="1" width="1198" height="618" fill="none" stroke="#CBD5E1" stroke-width="1.2" rx="8"/>
+<text x="28" y="34" font-size="18" font-weight="700" fill="#0F172A">FIG0002: Held-Out Multi-Cohort Scoreboard (95% Bootstrap CIs) &amp; Radiographic Contrast Hierarchy</text>
+<text x="28" y="54" font-size="11.5" fill="#64748B">Single-pass frozen evaluation (EVAL0001–EVAL0014, 1,260 OPGs, 0 leaks); cross-track ranking invalid across distinct taxonomies/granularities</text>
+<line x1="28" y1="65" x2="1172" y2="65" stroke="#E2E8F0" stroke-width="1"/>
+<text x="28" y="92" font-size="13.5" font-weight="700" fill="#0F172A">A. Primary Track Winners: mAP@0.50 &amp; mAP@0.50:0.95 (95% CI)</text>
+<rect x="265" y="80" width="12" height="12" rx="2" fill="#2563EB"/>
+<text x="282" y="90" font-size="10.5" fill="#334155">mAP@0.50</text>
+<rect x="360" y="80" width="12" height="12" rx="2" fill="#0F766E"/>
+<text x="377" y="90" font-size="10.5" fill="#334155">mAP@0.50:0.95</text>
+<line x1="475" y1="86" x2="493" y2="86" stroke="#0F172A" stroke-width="1.8"/>
+<text x="498" y="90" font-size="10.5" fill="#334155">95% CI</text>
+<line x1="265.0" y1="112" x2="265.0" y2="532" stroke="#E2E8F0" stroke-width="1"/>
+<text x="265.0" y="548" text-anchor="middle" font-size="10" fill="#64748B">0.0</text>
+<line x1="325.0" y1="112" x2="325.0" y2="532" stroke="#E2E8F0" stroke-width="1"/>
+<text x="325.0" y="548" text-anchor="middle" font-size="10" fill="#64748B">0.2</text>
+<line x1="385.0" y1="112" x2="385.0" y2="532" stroke="#E2E8F0" stroke-width="1"/>
+<text x="385.0" y="548" text-anchor="middle" font-size="10" fill="#64748B">0.4</text>
+<line x1="445.0" y1="112" x2="445.0" y2="532" stroke="#E2E8F0" stroke-width="1"/>
+<text x="445.0" y="548" text-anchor="middle" font-size="10" fill="#64748B">0.6</text>
+<line x1="505.0" y1="112" x2="505.0" y2="532" stroke="#E2E8F0" stroke-width="1"/>
+<text x="505.0" y="548" text-anchor="middle" font-size="10" fill="#64748B">0.8</text>
+<line x1="565.0" y1="112" x2="565.0" y2="532" stroke="#E2E8F0" stroke-width="1"/>
+<text x="565.0" y="548" text-anchor="middle" font-size="10" fill="#64748B">1.0</text>
+<text x="415.0" y="566" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Mean Average Precision (0–1)</text>
+<text x="255" y="134.0" text-anchor="end" font-size="10.8" font-weight="600" fill="#0F172A">TrackE: UAE (6-cls, Whole-Tooth)</text>
+<text x="255" y="148.0" text-anchor="end" font-size="9.5" fill="#64748B">EVAL0013</text>
+<rect x="265" y="121.0" width="247.4" height="16" rx="3" fill="#2563EB"/>
+<line x1="502.2" y1="129.0" x2="522.8" y2="129.0" stroke="#0F172A" stroke-width="1.6"/>
+<line x1="502.2" y1="125.0" x2="502.2" y2="133.0" stroke="#0F172A" stroke-width="1.5"/>
+<line x1="522.8" y1="125.0" x2="522.8" y2="133.0" stroke="#0F172A" stroke-width="1.5"/>
+<text x="527.8" y="133.0" font-size="10" font-weight="700" fill="#1E3A8A">0.825</text>
+<rect x="265" y="140.0" width="154.9" height="16" rx="3" fill="#0F766E"/>
+<line x1="412.4" y1="148.0" x2="429.4" y2="148.0" stroke="#0F172A" stroke-width="1.4"/>
+<text x="434.4" y="152.0" font-size="9.8" fill="#0F766E">0.516</text>
+<text x="255" y="194.0" text-anchor="end" font-size="10.8" font-weight="600" fill="#0F172A">TrackD: Hanoi PAI@1280 (3-cls, Focal)</text>
+<text x="255" y="208.0" text-anchor="end" font-size="9.5" fill="#64748B">EVAL0011</text>
+<rect x="265" y="181.0" width="146.0" height="16" rx="3" fill="#2563EB"/>
+<line x1="400.8" y1="189.0" x2="424.2" y2="189.0" stroke="#0F172A" stroke-width="1.6"/>
+<line x1="400.8" y1="185.0" x2="400.8" y2="193.0" stroke="#0F172A" stroke-width="1.5"/>
+<line x1="424.2" y1="185.0" x2="424.2" y2="193.0" stroke="#0F172A" stroke-width="1.5"/>
+<text x="429.2" y="193.0" font-size="10" font-weight="700" fill="#1E3A8A">0.487</text>
+<rect x="265" y="200.0" width="66.2" height="16" rx="3" fill="#0F766E"/>
+<line x1="325.7" y1="208.0" x2="339.9" y2="208.0" stroke="#0F172A" stroke-width="1.4"/>
+<text x="344.9" y="212.0" font-size="9.8" fill="#0F766E">0.221</text>
+<text x="255" y="254.0" text-anchor="end" font-size="10.8" font-weight="600" fill="#0F172A">TrackB: DENTEX (4-cls, Whole-Tooth)</text>
+<text x="255" y="268.0" text-anchor="end" font-size="9.5" fill="#64748B">EVAL0009</text>
+<rect x="265" y="241.0" width="131.9" height="16" rx="3" fill="#2563EB"/>
+<line x1="384.6" y1="249.0" x2="413.7" y2="249.0" stroke="#0F172A" stroke-width="1.6"/>
+<line x1="384.6" y1="245.0" x2="384.6" y2="253.0" stroke="#0F172A" stroke-width="1.5"/>
+<line x1="413.7" y1="245.0" x2="413.7" y2="253.0" stroke="#0F172A" stroke-width="1.5"/>
+<text x="418.7" y="253.0" font-size="10" font-weight="700" fill="#1E3A8A">0.440</text>
+<rect x="265" y="260.0" width="80.2" height="16" rx="3" fill="#0F766E"/>
+<line x1="337.5" y1="268.0" x2="358.0" y2="268.0" stroke="#0F172A" stroke-width="1.4"/>
+<text x="363.0" y="272.0" font-size="9.8" fill="#0F766E">0.267</text>
+<text x="255" y="314.0" text-anchor="end" font-size="10.8" font-weight="600" fill="#0F172A">TrackA Ext: Romania@1280 (13-cls, Focal)</text>
+<text x="255" y="328.0" text-anchor="end" font-size="9.5" fill="#64748B">EVAL0002</text>
+<rect x="265" y="301.0" width="130.1" height="16" rx="3" fill="#2563EB"/>
+<line x1="382.0" y1="309.0" x2="419.7" y2="309.0" stroke="#0F172A" stroke-width="1.6"/>
+<line x1="382.0" y1="305.0" x2="382.0" y2="313.0" stroke="#0F172A" stroke-width="1.5"/>
+<line x1="419.7" y1="305.0" x2="419.7" y2="313.0" stroke="#0F172A" stroke-width="1.5"/>
+<text x="424.7" y="313.0" font-size="10" font-weight="700" fill="#1E3A8A">0.434</text>
+<rect x="265" y="320.0" width="61.1" height="16" rx="3" fill="#0F766E"/>
+<line x1="319.2" y1="328.0" x2="341.3" y2="328.0" stroke="#0F172A" stroke-width="1.4"/>
+<text x="346.3" y="332.0" font-size="9.8" fill="#0F766E">0.204</text>
+<text x="255" y="374.0" text-anchor="end" font-size="10.8" font-weight="600" fill="#0F172A">TrackA Int: Romania@1280 (13-cls, Focal)</text>
+<text x="255" y="388.0" text-anchor="end" font-size="9.5" fill="#64748B">EVAL0001</text>
+<rect x="265" y="361.0" width="125.0" height="16" rx="3" fill="#2563EB"/>
+<line x1="378.9" y1="369.0" x2="407.3" y2="369.0" stroke="#0F172A" stroke-width="1.6"/>
+<line x1="378.9" y1="365.0" x2="378.9" y2="373.0" stroke="#0F172A" stroke-width="1.5"/>
+<line x1="407.3" y1="365.0" x2="407.3" y2="373.0" stroke="#0F172A" stroke-width="1.5"/>
+<text x="412.3" y="373.0" font-size="10" font-weight="700" fill="#1E3A8A">0.417</text>
+<rect x="265" y="380.0" width="52.2" height="16" rx="3" fill="#0F766E"/>
+<line x1="311.4" y1="388.0" x2="326.8" y2="388.0" stroke="#0F172A" stroke-width="1.4"/>
+<text x="331.8" y="392.0" font-size="9.8" fill="#0F766E">0.174</text>
+<text x="255" y="434.0" text-anchor="end" font-size="10.8" font-weight="600" fill="#0F172A">TrackC: Dhaka (6-cls* / 5-cls=0.263)</text>
+<text x="255" y="448.0" text-anchor="end" font-size="9.5" fill="#64748B">EVAL0010</text>
+<rect x="265" y="421.0" width="75.3" height="16" rx="3" fill="#2563EB"/>
+<line x1="325.7" y1="429.0" x2="367.4" y2="429.0" stroke="#0F172A" stroke-width="1.6"/>
+<line x1="325.7" y1="425.0" x2="325.7" y2="433.0" stroke="#0F172A" stroke-width="1.5"/>
+<line x1="367.4" y1="425.0" x2="367.4" y2="433.0" stroke="#0F172A" stroke-width="1.5"/>
+<text x="372.4" y="433.0" font-size="10" font-weight="700" fill="#1E3A8A">0.251</text>
+<rect x="265" y="440.0" width="42.2" height="16" rx="3" fill="#0F766E"/>
+<line x1="299.7" y1="448.0" x2="324.7" y2="448.0" stroke="#0F172A" stroke-width="1.4"/>
+<text x="329.7" y="452.0" font-size="9.8" fill="#0F766E">0.141</text>
+<text x="255" y="494.0" text-anchor="end" font-size="10.8" font-weight="600" fill="#0F172A">TrackF: Pediatric (2-cls, Small-N Focal)</text>
+<text x="255" y="508.0" text-anchor="end" font-size="9.5" fill="#64748B">EVAL0014</text>
+<rect x="265" y="481.0" width="16.1" height="16" rx="3" fill="#2563EB"/>
+<line x1="272.9" y1="489.0" x2="296.7" y2="489.0" stroke="#0F172A" stroke-width="1.6"/>
+<line x1="272.9" y1="485.0" x2="272.9" y2="493.0" stroke="#0F172A" stroke-width="1.5"/>
+<line x1="296.7" y1="485.0" x2="296.7" y2="493.0" stroke="#0F172A" stroke-width="1.5"/>
+<text x="301.7" y="493.0" font-size="10" font-weight="700" fill="#1E3A8A">0.054</text>
+<rect x="265" y="500.0" width="3.3" height="16" rx="3" fill="#0F766E"/>
+<line x1="266.5" y1="508.0" x2="272.5" y2="508.0" stroke="#0F172A" stroke-width="1.4"/>
+<text x="277.5" y="512.0" font-size="9.8" fill="#0F766E">0.011</text>
+<line x1="615" y1="80" x2="615" y2="580" stroke="#E2E8F0" stroke-width="1.2"/>
+<text x="632" y="92" font-size="13.5" font-weight="700" fill="#0F172A">B. Per-Class Radiographic Contrast Hierarchy (AP@0.50)</text>
+<rect x="632" y="98" width="10" height="10" rx="2" fill="#0F766E"/>
+<text x="646" y="107" font-size="9.8" fill="#334155">High-Contrast Metal/Struct.</text>
+<rect x="786" y="98" width="10" height="10" rx="2" fill="#D97706"/>
+<text x="800" y="107" font-size="9.8" fill="#334155">Moderate / Whole-Tooth</text>
+<rect x="926" y="98" width="10" height="10" rx="2" fill="#BE123C"/>
+<text x="940" y="107" font-size="9.8" fill="#334155">Subtle Radiolucent / Rare</text>
+<line x1="855.0" y1="122" x2="855.0" y2="532" stroke="#E2E8F0" stroke-width="1"/>
+<text x="855.0" y="548" text-anchor="middle" font-size="10" fill="#64748B">0.0</text>
+<line x1="914.0" y1="122" x2="914.0" y2="532" stroke="#E2E8F0" stroke-width="1"/>
+<text x="914.0" y="548" text-anchor="middle" font-size="10" fill="#64748B">0.2</text>
+<line x1="973.0" y1="122" x2="973.0" y2="532" stroke="#E2E8F0" stroke-width="1"/>
+<text x="973.0" y="548" text-anchor="middle" font-size="10" fill="#64748B">0.4</text>
+<line x1="1032.0" y1="122" x2="1032.0" y2="532" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1032.0" y="548" text-anchor="middle" font-size="10" fill="#64748B">0.6</text>
+<line x1="1091.0" y1="122" x2="1091.0" y2="532" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1091.0" y="548" text-anchor="middle" font-size="10" fill="#64748B">0.8</text>
+<line x1="1150.0" y1="122" x2="1150.0" y2="532" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1150.0" y="548" text-anchor="middle" font-size="10" fill="#64748B">1.0</text>
+<text x="1002.5" y="566" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Class AP@0.50 (0–1)</text>
+<text x="847" y="141.0" text-anchor="end" font-size="10.3" fill="#0F172A">TrackE: Implant (Metallic)</text>
+<rect x="855" y="130.0" width="294.4" height="15" rx="3" fill="#0F766E"/>
+<text x="1154.4" y="141.0" font-size="9.8" font-weight="700" fill="#0F766E">0.998 (n=80)</text>
+<text x="847" y="172.23076923076923" text-anchor="end" font-size="10.3" fill="#0F172A">TrackA Ext: Implant (Metallic)</text>
+<rect x="855" y="161.23076923076923" width="274.3" height="15" rx="3" fill="#0F766E"/>
+<text x="1134.3" y="172.23076923076923" font-size="9.8" font-weight="700" fill="#0F766E">0.930 (n=16)</text>
+<text x="847" y="203.46153846153845" text-anchor="end" font-size="10.3" fill="#0F172A">TrackE: Crowned Tooth (Metallic)</text>
+<rect x="855" y="192.46153846153845" width="271.5" height="15" rx="3" fill="#0F766E"/>
+<text x="1131.5" y="203.46153846153845" font-size="9.8" font-weight="700" fill="#0F766E">0.920 (n=205)</text>
+<text x="847" y="234.69230769230768" text-anchor="end" font-size="10.3" fill="#0F172A">TrackB: Impacted Tooth (Struct.)</text>
+<rect x="855" y="223.69230769230768" width="265.8" height="15" rx="3" fill="#0F766E"/>
+<text x="1125.8" y="234.69230769230768" font-size="9.8" font-weight="700" fill="#0F766E">0.901 (n=91)</text>
+<text x="847" y="265.9230769230769" text-anchor="end" font-size="10.3" fill="#0F172A">TrackA Int: Surgical Device (Metal)</text>
+<rect x="855" y="254.9230769230769" width="252.7" height="15" rx="3" fill="#0F766E"/>
+<text x="1112.7" y="265.9230769230769" font-size="9.8" font-weight="700" fill="#0F766E">0.857 (n=163)</text>
+<text x="847" y="297.1538461538462" text-anchor="end" font-size="10.3" fill="#0F172A">TrackA Int: Endodontic Fill</text>
+<rect x="855" y="286.1538461538462" width="201.3" height="15" rx="3" fill="#D97706"/>
+<text x="1061.3" y="297.1538461538462" font-size="9.8" font-weight="700" fill="#D97706">0.682 (n=437)</text>
+<text x="847" y="328.38461538461536" text-anchor="end" font-size="10.3" fill="#0F172A">TrackD: PAI 3 Apical (@1280)</text>
+<rect x="855" y="317.38461538461536" width="173.4" height="15" rx="3" fill="#D97706"/>
+<text x="1033.4" y="328.38461538461536" font-size="9.8" font-weight="700" fill="#D97706">0.588 (n=633)</text>
+<text x="847" y="359.61538461538464" text-anchor="end" font-size="10.3" fill="#0F172A">TrackE: Cavitated Tooth (Whole)</text>
+<rect x="855" y="348.61538461538464" width="159.9" height="15" rx="3" fill="#D97706"/>
+<text x="1019.9" y="359.61538461538464" font-size="9.8" font-weight="700" fill="#D97706">0.542 (n=124)</text>
+<text x="847" y="390.8461538461538" text-anchor="end" font-size="10.3" fill="#0F172A">TrackA Int: Carious Lesion (Focal)</text>
+<rect x="855" y="379.8461538461538" width="97.5" height="15" rx="3" fill="#BE123C"/>
+<text x="957.5" y="390.8461538461538" font-size="9.8" font-weight="700" fill="#BE123C">0.330 (n=446)</text>
+<text x="847" y="422.0769230769231" text-anchor="end" font-size="10.3" fill="#0F172A">TrackA Int: Apical Periodontitis</text>
+<rect x="855" y="411.0769230769231" width="90.8" height="15" rx="3" fill="#BE123C"/>
+<text x="950.8" y="422.0769230769231" font-size="9.8" font-weight="700" fill="#BE123C">0.308 (n=142)</text>
+<text x="847" y="453.3076923076923" text-anchor="end" font-size="10.3" fill="#0F172A">TrackA Int: Bone Resorption (Diff.)</text>
+<rect x="855" y="442.3076923076923" width="26.7" height="15" rx="3" fill="#BE123C"/>
+<text x="886.7" y="453.3076923076923" font-size="9.8" font-weight="700" fill="#BE123C">0.091 (n=390)</text>
+<text x="847" y="484.53846153846155" text-anchor="end" font-size="10.3" fill="#0F172A">TrackF: Pediatric Proximal Caries</text>
+<rect x="855" y="473.53846153846155" width="24.3" height="15" rx="3" fill="#BE123C"/>
+<text x="884.3" y="484.53846153846155" font-size="9.8" font-weight="700" fill="#BE123C">0.082 (n=110)</text>
+<text x="847" y="515.7692307692307" text-anchor="end" font-size="10.3" fill="#0F172A">TrackA Int: Apical Surgery (Rare)</text>
+<rect x="855" y="504.7692307692308" width="12.6" height="15" rx="3" fill="#BE123C"/>
+<text x="872.6" y="515.7692307692307" font-size="9.8" font-weight="700" fill="#BE123C">0.043 (n=10)</text>
+<line x1="28" y1="590" x2="1172" y2="590" stroke="#E2E8F0" stroke-width="1"/>
+<text x="28" y="608" font-size="10" fill="#64748B">Source: 09_Evaluation/EVAL0001..EVAL0014/metrics_summary.json (1,000-resample GroupID bootstrap, seed=20261131). *TrackC 5-class pathology-only mAP@0.50 = 0.2631.</text>
+</svg>

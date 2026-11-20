@@ -1,0 +1,170 @@
+[
+  {
+    "eval_id": "EVAL0001",
+    "label": "TrackA Int (@1280)",
+    "fp_total": 1077,
+    "fp_pct": {
+      "FP_Bkg": 0.415,
+      "FP_Loc": 0.2609,
+      "FP_Cls": 0.2414,
+      "FP_Dup": 0.0826
+    },
+    "fn_total": 1420,
+    "fn_pct": {
+      "FN_Complete_Miss": 0.2415,
+      "FN_Missed_By_Score": 0.3408,
+      "FN_Loc_Only": 0.2268,
+      "FN_Confused_Cls": 0.1908
+    },
+    "small_recall": 0.309,
+    "small_gt": 1385,
+    "med_recall": 0.6636,
+    "med_gt": 1198,
+    "large_recall": 0.8033,
+    "large_gt": 305
+  },
+  {
+    "eval_id": "EVAL0002",
+    "label": "TrackA Ext (@1280)",
+    "fp_total": 832,
+    "fp_pct": {
+      "FP_Bkg": 0.4171,
+      "FP_Loc": 0.2632,
+      "FP_Cls": 0.2188,
+      "FP_Dup": 0.101
+    },
+    "fn_total": 1458,
+    "fn_pct": {
+      "FN_Complete_Miss": 0.2654,
+      "FN_Missed_By_Score": 0.4156,
+      "FN_Loc_Only": 0.1475,
+      "FN_Confused_Cls": 0.1715
+    },
+    "small_recall": 0.3087,
+    "small_gt": 1351,
+    "med_recall": 0.6523,
+    "med_gt": 1418,
+    "large_recall": 0.8013,
+    "large_gt": 156
+  },
+  {
+    "eval_id": "EVAL0009",
+    "label": "TrackB DENTEX",
+    "fp_total": 403,
+    "fp_pct": {
+      "FP_Bkg": 0.6551,
+      "FP_Loc": 0.1315,
+      "FP_Cls": 0.2109,
+      "FP_Dup": 0.0025
+    },
+    "fn_total": 243,
+    "fn_pct": {
+      "FN_Complete_Miss": 0.1564,
+      "FN_Missed_By_Score": 0.358,
+      "FN_Loc_Only": 0.2058,
+      "FN_Confused_Cls": 0.2798
+    },
+    "small_recall": null,
+    "small_gt": 0,
+    "med_recall": 0.4805,
+    "med_gt": 154,
+    "large_recall": 0.5665,
+    "large_gt": 376
+  },
+  {
+    "eval_id": "EVAL0010",
+    "label": "TrackC Dhaka",
+    "fp_total": 183,
+    "fp_pct": {
+      "FP_Bkg": 0.694,
+      "FP_Loc": 0.1148,
+      "FP_Cls": 0.1913,
+      "FP_Dup": 0.0
+    },
+    "fn_total": 109,
+    "fn_pct": {
+      "FN_Complete_Miss": 0.2661,
+      "FN_Missed_By_Score": 0.422,
+      "FN_Loc_Only": 0.1284,
+      "FN_Confused_Cls": 0.1835
+    },
+    "small_recall": null,
+    "small_gt": 0,
+    "med_recall": 0.3667,
+    "med_gt": 30,
+    "large_recall": 0.4079,
+    "large_gt": 152
+  },
+  {
+    "eval_id": "EVAL0011",
+    "label": "TrackD Hanoi (@1280)",
+    "fp_total": 497,
+    "fp_pct": {
+      "FP_Bkg": 0.497,
+      "FP_Loc": 0.0443,
+      "FP_Cls": 0.4386,
+      "FP_Dup": 0.0201
+    },
+    "fn_total": 423,
+    "fn_pct": {
+      "FN_Complete_Miss": 0.1608,
+      "FN_Missed_By_Score": 0.4965,
+      "FN_Loc_Only": 0.0591,
+      "FN_Confused_Cls": 0.2837
+    },
+    "small_recall": 0.6111,
+    "small_gt": 756,
+    "med_recall": 0.4726,
+    "med_gt": 237,
+    "large_recall": 0.3333,
+    "large_gt": 6
+  },
+  {
+    "eval_id": "EVAL0013",
+    "label": "TrackE UAE",
+    "fp_total": 145,
+    "fp_pct": {
+      "FP_Bkg": 0.3034,
+      "FP_Loc": 0.0966,
+      "FP_Cls": 0.5517,
+      "FP_Dup": 0.0483
+    },
+    "fn_total": 185,
+    "fn_pct": {
+      "FN_Complete_Miss": 0.1838,
+      "FN_Missed_By_Score": 0.2324,
+      "FN_Loc_Only": 0.1838,
+      "FN_Confused_Cls": 0.4
+    },
+    "small_recall": 0.0,
+    "small_gt": 1,
+    "med_recall": 0.8482,
+    "med_gt": 527,
+    "large_recall": 0.8,
+    "large_gt": 520
+  },
+  {
+    "eval_id": "EVAL0014",
+    "label": "TrackF Pediatric",
+    "fp_total": 82,
+    "fp_pct": {
+      "FP_Bkg": 0.5,
+      "FP_Loc": 0.3293,
+      "FP_Cls": 0.1341,
+      "FP_Dup": 0.0366
+    },
+    "fn_total": 120,
+    "fn_pct": {
+      "FN_Complete_Miss": 0.575,
+      "FN_Missed_By_Score": 0.1,
+      "FN_Loc_Only": 0.2417,
+      "FN_Confused_Cls": 0.0833
+    },
+    "small_recall": 0.1241,
+    "small_gt": 137,
+    "med_recall": null,
+    "med_gt": 0,
+    "large_recall": null,
+    "large_gt": 0
+  }
+]

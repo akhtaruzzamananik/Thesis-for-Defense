@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **`STEP-040` COMPLETE (All `8/8` evidence-grounded DIU CSE B.Sc. Thesis manuscript files `WRIT0001–WRIT0008` drafted under `11_Writing/thesis/` — Front Matter, Chapters 1–6 & Appendices A–D — strictly grounded in `CLAIM0001–CLAIM0017`, `EVAL0001–EVAL0014`, `XSHIFT01–06`, `ERRREV0001`, & `REPRO0001`)**; **ready for `STEP-041` (Generate publication-ready vector SVG figures `FIG0001–FIG0006`, tables `TAB0001–TAB0006`, & run automated citation/claim audit)** |
+| Current stage / step | **`STEP-041` COMPLETE (All `6` publication-ready vector SVG figures `FIG0001–FIG0006`, `6` MD+LaTeX table pairs `TAB0001–TAB0006`, `6` figure specs, `6` safe JSON extracts generated programmatically from live `G03–G14` records; `STEP041_citation_claim_asset_audit.md = PASS`: `40/40` verified citations, `17/17` claims, `12/12` assets, `21/21` exact metric matches, `0` overclaims)**; **ready for `STEP-042` (Supervisor Review Assembly, Defense Slides & Submission-Readiness Audit -> `G15`)** |
 
 ## 1. Stage & gate summary
 
@@ -31,8 +31,8 @@
 
 ## 2. Immediate priorities & open blockers
 
-1. Execute **`STEP-041`** (`S14` — Generate all `6` publication-ready vector SVG figures `FIG0001–FIG0006` and `6` tables `TAB0001–TAB0006` in `10_Figures_Tables/` directly from `G12–G13` JSON/CSV evidence + run automated BibTeX/claim verification across `WRIT0001–WRIT0008`).
-2. Execute **`STEP-042`–`STEP-044`** (Concise Paper Draft `WRIT0009–0013`, DIU Defense Slide Deck `WRIT0014`, Final Polish & **`G15 PASS`**), **`STEP-045`–`046`** (Archival Release **`G16 PASS`**), and **`STEP-047`–`049`** (Live Hosted Web Showcase reusing `OPGPrototypeEngine` **`G17 PASS`**).
+1. Execute **`STEP-042`–`STEP-044`** (`S14` — Assemble complete thesis document + supervisor review checklist & DIU defense slide deck `WRIT0014` -> **`G15`**, preserve immutable thesis submission record, and prepare optional concise paper draft `WRIT0009–0013` / disposition).
+2. Execute **`STEP-045`–`STEP-046`** (Final Archival Release & Zenodo/Git Tag -> **`G16 PASS`**) and **`STEP-047`–`STEP-049`** (Live Hosted Web Showcase reusing `OPGPrototypeEngine` -> **`G17 PASS`**).
 3. Maintain strict custody: `git ls-files "*.pdf" "*.zip" "*.rar" "*.jpg" "*.png" "*.pt" "*.onnx"` stays empty.
 
 ## 3. Canonical ledgers

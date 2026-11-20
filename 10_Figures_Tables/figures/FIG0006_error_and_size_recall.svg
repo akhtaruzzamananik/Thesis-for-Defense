@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-label="FIG0006: T19 Error Taxonomy (FP/FN Decomposition) &amp; Normalized Object-Size Recall Across All 7 Primary Evaluations">
+<defs>
+  <style>text { font-family: Segoe UI, Helvetica Neue, Arial, sans-serif; }</style>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="1200" height="590" fill="#FFFFFF" rx="8"/>
+<rect x="1" y="1" width="1198" height="588" fill="none" stroke="#CBD5E1" stroke-width="1.2" rx="8"/>
+<text x="28" y="34" font-size="18" font-weight="700" fill="#0F172A">FIG0006: T19 Error Taxonomy (FP/FN Decomposition) &amp; Normalized Object-Size Recall Across All 7 Primary Evaluations</text>
+<text x="28" y="54" font-size="11.5" fill="#64748B">Read-only audit of all 6,718 held-out GT boxes at frozen conf_op (ERRREV0001 / G13 PASS); zero labels or thresholds modified</text>
+<line x1="28" y1="65" x2="1172" y2="65" stroke="#E2E8F0" stroke-width="1"/>
+<text x="28" y="92" font-size="13.5" font-weight="700" fill="#0F172A">A. False Positive (FP) Composition (% of FP Total)</text>
+<rect x="28" y="102" width="11" height="11" rx="2" fill="#BE123C"/>
+<text x="43" y="111" font-size="9.8" fill="#334155">Background / Unannot.</text>
+<rect x="163" y="102" width="11" height="11" rx="2" fill="#D97706"/>
+<text x="178" y="111" font-size="9.8" fill="#334155">Localization (0.1–0.5)</text>
+<rect x="298" y="102" width="11" height="11" rx="2" fill="#2563EB"/>
+<text x="313" y="111" font-size="9.8" fill="#334155">Class Confusion</text>
+<rect x="433" y="102" width="11" height="11" rx="2" fill="#64748B"/>
+<text x="448" y="111" font-size="9.8" fill="#334155">Duplicate</text>
+<line x1="175.0" y1="130" x2="175.0" y2="495" stroke="#E2E8F0" stroke-width="1"/>
+<text x="175.0" y="511" text-anchor="middle" font-size="10" fill="#64748B">0%</text>
+<line x1="271.2" y1="130" x2="271.2" y2="495" stroke="#E2E8F0" stroke-width="1"/>
+<text x="271.2" y="511" text-anchor="middle" font-size="10" fill="#64748B">25%</text>
+<line x1="367.5" y1="130" x2="367.5" y2="495" stroke="#E2E8F0" stroke-width="1"/>
+<text x="367.5" y="511" text-anchor="middle" font-size="10" fill="#64748B">50%</text>
+<line x1="463.8" y1="130" x2="463.8" y2="495" stroke="#E2E8F0" stroke-width="1"/>
+<text x="463.8" y="511" text-anchor="middle" font-size="10" fill="#64748B">75%</text>
+<line x1="560.0" y1="130" x2="560.0" y2="495" stroke="#E2E8F0" stroke-width="1"/>
+<text x="560.0" y="511" text-anchor="middle" font-size="10" fill="#64748B">100%</text>
+<text x="367.5" y="530" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Share of False Positives at Frozen conf_op (%)</text>
+<text x="167" y="157.0" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackA Int (@1280)</text>
+<text x="167" y="170.0" text-anchor="end" font-size="9.2" fill="#64748B">FP=1,077</text>
+<rect x="175.0" y="141.0" width="159.8" height="28" fill="#BE123C"/>
+<text x="254.9" y="159.0" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">42%</text>
+<rect x="334.8" y="141.0" width="100.4" height="28" fill="#D97706"/>
+<text x="385.0" y="159.0" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">26%</text>
+<rect x="435.2" y="141.0" width="92.9" height="28" fill="#2563EB"/>
+<text x="481.7" y="159.0" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">24%</text>
+<rect x="528.2" y="141.0" width="31.8" height="28" fill="#64748B"/>
+<text x="167" y="209.14285714285714" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackA Ext (@1280)</text>
+<text x="167" y="222.14285714285714" text-anchor="end" font-size="9.2" fill="#64748B">FP=832</text>
+<rect x="175.0" y="193.14285714285714" width="160.6" height="28" fill="#BE123C"/>
+<text x="255.3" y="211.14285714285714" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">42%</text>
+<rect x="335.6" y="193.14285714285714" width="101.3" height="28" fill="#D97706"/>
+<text x="386.2" y="211.14285714285714" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">26%</text>
+<rect x="436.9" y="193.14285714285714" width="84.2" height="28" fill="#2563EB"/>
+<text x="479.0" y="211.14285714285714" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">22%</text>
+<rect x="521.2" y="193.14285714285714" width="38.9" height="28" fill="#64748B"/>
+<text x="167" y="261.2857142857143" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackB DENTEX</text>
+<text x="167" y="274.2857142857143" text-anchor="end" font-size="9.2" fill="#64748B">FP=403</text>
+<rect x="175.0" y="245.28571428571428" width="252.2" height="28" fill="#BE123C"/>
+<text x="301.1" y="263.2857142857143" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">66%</text>
+<rect x="427.2" y="245.28571428571428" width="50.6" height="28" fill="#D97706"/>
+<text x="452.5" y="263.2857142857143" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">13%</text>
+<rect x="477.8" y="245.28571428571428" width="81.2" height="28" fill="#2563EB"/>
+<text x="518.4" y="263.2857142857143" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">21%</text>
+<rect x="559.0" y="245.28571428571428" width="1.0" height="28" fill="#64748B"/>
+<text x="167" y="313.42857142857144" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackC Dhaka</text>
+<text x="167" y="326.42857142857144" text-anchor="end" font-size="9.2" fill="#64748B">FP=183</text>
+<rect x="175.0" y="297.42857142857144" width="267.2" height="28" fill="#BE123C"/>
+<text x="308.6" y="315.42857142857144" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">69%</text>
+<rect x="442.2" y="297.42857142857144" width="44.2" height="28" fill="#D97706"/>
+<rect x="486.4" y="297.42857142857144" width="73.7" height="28" fill="#2563EB"/>
+<text x="523.2" y="315.42857142857144" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">19%</text>
+<text x="167" y="365.57142857142856" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackD Hanoi (@1280)</text>
+<text x="167" y="378.57142857142856" text-anchor="end" font-size="9.2" fill="#64748B">FP=497</text>
+<rect x="175.0" y="349.57142857142856" width="191.3" height="28" fill="#BE123C"/>
+<text x="270.7" y="367.57142857142856" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">50%</text>
+<rect x="366.3" y="349.57142857142856" width="17.1" height="28" fill="#D97706"/>
+<rect x="383.4" y="349.57142857142856" width="168.9" height="28" fill="#2563EB"/>
+<text x="467.8" y="367.57142857142856" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">44%</text>
+<rect x="552.3" y="349.57142857142856" width="7.7" height="28" fill="#64748B"/>
+<text x="167" y="417.7142857142857" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackE UAE</text>
+<text x="167" y="430.7142857142857" text-anchor="end" font-size="9.2" fill="#64748B">FP=145</text>
+<rect x="175.0" y="401.7142857142857" width="116.8" height="28" fill="#BE123C"/>
+<text x="233.4" y="419.7142857142857" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">30%</text>
+<rect x="291.8" y="401.7142857142857" width="37.2" height="28" fill="#D97706"/>
+<rect x="329.0" y="401.7142857142857" width="212.4" height="28" fill="#2563EB"/>
+<text x="435.2" y="419.7142857142857" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">55%</text>
+<rect x="541.4" y="401.7142857142857" width="18.6" height="28" fill="#64748B"/>
+<text x="167" y="469.8571428571429" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackF Pediatric</text>
+<text x="167" y="482.8571428571429" text-anchor="end" font-size="9.2" fill="#64748B">FP=82</text>
+<rect x="175.0" y="453.8571428571429" width="192.5" height="28" fill="#BE123C"/>
+<text x="271.2" y="471.8571428571429" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">50%</text>
+<rect x="367.5" y="453.8571428571429" width="126.8" height="28" fill="#D97706"/>
+<text x="430.9" y="471.8571428571429" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">33%</text>
+<rect x="494.3" y="453.8571428571429" width="51.6" height="28" fill="#2563EB"/>
+<text x="520.1" y="471.8571428571429" text-anchor="middle" font-size="9.8" font-weight="700" fill="#FFFFFF">13%</text>
+<rect x="545.9" y="453.8571428571429" width="14.1" height="28" fill="#64748B"/>
+<line x1="590" y1="80" x2="590" y2="550" stroke="#E2E8F0" stroke-width="1.2"/>
+<text x="610" y="92" font-size="13.5" font-weight="700" fill="#0F172A">B. Recall by Normalized Box Area (% of Radiograph Area)</text>
+<rect x="610" y="102" width="11" height="11" rx="2" fill="#BE123C"/>
+<text x="625" y="111" font-size="9.8" fill="#334155">Small (&lt; 0.2% area)</text>
+<rect x="755" y="102" width="11" height="11" rx="2" fill="#D97706"/>
+<text x="770" y="111" font-size="9.8" fill="#334155">Medium (0.2–1.0%)</text>
+<rect x="900" y="102" width="11" height="11" rx="2" fill="#0F766E"/>
+<text x="915" y="111" font-size="9.8" fill="#334155">Large (&gt;= 1.0%)</text>
+<line x1="740.0" y1="130" x2="740.0" y2="495" stroke="#E2E8F0" stroke-width="1"/>
+<text x="740.0" y="511" text-anchor="middle" font-size="10" fill="#64748B">0.0</text>
+<line x1="823.0" y1="130" x2="823.0" y2="495" stroke="#E2E8F0" stroke-width="1"/>
+<text x="823.0" y="511" text-anchor="middle" font-size="10" fill="#64748B">0.2</text>
+<line x1="906.0" y1="130" x2="906.0" y2="495" stroke="#E2E8F0" stroke-width="1"/>
+<text x="906.0" y="511" text-anchor="middle" font-size="10" fill="#64748B">0.4</text>
+<line x1="989.0" y1="130" x2="989.0" y2="495" stroke="#E2E8F0" stroke-width="1"/>
+<text x="989.0" y="511" text-anchor="middle" font-size="10" fill="#64748B">0.6</text>
+<line x1="1072.0" y1="130" x2="1072.0" y2="495" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1072.0" y="511" text-anchor="middle" font-size="10" fill="#64748B">0.8</text>
+<line x1="1155.0" y1="130" x2="1155.0" y2="495" stroke="#E2E8F0" stroke-width="1"/>
+<text x="1155.0" y="511" text-anchor="middle" font-size="10" fill="#64748B">1.0</text>
+<text x="947.5" y="530" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Recall at Frozen conf_op (0–1)</text>
+<text x="732" y="158.0" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackA Int (@1280)</text>
+<rect x="740" y="136.0" width="128.2" height="10.5" rx="2" fill="#BE123C"/>
+<text x="872.2" y="145.0" font-size="9.2" font-weight="700" fill="#BE123C">30.9% (n=1385)</text>
+<rect x="740" y="149.0" width="275.4" height="10.5" rx="2" fill="#D97706"/>
+<text x="1019.4" y="158.0" font-size="9.2" font-weight="700" fill="#D97706">66.4% (n=1198)</text>
+<rect x="740" y="162.0" width="333.4" height="10.5" rx="2" fill="#0F766E"/>
+<text x="1077.4" y="171.0" font-size="9.2" font-weight="700" fill="#0F766E">80.3% (n=305)</text>
+<text x="732" y="210.14285714285714" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackA Ext (@1280)</text>
+<rect x="740" y="188.14285714285714" width="128.1" height="10.5" rx="2" fill="#BE123C"/>
+<text x="872.1" y="197.14285714285714" font-size="9.2" font-weight="700" fill="#BE123C">30.9% (n=1351)</text>
+<rect x="740" y="201.14285714285714" width="270.7" height="10.5" rx="2" fill="#D97706"/>
+<text x="1014.7" y="210.14285714285714" font-size="9.2" font-weight="700" fill="#D97706">65.2% (n=1418)</text>
+<rect x="740" y="214.14285714285714" width="332.5" height="10.5" rx="2" fill="#0F766E"/>
+<text x="1076.5" y="223.14285714285714" font-size="9.2" font-weight="700" fill="#0F766E">80.1% (n=156)</text>
+<text x="732" y="262.2857142857143" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackB DENTEX</text>
+<text x="744" y="249.78571428571428" font-size="8.8" font-style="italic" fill="#64748B">N/A (0 GT)</text>
+<rect x="740" y="253.28571428571428" width="199.4" height="10.5" rx="2" fill="#D97706"/>
+<text x="943.4" y="262.2857142857143" font-size="9.2" font-weight="700" fill="#D97706">48.0% (n=154)</text>
+<rect x="740" y="266.2857142857143" width="235.1" height="10.5" rx="2" fill="#0F766E"/>
+<text x="979.1" y="275.2857142857143" font-size="9.2" font-weight="700" fill="#0F766E">56.6% (n=376)</text>
+<text x="732" y="314.42857142857144" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackC Dhaka</text>
+<text x="744" y="301.92857142857144" font-size="8.8" font-style="italic" fill="#64748B">N/A (0 GT)</text>
+<rect x="740" y="305.42857142857144" width="152.2" height="10.5" rx="2" fill="#D97706"/>
+<text x="896.2" y="314.42857142857144" font-size="9.2" font-weight="700" fill="#D97706">36.7% (n=30)</text>
+<rect x="740" y="318.42857142857144" width="169.3" height="10.5" rx="2" fill="#0F766E"/>
+<text x="913.3" y="327.42857142857144" font-size="9.2" font-weight="700" fill="#0F766E">40.8% (n=152)</text>
+<text x="732" y="366.57142857142856" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackD Hanoi (@1280)</text>
+<rect x="740" y="344.57142857142856" width="253.6" height="10.5" rx="2" fill="#BE123C"/>
+<text x="997.6" y="353.57142857142856" font-size="9.2" font-weight="700" fill="#BE123C">61.1% (n=756)</text>
+<rect x="740" y="357.57142857142856" width="196.1" height="10.5" rx="2" fill="#D97706"/>
+<text x="940.1" y="366.57142857142856" font-size="9.2" font-weight="700" fill="#D97706">47.3% (n=237)</text>
+<rect x="740" y="370.57142857142856" width="138.3" height="10.5" rx="2" fill="#0F766E"/>
+<text x="882.3" y="379.57142857142856" font-size="9.2" font-weight="700" fill="#0F766E">33.3% (n=6)</text>
+<text x="732" y="418.7142857142857" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackE UAE</text>
+<text x="744" y="406.2142857142857" font-size="8.8" font-style="italic" fill="#64748B">n=1 (too small)</text>
+<rect x="740" y="409.7142857142857" width="352.0" height="10.5" rx="2" fill="#D97706"/>
+<text x="1096.0" y="418.7142857142857" font-size="9.2" font-weight="700" fill="#D97706">84.8% (n=527)</text>
+<rect x="740" y="422.7142857142857" width="332.0" height="10.5" rx="2" fill="#0F766E"/>
+<text x="1076.0" y="431.7142857142857" font-size="9.2" font-weight="700" fill="#0F766E">80.0% (n=520)</text>
+<text x="732" y="470.8571428571429" text-anchor="end" font-size="10.4" font-weight="600" fill="#0F172A">TrackF Pediatric</text>
+<rect x="740" y="448.8571428571429" width="51.5" height="10.5" rx="2" fill="#BE123C"/>
+<text x="795.5" y="457.8571428571429" font-size="9.2" font-weight="700" fill="#BE123C">12.4% (n=137)</text>
+<text x="744" y="471.3571428571429" font-size="8.8" font-style="italic" fill="#64748B">N/A (0 GT)</text>
+<text x="744" y="484.3571428571429" font-size="8.8" font-style="italic" fill="#64748B">N/A (0 GT)</text>
+<line x1="28" y1="560" x2="1172" y2="560" stroke="#E2E8F0" stroke-width="1"/>
+<text x="28" y="578" font-size="10" fill="#64748B">Source: 09_Evaluation/step036_error_taxonomy.json. TrackA exhibits an identical 2.6x recall drop (80.3%-&gt;30.9%) internally &amp; externally; TrackD@1280 preserves 61.1% small-lesion recall; TrackF is 100% small.</text>
+</svg>

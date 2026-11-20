@@ -1,0 +1,22 @@
+{
+  "cohorts": 6,
+  "countries": [
+    "Romania",
+    "T\u00fcrkiye",
+    "Bangladesh",
+    "Vietnam",
+    "UAE",
+    "Iran"
+  ],
+  "canonical_opgs": 7457,
+  "canonical_boxes": 41103,
+  "dedup_removed": 332,
+  "quarantined_files": 17566,
+  "ontology_entries": 41,
+  "experiments_total": 13,
+  "frozen_models": 10,
+  "excluded_clahe_models": 3,
+  "heldout_evals": 14,
+  "xshift_bridges": 12,
+  "gates_passed": "G01-G14 (14/17)"
+}

@@ -1,0 +1,222 @@
+[
+  {
+    "bridge_id": "XSHIFT04_A",
+    "concept": "HC03_Impacted_Tooth",
+    "concept_title": "HC03: Impacted Tooth (High-Contrast)",
+    "route": "Romania -> T\u00fcrkiye",
+    "source_model": "MODEL0005",
+    "gt": 91,
+    "ap50": 0.818134,
+    "ap95": 0.408268,
+    "f1": 0.802469
+  },
+  {
+    "bridge_id": "XSHIFT03_A",
+    "concept": "HC03_Impacted_Tooth",
+    "concept_title": "HC03: Impacted Tooth (High-Contrast)",
+    "route": "Romania -> Bangladesh",
+    "source_model": "MODEL0005",
+    "gt": 30,
+    "ap50": 0.710949,
+    "ap95": 0.375243,
+    "f1": 0.653846
+  },
+  {
+    "bridge_id": "XSHIFT04_E",
+    "concept": "HC03_Impacted_Tooth",
+    "concept_title": "HC03: Impacted Tooth (High-Contrast)",
+    "route": "UAE -> T\u00fcrkiye",
+    "source_model": "MODEL0008",
+    "gt": 91,
+    "ap50": 0.696653,
+    "ap95": 0.347168,
+    "f1": 0.594203
+  },
+  {
+    "bridge_id": "XSHIFT01",
+    "concept": "HC03_Impacted_Tooth",
+    "concept_title": "HC03: Impacted Tooth (High-Contrast)",
+    "route": "Romania -> UAE",
+    "source_model": "MODEL0005",
+    "gt": 71,
+    "ap50": 0.611579,
+    "ap95": 0.251273,
+    "f1": 0.561404
+  },
+  {
+    "bridge_id": "XSHIFT02_EXT",
+    "concept": "HC03_Impacted_Tooth",
+    "concept_title": "HC03: Impacted Tooth (High-Contrast)",
+    "route": "UAE -> Romania (Ext)",
+    "source_model": "MODEL0008",
+    "gt": 111,
+    "ap50": 0.493542,
+    "ap95": 0.224233,
+    "f1": 0.55
+  },
+  {
+    "bridge_id": "XSHIFT03_E",
+    "concept": "HC03_Impacted_Tooth",
+    "concept_title": "HC03: Impacted Tooth (High-Contrast)",
+    "route": "UAE -> Bangladesh",
+    "source_model": "MODEL0008",
+    "gt": 30,
+    "ap50": 0.446875,
+    "ap95": 0.241809,
+    "f1": 0.488889
+  },
+  {
+    "bridge_id": "XSHIFT02_INT",
+    "concept": "HC03_Impacted_Tooth",
+    "concept_title": "HC03: Impacted Tooth (High-Contrast)",
+    "route": "UAE -> Romania (Int)",
+    "source_model": "MODEL0008",
+    "gt": 133,
+    "ap50": 0.381401,
+    "ap95": 0.168432,
+    "f1": 0.537445
+  },
+  {
+    "bridge_id": "XSHIFT03_E",
+    "concept": "HC04_Residual_Root",
+    "concept_title": "HC04: Residual Root / BDC",
+    "route": "UAE -> Bangladesh",
+    "source_model": "MODEL0008",
+    "gt": 15,
+    "ap50": 0.505519,
+    "ap95": 0.224482,
+    "f1": 0.5
+  },
+  {
+    "bridge_id": "XSHIFT01",
+    "concept": "HC04_Residual_Root",
+    "concept_title": "HC04: Residual Root / BDC",
+    "route": "Romania -> UAE",
+    "source_model": "MODEL0005",
+    "gt": 140,
+    "ap50": 0.381553,
+    "ap95": 0.119528,
+    "f1": 0.42654
+  },
+  {
+    "bridge_id": "XSHIFT02_EXT",
+    "concept": "HC04_Residual_Root",
+    "concept_title": "HC04: Residual Root / BDC",
+    "route": "UAE -> Romania (Ext)",
+    "source_model": "MODEL0008",
+    "gt": 93,
+    "ap50": 0.315228,
+    "ap95": 0.115825,
+    "f1": 0.477477
+  },
+  {
+    "bridge_id": "XSHIFT02_INT",
+    "concept": "HC04_Residual_Root",
+    "concept_title": "HC04: Residual Root / BDC",
+    "route": "UAE -> Romania (Int)",
+    "source_model": "MODEL0008",
+    "gt": 178,
+    "ap50": 0.242036,
+    "ap95": 0.072611,
+    "f1": 0.419098
+  },
+  {
+    "bridge_id": "XSHIFT03_A",
+    "concept": "HC04_Residual_Root",
+    "concept_title": "HC04: Residual Root / BDC",
+    "route": "Romania -> Bangladesh",
+    "source_model": "MODEL0005",
+    "gt": 15,
+    "ap50": 0.084444,
+    "ap95": 0.017762,
+    "f1": 0.166667
+  },
+  {
+    "bridge_id": "XSHIFT02_EXT",
+    "concept": "HC05_Dental_Implant",
+    "concept_title": "HC05: Dental Implant (Box-Extent Shift)",
+    "route": "UAE -> Romania (Ext)",
+    "source_model": "MODEL0008",
+    "gt": 16,
+    "ap50": 0.462623,
+    "ap95": 0.196997,
+    "f1": 0.468085
+  },
+  {
+    "bridge_id": "XSHIFT01",
+    "concept": "HC05_Dental_Implant",
+    "concept_title": "HC05: Dental Implant (Box-Extent Shift)",
+    "route": "Romania -> UAE",
+    "source_model": "MODEL0005",
+    "gt": 80,
+    "ap50": 0.318915,
+    "ap95": 0.122945,
+    "f1": 0.467836
+  },
+  {
+    "bridge_id": "XSHIFT02_INT",
+    "concept": "HC05_Dental_Implant",
+    "concept_title": "HC05: Dental Implant (Box-Extent Shift)",
+    "route": "UAE -> Romania (Int)",
+    "source_model": "MODEL0008",
+    "gt": 70,
+    "ap50": 0.072271,
+    "ap95": 0.034967,
+    "f1": 0.187919
+  },
+  {
+    "bridge_id": "XSHIFT05_A2D",
+    "concept": "HC02_Periapical_Lesion",
+    "concept_title": "HC02: Periapical Lesion (Low-Contrast)",
+    "route": "Romania -> Vietnam",
+    "source_model": "MODEL0005",
+    "gt": 999,
+    "ap50": 0.235546,
+    "ap95": 0.05732,
+    "f1": 0.171875
+  },
+  {
+    "bridge_id": "XSHIFT05_D2A_EXT",
+    "concept": "HC02_Periapical_Lesion",
+    "concept_title": "HC02: Periapical Lesion (Low-Contrast)",
+    "route": "Vietnam -> Romania (Ext)",
+    "source_model": "MODEL0013",
+    "gt": 106,
+    "ap50": 0.216312,
+    "ap95": 0.060169,
+    "f1": 0.268097
+  },
+  {
+    "bridge_id": "XSHIFT05_D2A_INT",
+    "concept": "HC02_Periapical_Lesion",
+    "concept_title": "HC02: Periapical Lesion (Low-Contrast)",
+    "route": "Vietnam -> Romania (Int)",
+    "source_model": "MODEL0013",
+    "gt": 142,
+    "ap50": 0.177905,
+    "ap95": 0.051685,
+    "f1": 0.239631
+  },
+  {
+    "bridge_id": "XSHIFT06_E2C",
+    "concept": "HC01_WholeTooth_Caries",
+    "concept_title": "HC01: Whole-Tooth Caries (Low-Contrast)",
+    "route": "UAE -> Bangladesh",
+    "source_model": "MODEL0008",
+    "gt": 30,
+    "ap50": 0.163451,
+    "ap95": 0.090867,
+    "f1": 0.307692
+  },
+  {
+    "bridge_id": "XSHIFT06_E2B",
+    "concept": "HC01_WholeTooth_Caries",
+    "concept_title": "HC01: Whole-Tooth Caries (Low-Contrast)",
+    "route": "UAE -> T\u00fcrkiye",
+    "source_model": "MODEL0008",
+    "gt": 415,
+    "ap50": 0.162709,
+    "ap95": 0.09185,
+    "f1": 0.182979
+  }
+]
