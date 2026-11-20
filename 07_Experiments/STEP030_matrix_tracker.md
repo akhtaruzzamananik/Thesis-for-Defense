@@ -15,7 +15,7 @@
 | Priority | `EXP ID` | `RQ` | Model (`MC`) | Dataset / `PP` (`imgsz`, `BS`) | Matched Control | Kaggle Bundle (`.zip` off-Git) | `val mAP@0.50` | `val mAP@0.50:95` | `G10` Status |
 |---|---|---|---|---|---|---|---:|---:|---|
 | Done | **`EXP0001`** | `RQ0, RQ1` | `YOLO11s` | `REL0001` / `PP0001` (`640`, `16`) | Primary Anchor | `EXP0001_REL0001_PP0001_bundle.zip` (`94.47 MB`) | **`0.381`** | `0.1570` | **PASS** (`MODEL0001`) |
-| **Wave 1** | **`EXP0002`** | `RQ1, RQ3` | **`YOLOv8s`** | `REL0001` / `PP0001` (`640`, `16`) | `EXP0001` | *Reuses `EXP0001` Kaggle dataset!* | `PENDING` | `PENDING` | `READY` |
+| **Wave 1** | **`EXP0002`** | `RQ1, RQ3` | **`YOLOv8s`** | `REL0001` / `PP0001` (`640`, `16`) | `EXP0001` | *Reuses `EXP0001` Kaggle dataset!* | **`0.364`** | `0.1523` | **PASS** (`MODEL0002`, `37` ep / `12.1m`) |
 | **Wave 1** | **`EXP0013`** | `RQ1, RQ3` | **`YOLO11m`** | `REL0001` / `PP0001` (`640`, `16`) | `EXP0001` | *Reuses `EXP0001` Kaggle dataset!* | `PENDING` | `PENDING` | `READY` |
 | **Wave 1** | **`EXP0010`** | `RQ2, RQ3` | `YOLO11s` | `REL0001` / **`PP0004` (`1280`, `8`)** | `EXP0001` | `kaggle_bundles/REL0001_PP0004_bundle.zip` (`299.46 MB`) | `PENDING` | `PENDING` | `READY` |
 | **Wave 2** | **`EXP0003`** | `RQ0, RQ1` | `YOLO11s` | `REL0002` (`DENTEX`) / `PP0001` (`640`, `16`) | TrackB Baseline | `kaggle_bundles/REL0002_PP0001_bundle.zip` (`43.38 MB`) | `PENDING` | `PENDING` | `READY` |

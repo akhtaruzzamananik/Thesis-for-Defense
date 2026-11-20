@@ -57,9 +57,13 @@ def main() -> None:
     man = json.loads((git_src / f"{exp_id}_effective_manifest.json").read_text(encoding="utf-8"))
     y_args = yaml.safe_load((git_src / "args.yaml").read_text(encoding="utf-8"))
 
-    # 1. Config SHA & hyperparameter reconciliation
-    cfg_sha = sha256_file(exp_dir / "config.yaml")
-    assert cfg_sha == man["config_sha256"], f"config_sha256 mismatch: {cfg_sha} != {man['config_sha256']}"
+    # 1. Config SHA (accept raw or LF-normalized bytes for Windows CRLF vs Kaggle Linux LF) & hyperparameter reconciliation
+    cfg_bytes = (exp_dir / "config.yaml").read_bytes()
+    cfg_sha_raw = hashlib.sha256(cfg_bytes).hexdigest()
+    cfg_sha_lf = hashlib.sha256(cfg_bytes.replace(b"\r\n", b"\n")).hexdigest()
+    assert man["config_sha256"] in {cfg_sha_raw, cfg_sha_lf}, (
+        f"config_sha256 mismatch: raw={cfg_sha_raw} lf={cfg_sha_lf} != {man['config_sha256']}"
+    )
     tr = cfg["training"]
     aug = tr["augmentations"]
     ev = cfg["evaluation"]
