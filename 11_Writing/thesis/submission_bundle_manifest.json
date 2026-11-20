@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0.0",
+  "step": "STEP-043",
+  "bundle_id": "SUBBUNDLE_DIU_CSE_THESIS_v1.0.0",
+  "submission_state": "READY_AWAITING_G15_AND_PORTAL_UPLOAD",
+  "allowed_states": [
+    "READY_AWAITING_G15_AND_PORTAL_UPLOAD",
+    "SENT_OR_UPLOADED",
+    "CONFIRMED_SUBMITTED"
+  ],
+  "g15_thesis_gate_state": "HOLD (Technical Readiness 100% PASS; awaiting Ms Faiza Feroz authorization & UD17 defense date)",
+  "institution": "Department of Computer Science and Engineering (CSE), Daffodil International University (DIU)",
+  "authorized_submitters": [
+    "Akhtaruzzaman Anik (ID: 232-15-252)",
+    "Mahajub Al Shabah (ID: 232-15-900)"
+  ],
+  "supervisors": [
+    "Ms Faiza Feroz (Supervisor, Lecturer, CSE, DIU)",
+    "Israt Jahan (Co-supervisor, Senior Lecturer, CSE, DIU)"
+  ],
+  "file_count": 33,
+  "total_bytes": 705585,
+  "bundle_merkle_sha256": "91afff083678781b0c925e8f63466f202db8ce40951d53c6168c9ecbbbbfa75b",
+  "institutional_receipt": {
+    "submitted_date": null,
+    "destination_portal_or_office": null,
+    "receipt_or_confirmation_id": null,
+    "restricted_receipt_artifact_path": null,
+    "note": "Populate ONLY after actual institutional submission by authorized researcher following G15 PASS."
+  },
+  "files": [
+    {
+      "path": "11_Writing/thesis/DIU_CSE_Thesis_Assembled_v1.0.0.md",
+      "bytes": 119276,
+      "sha256": "621fd7c2cea07a6258a08e74c512e5938febcc2054310a467ca641ea815988d6"
+    },
+    {
+      "path": "11_Writing/thesis/DIU_CSE_Thesis_Assembled_v1.0.0.html",
+      "bytes": 264817,
+      "sha256": "4aa968371dd18ecbc35f3e0352fcc4f128693e24533e23749bba3907c6c37d2e"
+    },
+    {
+      "path": "11_Writing/slides/defense_slides.md",
+      "bytes": 15149,
+      "sha256": "c9b6bae2a3ade4477a0d7c3c9aff236311a2c99f1eaaeacc246b2d2934a28ef0"
+    },
+    {
+      "path": "11_Writing/thesis/00_front_matter_and_abstract.md",
+      "bytes": 9535,
+      "sha256": "18ebb9c405dba69165406a8b1006ecc2a9adfec498dc69be28c8b294ed139134"
+    },
+    {
+      "path": "11_Writing/thesis/01_chapter1_introduction.md",
+      "bytes": 9177,
+      "sha256": "6bf532bacf6aa5a14da50e5fa747cd82dce5a28d7d2a338cf5747b444772f358"
+    },
+    {
+      "path": "11_Writing/thesis/02_chapter2_literature_review.md",
+      "bytes": 10344,
+      "sha256": "9cfde8fa6b5f9bca8c19006c75fc73afc4952bfe9728a01bef978c8bd6e5b1b7"
+    },
+    {
+      "path": "11_Writing/thesis/03_chapter3_methodology.md",
+      "bytes": 10173,
+      "sha256": "8d8547b8ff3b9a8ed0fae5f87b1461248115a5d6aa1de11aab6970afeca99791"
+    },
+    {
+      "path": "11_Writing/thesis/04_chapter4_results.md",
+      "bytes": 24444,
+      "sha256": "41810990222b0e12d5d9303ecc951c0c3d88c3c4d88571a64089954e5be5ce15"
+    },
+    {
+      "path": "11_Writing/thesis/05_chapter5_discussion_and_prototype.md",
+      "bytes": 16723,
+      "sha256": "102e75e185dfc871130544765c75f4fa93ac942a0e3cfae00ab5d16fa1f542f8"
+    },
+    {
+      "path": "11_Writing/thesis/06_chapter6_conclusion.md",
+      "bytes": 7953,
+      "sha256": "044bc631129962a5d400463f4ced9d233bf4be86384ab22a606f00ee73b84ae9"
+    },
+    {
+      "path": "11_Writing/thesis/07_appendices.md",
+      "bytes": 14740,
+      "sha256": "9063c57695e52ddfcf558d6a27cff8c16fb12dec537d05bf0f5062bcff1326cd"
+    },
+    {
+      "path": "10_Figures_Tables/figures/FIG0001_study_pipeline.svg",
+      "bytes": 10007,
+      "sha256": "35a778e6ff8229661f83205b6e109bc27f7c5a3b88a2301dc7dd61a466b42f80"
+    },
+    {
+      "path": "10_Figures_Tables/figures/FIG0002_heldout_scoreboard_ci.svg",
+      "bytes": 15248,
+      "sha256": "136a922d01ad9a430b6051649415fc3fe0dfbc7da8ca210ef63fc700b20c96d8"
+    },
+    {
+      "path": "10_Figures_Tables/figures/FIG0003_rq2_clahe_vs_1280.svg",
+      "bytes": 9432,
+      "sha256": "5a53ff18a3284f0331881e56cde43a032eb44a6cc0a0a04871249aae7628ce58"
+    },
+    {
+      "path": "10_Figures_Tables/figures/FIG0004_cross_country_shift.svg",
+      "bytes": 24861,
+      "sha256": "a9520d88c2e5577b8e8a1763ecbd68fc7e1632f30cdecf2c451797ca9261a396"
+    },
+    {
+      "path": "10_Figures_Tables/figures/FIG0005_rq3_latency_pareto.svg",
+      "bytes": 12576,
+      "sha256": "e1b9cfd28ef38752c9ec47e91d9be45590ed53c1cce6f6bc5e371a6f68b9b8f4"
+    },
+    {
+      "path": "10_Figures_Tables/figures/FIG0006_error_and_size_recall.svg",
+      "bytes": 15326,
+      "sha256": "dd10472a935f9fa4821ef5e4f9b309535c5eb8119ff2e3ef05c4441846be072d"
+    },
+    {
+      "path": "10_Figures_Tables/tables/TAB0001_literature_audit.md",
+      "bytes": 1505,
+      "sha256": "60bac69bfc8f94324d38fb8808744b0a45e7b1aa4ed3e2b282f2a46f21f96100"
+    },
+    {
+      "path": "10_Figures_Tables/tables/TAB0001_literature_audit.tex",
+      "bytes": 1615,
+      "sha256": "f076519a8a5b4815bc6c6caa398a12c97be0aa0d865c98b951d41747bc3933c1"
+    },
+    {
+      "path": "10_Figures_Tables/tables/TAB0002_dataset_splits.md",
+      "bytes": 1342,
+      "sha256": "c30071772361a28aa207dc758ee352ae6377084baf33588a0f5f887e950d07e9"
+    },
+    {
+      "path": "10_Figures_Tables/tables/TAB0002_dataset_splits.tex",
+      "bytes": 1413,
+      "sha256": "356c16bd737a63eeae673ed3f552eb34fc0431118f57f4d322171ad24ed6adf0"
+    },
+    {
+      "path": "10_Figures_Tables/tables/TAB0003_experiment_matrix.md",
+      "bytes": 2110,
+      "sha256": "3c2191f2e6489bcd6cb1f90519ec1f49e22bd715f5d6bb8a305878db54a26167"
+    },
+    {
+      "path": "10_Figures_Tables/tables/TAB0003_experiment_matrix.tex",
+      "bytes": 2200,
+      "sha256": "9d16cd82b1170a13541f0e2c4d138b4d67c082ef2229627dbbfdbbc87bdc9a3d"
+    },
+    {
+      "path": "10_Figures_Tables/tables/TAB0004_heldout_scoreboard.md",
+      "bytes": 2651,
+      "sha256": "5d2dfac086cd64bc6b99dd847749c5a108fb0836f11ad51bca73dd5a76f609e1"
+    },
+    {
+      "path": "10_Figures_Tables/tables/TAB0004_heldout_scoreboard.tex",
+      "bytes": 2745,
+      "sha256": "2b1d490f6cd454a346d857dc3946add4fd865125de63ff7402c19b3f8268e133"
+    },
+    {
+      "path": "10_Figures_Tables/tables/TAB0005_rq2_rq3_pareto.md",
+      "bytes": 1918,
+      "sha256": "1e8675b96a378205f558760392ec67aede48c3039cd3a8a9bc7d2a246df29079"
+    },
+    {
+      "path": "10_Figures_Tables/tables/TAB0005_rq2_rq3_pareto.tex",
+      "bytes": 1997,
+      "sha256": "6bf4c66b37242a81f77a1f3228425ba945baedc609db83a540c7fa82991c1292"
+    },
+    {
+      "path": "10_Figures_Tables/tables/TAB0006_cross_country_shift.md",
+      "bytes": 3003,
+      "sha256": "faa7b3e5f37d04e0497045cfaaa6cd1cfc899e50233baf77db6ba50ca24863bd"
+    },
+    {
+      "path": "10_Figures_Tables/tables/TAB0006_cross_country_shift.tex",
+      "bytes": 3161,
+      "sha256": "51654dedcbbe361c9ece661ed145051816025d1628cae352b3d98df788c5b703"
+    },
+    {
+      "path": "02_Literature/references.bib",
+      "bytes": 62275,
+      "sha256": "514d7082dd8e62c43bb109f7d893c7ffdf8e0282e29f1d3a0a26888657367328"
+    },
+    {
+      "path": "09_Evaluation/freeze_manifest.json",
+      "bytes": 19674,
+      "sha256": "d6147ffe5a0e6173da4440185c7cddacc2296aaf71908f0388e7aecf9e234ba1"
+    },
+    {
+      "path": "09_Evaluation/g12_reconciliation_audit.json",
+      "bytes": 4569,
+      "sha256": "bb8f25d0531d3eacebb8e7f72c076e1e3d648cc4da913af5246af3dcac03d469"
+    },
+    {
+      "path": "12_Documentation/step038_reproducibility_audit.json",
+      "bytes": 3626,
+      "sha256": "a29c94f3c271667ab08f7f09be9c9d0a9f1545e52a35a2edd695a292251f6535"
+    }
+  ]
+}
