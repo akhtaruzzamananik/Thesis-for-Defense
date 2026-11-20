@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **`STEP-042` COMPLETE (Full DIU CSE Thesis assembled into `DIU_CSE_Thesis_Assembled_v1.0.0.{md,html}` with inline SVGs & 40 IEEE refs + SHA-256 `assembled_manifest.json`; 17-slide `defense_slides.md` `WRIT0014` drafted; honest `supervisor_review_ledger.md` & `G15` readiness audit recorded as `HOLD` pending actual Ms Faiza Feroz sign-off & `UD17` defense date)**; **ready for Supervisor Sign-Off / `STEP-043` (Submission Snapshot) or `STEP-044` (Optional Concise Paper Draft)** |
+| Current stage / step | **`STEP-044` COMPLETE (Concise IMRaD paper package `11_Writing/paper/manuscript_draft.{md,v1.0.0.html}` `WRIT0009–0013` drafted, compiled with inline SVGs & IEEE refs, and audited `PASS` [`17/17` claims, `12/12` assets, `25/25` metric checks]; `paper_disposition.md` & `GA0018` `G15 / paper` recorded honestly as `DEFERRED` under `UD17`)**; **ready for `STEP-047`–`049` (Live Hosted Web Showcase `G17`) or `STEP-045`–`046` (Archival Release & Completion Audit `G16`)** |
 
 ## 1. Stage & gate summary
 
