@@ -24,7 +24,7 @@
 | **Wave 2** | **`EXP0006`** | `RQ0, RQ1` | `YOLO11s` | `REL0005` (`UAE`) / `PP0001` (`640`, `16`) | TrackE Baseline | `kaggle_bundles/REL0005_PP0001_bundle.zip` (`37.41 MB`) | **`0.858`** *(peak `0.860`)* | **`0.5705`** | **PASS** (`MODEL0008`, `100` ep / `21.1m`) |
 | **Wave 2** | **`EXP0007`** | `RQ0, RQ1` | `YOLO11s` | `REL0006` (`Pediatric`) / `PP0001` (`640`, `16`) | TrackF Baseline | `kaggle_bundles/REL0006_PP0001_bundle.zip` (`10.07 MB`) | **`0.100`** | `0.0300` | **PASS** (`MODEL0007`, `56` ep / `2.6m`) |
 | **Wave 3** | **`EXP0008`** | `RQ2` | `YOLO11s` | `REL0001` / **`PP0002` (`CLAHE 2.0`)** | `EXP0001` | `kaggle_bundles/REL0001_PP0002_bundle.zip` (`121.17 MB`) | **`0.344`** *(`-0.037` vs Raw)* | `0.1479` | **PASS** (`MODEL0011`, `46` ep / `24.6m`) |
-| **Wave 3** | **`EXP0009`** | `RQ2` | `YOLO11s` | `REL0001` / **`PP0003` (`CLAHE 3.0`)** | `EXP0001` | `kaggle_bundles/REL0001_PP0003_bundle.zip` (`136.73 MB`) | `PENDING` | `PENDING` | `READY` |
+| **Wave 3** | **`EXP0009`** | `RQ2` | `YOLO11s` | `REL0001` / **`PP0003` (`CLAHE 3.0`)** | `EXP0001` | `kaggle_bundles/REL0001_PP0003_bundle.zip` (`136.73 MB`) | **`0.363`** *(`-0.018` vs Raw)* | `0.1472` | **PASS** (`MODEL0012`, `50` ep / `17.5m`) |
 | **Wave 3** | **`EXP0011`** | `RQ2, RQ3` | `YOLO11s` | `REL0004` / **`PP0004` (`1280`, `8`)** | `EXP0005` | `kaggle_bundles/REL0004_PP0004_bundle.zip` (`709.71 MB`) | `PENDING` | `PENDING` | `READY` |
 | **Wave 3** | **`EXP0012`** | `RQ2` | `YOLO11s` | `REL0003` / **`PP0002` (`CLAHE 2.0`)** | `EXP0004` | `kaggle_bundles/REL0003_PP0002_bundle.zip` (`21.50 MB`) | **`0.232`** *(`-0.027` vs Raw)* | `0.1315` | **PASS** (`MODEL0009`, `26` ep / `1.7m`) |
 
