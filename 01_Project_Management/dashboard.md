@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **`STEP-045` COMPLETE (Immutable release archive `ARCH0001` / tag `v1.0.0-arch0001` & `15_Archive/archive_manifest.csv` [`35` items across 3 lawful tiers under `DEC0020`] created and restore-verified `PASS` in clean-room temp directory [`restore_verification_report.md`])**; **ready for `STEP-046` (Final Project-Completion Audit `G16`) or `STEP-047`–`049` (Live Hosted Web Showcase `G17`)** |
+| Current stage / step | **`STEP-046` COMPLETE (`project_completion_audit.md`, `G16_completion_audit_2026-11-21.json` & `handover_and_ownership_record.md` verified `20/20` `OS §13.3` deliverables, `14/14` `G01–G14 PASS`, `43/43` `ARCH0001` items, `0` deleted negative results, `0` binary leaks; `G16` recorded honestly as `HOLD` pending `G15` supervisor receipt & `S16` `G17` Web Showcase)**; **ready for `STEP-047`–`049` (Live Hosted Web Showcase `G17`)** |
 
 ## 1. Stage & gate summary
 
@@ -28,7 +28,8 @@
 | G13 | STEP-036 | **PASS** | **Verified (`2026-11-21`):** Exhaustive FP/FN taxonomy (`6,718` GT boxes), size-bucket recall (`Small 30.9% -> Large 80.3%`), `28` non-cherry-picked cases visually reviewed (`7` off-Git overlay sheets), source-label incompleteness & ordinal boundary uncertainty documented, and strict non-clinical limits frozen (`error_review.md`, `limitations.md`, `G13_assessment_2026-11-21.md`) |
 | G14 | STEP-038 | **PASS** | **Verified (`2026-11-21`):** `OPGPrototypeEngine` + `REPRO0001`: **`R1`** `50/50` checksums, **`R2`** exact `0.0` metric replay (`EVAL0001/0011/0013`), **`R3A`** `0.0` self-diff & `0.994` ONNX-PyTorch IoU parity on `40` raw OPGs, **`R3B`** clean `git archive` checkout passing (`reproduce.md`, `reproducibility_audit.md`, `G14_assessment_2026-11-21.md`; `R4` GPU retraining transparently archived) |
 | G15 | STEP-042 | **HOLD** *(Tech `PASS`)* | **Assembled & Audited (`2026-11-21`):** `DIU_CSE_Thesis_Assembled_v1.0.0.{md,html}` (`6` inline SVGs, `40` IEEE refs), `defense_slides.md` (`17` slides), `STEP-041` audit `PASS`; **`HOLD` strictly awaiting actual Ms Faiza Feroz supervisor sign-off & `UD17` defense date** (`G15_thesis_readiness_2026-11-21.md`) |
-| G16–G17 | STEP-043–049 | **NOT ASSESSED** | Ready for **`STEP-043` (Submission Record once `G15 PASS`)**, **`STEP-044` (Concise Paper Package `WRIT0009–0013`)**, **`S15` (`STEP-045`–`046` Archive -> `G16`)**, & **`S16` (`STEP-047`–`049` Live Web Showcase -> `G17`)** |
+| G16 | STEP-046 | **HOLD** *(Tech `PASS`)* | **Audited (`2026-11-21`):** `20/20` `OS §13.3` deliverables, `14/14` `G01–G14 PASS`, `43/43` `ARCH0001` items (`3.94s` restore `PASS`), `0` deleted negative results, `0` binary leaks (`project_completion_audit.md`); **`HOLD` awaiting `G15` supervisor receipt & `S16` `G17` Web Showcase** |
+| G17 | STEP-047–049 | **NOT ASSESSED** | Ready for **`Stage S16` (`STEP-047`–`049` Live Hosted Web Showcase of frozen `FREEZE0001` winner via `OPGPrototypeEngine` -> `G17`)** |
 
 ## 2. Immediate priorities & open blockers
 

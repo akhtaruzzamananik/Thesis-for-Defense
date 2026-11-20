@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0.0",
+  "step": "STEP-046",
+  "assessment_id": "GA0016",
+  "gate_id": "G16",
+  "technical_and_archival_audit_status": "PASS (20/20 OS \u00a713.3 deliverables verified & recoverable)",
+  "g01_to_g14_scientific_gates": "14/14 PASS",
+  "g15_thesis_gate": "HOLD",
+  "g15_paper_gate": "DEFERRED",
+  "g17_web_demo_gate": "NOT ASSESSED",
+  "g16_gate_outcome": "HOLD",
+  "g16_hold_reason": "100% of scientific, evaluation, reproducibility, thesis/paper writing, and ARCH0001 restore deliverables (G01-G14, STEP-001..045) are COMPLETE and VERIFIED PASS. Per Blueprint STEP-046 (lines 2763, 2799-2809), final G16 -> PASS awaits: (1) human Supervisor Ms Faiza Feroz sign-off on G15 & actual DIU submission receipt in STEP-043, and (2) Stage S16 (STEP-047..049 / G17) live hosted web demonstration (or supervisor-confirmed UD21 deferral).",
+  "negative_results_retained": {
+    "excluded_clahe_experiments": [
+      "EXP0008",
+      "EXP0009",
+      "EXP0012"
+    ],
+    "trackF_small_n_test_mAP50": 0.053718,
+    "zero_deleted_experiments": true
+  },
+  "tracked_forbidden_binary_count": 0,
+  "deliverables_verified_count": 20,
+  "deliverables": [
+    {
+      "deliverable_id": "D01_Scope_And_Roles",
+      "path": "01_Project_Management/scope.md",
+      "bytes": 7566,
+      "sha256": "1061a678a8b74de793cbf1e184a803efe157524ef8654ca2ad094db7941fee5c",
+      "verification_note": "G01 PASS",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D02_Literature_Corpus_And_Synthesis",
+      "path": "02_Literature/synthesis.md",
+      "bytes": 36247,
+      "sha256": "aca496d7c31fd9f6220a0ee50bad70467738d637d95ddbbed60031f897d3886f",
+      "verification_note": "G03 PASS (122 screened / 42 Core)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D03_Canonical_BibTeX",
+      "path": "02_Literature/references.bib",
+      "bytes": 62275,
+      "sha256": "514d7082dd8e62c43bb109f7d893c7ffdf8e0282e29f1d3a0a26888657367328",
+      "verification_note": "122 verified entries (0 legacy [1]-[13])",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D04_Claims_And_Gaps_Ledgers",
+      "path": "02_Literature/claims.csv",
+      "bytes": 21878,
+      "sha256": "bb4c7ab59f24c2bc3c45a588ca7ec994e4b6422ff75bfd44cc0f88451350ca16",
+      "verification_note": "17/17 verified claims (CLAIM0001-0017)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D05_Six_Cohort_Dataset_Portfolio",
+      "path": "03_Datasets/datasets.csv",
+      "bytes": 4752,
+      "sha256": "44cfd2472c291f8c06119eee98c78e68e8c5f0e510b42a669d5ba08cb5c57e6e",
+      "verification_note": "G04 PASS (DS0001-DS0006, 6 countries)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D06_Frozen_41_Class_Ontology",
+      "path": "04_Annotations/classes.csv",
+      "bytes": 36831,
+      "sha256": "c3f91dfc8a27e5a0dc4ca6324676dbcb78bb8460112e36f84032b295694640af",
+      "verification_note": "G05-G06 PASS (sha256:c3f91dfc...)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D07_Deduplicated_Group_Splits",
+      "path": "03_Datasets/releases.csv",
+      "bytes": 3756,
+      "sha256": "3b0738c7e28f8c71c62f3e0f4b5073d90d4d07eebc2affc6c2b30db87c344473",
+      "verification_note": "G07 PASS (7,457 OPGs, 41,103 boxes, 0 leaks)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D08_Invertible_Preprocessing_Ledger",
+      "path": "src/opg/preprocessing.py",
+      "bytes": 15541,
+      "sha256": "011e67c02c56a1518af45c46627ec6db300330cb5ad233a4a37ca843e8bfac39",
+      "verification_note": "G08 PASS (PP0001-0004, <=0.0041px error)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D09_Controlled_13_Experiment_Matrix",
+      "path": "07_Experiments/experiment_registry.csv",
+      "bytes": 9122,
+      "sha256": "fc9916a80690ebae85541f13f4424dd0de469a0fa773896127e11c7aa95ec233",
+      "verification_note": "G09-G10 PASS (13/13 runs verified)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D10_PreTest_Evaluation_Freeze",
+      "path": "09_Evaluation/freeze_manifest.json",
+      "bytes": 19674,
+      "sha256": "d6147ffe5a0e6173da4440185c7cddacc2296aaf71908f0388e7aecf9e234ba1",
+      "verification_note": "G11 PASS (FREEZE0001, 0 prior test access)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D11_Consolidated_HeldOut_Evaluation",
+      "path": "09_Evaluation/final_evaluation_report.md",
+      "bytes": 13811,
+      "sha256": "ac580cc261f912ac4bf3d5dbf26797c30b3bde6fd44631e6d5ddf9c97605a7c2",
+      "verification_note": "G12 PASS (14 EVALs + 12 XSHIFT + GPU/CPU timing)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D12_Systematic_T19_Error_And_Limits",
+      "path": "09_Evaluation/error_review.md",
+      "bytes": 14236,
+      "sha256": "fb8246411a345f641b6200ec6387859a9d77712abbdc0fbb69127dae7c4cfab2",
+      "verification_note": "G13 PASS (6,718 GT boxes + 28 visual cases + limitations.md)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D13_Packaged_CPU_ONNX_Prototype",
+      "path": "src/opg/inference_prototype.py",
+      "bytes": 18984,
+      "sha256": "acefba7fea8e425cf2f98a277e2b693859e5b04ef095317c28d0defac0f4bbad",
+      "verification_note": "G14 PASS (OPGPrototypeEngine, 0 train/serve skew)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D14_Clean_Room_Reproducibility_Audit",
+      "path": "12_Documentation/reproducibility_audit.md",
+      "bytes": 6818,
+      "sha256": "c541a2b8b9f69e1ec1bce1722b569922a42be709cc65ef1f187b00ae343e2780",
+      "verification_note": "G14 PASS (R1 50/50, R2 0.0, R3A 0.994 IoU, R3B clean checkout)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D15_Vector_Figures_And_LaTeX_Tables",
+      "path": "10_Figures_Tables/assets.csv",
+      "bytes": 8051,
+      "sha256": "acf1c1a2152746620916f2924e61853d777fc1cc99951e09b3f9232c4d3ee0a7",
+      "verification_note": "STEP-041 PASS (FIG0001-0006 SVGs + TAB0001-0006 MD/TeX)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D16_Assembled_DIU_CSE_Thesis_Package",
+      "path": "11_Writing/thesis/DIU_CSE_Thesis_Assembled_v1.0.0.html",
+      "bytes": 264817,
+      "sha256": "4aa968371dd18ecbc35f3e0352fcc4f128693e24533e23749bba3907c6c37d2e",
+      "verification_note": "STEP-040/042 PASS (16,187 words, 6 inline SVGs, 40 IEEE refs)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D17_Defense_Slide_Deck",
+      "path": "11_Writing/slides/defense_slides.md",
+      "bytes": 15149,
+      "sha256": "c9b6bae2a3ade4477a0d7c3c9aff236311a2c99f1eaaeacc246b2d2934a28ef0",
+      "verification_note": "STEP-042 PASS (17 slides WRIT0014)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D18_Thesis_Submission_Bundle_Ledger",
+      "path": "11_Writing/thesis/submission.md",
+      "bytes": 8501,
+      "sha256": "4dfd192168e953865fb124e1d47ad6e1b0536916cebeb1ec10c958c5b027f251",
+      "verification_note": "STEP-043 PASS (33 files hashed; READY_AWAITING_G15)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D19_Concise_Paper_And_Disposition",
+      "path": "11_Writing/paper/paper_disposition.md",
+      "bytes": 4269,
+      "sha256": "57a4b0111731622b8fb9d30c3b2940ca6d3c894a549b190e1ff02911c0100f45",
+      "verification_note": "STEP-044 PASS (3,937-word IMRaD draft; GA0018 DEFERRED)",
+      "status": "VERIFIED"
+    },
+    {
+      "deliverable_id": "D20_Immutable_Archive_And_Restore_Proof",
+      "path": "15_Archive/ARCH0001/restore_verification_report.md",
+      "bytes": 2965,
+      "sha256": "db38cb4d0ec936b71c96c8502641d8c7db566eba29cd6a92a3fb2a55358d3578",
+      "verification_note": "STEP-045 PASS (ARCH0001, tag v1.0.0-arch0001, 3.94s restore PASS)",
+      "status": "VERIFIED"
+    }
+  ]
+}
