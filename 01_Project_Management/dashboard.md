@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **`STEP-037` COMPLETE (`OPGPrototypeEngine` in `src/opg/inference_prototype.py`, CLI `run_opg_inference.py`, `DEC0018`, `prototype_guide.md`, & `test_prototype_interface.py` passing with PyTorch-ONNX parity)**; **ready for `STEP-038` (Clean-Environment Reproducibility Audit & `G14` Assessment)** |
+| Current stage / step | **Stage `S13` (`STEP-037`–`038`) 100% COMPLETE (`G14 = PASS` — `14/17` gates passed! `R1` `50/50` hashes, `R2` `0.0` metric replay, `R3A` `0.994` ONNX parity, `R3B` clean `git archive` checkout verified)**; **ready for `S14` (`STEP-039`–`044` Thesis Figures/Tables & Manuscript -> `G15`) and parallel `S16` (`STEP-047`–`049` Live Web Showcase -> `G17`)** |
 
 ## 1. Stage & gate summary
 
@@ -26,17 +26,18 @@
 | G11 | STEP-031 | **PASS** | **Frozen (`2026-11-21`):** `FREEZE0001` locked (`6` track winners: `MODEL0005/0004/0006/0013/0008/0007` + `4` `RQ1`/`RQ3` comparators: `MODEL0001/0002/0003/0010`; `3/3` CLAHE excluded; `val`-only `conf_op`; `0` prior test access; `09_Evaluation/freeze_manifest.json`, `G11_assessment_2026-11-21.md`) |
 | G12 | STEP-035 | **PASS** | **Verified (`2026-11-21`):** Programmatic audit (`g12_reconciliation_audit.json`) reconciled `14/14` EVALs, `128/128` per-class `TP+FN==GT` rows, `12/12` `HC01–HC05` shift bridges, `10` GPU + `7` CPU ONNX timing logs (`0` errors), `G11 < STEP-032` custody, and `CLAIM0013–CLAIM0017` (`final_evaluation_report.md`, `G12_assessment_2026-11-21.md`) |
 | G13 | STEP-036 | **PASS** | **Verified (`2026-11-21`):** Exhaustive FP/FN taxonomy (`6,718` GT boxes), size-bucket recall (`Small 30.9% -> Large 80.3%`), `28` non-cherry-picked cases visually reviewed (`7` off-Git overlay sheets), source-label incompleteness & ordinal boundary uncertainty documented, and strict non-clinical limits frozen (`error_review.md`, `limitations.md`, `G13_assessment_2026-11-21.md`) |
-| G14–G17 | STEP-037–049 | **NOT ASSESSED** | Ready for **`STEP-037`** (`S13` Bounded Research Inference Prototype -> `G14`) & **`S14–S16`** (Thesis Writing, Archive & Live Web Showcase) |
+| G14 | STEP-038 | **PASS** | **Verified (`2026-11-21`):** `OPGPrototypeEngine` + `REPRO0001`: **`R1`** `50/50` checksums, **`R2`** exact `0.0` metric replay (`EVAL0001/0011/0013`), **`R3A`** `0.0` self-diff & `0.994` ONNX-PyTorch IoU parity on `40` raw OPGs, **`R3B`** clean `git archive` checkout passing (`reproduce.md`, `reproducibility_audit.md`, `G14_assessment_2026-11-21.md`; `R4` GPU retraining transparently archived) |
+| G15–G17 | STEP-039–049 | **NOT ASSESSED** | Ready for **`S14` (`STEP-039`–`044` Figures/Tables & Thesis Manuscript -> `G15`)**, **`S15` (`STEP-045`–`046` Archive -> `G16`)**, and **`S16` (`STEP-047`–`049` Web Showcase -> `G17`)** |
 
 ## 2. Immediate priorities & open blockers
 
-1. Execute **`STEP-038`** (*Perform clean-environment reproducibility audit*, write `12_Documentation/reproduce.md` & `reproducibility_audit.md`, and pass **`G14`**).
-2. Execute **`S14–S16`** (`STEP-039`–`STEP-049`: publication-ready figures/tables, full thesis manuscript `G15`, archival package `G16`, and live hosted web showcase `G17` reusing `OPGPrototypeEngine`).
+1. Execute **`STEP-039`–`STEP-040`** (`S14` — Finalize thesis/paper writing plan `DEC0017` and generate all publication-ready figures & LaTeX/Markdown tables in `10_Figures_Tables/` directly from `G12–G13` verified data).
+2. Execute **`STEP-041`–`STEP-044`** (Full DIU CSE Thesis Manuscript Chapters 1–6 + Defense Slides + **`G15`**), **`STEP-045`–`046`** (Archive **`G16`**), and **`STEP-047`–`049`** (Live Hosted Web Showcase reusing `OPGPrototypeEngine` **`G17`**).
 3. Maintain strict custody: `git ls-files "*.pdf" "*.zip" "*.rar" "*.jpg" "*.png" "*.pt" "*.onnx"` stays empty.
 
 ## 3. Canonical ledgers
 
-- Decisions: `01_Project_Management/decisions.csv` (`UD01–UD24` registered; `DEC0001–DEC0016` & `DEC0019` Resolved/Frozen; `DEC0017–0018`, `DEC0020–0024` open for `S13–S16`)
-- Gates: `01_Project_Management/gates.csv` (`G01–G13 PASS`; `G14–G17 NOT ASSESSED`)
+- Decisions: `01_Project_Management/decisions.csv` (`UD01–UD24` registered; `DEC0001–DEC0016`, `DEC0018`, `DEC0019` Resolved/Frozen; `DEC0017`, `DEC0020–0024` open for `S14–S16`)
+- Gates: `01_Project_Management/gates.csv` (`G01–G14 PASS`; `G15–G17 NOT ASSESSED`)
 - Risks: `01_Project_Management/risk_register.csv` (header-only)
 - Role split: `01_Project_Management/team_roles.md`

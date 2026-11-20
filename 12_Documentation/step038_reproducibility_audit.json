@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "step": "STEP-038",
+  "gate": "G14",
+  "audited_utc": "2026-11-20T21:33:09.015071+00:00",
+  "audited_commit": "86546f117646b4803a2f3d74b3ab9f162693b303",
+  "duration_sec": 32.23,
+  "host_context": {
+    "os": "Windows 11",
+    "python": "3.14.6",
+    "cpu_cores_logical": 8
+  },
+  "prospective_tolerances": {
+    "R1_checksums": "exact_bit_for_bit_sha256",
+    "R2_metric_replay": "abs_diff <= 1e-6 and exact TP/FP/FN counts",
+    "R3A_onnx_self_determinism": "max_abs_diff == 0.0",
+    "R3A_onnx_cpu_vs_pytorch_gpu_parity": "mean_box_iou >= 0.95 and mean_abs_score_diff <= 0.02",
+    "R3B_clean_git_archive_checkout": "validate_repo exit 0 and unit/error-contract tests exit 0"
+  },
+  "reproduction_levels": {
+    "R1_artifact_checksums": {
+      "status": "PASS",
+      "verified_count": 50,
+      "mismatches": 0
+    },
+    "R2_metric_replay": {
+      "status": "PASS",
+      "results": {
+        "EVAL0001": {
+          "archived_mAP50": 0.416549,
+          "replayed_mAP50": 0.416549,
+          "abs_diff_mAP50": 0.0,
+          "abs_diff_mAP50_95": 0.0,
+          "abs_diff_macro_f1": 0.0,
+          "tp_fp_fn_exact_match": true
+        },
+        "EVAL0011": {
+          "archived_mAP50": 0.486813,
+          "replayed_mAP50": 0.486813,
+          "abs_diff_mAP50": 0.0,
+          "abs_diff_mAP50_95": 0.0,
+          "abs_diff_macro_f1": 0.0,
+          "tp_fp_fn_exact_match": true
+        },
+        "EVAL0013": {
+          "archived_mAP50": 0.824552,
+          "replayed_mAP50": 0.824552,
+          "abs_diff_mAP50": 0.0,
+          "abs_diff_mAP50_95": 0.0,
+          "abs_diff_macro_f1": 0.0,
+          "tp_fp_fn_exact_match": true
+        }
+      }
+    },
+    "R3A_onnx_inference_replay": {
+      "status": "PASS",
+      "results": {
+        "MODEL0008": {
+          "eval_id": "EVAL0013",
+          "sampled_raw_opgs": 20,
+          "self_determinism_max_diff": 0.0,
+          "pytorch_gpu_vs_onnx_cpu_matched_boxes": 172,
+          "mean_box_iou": 0.9946,
+          "mean_abs_score_diff": 0.00366,
+          "mean_cpu_e2e_ms": 170.9
+        },
+        "MODEL0005": {
+          "eval_id": "EVAL0001",
+          "sampled_raw_opgs": 10,
+          "self_determinism_max_diff": 0.0,
+          "pytorch_gpu_vs_onnx_cpu_matched_boxes": 165,
+          "mean_box_iou": 0.99381,
+          "mean_abs_score_diff": 0.00242,
+          "mean_cpu_e2e_ms": 775.88
+        },
+        "MODEL0013": {
+          "eval_id": "EVAL0011",
+          "sampled_raw_opgs": 10,
+          "self_determinism_max_diff": 0.0,
+          "pytorch_gpu_vs_onnx_cpu_matched_boxes": 19,
+          "mean_box_iou": 0.99435,
+          "mean_abs_score_diff": 0.00903,
+          "mean_cpu_e2e_ms": 824.5
+        }
+      }
+    },
+    "R3B_clean_git_archive_checkout": {
+      "tested_commit": "86546f117646b4803a2f3d74b3ab9f162693b303",
+      "clean_env_pythonpath_stripped": true,
+      "offgit_data_absent_in_clean_checkout": true,
+      "validate_repo_stdout": "OK: 21 folder READMEs, 22 Appendix B CSVs, T01-T30 templates, G01-G17 gates, and STEP-002 environment checks passed.",
+      "pytest_summary": "15 passed, 2 skipped in 0.97s",
+      "passed": true
+    },
+    "R4_full_13exp_gpu_retraining": {
+      "status": "NOT_REEXECUTED",
+      "rationale": "Full 13-EXP Kaggle Tesla T4 retraining (~7.5 GPU-hr) is preserved via locked seeds (20261124), deterministic=true, ultralytics==8.3.253, and committed EXP0001-0013 configs/args/results; not re-executed in STEP-038."
+    }
+  },
+  "all_verified_levels_passed": true
+}
