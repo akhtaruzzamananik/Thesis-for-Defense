@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **`STEP-034` COMPLETE (`10` GPU `Tesla T4` + `7` Local CPU `Intel i5-1135G7` `ONNXRuntime` `BS=1` timing benchmarks, `0` failures, `0.983–0.997` PyTorch-ONNX box parity IoU, `timing_report.md` complete)**; **ready for `STEP-035` (`T19` Error Review & `G12` Gate Assessment)** |
+| Current stage / step | **`STEP-035` (`G12 = PASS`) COMPLETE (`final_evaluation_report.md`, `14/14` EVALs & `128/128` per-class `TP+FN==GT` rows reconciled, `12/12` `HC01–HC05` bridges, `10` GPU + `7` CPU timing logs, `CLAIM0013–CLAIM0017` verified)**; **ready for `STEP-036` (`T19` Error Review, Annotation Uncertainty, Limitations & `G13` Assessment)** |
 
 ## 1. Stage & gate summary
 
@@ -24,17 +24,18 @@
 | G09 | STEP-026 | **PASS** | **Verified (`2026-11-19` on Kaggle `Tesla T4`, `torch 2.11.0+cu130`, `ultralytics 8.3.253`):** `EXP0000_SMOKE` epoch-1 interrupt (`optimizer`+`EMA` saved), backup SHA-256 match (`3f4452be...`), clean `resume=True` to epoch `2/2`, `19.51 FPS_e2e` (`G09_assessment_2026-11-19.md`) |
 | G10 | STEP-029–030 | **PASS** *(`13/13`)* | **ALL `13/13` experiments (`EXP0001–EXP0013` / `MODEL0001–MODEL0013`) PASSED (`2026-11-21`):** TrackE UAE **`0.858`**, TrackD Hanoi 1280 **`0.536`** (`+4.8%` vs 640 `0.488`), TrackB DENTEX **`0.444`**, TrackA UMFIH 1280 **`0.391`** (`0.1656` mAP50-95), TrackC Dhaka **`0.259`**, TrackF Pediatric **`0.100`**; `3/3` CLAHE ablations degraded `mAP@0.50` (`STEP030_matrix_tracker.md`) |
 | G11 | STEP-031 | **PASS** | **Frozen (`2026-11-21`):** `FREEZE0001` locked (`6` track winners: `MODEL0005/0004/0006/0013/0008/0007` + `4` `RQ1`/`RQ3` comparators: `MODEL0001/0002/0003/0010`; `3/3` CLAHE excluded; `val`-only `conf_op`; `0` prior test access; `09_Evaluation/freeze_manifest.json`, `G11_assessment_2026-11-21.md`) |
-| G12–G17 | STEP-032–049 | **NOT ASSESSED** | Ready for **`STEP-032`** sealed final-test predictions (`1,082 test` + `178 external_test` + `12` `HC01–HC05` cross-country bridges) |
+| G12 | STEP-035 | **PASS** | **Verified (`2026-11-21`):** Programmatic audit (`g12_reconciliation_audit.json`) reconciled `14/14` EVALs, `128/128` per-class `TP+FN==GT` rows, `12/12` `HC01–HC05` shift bridges, `10` GPU + `7` CPU ONNX timing logs (`0` errors), `G11 < STEP-032` custody, and `CLAIM0013–CLAIM0017` (`final_evaluation_report.md`, `G12_assessment_2026-11-21.md`) |
+| G13–G17 | STEP-036–049 | **NOT ASSESSED** | Ready for **`STEP-036`** (`T19` Error Review, Annotation Uncertainty, Limitations & `G13` Assessment) |
 
 ## 2. Immediate priorities & open blockers
 
-1. Execute **`STEP-035`** (*Conduct class-aware error review `T19` on held-out `test`/`external_test` errors, synthesize `RQ0–RQ3` claims/limitations, and assess **`G12`** — Evaluation Validity & Results Acceptance*).
-2. Proceed to **`STEP-036`–`STEP-038`** (`S13` Minimal Research Prototype & `G14` / `S14` Thesis & Paper Writing Plan `STEP-039`–`STEP-044`).
+1. Execute **`STEP-036`** (*Review errors, annotation uncertainty and limitations* — generate class-aware FP/FN/confusion & object-size bucket diagnostics, write `09_Evaluation/error_review.md` [`T19`] and `09_Evaluation/limitations.md`, and pass **`G13`**).
+2. Proceed to **`STEP-037`–`STEP-038`** (`S13` Minimal Research Prototype & `G14`) and **`S14–S16`** (Thesis Manuscript, Figures/Tables, Archive & Live Web Showcase).
 3. Maintain strict custody: `git ls-files "*.pdf" "*.zip" "*.rar" "*.jpg" "*.png" "*.pt" "*.onnx"` stays empty.
 
 ## 3. Canonical ledgers
 
 - Decisions: `01_Project_Management/decisions.csv` (`UD01–UD24` registered; `DEC0001–DEC0016` & `DEC0019` Resolved/Frozen; `DEC0017–0018`, `DEC0020–0024` open for `S13–S16`)
-- Gates: `01_Project_Management/gates.csv` (`G01–G11 PASS`; `G12–G17 NOT ASSESSED`)
+- Gates: `01_Project_Management/gates.csv` (`G01–G12 PASS`; `G13–G17 NOT ASSESSED`)
 - Risks: `01_Project_Management/risk_register.csv` (header-only)
 - Role split: `01_Project_Management/team_roles.md`

@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0.0",
+  "step": "STEP-035",
+  "gate": "G12",
+  "freeze_timestamp_precedes_test": true,
+  "freeze_at": "2026-11-21T01:40:00+06:00",
+  "step032_started_utc": "2026-11-20T20:24:27.148500+00:00",
+  "governance_hashes_verified": 4,
+  "evals_reconciled": 14,
+  "per_class_rows_reconciled": 128,
+  "xshift_bridges_reconciled": 12,
+  "gpu_timing_models_verified": 10,
+  "cpu_onnx_timing_models_verified": 7,
+  "all_g12_checks_passed": true,
+  "evals": {
+    "EVAL0001": {
+      "model_id": "MODEL0005",
+      "release_partition": "REL0001:test",
+      "images": 208,
+      "gt_boxes": 2888,
+      "mAP50": 0.416549,
+      "mAP50_95": 0.174057,
+      "gpu_fps_e2e": 9.238,
+      "cpu_fps_e2e": 1.139,
+      "reconciled": true
+    },
+    "EVAL0002": {
+      "model_id": "MODEL0005",
+      "release_partition": "REL0001:external_test",
+      "images": 178,
+      "gt_boxes": 2925,
+      "mAP50": 0.4338,
+      "mAP50_95": 0.203812,
+      "gpu_fps_e2e": 9.238,
+      "cpu_fps_e2e": 1.139,
+      "reconciled": true
+    },
+    "EVAL0003": {
+      "model_id": "MODEL0001",
+      "release_partition": "REL0001:test",
+      "images": 208,
+      "gt_boxes": 2888,
+      "mAP50": 0.381531,
+      "mAP50_95": 0.157657,
+      "gpu_fps_e2e": 13.999,
+      "cpu_fps_e2e": 3.797,
+      "reconciled": true
+    },
+    "EVAL0004": {
+      "model_id": "MODEL0001",
+      "release_partition": "REL0001:external_test",
+      "images": 178,
+      "gt_boxes": 2925,
+      "mAP50": 0.371616,
+      "mAP50_95": 0.166285,
+      "gpu_fps_e2e": 13.999,
+      "cpu_fps_e2e": 3.797,
+      "reconciled": true
+    },
+    "EVAL0005": {
+      "model_id": "MODEL0002",
+      "release_partition": "REL0001:test",
+      "images": 208,
+      "gt_boxes": 2888,
+      "mAP50": 0.378563,
+      "mAP50_95": 0.157798,
+      "gpu_fps_e2e": 13.419,
+      "cpu_fps_e2e": 3.76,
+      "reconciled": true
+    },
+    "EVAL0006": {
+      "model_id": "MODEL0002",
+      "release_partition": "REL0001:external_test",
+      "images": 178,
+      "gt_boxes": 2925,
+      "mAP50": 0.417651,
+      "mAP50_95": 0.184824,
+      "gpu_fps_e2e": 13.419,
+      "cpu_fps_e2e": 3.76,
+      "reconciled": true
+    },
+    "EVAL0007": {
+      "model_id": "MODEL0003",
+      "release_partition": "REL0001:test",
+      "images": 208,
+      "gt_boxes": 2888,
+      "mAP50": 0.398972,
+      "mAP50_95": 0.168205,
+      "gpu_fps_e2e": 13.136,
+      "cpu_fps_e2e": 1.951,
+      "reconciled": true
+    },
+    "EVAL0008": {
+      "model_id": "MODEL0003",
+      "release_partition": "REL0001:external_test",
+      "images": 178,
+      "gt_boxes": 2925,
+      "mAP50": 0.44489,
+      "mAP50_95": 0.193966,
+      "gpu_fps_e2e": 13.136,
+      "cpu_fps_e2e": 1.951,
+      "reconciled": true
+    },
+    "EVAL0009": {
+      "model_id": "MODEL0004",
+      "release_partition": "REL0002:test",
+      "images": 106,
+      "gt_boxes": 530,
+      "mAP50": 0.439748,
+      "mAP50_95": 0.267333,
+      "gpu_fps_e2e": 13.783,
+      "cpu_fps_e2e": null,
+      "reconciled": true
+    },
+    "EVAL0010": {
+      "model_id": "MODEL0006",
+      "release_partition": "REL0003:test",
+      "images": 33,
+      "gt_boxes": 182,
+      "mAP50": 0.250848,
+      "mAP50_95": 0.140596,
+      "gpu_fps_e2e": 38.2,
+      "cpu_fps_e2e": null,
+      "reconciled": true
+    },
+    "EVAL0011": {
+      "model_id": "MODEL0013",
+      "release_partition": "REL0004:test",
+      "images": 578,
+      "gt_boxes": 999,
+      "mAP50": 0.486813,
+      "mAP50_95": 0.220748,
+      "gpu_fps_e2e": 11.058,
+      "cpu_fps_e2e": 1.179,
+      "reconciled": true
+    },
+    "EVAL0012": {
+      "model_id": "MODEL0010",
+      "release_partition": "REL0004:test",
+      "images": 578,
+      "gt_boxes": 999,
+      "mAP50": 0.441874,
+      "mAP50_95": 0.183555,
+      "gpu_fps_e2e": 17.766,
+      "cpu_fps_e2e": 5.498,
+      "reconciled": true
+    },
+    "EVAL0013": {
+      "model_id": "MODEL0008",
+      "release_partition": "REL0005:test",
+      "images": 133,
+      "gt_boxes": 1048,
+      "mAP50": 0.824552,
+      "mAP50_95": 0.516259,
+      "gpu_fps_e2e": 12.283,
+      "cpu_fps_e2e": 4.961,
+      "reconciled": true
+    },
+    "EVAL0014": {
+      "model_id": "MODEL0007",
+      "release_partition": "REL0006:test",
+      "images": 24,
+      "gt_boxes": 137,
+      "mAP50": 0.053718,
+      "mAP50_95": 0.011091,
+      "gpu_fps_e2e": 6.353,
+      "cpu_fps_e2e": null,
+      "reconciled": true
+    }
+  }
+}
