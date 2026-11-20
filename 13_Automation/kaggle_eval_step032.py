@@ -452,7 +452,7 @@ def main() -> None:
     onnx_dir = work_dir / "onnx"
     onnx_dir.mkdir(parents=True, exist_ok=True)
 
-    for fm in freeze["frozen_models"]:
+    for fm in models_by_id.values():
         mid = fm["model_id"]
         print(f"\n================ Loading {mid} ({fm['architecture']}@{fm['imgsz']}) ================")
         model = YOLO(str(fm["bundle_weight_path"]))
