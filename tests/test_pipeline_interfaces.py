@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
+import opg.data_loader as data_loader_mod  # noqa: E402
 from opg.data_loader import load_locked_partition_items, validate_experiment_config  # noqa: E402
 from opg.evaluator import DetectionBox, evaluate_predictions, find_optimal_operating_conf  # noqa: E402
 from opg.trainer import benchmark_inference_latency  # noqa: E402
@@ -47,7 +48,7 @@ def _make_valid_t14_config() -> dict:
     return cfg
 
 
-def test_t14_config_guards_and_locked_loader() -> None:
+def test_t14_config_guards_and_locked_loader(monkeypatch: pytest.MonkeyPatch) -> None:
     cfg = _make_valid_t14_config()
     validate_experiment_config(cfg, root=ROOT)
 
@@ -66,14 +67,21 @@ def test_t14_config_guards_and_locked_loader() -> None:
     # 3. Attempting to include 'test' partition before G11 PASS must fail
     bad_test = copy.deepcopy(cfg)
     bad_test["data"]["allowed_partitions"] = ["train", "val", "test"]
-    with pytest.raises(PermissionError, match="SEALED TEST VIOLATION"):
-        validate_experiment_config(bad_test, root=ROOT)
+    with monkeypatch.context() as mp:
+        mp.setattr(data_loader_mod, "_is_g11_passed", lambda _root: False)
+        with pytest.raises(PermissionError, match="SEALED TEST VIOLATION"):
+            validate_experiment_config(bad_test, root=ROOT)
+        with pytest.raises(PermissionError, match="SEALED TEST VIOLATION"):
+            load_locked_partition_items(
+                ROOT, dataset_id="DS0003", split_id="SPLIT0003", batch_id="ANNB0003", track_id="TrackC", partition="test"
+            )
 
-    # 4. Locked loader rejects 'test' before G11 and rejects wrong split hash
-    with pytest.raises(PermissionError, match="SEALED TEST VIOLATION"):
-        load_locked_partition_items(
+    # 4. After G11 PASS, locked test loader returns exact canonical test items & still rejects wrong split hash
+    if data_loader_mod._is_g11_passed(ROOT):
+        ds3_test = load_locked_partition_items(
             ROOT, dataset_id="DS0003", split_id="SPLIT0003", batch_id="ANNB0003", track_id="TrackC", partition="test"
         )
+        assert len(ds3_test) == 33
     with pytest.raises(ValueError, match="Split manifest SHA-256 mismatch"):
         load_locked_partition_items(
             ROOT,

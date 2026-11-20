@@ -7,7 +7,7 @@
 | Researchers | Akhtaruzzaman Anik (`232-15-252`), Mahajub Al Shabah (`232-15-900`) |
 | Supervisors | Ms Faiza Feroz (Supervisor), Israt Jahan (Co-supervisor) |
 | Last updated | 2026-11-21 |
-| Current stage / step | **S11 (`STEP-027`–`030`) 100% COMPLETE (`13/13` `EXP0001–EXP0013` / `MODEL0001–MODEL0013` `G10 = PASS`, `0` failures, `0` sealed test access)**; **ready for `STEP-031` (`G11` Validation Freeze & Sealed Final Test Launch)** |
+| Current stage / step | **`STEP-031` (`G11 = PASS`) COMPLETE (`FREEZE0001` locked: `6` track winners + `4` `RQ1`/`RQ3` comparators, `val`-only `conf_op`, `0` prior test access)**; **ready for `STEP-032` (Sealed Final-Test Predictions, GPU Timing & ONNX Export)** |
 
 ## 1. Stage & gate summary
 
@@ -23,21 +23,20 @@
 | G08 | STEP-021 | **PASS** | **Approved (`2026-11-19`):** Prepared dataset releases **`REL0001–REL0006`** & **`PP0001–PP0004`** verified (`7,457` canonical OPGs, `41,103` boxes, `0` dropped boxes, `max_rt_err = 0.003630 px @ 640 / 0.004068 px @ 1280`, train-only fit on `5,106` train OPGs, `G08_assessment_2026-11-19.md`) |
 | G09 | STEP-026 | **PASS** | **Verified (`2026-11-19` on Kaggle `Tesla T4`, `torch 2.11.0+cu130`, `ultralytics 8.3.253`):** `EXP0000_SMOKE` epoch-1 interrupt (`optimizer`+`EMA` saved), backup SHA-256 match (`3f4452be...`), clean `resume=True` to epoch `2/2`, `19.51 FPS_e2e` (`G09_assessment_2026-11-19.md`) |
 | G10 | STEP-029–030 | **PASS** *(`13/13`)* | **ALL `13/13` experiments (`EXP0001–EXP0013` / `MODEL0001–MODEL0013`) PASSED (`2026-11-21`):** TrackE UAE **`0.858`**, TrackD Hanoi 1280 **`0.536`** (`+4.8%` vs 640 `0.488`), TrackB DENTEX **`0.444`**, TrackA UMFIH 1280 **`0.391`** (`0.1656` mAP50-95), TrackC Dhaka **`0.259`**, TrackF Pediatric **`0.100`**; `3/3` CLAHE ablations degraded `mAP@0.50` (`STEP030_matrix_tracker.md`) |
-| G11–G17 | STEP-031–049 | **NOT ASSESSED** | Awaiting `STEP-030` matrix completion before `G11` freeze & sealed `test` evaluation |
+| G11 | STEP-031 | **PASS** | **Frozen (`2026-11-21`):** `FREEZE0001` locked (`6` track winners: `MODEL0005/0004/0006/0013/0008/0007` + `4` `RQ1`/`RQ3` comparators: `MODEL0001/0002/0003/0010`; `3/3` CLAHE excluded; `val`-only `conf_op`; `0` prior test access; `09_Evaluation/freeze_manifest.json`, `G11_assessment_2026-11-21.md`) |
+| G12–G17 | STEP-032–049 | **NOT ASSESSED** | Ready for **`STEP-032`** sealed final-test predictions (`1,082 test` + `178 external_test` + `12` `HC01–HC05` cross-country bridges) |
 
 ## 2. Immediate priorities & open blockers
 
-1. Execute **`S10` (`STEP-022`–`026` — Baseline Readiness & `G09`)**:
-   - `STEP-022`: Compare documented YOLO candidate implementations/scales in `06_Models/candidates.csv`, record baseline choice & weight provenance in `06_Models/baseline_plan.md` and `DEC0010.md` (`UD10`).
-   - `STEP-023`: Pin and verify the model execution environment (`environment/model/` + `DEC0011` YOLO compute resolution).
-   - `STEP-024`: Approve baseline, experiment matrix, and evaluation/timing plans (`07_Experiments/experiment_plan.md`, `09_Evaluation/protocol.md`, `DEC0012–DEC0016`).
-   - `STEP-025` & `STEP-026`: Implement data loader/trainer/evaluator adapters (`src/opg/`), run smoke & checkpoint recovery verification, and assess **`G09`**.
-2. Maintain Private Google Drive sync (`03_Datasets/raw/DS0001–DS0006` + `05_Preprocessing/processed/REL0001–REL0006` per `DEC0011`).
-3. Maintain strict custody: `git ls-files "*.pdf" "*.zip" "*.rar" "*.jpg" "*.png" "*.pt"` stays empty.
+1. Execute **`STEP-032`** (*Generate and validate final-test predictions*):
+   - Build single off-Git sealed test + weights Kaggle bundle verifying every `SHA-256` against `09_Evaluation/freeze_manifest.json`.
+   - Run deterministic single-pass inference (`EVAL0001–EVAL0014` + `12` `HC01–HC05` zero-shot cross-country bridges), GPU `batch=1` timing (`T_pre/T_infer/T_post/FPS_e2e`), and `ONNX` export (`MODEL0005/0001/0002/0003/0013/0010/0008`) on Kaggle `Tesla T4`.
+2. Proceed to **`STEP-033`–`STEP-035`** (canonical `src/opg/evaluator.py` metrics + `1,000`-resample `GroupID` bootstrap `95% CI`, local CPU `ONNXRuntime` timing, error review `T19`, and `G12` assessment).
+3. Maintain strict custody: `git ls-files "*.pdf" "*.zip" "*.rar" "*.jpg" "*.png" "*.pt" "*.onnx"` stays empty.
 
 ## 3. Canonical ledgers
 
-- Decisions: `01_Project_Management/decisions.csv` (`UD01–UD24` registered; `DEC0001–DEC0009`, `DEC0019` Resolved, `DEC0011` STEP-002 Resolved)
-- Gates: `01_Project_Management/gates.csv` (`G01–G07 PASS`; `G08–G17 NOT ASSESSED`)
+- Decisions: `01_Project_Management/decisions.csv` (`UD01–UD24` registered; `DEC0001–DEC0016` & `DEC0019` Resolved/Frozen; `DEC0017–0018`, `DEC0020–0024` open for `S13–S16`)
+- Gates: `01_Project_Management/gates.csv` (`G01–G11 PASS`; `G12–G17 NOT ASSESSED`)
 - Risks: `01_Project_Management/risk_register.csv` (header-only)
 - Role split: `01_Project_Management/team_roles.md`
